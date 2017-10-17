@@ -1,0 +1,22 @@
+{
+  "name": "kamihime-bot",
+  "version": "0.0.1",
+  "description": "a simple kamihime discord bot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drumicube/kamihime-bot.git"
+  },
+  "author": "drumicube",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drumicube/kamihime-bot/issues"
+  },
+  "homepage": "https://github.com/drumicube/kamihime-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.2.1"
+  }
+}
