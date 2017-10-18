@@ -1,42 +1,25 @@
-
 const Discord     = require("discord.js");        // Load up the discord.js library
 const fs          = require("fs");
 
 
 // This is your client. Some people call it `bot`, some people call it `self`,
 const client = new Discord.Client();
-
 // Here we load the config.json file that contains our token and our prefix values.
 const config = require("./config.json");
 
-// -------------------- event ready ----------------------
 
-client.on("ready", () => {
-  // This event will run if the bot starts, and logs in, successfully.
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-  // Example of changing the bot's playing game to something useful. `client.user` is what the
-  // docs refer to as the "ClientUser".
-  if(client.guilds.size > 1)
-    client.user.setGame(`on ${client.guilds.size} servers`);
-  else
-    client.user.setGame(`on ${client.guilds.size} server`);
+// -------------- This loop reads the /events/ folder and attaches each event file to the appropriate event.
+
+fs.readdir("./events/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(file => {
+    let eventFunction = require(`./events/${file}`);
+    let eventName = file.split(".")[0];
+    // super-secret recipe to call events with all their proper arguments *after* the `client` var.
+    client.on(eventName, (...args) => eventFunction.run(client, ...args));
+  });
 });
 
-// -------------------- event guildCreate ----------------------
-
-client.on("guildCreate", guild => {
-  // This event triggers when the bot joins a guild.
-  console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setGame(`on ${client.guilds.size} servers`);
-});
-
-// -------------------- event guildDelete ----------------------
-
-client.on("guildDelete", guild => {
-  // this event triggers when the bot is removed from a guild.
-  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setGame(`on ${client.guilds.size} servers`);
-});
 
 // -------------------- event message ----------------------
 
