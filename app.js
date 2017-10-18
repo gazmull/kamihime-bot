@@ -1,6 +1,12 @@
 // Load up the discord.js library
 const Discord = require("discord.js");
 
+// http://countdownjs.org
+const Countdown = require("countdown");
+
+// https://momentjs.com/
+const Moment = require("moment");
+
 // This is your client. Some people call it `bot`, some people call it `self`,
 // some might call it `cootchie`. Either way, when you see `client.something`, or `bot.something`,
 // this is what we're refering to. Your client.
@@ -69,6 +75,12 @@ client.on("message", message => {
     message.delete().catch(O_o=>{});
     // And we get the bot to say the thing:
     message.channel.send(sayMessage);
+  }
+  
+  if(command === "countdown") {
+    var nextDailyReset = Moment.utc().hour(7).minute(0).second(0);
+    if(Moment.utc().isAfter(nextDailyReset)) { nextDailyReset.add(1, 'day'); }
+    message.channel.send(`Daily reset is in ` + Countdown(nextDailyReset).toString());
   }
 
 });
