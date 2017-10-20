@@ -3,10 +3,4 @@
 
 exports.run = (client, message, args) => {
     message.channel.send(`Pong! API Latency is ${Math.round(client.ping)}ms`).catch(console.error);
-
-    message.channel.send({embed: {
-      color: 3447003,
-      description: "A very simple Embed!"
-    }});
-
 }
