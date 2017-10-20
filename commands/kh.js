@@ -5,6 +5,7 @@
 
 var   KHdatas = require('../datas/kamihime.json');
 var   EDdatas = require('../datas/eidolons.json');
+var   SLdatas = require('../datas/souls.json');
 var   Eimoji = require('../datas/eimoji/eimoji.json');
 const Discord = require("discord.js");
 
@@ -72,6 +73,37 @@ exports.run = (client, message, args) => {
     message.channel.send({embed});
     khfound = true;
   }
+
+  // --- Souls
+
+  if(SLdatas.hasOwnProperty(khname))
+  {
+    var sl_name           = SLdatas[khname].name;
+    var sl_link           = SLdatas[khname].link;
+    var sl_thumb          = SLdatas[khname].thumb;
+    var sl_rarity         = SLdatas[khname].rarity;
+    var sl_classthumb     = SLdatas[khname].classthumb;
+    var sl_subType        = SLdatas[khname].subType;
+    var sl_weapons1       = SLdatas[khname].weapons1;
+    var sl_weapons2       = SLdatas[khname].weapons2;
+    var sl_releaseCost    = SLdatas[khname].releaseCost;
+
+
+    const embed = new Discord.RichEmbed()
+    .setTitle(sl_rarity+" - "+sl_subType)
+    .setAuthor("Soul: "+sl_name, "")
+    .setColor("#00AE86")
+    .setThumbnail(sl_thumb)
+    .setURL("http://kamihime-project.wikia.com"+sl_link)
+    .setImage(sl_classthumb)
+    .addField("Weapons:",sl_weapons1+" - "+sl_weapons2, false)
+    .addField("Release Cost:", sl_releaseCost, false);
+    message.channel.send({embed});
+    khfound = true;
+  }
+
+
+
 
   if( khfound == false)
   {
