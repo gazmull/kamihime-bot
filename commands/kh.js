@@ -1,12 +1,9 @@
 // Return Simple Kamihime datasheet scrapped from kamihime-project.wikia.com
 // Currently supported items: Kamihimes Eidolons & Souls
-// Due to limited embed customization, server eimojis are used for a better rendering:
-// Refers to eimoji.json to adapt to match your server eimojis
 
 var   KHdatas = require('../datas/kamihime.json');
 var   EDdatas = require('../datas/eidolons.json');
 var   SLdatas = require('../datas/souls.json');
-var   Eimoji  = require('../datas/eimoji/eimoji.json');
 const Discord = require("discord.js");
 const config  = require("../config.json");
 
@@ -35,7 +32,7 @@ exports.run = (client, message, args) => {
     var kh_totalPowerMax  = KHdatas[khname].totalPowerMax;
 
     const embed = new Discord.RichEmbed()
-    .setTitle(Eimoji[kh_rarity]+" "+Eimoji[kh_element])
+    .setTitle(config.eimojis[kh_rarity]+" "+config.eimojis[kh_element])
     .setAuthor("Kamihime: "+kh_name, "")
     .setColor("#00AE86")
     .setThumbnail(kh_thumb)
@@ -65,7 +62,7 @@ exports.run = (client, message, args) => {
     var ed_totalPowerMax  = EDdatas[khname].totalPowerMax;
 
     const embed = new Discord.RichEmbed()
-    .setTitle(Eimoji[ed_rarity]+" "+Eimoji[ed_element])
+    .setTitle(config.eimojis[ed_rarity]+" "+config.eimojis[ed_element])
     .setAuthor("Eidolon: "+ed_name, "")
     .setColor("#00AE86")
     .setThumbnail(ed_thumb)
@@ -101,9 +98,6 @@ exports.run = (client, message, args) => {
     message.channel.send({embed});
     khfound = true;
   }
-
-
-
 
   if( khfound == false)
   {

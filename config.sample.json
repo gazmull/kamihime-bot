@@ -1,6 +1,31 @@
+// token:
+//		Token of your app (https://discordapp.com/developers/docs/intro)
+// prefix:
+//		Your discord prefix command
+// wikidomain:
+//		Domain to link
+// thumbrooturl:
+// 		Root url of the kimihime image library (mostly used to download character thumbs)
+// eimojis:
+// 		Due to limited embed customization, server eimojis are used for a better rendering.
+// 		On your discord server, add the custom eimojis available in /datas/eimoji using shortcuts listed below.
+// 		On yur server, use the command \:K_myeimoji: to get your personal eimojis codes, and update this config file according to replies.
+
 {
 	"token"  : "your_discord_bot_token",
 	"prefix" : "/",
 	"wikidomain" : "https:\/\/kamihime-project.wikia.com",
-	"thumbrooturl" : "https:\/\/myhost.com/kimihime-images-folder"
+	"thumbrooturl" : "https:\/\/myhost.com/kimihime-images-folder",
+	"eimojis" : {
+		"N" : "<:K_N:your_eijoji_token_id>",
+		"R" : "<:K_R:your_eijoji_token_id>",
+		"SR" : "<:K_SR:your_eijoji_token_id>",
+		"SSR" : "<:K_SSR:your_eijoji_token_id>",
+		"FireSymbol" : "<:K_Fire:your_eijoji_token_id>",
+		"LightSymbol" : "<:K_Light:your_eijoji_token_id>",
+		"DarkSymbol" : "<:K_Dark:your_eijoji_token_id>",
+		"WaterSymbol" : "<:K_Water:your_eijoji_token_id>",
+		"WindSymbol" : "<:K_Wind:your_eijoji_token_id>",
+		"ThunderSymbol" : "<:K_Thunder:your_eijoji_token_id>"
+	}
 }
