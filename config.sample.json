@@ -1,4 +1,6 @@
 {
-	"token"  : "your_discord_bot_token_here",
-	"prefix" : "/"
+	"token"  : "your_discord_bot_token",
+	"prefix" : "/",
+	"wikidomain" : "https:\/\/kamihime-project.wikia.com",
+	"thumbrooturl" : "https:\/\/myhost.com/kimihime-images-folder"
 }
