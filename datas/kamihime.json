@@ -623,6 +623,22 @@
         "rarity": "SSR",
         "element": "WindSymbol"
     },
+    "Gaia (Awakened)": {
+        "name": "Gaia (Awakened)",
+        "link": "\/wiki\/Gaia_(Awakened)",
+        "thumb": "\/images\/a\/aa\/Gaia%28Awakened%29Portrait.png",
+        "raritythumb": "\/images\/8\/8c\/SSRplus.png",
+        "elementthumb": "\/images\/2\/27\/WindSymbol.png",
+        "classthumb": "\/images\/6\/66\/Defense.png",
+        "attackMin": "1420",
+        "attackMax": "8800",
+        "HPMin": "380",
+        "HPMax": "2350",
+        "totalPowerMin": "1800",
+        "totalPowerMax": "11150",
+        "rarity": "SSRplus",
+        "element": "WindSymbol"
+    },
     "Hades": {
         "name": "Hades",
         "link": "\/wiki\/Hades",
