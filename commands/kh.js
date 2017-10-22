@@ -1,4 +1,4 @@
-// Return Simple Kamihime datasheet scrapped from kamihime-project.wikia.com
+// Return Simple Kamihime datasheets.
 // Currently supported items: Kamihimes Eidolons & Souls
 
 var   KHdatas = require('../datas/kamihime.json');
@@ -12,7 +12,38 @@ exports.run = (client, message, args) => {
   var khname  = args.join(" ");
   khname      = khname.toLowerCase().replace( /\b./g, function(a){ return a.toUpperCase(); } );
 
+  if (khname.length < 3)
+  {
+    message.channel.send("I need at least 3 characters to help you.");
+    return;
+  }
+
+
+  // --- Try to match a result with an incomplete input
+
+  var originalRequest = khname;
+
+  for(var key in KHdatas) {
+      if(key.indexOf(khname) == 0) {
+          khname = key;
+      }
+  }
+
+  for(var key in EDdatas) {
+      if(key.indexOf(khname) == 0) {
+          khname = key;
+      }
+  }
+
+  for(var key in SLdatas) {
+      if(key.indexOf(khname) == 0) {
+          khname = key;
+      }
+  }
+
+
   // --- Kamihimes
+
 
   if(KHdatas.hasOwnProperty(khname))
   {

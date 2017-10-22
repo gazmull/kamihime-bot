@@ -1,9 +1,12 @@
 # kamihime-bot
-A simple Kamihime Discord bot
+
+A simple Kamihime Discord bot. it supports Kamihime, eidolons and souls.
+
+Use the command **/kh [character name]** to display kamihime infos.
 
 ### Configuration:
 
-Copy "*config.sample.json*" to "*config.json*" and edit your config:
+Copy "*config.sample.json*" to "*config.json*" and edit your configuration:
 
 
 __token:__
@@ -16,7 +19,7 @@ Your discord prefix command.
 
 __wikidomain:__
 
-Domain to link each characters.
+Wiki domain to link each character page.
 
 __thumbrooturl:__
 
