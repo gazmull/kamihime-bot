@@ -7,7 +7,7 @@
         "classthumb": "\/images\/5\/56\/Offense.png",
         "subType": "Counter-attacker",
         "weapons1": "Glaive",
-        "weapons2": "https:\/\/vignette.wikia.nocookie.net\/ragnaly-brave\/images\/8\/81\/Hammer.png\/revision\/latest?cb=20170806160005",
+        "weapons2": "Hammer",
         "releaseCost": "100 SP"
     },
     "Billy the Kid": {
@@ -18,7 +18,7 @@
         "classthumb": "\/images\/d\/d4\/Tricky.png",
         "subType": "Outlaw",
         "weapons1": "Gun",
-        "weapons2": "",
+        "weapons2": "N\/A",
         "releaseCost": "100 SP"
     },
     "Crowley": {
@@ -161,7 +161,7 @@
         "classthumb": "\/images\/5\/56\/Offense.png",
         "subType": "Counter-attacker",
         "weapons1": "Glaive",
-        "weapons2": "https:\/\/vignette.wikia.nocookie.net\/ragnaly-brave\/images\/8\/81\/Hammer.png\/revision\/latest?cb=20170806160005",
+        "weapons2": "Hammer",
         "releaseCost": "200 SP"
     },
     "Granuaile": {
@@ -172,7 +172,7 @@
         "classthumb": "\/images\/d\/d4\/Tricky.png",
         "subType": "Outlaw",
         "weapons1": "Gun",
-        "weapons2": "",
+        "weapons2": "N\/A",
         "releaseCost": "200 SP"
     },
     "Roland": {
@@ -227,7 +227,7 @@
         "classthumb": "\/images\/d\/d4\/Tricky.png",
         "subType": "Outlaw",
         "weapons1": "Gun",
-        "weapons2": "",
+        "weapons2": "N\/A",
         "releaseCost": "500 SP"
     },
     "Joan of Arc": {
@@ -260,7 +260,7 @@
         "classthumb": "\/images\/5\/56\/Offense.png",
         "subType": "Counter-attacker",
         "weapons1": "Glaive",
-        "weapons2": "",
+        "weapons2": "N\/A",
         "releaseCost": "500 SP"
     },
     "Solomon": {
