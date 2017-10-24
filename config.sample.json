@@ -15,5 +15,6 @@
 		"WaterSymbol" : "<:K_Water:your_eijoji_token_id>",
 		"WindSymbol" : "<:K_Wind:your_eijoji_token_id>",
 		"ThunderSymbol" : "<:K_Thunder:your_eijoji_token_id>"
-	}
+	},
+	"node_persist_path": "datas/storage"
 }

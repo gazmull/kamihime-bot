@@ -1,5 +1,6 @@
 const Discord     = require("discord.js");        // Load up the discord.js library
 const fs          = require("fs");
+const persist     = require("./datas/persist").persist;
 
 
 // This is your client. Some people call it `bot`, some people call it `self`,

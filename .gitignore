@@ -60,3 +60,4 @@ typings/
 # kamihime bot specific
 
 /config.json
+/datas/storage
