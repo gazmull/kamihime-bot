@@ -29,6 +29,27 @@ const Countdown_units = Countdown.YEARS |
   Countdown.DAYS |
   Countdown.HOURS |
   Countdown.MINUTES;
+  
+function get_countdowns_with_cleanup(callback) {
+  persist.get('countdowns').then((countdowns) => {
+    var needs_saving = false;
+    
+    for(var countdown_key in countdowns) {
+      var date = Moment.utc(countdowns[countdown_key]).seconds(0);
+      if(Moment.utc().isAfter(date)) {
+        console.log(`Countdown ` + countdown_key + ` points to the past. Removing...`);
+        delete countdowns[countdown_key];
+        needs_saving = true;
+      }
+    }
+    
+    if(needs_saving) {
+      persist.set('countdowns', countdowns);
+    }
+    
+    callback(countdowns);
+  });
+}
 
 exports.run = (client, message, args) => {
   
@@ -44,9 +65,10 @@ exports.run = (client, message, args) => {
       countdown_array.push([definition.name, date]);
     }
     
-    persist.get('countdowns').then((countdowns) => {
+    get_countdowns_with_cleanup((countdowns) => {
       for (var countdown_key in countdowns) {
-        countdown_array.push([countdown_key, Moment.utc(countdowns[countdown_key]).seconds(0)]);
+        var date = Moment.utc(countdowns[countdown_key]).seconds(0);
+        countdown_array.push([countdown_key, date]);
       }
       
       const embed = new Discord.RichEmbed()
@@ -75,7 +97,7 @@ exports.run = (client, message, args) => {
       var date = args.pop();
       var name = args.join(" ");
       
-      persist.get('countdowns').then((countdowns) => {
+      get_countdowns_with_cleanup((countdowns) => {
         countdowns[name] = date;
         persist.set('countdowns', countdowns).then(() => {
           message.channel.send(`Countdown added`);
@@ -88,7 +110,7 @@ exports.run = (client, message, args) => {
       args.shift();
       var name = args.join(" ");
       
-      persist.get('countdowns').then((countdowns) => {
+      get_countdowns_with_cleanup((countdowns) => {
         if(name in countdowns) {
           delete countdowns[name];
           persist.set('countdowns', countdowns).then(() => {
