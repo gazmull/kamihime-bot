@@ -88,19 +88,33 @@ exports.run     = (client, message, args) => {
 
     if(EDdatas.hasOwnProperty(khname))
     {
-      var ed_name           = EDdatas[khname].name;
-      var ed_link           = config.wikidomain+EDdatas[khname].link;
-      var ed_thumb          = config.thumbrooturl+EDdatas[khname].thumb;
-      var ed_raritythumb    = config.thumbrooturl+EDdatas[khname].raritythumb;
-      var ed_rarity         = EDdatas[khname].rarity;
-      var ed_elementthumb   = config.thumbrooturl+EDdatas[khname].elementthumb;
-      var ed_element        = EDdatas[khname].element;
-      var ed_attackMin      = EDdatas[khname].attackMin;
-      var ed_attackMax      = EDdatas[khname].attackMax;
-      var ed_HPMin          = EDdatas[khname].HPMin;
-      var ed_HPMax          = EDdatas[khname].HPMax;
-      var ed_totalPowerMin  = EDdatas[khname].totalPowerMin;
-      var ed_totalPowerMax  = EDdatas[khname].totalPowerMax;
+      var ed_name                     = EDdatas[khname].name;
+      var ed_link                     = config.wikidomain+EDdatas[khname].link;
+      var ed_thumb                    = config.thumbrooturl+EDdatas[khname].thumb;
+      var ed_raritythumb              = config.thumbrooturl+EDdatas[khname].raritythumb;
+      var ed_rarity                   = EDdatas[khname].rarity;
+      var ed_elementthumb             = config.thumbrooturl+EDdatas[khname].elementthumb;
+      var ed_element                  = EDdatas[khname].element;
+      var ed_attackMin                = EDdatas[khname].attackMin;
+      var ed_attackMax                = EDdatas[khname].attackMax;
+      var ed_HPMin                    = EDdatas[khname].HPMin;
+      var ed_HPMax                    = EDdatas[khname].HPMax;
+      var ed_totalPowerMin            = EDdatas[khname].totalPowerMin;
+      var ed_totalPowerMax            = EDdatas[khname].totalPowerMax;
+      var ed_summonAttack             = EDdatas[khname].summonAttack;
+      var ed_summonAttack             = EDdatas[khname].summonAttack;
+      var ed_summonAttackEffect       = EDdatas[khname].summonAttackEffect;
+      var ed_summonAttackCooldown     = EDdatas[khname].summonAttackCooldown;
+      var ed_eidolonsEffect           = EDdatas[khname].eidolonsEffect;
+      var ed_eidolonEffectTier0Stars  = EDdatas[khname].eidolonEffectTier0Stars;
+      var ed_eidolonEffectTier0Effect = EDdatas[khname].eidolonEffectTier0Effect;
+      var ed_eidolonEffectTier1Stars  = EDdatas[khname].eidolonEffectTier1Stars;
+      var ed_eidolonEffectTier1Effect = EDdatas[khname].eidolonEffectTier1Effect;
+      var ed_eidolonEffectTier2Stars  = EDdatas[khname].eidolonEffectTier2Stars;
+      var ed_eidolonEffectTier2Effect = EDdatas[khname].eidolonEffectTier2Effect;
+      var ed_eidolonEffectTier3Stars  = EDdatas[khname].eidolonEffectTier3Stars;
+      var ed_eidolonEffectTier3Effect = EDdatas[khname].eidolonEffectTier3Effect;
+
 
       const embed = new Discord.RichEmbed()
       .setTitle(config.eimojis[ed_rarity]+" "+config.eimojis[ed_element])
@@ -109,6 +123,19 @@ exports.run     = (client, message, args) => {
       .setThumbnail(ed_thumb)
       .setURL(ed_link)
       .addField("Statistics:", ":crossed_swords: " + ed_attackMin + " - " + ed_attackMax + "    :green_heart: " + ed_HPMin + " - " + ed_HPMax + "    :muscle: " + ed_totalPowerMin + " - " + ed_totalPowerMax, false);
+
+      if (ed_summonAttack.length && ed_summonAttackEffect.length) {
+        embed.addField(ed_summonAttack + " (" + ed_summonAttackCooldown + ")", ed_summonAttackEffect,false);
+      }
+
+      if (ed_eidolonsEffect.length) {
+        embed.addField(ed_eidolonsEffect, ed_eidolonEffectTier0Stars+" "+ed_eidolonEffectTier0Effect+"\n"+
+          ed_eidolonEffectTier1Stars+" "+ed_eidolonEffectTier1Effect+"\n"+
+          ed_eidolonEffectTier2Stars+" "+ed_eidolonEffectTier2Effect+"\n"+
+          ed_eidolonEffectTier3Stars+" "+ed_eidolonEffectTier3Effect+"\n"
+          ,false);
+      }
+
       message.channel.send({embed});
       khfound = true;
     }
