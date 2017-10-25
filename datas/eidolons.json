@@ -26,7 +26,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"This Eidolon with wings like a dragon serves an evil god. Believed to be the source of all evil, she is feared by humans.\"",
+        "image": "\/images\/7\/79\/Aji-DahakaClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Anzu": {
         "name": "Anzu",
@@ -55,7 +58,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Item drop rate\u2191+",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"This Eidolon, capable of controlling electricity, belongs to a band of thieves. The lithograph she wears was stolen from an ancient god.\"",
+        "image": "\/images\/e\/e2\/AnzuClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Apocalypse": {
         "name": "Apocalypse",
@@ -84,7 +90,10 @@
         "eidolonEffectTier3Effect": "Dark ATK\u2191 40% \/ Fire ATK\u2191 35%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Dark \/ Fire ATK\u2191 40%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Born amid chaos, she possesses fearsome magic power. Strong enough to end the world all over again, her power is very dangerous.\"",
+        "image": "\/images\/2\/20\/ApocalypseClose.PNG",
+        "obtained": "Advent Battle vs Apocalypse"
     },
     "Aqua Kaiser Dragoon": {
         "name": "Aqua Kaiser Dragoon",
@@ -113,7 +122,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon with the power of an absolute zero icy wind. Her icy nature is both beautiful and cruel.\"",
+        "image": "\/images\/6\/65\/AquaKaiserDragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Aqua Spirit": {
         "name": "Aqua Spirit",
@@ -142,7 +154,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon transformed into a spirit by water magic.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/3\/3f\/Aqua_SpiritClose.PNG",
+        "obtained": "Gem GachaDaily QuestsVarious Events"
     },
     "Arachne": {
         "name": "Arachne",
@@ -171,7 +186,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A beautiful woman with a giant spider as a familiar.Anyone who finds himself trapped in her indestructible spider web will never escape.\"",
+        "image": "\/images\/c\/cd\/ArachneClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Archangel": {
         "name": "Archangel",
@@ -188,7 +206,7 @@
         "rarity": "SSR",
         "element": "LightSymbol",
         "summonAttack": "Summon Attack - God Revelation -",
-        "summonAttackEffect": "Light DMG to all enemies (++++)Reduces Mode Gauge",
+        "summonAttackEffect": "Light DMG to all enemies (++++)\nReduces Mode Gauge",
         "summonAttackCooldown": "8 turns",
         "eidolonsEffect": "Eidolon Effect - Divine Feather -",
         "eidolonEffectTier0Effect": "Light Characters' ATK\u2191 50% \/ Ability DMG\u2191 (+)",
@@ -200,7 +218,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Disdanful of boord, this Eidolon loves seets and wants to be a refined woman.They say her holy sword will protect the heavens for all eternity\"",
+        "image": "\/images\/7\/7f\/ArchangelClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Aurora Dragoon": {
         "name": "Aurora Dragoon",
@@ -229,7 +250,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A member of a dragon series created to be guardian beasts. Possessing the power of ice, she can protect herself with powerful blasts of cold air.\"",
+        "image": "\/images\/f\/ff\/Aurora_DragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Baby Dragon": {
         "name": "Baby Dragon",
@@ -258,7 +282,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"The child of a god-like dragon that controls various natural phenomena.Her power doesn't yet match an adult dragon's, but is astounding to human.\"",
+        "image": "\/images\/a\/aa\/Baby_DragonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Balrog": {
         "name": "Balrog",
@@ -287,7 +314,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon created in an incubation tank and confined for ages. Her hatred for humans is embodied on her jet-black shadow dress.\"",
+        "image": "\/images\/5\/56\/BalrogClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Basilisk": {
         "name": "Basilisk",
@@ -316,7 +346,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon with the power to turn those she looks upon to stone. Despite her fearsome looks, she's supposedly scared of ghosts.\"",
+        "image": "\/images\/9\/94\/BasiliskClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Behemoth": {
         "name": "Behemoth",
@@ -345,7 +378,10 @@
         "eidolonEffectTier3Effect": "Wind\/Light\/Water ATK\u2191 45%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind\/Light\/Water ATK\u2191 50%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A guardian Eidolon that can use nano machines to manipulate the wind. The hippo is said to be her other self. She's lazy by nature.\"",
+        "image": "\/images\/f\/f6\/BehemothClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Cat Sith": {
         "name": "Cat Sith",
@@ -374,7 +410,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"This Eidolon, evolved from a cat, can speak human languages and walk on two legs.They say she's actually all that is left of the cat king.\"",
+        "image": "\/images\/6\/69\/Cait_SithClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Cetus": {
         "name": "Cetus",
@@ -403,7 +442,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon who was sealed in stone at the bottom of the sea. She swims the seas of the world in search of the person who freed her.\"",
+        "image": "\/images\/c\/c3\/CetusFullClose.png",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Chaos Spirit": {
         "name": "Chaos Spirit",
@@ -432,7 +474,10 @@
         "eidolonEffectTier3Effect": "Dark characters' HP \/ ATK\u2191 22%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Dark characters' HP \/ ATK\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A materialized chaos spirit Eidolon.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/e\/e1\/Chaos_SpiritClose.PNG",
+        "obtained": "Various EventsWeekly Missions"
     },
     "Chimera": {
         "name": "Chimera",
@@ -461,7 +506,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Created through an experiment to combine a variety of different monsters, no one knows how many monsters reside in her body now.\"",
+        "image": "\/images\/7\/70\/ChimeraClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Cthugha": {
         "name": "Cthugha",
@@ -478,7 +526,7 @@
         "rarity": "SSR",
         "element": "FireSymbol",
         "summonAttack": "Summon Attack - Reduced to Ashes",
-        "summonAttackEffect": "Fire DMG to all enemies(++++)Applies  Scorched",
+        "summonAttackEffect": "Fire DMG to all enemies(++++)\nApplies  Scorched",
         "summonAttackCooldown": "9 turns",
         "eidolonsEffect": "Eidolon Effect - Divinicidal Inferno",
         "eidolonEffectTier0Effect": "Fire characters' ATK\u2191 30% \/ HP\u2191 10%",
@@ -490,7 +538,10 @@
         "eidolonEffectTier3Effect": "Fire characters' ATK\u2191 40% \/ HP\u2191 15%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire characters' ATK\u2191 40% \/ HP\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A living flame, this Eidolon hold immense power. When fighting, her own sleepiness can become an obstacle, which angers her greatly.\"",
+        "image": "\/images\/d\/d9\/CthughaClose.png",
+        "obtained": "Creeping Flames of Madness"
     },
     "Crom Cruach": {
         "name": "Crom Cruach",
@@ -519,7 +570,10 @@
         "eidolonEffectTier3Effect": "Fire characters' ATK\u2191 40% \/ HP\u2191 15%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire characters' ATK\u2191 40% \/ HP\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A fire dragon whose anger manifests in flame, burning everything in sight.A flap of her blazing wing is powerful enough to decimate an entire city.\"",
+        "image": "\/images\/c\/c6\/CromCruachClose.PNG",
+        "obtained": "Raging Fury of the Inferno Dragon"
     },
     "Cyclone Spirit": {
         "name": "Cyclone Spirit",
@@ -548,7 +602,10 @@
         "eidolonEffectTier3Effect": "Wind character's HP \/ ATK\u2191 22%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind character's HP \/ ATK\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A materialized wind spirit Eidolon.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/6\/62\/Cyclone_SpiritClose.PNG",
+        "obtained": "Various EventsWeekly Missions"
     },
     "Dark Spirit": {
         "name": "Dark Spirit",
@@ -577,7 +634,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon transformed into a spirit by dark magic.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/0\/0c\/Dark_SpiritClose.PNG",
+        "obtained": "Gem GachaDaily QuestsVarious Events"
     },
     "Diabolos": {
         "name": "Diabolos",
@@ -606,7 +666,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A magical being created just as the creator gods vanished.Though cold blooded, cruel, and philosophical, she can be helpful at times.\"",
+        "image": "\/images\/9\/92\/DiabolosClose.png",
+        "obtained": "Tutorial"
     },
     "Dryad": {
         "name": "Dryad",
@@ -635,7 +698,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A beautiful Eidolon who rules trees.Extremely kind, she rarely appears before people, but mercilessly defends the forest.\"",
+        "image": "\/images\/d\/d2\/DryadClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Dullahan": {
         "name": "Dullahan",
@@ -652,7 +718,7 @@
         "rarity": "SSR",
         "element": "DarkSymbol",
         "summonAttack": "Summon Attack - Phantom Blaster",
-        "summonAttackEffect": "Dark DMG to all enemies(++++) Applies  Putrefied",
+        "summonAttackEffect": "Dark DMG to all enemies(++++)\n Applies  Putrefied",
         "summonAttackCooldown": "10 turns",
         "eidolonsEffect": "Eidolon Effect - Necro Soul",
         "eidolonEffectTier0Effect": "Dark characters' ATK\u2191 30% \/ HP\u2191 10%",
@@ -664,7 +730,10 @@
         "eidolonEffectTier3Effect": "Dark characters' ATK\u2191 40% \/ HP\u2191 15%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Dark characters' ATK\u2191 40% \/ HP\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"There's no escaping this messenger of death Eidolon.The only way to beat destiny is to face her head on.\"",
+        "image": "\/images\/1\/12\/DullahanClose.PNG",
+        "obtained": "Dark Knight's Slaughter (6th Raid Battle)"
     },
     "Echidna": {
         "name": "Echidna",
@@ -693,7 +762,10 @@
         "eidolonEffectTier3Effect": "Dark\/Fire ATK\u2191 55%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Dark\/Fire ATK\u2191 60%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A legendary Eidolon who has given birth to countless monsters. She steals a man's seed before killing him like a deranged mantis.\"",
+        "image": "\/images\/c\/c2\/EchidnaClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Electro Spirit": {
         "name": "Electro Spirit",
@@ -722,7 +794,10 @@
         "eidolonEffectTier3Effect": "Thunder characters' HP \/ ATK\u2191 22%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder characters' HP \/ ATK\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A materialized thunder spirit Eidolon.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/e\/ef\/Electro_SpiritClose.PNG",
+        "obtained": "Various EventsWeekly Missions"
     },
     "Evil Kaiser Dragoon": {
         "name": "Evil Kaiser Dragoon",
@@ -751,7 +826,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Mentally, the youngest of all the dragoons,her ability to commit cruel acts without a second thought makes her dangerous.\"",
+        "image": "\/images\/b\/b2\/Evil_Kaiser_DragoonClose.png",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Fafnir": {
         "name": "Fafnir",
@@ -768,7 +846,7 @@
         "rarity": "SSR",
         "element": "FireSymbol",
         "summonAttack": "Summon Attack - Golden Dragon's Radiant Flame",
-        "summonAttackEffect": "Fire DMG to all enemies (++++)All allies'  ATK \/  DEF\u2191 (++)",
+        "summonAttackEffect": "Fire DMG to all enemies (++++)\nAll allies'  ATK \/  DEF\u2191 (++)",
         "summonAttackCooldown": "9 turns",
         "eidolonsEffect": "Eidolon Effect - Gold Ring",
         "eidolonEffectTier0Effect": "Fire\/Water ATK\u2191 40%",
@@ -780,7 +858,10 @@
         "eidolonEffectTier3Effect": "Fire\/Water ATK\u2191 55%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire\/Water ATK\u2191 60%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Feeding off Greed and Treachery, Fafnir is an Eidolon harboring the strength of the Dragons.She was originally human that was cursed. Her greed for gold is beyond measure as well as her selfishness.\"",
+        "image": "\/images\/d\/dc\/FafnirClose.png",
+        "obtained": "Magic Jewel GachaPremium Gacha"
     },
     "Fenrir": {
         "name": "Fenrir",
@@ -809,7 +890,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Water character's ATK\u2191 70% \/ Burst Streak DMG\u2191 30%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"This Eidolon was sleeping in a glacier. Typically a giant, she can shrink herself at will. Her ice magic is top class, even among Eidolons.\"",
+        "image": "\/images\/5\/52\/FenrirClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Fire Spirit": {
         "name": "Fire Spirit",
@@ -838,7 +922,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon transformed into a spirit by fire magic.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/d\/da\/Fire_SpiritClose.PNG",
+        "obtained": "Gem GachaDaily QuestsVarious Events"
     },
     "Flame Spirit": {
         "name": "Flame Spirit",
@@ -867,7 +954,10 @@
         "eidolonEffectTier3Effect": "Fire characters' HP \/ ATK\u2191 22%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire characters' HP \/ ATK\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A materialized flame spirit Eidolon.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/a\/a4\/Flame_SpiritClose.PNG",
+        "obtained": "Various EventsWeekly Missions"
     },
     "Frost Spirit": {
         "name": "Frost Spirit",
@@ -896,7 +986,10 @@
         "eidolonEffectTier3Effect": "Water characters' HP \/ ATK\u2191 22%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Water characters' HP \/ ATK\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A materialized water spirit Eidolon.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/2\/2b\/Frost_SpiritClose.PNG",
+        "obtained": "Various EventsWeekly Missions"
     },
     "Furfur": {
         "name": "Furfur",
@@ -925,7 +1018,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Capable of summoning thunderstorms, this demon Eidolon holds the title of countess. She loves tales of romance and is up on all the latest trends.\"",
+        "image": "\/images\/8\/8c\/FurfurClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Gale Kaiser Dragoon": {
         "name": "Gale Kaiser Dragoon",
@@ -954,7 +1050,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"The highest ranked elemental dragoon. Her attacks are a marvel to behold and the divine protection of her wind is tremendously powerful.\"",
+        "image": "\/images\/a\/a1\/GaleKaiserDragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Gandharva": {
         "name": "Gandharva",
@@ -983,7 +1082,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon who belongs to a religious music group. With beautiful golden wings, she's very good at using the wind to attack.\"",
+        "image": "\/images\/6\/61\/GandharvaClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Gargoyle (N)": {
         "name": "Gargoyle (N)",
@@ -1012,7 +1114,10 @@
         "eidolonEffectTier3Effect": "Thunder characters' HP\u2191 20%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder characters' HP\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"This Eidolon was petrified as punishment for her pranks.Even after being freed, she is still most comfortable on a slab of slate.\"",
+        "image": "\/images\/0\/0c\/GargoyleClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Gargoyle": {
         "name": "Gargoyle",
@@ -1070,7 +1175,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An extremely loyal Eidolon also known by the name \"Watchdog.\"Loyal to those she knows, she's merciless to enemies.\"",
+        "image": "\/images\/e\/e4\/GarmClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Garuda": {
         "name": "Garuda",
@@ -1099,7 +1207,10 @@
         "eidolonEffectTier3Effect": "Wind ATK\u2191 40% \/ Water ATK\u2191 35%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind \/ Water ATK\u2191 40%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"After drinking the sacred Amrita water of immortality, this Eidolon gained extraordinary power.Her wind attacks boast a truly awesome destructive power.\"",
+        "image": "\/images\/a\/af\/GarudaClose.PNG",
+        "obtained": "Advent Battle vs Garuda"
     },
     "God Kaiser Dragoon": {
         "name": "God Kaiser Dragoon",
@@ -1128,7 +1239,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A god-like Eidolon with the power to purify the world. Benevolent and loving, she provides divine protection to anyone who asks for help.\"",
+        "image": "\/images\/f\/ff\/GodKaiserDragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Golem": {
         "name": "Golem",
@@ -1157,7 +1271,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A manipulative Eidolon who made a golden metal giant fall in love with her.The gold giant was a tool of war, but now it's only for her own personal use.\"",
+        "image": "\/images\/d\/d9\/GolemClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Gremlin": {
         "name": "Gremlin",
@@ -1186,7 +1303,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Turned into an Eidolon while messing about at a weapons factory, she may look cute, but she hates humans for making her into an Eidolon.\"",
+        "image": "\/images\/f\/f7\/GremlinClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Girimehkala": {
         "name": "Girimehkala",
@@ -1215,7 +1335,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Accompanied by a mechanical elephant, this Eidolon is a weapon of war.Her elephant's charge shakes the earth, destroying all in its path.\"",
+        "image": "\/images\/2\/22\/GirimehkalaClose.png",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Griffin": {
         "name": "Griffin",
@@ -1244,7 +1367,10 @@
         "eidolonEffectTier3Effect": "Wind ATK\u2191 25%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind ATK\u2191 30%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon originally created to guard a weapons research facility.Now that the facility is gone, she wanders about, in search of something to protect.\"",
+        "image": "\/images\/9\/98\/GriffinClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Guilty Dragoon": {
         "name": "Guilty Dragoon",
@@ -1273,7 +1399,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A member of a dragon series created to be guardian beasts. Mostly provides dark magic power, but can also be used for defense.\"",
+        "image": "\/images\/e\/e7\/Guilty_DragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Harpie (N)": {
         "name": "Harpie (N)",
@@ -1302,7 +1431,10 @@
         "eidolonEffectTier3Effect": "Wind characters' HP\u2191 20%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind characters' HP\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Half human, half vulture, this beast was created as a weapon.She has a voracious appetite and is known to eat humans and monsters on occasion.\"",
+        "image": "\/images\/8\/8f\/HarpieClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Harpie": {
         "name": "Harpie",
@@ -1360,7 +1492,10 @@
         "eidolonEffectTier3Effect": "Light character's ATK\u2191 55% \/ HP\u2191 20%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Light character's ATK\u2191 60% \/ HP\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon with mechanical arms and a strong sense of justice, she lets no evil go unpunished, though she can go a bit overboard on occasion.\"",
+        "image": "\/images\/8\/8f\/HecatonchiresClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Hellhound": {
         "name": "Hellhound",
@@ -1389,7 +1524,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A canine Eidolon with fiery red eyes.Her howl is said to announce destinations to the souls of the departed.\"",
+        "image": "\/images\/2\/27\/HellhoundClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Holy Spirit": {
         "name": "Holy Spirit",
@@ -1418,7 +1556,10 @@
         "eidolonEffectTier3Effect": "Light characters' HP \/ ATK\u2191 22%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Light characters' HP \/ ATK\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A materialized light spirit Eidolon.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/2\/20\/Holy_SpiritClose.PNG",
+        "obtained": "Various EventsWeekly Missions"
     },
     "Homunculus": {
         "name": "Homunculus",
@@ -1447,7 +1588,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An android made by a legendary alchemist.Her master is dead, but she's still searching for him, wandering about with a forlorn look on her face.\"",
+        "image": "\/images\/d\/d6\/HomunculusClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Huanglong": {
         "name": "Huanglong",
@@ -1476,7 +1620,10 @@
         "eidolonEffectTier3Effect": "Thunder character's ATK\u2191 55% \/ HP\u2191 20%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder character's ATK\u2191 60% \/ HP\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Made in an attempt to create a god and boasting immense power, her attacks, powerful as nuclear bombs, are the embodiment of divine wrath.\"",
+        "image": "\/images\/d\/d2\/HuanglongClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Hydra": {
         "name": "Hydra",
@@ -1505,7 +1652,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A fire breathing Eidolon with the heads of five snakes. Possesses the ability to regenerate.If one head is cut off, it will grow back.\"",
+        "image": "\/images\/8\/84\/HydraClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Ifrit": {
         "name": "Ifrit",
@@ -1534,7 +1684,10 @@
         "eidolonEffectTier3Effect": "Fire characters' ATK\u2191 65% \/ Burst Streak DMG\u2191 20%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire characters' ATK\u2191 70% \/ Burst Streak DMG\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A fire demon Eidolon. She'll grant one wish for whomever she serves, but she will ask to be appropriately compensated for her wish granting.\"",
+        "image": "\/images\/6\/62\/IfritClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Ignited Dragoon": {
         "name": "Ignited Dragoon",
@@ -1563,7 +1716,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A member of a dragon series created to be guardian beasts. The flames shrouding her body are so hot that it's difficuly to get near her.\"",
+        "image": "\/images\/4\/44\/Ignited_DragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Ixion": {
         "name": "Ixion",
@@ -1580,7 +1736,7 @@
         "rarity": "SSR",
         "element": "ThunderSymbol",
         "summonAttack": "Summon Attack - Tyrant Volt",
-        "summonAttackEffect": "Thunder DMG to all enemies(++++)Applies  Thunder ATK\u2191 (+) to allies",
+        "summonAttackEffect": "Thunder DMG to all enemies(++++)\nApplies  Thunder ATK\u2191 (+) to allies",
         "summonAttackCooldown": "10 turns",
         "eidolonsEffect": "Eidolon Effect - Tyrant's Charisma",
         "eidolonEffectTier0Effect": "Thunder characters' ATK\u2191 20% \/ Burst Streak DMG\u2191 20%",
@@ -1592,7 +1748,10 @@
         "eidolonEffectTier3Effect": "Thunder characters' ATK\u2191 30% \/ Burst Streak DMG\u2191 25%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder characters' ATK\u2191 30% \/ Burst Streak DMG\u2191 30%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon who treats humans as slaves. Long ago, she trappedand killed her sister. Now, she must pay for her sin for all eternity.\"",
+        "image": "\/images\/8\/8a\/IxionClose.PNG",
+        "obtained": "Advent Battle vs Ixion"
     },
     "Jabberwock": {
         "name": "Jabberwock",
@@ -1621,7 +1780,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"The Eidolon who once ruled over the \"Mirror Kingdom.\" Sealed away by a little girl, half her power was stolen, but she's still pretty strong.\"",
+        "image": "\/images\/3\/36\/JabberwockClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Jormungandr": {
         "name": "Jormungandr",
@@ -1650,7 +1812,10 @@
         "eidolonEffectTier3Effect": "Water character's ATK\u2191 40% \/ HP\u2191 15%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Water character's ATK\u2191 40% \/ HP\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A giant Eidolon who was sealed at the bottom of the sea by the thunder god Thor. On a rampage trying to find the Kamihime who sealed her.\"",
+        "image": "\/images\/f\/f8\/JormungandrClose.PNG",
+        "obtained": "Wicked Emperor of the Abyss"
     },
     "Kraken": {
         "name": "Kraken",
@@ -1679,7 +1844,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon with the head of a giant squid.She looks cute, but let your guard down around her and she'll attack you with her suckers.\"",
+        "image": "\/images\/7\/7c\/KrakenClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Laelaps": {
         "name": "Laelaps",
@@ -1708,7 +1876,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Laelaps never fails to catch her prey.Like a dog, she'd follow her master's orders even if it meant chasing an enemy into the depths of hell.\"",
+        "image": "\/images\/e\/e9\/LaelapsClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Lamia": {
         "name": "Lamia",
@@ -1737,7 +1908,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"This wildly libidinous Eidolon enjoys younger men. With her power, she'd be able to challenge dragons if she ever decided to fight seriously.\"",
+        "image": "\/images\/d\/d3\/LamiaClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Lightning Dragoon": {
         "name": "Lightning Dragoon",
@@ -1766,7 +1940,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A member of a dragon series created to be guardian beasts.Creates powerful electric currents in her body, always electrified.\"",
+        "image": "\/images\/e\/eb\/Lightning_DragoonClose.png",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Lilim Luxuria": {
         "name": "Lilim Luxuria",
@@ -1783,7 +1960,7 @@
         "rarity": "SSR",
         "element": "WindSymbol",
         "summonAttack": "Summon Attack - Lux Typhonas",
-        "summonAttackEffect": "Wind DMG to all enemies(++++)All allies' Wind ATK\u2191",
+        "summonAttackEffect": "Wind DMG to all enemies(++++)\nAll allies' Wind ATK\u2191",
         "summonAttackCooldown": "10 turns",
         "eidolonsEffect": "Eidolon Effect - Torren of Lust",
         "eidolonEffectTier0Effect": "When your team has three or more elements, Wind characters' ATK\u2191 50%",
@@ -1795,7 +1972,10 @@
         "eidolonEffectTier3Effect": "When your team has three or more elements, Wind characters' ATK\u2191 65%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "When your team has three or more elements, Wind characters' ATK\u2191 70%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon who serves Demon Lust. She is confident in her sexiness, but her clumsiness prevents her from exploiting it.\"",
+        "image": "\/images\/6\/68\/Lilim_LuxuriaClose.png",
+        "obtained": "Crucible of Combat vs The Demon: Lust"
     },
     "Lindwurm": {
         "name": "Lindwurm",
@@ -1824,7 +2004,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Created in the general image of a dragon. She breathes fire, of course, but she's not very good at it and has developed a complex as a result.\"",
+        "image": "\/images\/f\/f7\/LindwurmClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Lorelei": {
         "name": "Lorelei",
@@ -1853,7 +2036,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A woman who, betrayed by her lover, threw herself into the sea.The sound of her harp is sad but beautiful, once it captures a heart, it never lets go.\"",
+        "image": "\/images\/9\/9a\/LoreleiClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Maneater": {
         "name": "Maneater",
@@ -1882,7 +2068,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A vicious, predatory monster that feeds on people.She doesn't usual attack when she's full, but stay away from Maneater when she's hungry.\"",
+        "image": "\/images\/7\/77\/ManeaterClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Manticore": {
         "name": "Manticore",
@@ -1911,7 +2100,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Equal parts lion, poisonous insect, and human, Chimera was born of war. She longs for the day she'll be able to live a happy, normal human life.\"",
+        "image": "\/images\/8\/88\/ManticoreClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Mastema": {
         "name": "Mastema",
@@ -1928,7 +2120,7 @@
         "rarity": "SSR",
         "element": "ThunderSymbol",
         "summonAttack": "Summon Attack - Fanatic Eraser",
-        "summonAttackEffect": "Thunder DMG to all enemies(++++)Applies  Dizziness",
+        "summonAttackEffect": "Thunder DMG to all enemies(++++)\nApplies  Dizziness",
         "summonAttackCooldown": "9 turns",
         "eidolonsEffect": "Eidolon Effect - Flash of madness",
         "eidolonEffectTier0Effect": "Thunder Characters' ATK\u2191 20% \/ Ability DMG\u2191",
@@ -1940,7 +2132,10 @@
         "eidolonEffectTier3Effect": "Thunder Characters' ATK\u2191 30% \/ Ability DMG\u2191 (+)",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder Characters' ATK\u2191 30% \/ Ability DMG\u2191 (++)",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A synthetic thunder Eidolon. She has workshipped and desiredyou since you saved her. Her love for you borders on madness.\"",
+        "image": "\/images\/4\/40\/MastemaClose.png",
+        "obtained": "Advent Battle vs Mastema"
     },
     "Medusa": {
         "name": "Medusa",
@@ -1957,7 +2152,7 @@
         "rarity": "SSR",
         "element": "DarkSymbol",
         "summonAttack": "Summon Attack - Poison's Lethal Embrace",
-        "summonAttackEffect": "Dark DMG to all enemies(++++)Applies  Poisoned",
+        "summonAttackEffect": "Dark DMG to all enemies(++++)\nApplies  Poisoned",
         "summonAttackCooldown": "8 turns",
         "eidolonsEffect": "Eidolon Effect - Kin of Noble Darkness",
         "eidolonEffectTier0Effect": "Dark characters' ATK\u2191 20% \/ Burst Streak DMG\u2191 20%",
@@ -1969,7 +2164,10 @@
         "eidolonEffectTier3Effect": "Dark characters' ATK\u2191 30% \/ Burst Streak DMG\u2191 25%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Dark characters' ATK\u2191 30% \/ Burst Streak DMG\u2191 30%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An evil snake Eidolon who turns those who look upon her to stone. She was once beheaded, but a mad scientist gave her a new body.\"",
+        "image": "\/images\/6\/62\/MedusaClose.PNG",
+        "obtained": "Advent Battle vs Medusa"
     },
     "Melusine": {
         "name": "Melusine",
@@ -1998,7 +2196,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A vicious Eidolon sealed away for her evil deeds, she can turn a human into a lump of ice in an instant. She is capricious and violent.\"",
+        "image": "\/images\/6\/63\/MelusineClose.PNG",
+        "obtained": "Exchange Shop"
     },
     "Mermaid (N)": {
         "name": "Mermaid (N)",
@@ -2027,7 +2228,10 @@
         "eidolonEffectTier3Effect": "Water characters' HP\u2191 20%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Water characters' HP\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A sea-dwelling Eidolon with the lower body of a fish.When she spots a man who looks like her type, she drags him into the sea.\"",
+        "image": "\/images\/8\/83\/MermaidClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Mermaid": {
         "name": "Mermaid",
@@ -2085,7 +2289,10 @@
         "eidolonEffectTier3Effect": "Thunder ATK\u2191 12%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder ATK\u2191 15%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Skilled at mimicry, this Eidolon disguises herself as a treasure chest, a camouflage not even experienced adventurers can see through.\"",
+        "image": "\/images\/3\/3d\/MimicClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Mimic": {
         "name": "Mimic",
@@ -2143,7 +2350,10 @@
         "eidolonEffectTier3Effect": "Fire characters' HP\u2191 20%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire characters' HP\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A half-human, half-cow Eidolon.Minotaur may not look fast, but she's quick and accurate with an axe.\"",
+        "image": "\/images\/a\/ac\/MinotaurClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Minotaur": {
         "name": "Minotaur",
@@ -2201,7 +2411,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A serpent Eidolon with the ability to control the weather.Easily swayed by emotions, her feelings have even caused droughts.\"",
+        "image": "\/images\/e\/eb\/NagaClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Nekhbet": {
         "name": "Nekhbet",
@@ -2230,7 +2443,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Though created to protect the king of the land with magical science, no science could prevent the king's death and the country's destruction.\"",
+        "image": "\/images\/d\/db\/NekhClose.png",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Nightmare": {
         "name": "Nightmare",
@@ -2259,7 +2475,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"This demon plants the seeds of nightmares in people's minds and feeds off of their suffering.\"",
+        "image": "\/images\/7\/7f\/NightmareClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Nova Kaiser Dragoon": {
         "name": "Nova Kaiser Dragoon",
@@ -2276,7 +2495,7 @@
         "rarity": "SSR",
         "element": "FireSymbol",
         "summonAttack": "Summon Attack - Guardian Flame of the Dragon Emperor -",
-        "summonAttackEffect": "All allies'  Fire ATK\u2191 (++) \/  Wind RST\u2191 (++) (Limit Break \u2606\u2606\u2606\u2606)All allies'  Fire ATK\u2191 (+++) \/  Wind RST\u2191 (++) (Limit Break \u2605\u2606\u2606\u2606)",
+        "summonAttackEffect": "All allies'  Fire ATK\u2191 (++) \/  Wind RST\u2191 (++) (Limit Break \u2606\u2606\u2606\u2606)\nAll allies'  Fire ATK\u2191 (+++) \/  Wind RST\u2191 (++) (Limit Break \u2605\u2606\u2606\u2606)",
         "summonAttackCooldown": "8 turns",
         "eidolonsEffect": "Eidolon Effect - Divine Shield of the Fire Dragon",
         "eidolonEffectTier0Effect": "Fire characters' Healing Ability recovery power\u2191",
@@ -2288,7 +2507,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"This Eidolon has the unrivaled power of a supernova.She likes to keep things plain and simple, charging powerfully into any situation.\"",
+        "image": "\/images\/d\/dc\/NovaKaiserDragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Orc (N)": {
         "name": "Orc (N)",
@@ -2317,7 +2539,10 @@
         "eidolonEffectTier3Effect": "Fire ATK\u2191 12%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire ATK\u2191 15%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A ubiquitous eidolon found in grasslands and village fields.They reproduce so fast that no matter how many you kill, they'll never die out.\"",
+        "image": "\/images\/b\/be\/OrcClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Orc": {
         "name": "Orc",
@@ -2375,7 +2600,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"She stores powerful magic in the scarf around her neck. It's said that she has a lost sister that she's still searching for.\"",
+        "image": "\/images\/2\/26\/OrthrusClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Ouroboros": {
         "name": "Ouroboros",
@@ -2404,7 +2632,10 @@
         "eidolonEffectTier3Effect": "Dark\/Thunder ATK\u2191 55%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Dark\/Thunder ATK\u2191 60%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"The emotionless, evil dragon who rules infinity. She thinks of human men merely as tools for procreation.\"",
+        "image": "\/images\/9\/91\/OuroClose.png",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Pegasus": {
         "name": "Pegasus",
@@ -2433,7 +2664,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A sacred beast who protects the world as the guardian of light. Pure and sincere, lately she's been worrying that she's too gullible.\"",
+        "image": "\/images\/6\/69\/PegasusClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Phoenix": {
         "name": "Phoenix",
@@ -2462,7 +2696,10 @@
         "eidolonEffectTier3Effect": "Light ATK\u2191 40% \/ Thunder ATK\u2191 35%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Light \/ Thunder ATK\u2191 40%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon who rarely appears before others. Just meeting her is said to be good luck. She loves shiny things and obeys her desires.\"",
+        "image": "\/images\/9\/94\/PhoenixClose.PNG",
+        "obtained": "Advent Battle vs Phoenix"
     },
     "Pixie": {
         "name": "Pixie",
@@ -2491,7 +2728,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A fairy Eidolon, created to be a pet in the pre-Ragnarok world.Pixies have a temper, but are loyal to their own kind.\"",
+        "image": "\/images\/4\/46\/PixieClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Prison of Darkness, Disaster": {
         "name": "Prison of Darkness, Disaster",
@@ -2520,7 +2760,10 @@
         "eidolonEffectTier3Effect": "Dark characters' HP \/ ATK\u2191 18%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Dark characters' HP \/ ATK\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An endless prison of darkness, her awesome power can cause catastrophic damage. She has transformed into a malicious force of devastation.\"",
+        "image": "\/images\/7\/73\/Prison_of_Darkness%2C_DisasterClose.PNG",
+        "obtained": "Desperate Infinite Darkness"
     },
     "Prison of Fire, Disaster": {
         "name": "Prison of Fire, Disaster",
@@ -2549,7 +2792,10 @@
         "eidolonEffectTier3Effect": "Fire characters' HP\/ATK\u2191 18%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire characters' HP\/ATK\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An endless prison of fire, her awesome power can cause catastrophic damage. She has transformed into a malicious force of devastation.\"",
+        "image": "\/images\/f\/fd\/Prison_of_Fire%2C_DisasterClose.PNG",
+        "obtained": "Infernal Onslaught"
     },
     "Prison of Ice, Disaster": {
         "name": "Prison of Ice, Disaster",
@@ -2578,7 +2824,10 @@
         "eidolonEffectTier3Effect": "Water characters' HP\/ATK\u2191 18%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Water characters' HP\/ATK\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An endless prison of ice, her awesome power can cause catastrophic damage. She has transformed into a malicious force of devastation.\"",
+        "image": "\/images\/a\/a2\/Prison_of_Ice%2C_DisasterClose.PNG",
+        "obtained": "Fatal Creeping Ice"
     },
     "Prison of Light, Disaster": {
         "name": "Prison of Light, Disaster",
@@ -2607,7 +2856,10 @@
         "eidolonEffectTier3Effect": "Light characters' HP \/ ATK\u2191 18%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Light characters' HP \/ ATK\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An endless prison of light, her awesome power can cause catastrophic damage. She has transformed into a malicious force of devastation.\"",
+        "image": "\/images\/4\/40\/Prison_of_Light%2C_DisasterClose.PNG",
+        "obtained": "Merciful Flash of Death"
     },
     "Prison of Lightning, Disaster": {
         "name": "Prison of Lightning, Disaster",
@@ -2636,7 +2888,10 @@
         "eidolonEffectTier3Effect": "Thunder characters' HP \/ ATK\u2191 18%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder characters' HP \/ ATK\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An endless prison of lightning, her awesome power can cause catastrophic damage. She has transformed into a malicious force of devastation.\"",
+        "image": "\/images\/d\/d4\/Prison_of_Lightning%2C_DisasterClose.PNG",
+        "obtained": "Anguished Thunder"
     },
     "Prison of Wind, Disaster": {
         "name": "Prison of Wind, Disaster",
@@ -2665,7 +2920,10 @@
         "eidolonEffectTier3Effect": "Wind characters' HP \/ ATK\u2191 18%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind characters' HP \/ ATK\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An endless prison of wind, her awesome power can cause catastrophic damage. She has transformed into a malicious force of devastation.\"",
+        "image": "\/images\/9\/94\/Prison_of_Wind%2C_DisasterClose.PNG",
+        "obtained": "Brutal Gale"
     },
     "Pulse Kaiser Dragoon": {
         "name": "Pulse Kaiser Dragoon",
@@ -2682,7 +2940,7 @@
         "rarity": "SSR",
         "element": "ThunderSymbol",
         "summonAttack": "Summon Attack - Guardian Thunder of the Dragon Emperor",
-        "summonAttackEffect": "All allies' Thunder ATK\u2191(++) \/ Water RST\u2191(++) (Limit Break \u2606\u2606\u2606\u2606)All allies' Thunder ATK\u2191(+++) \/ Water RST\u2191(++) (Limit Break \u2605\u2606\u2606\u2606)",
+        "summonAttackEffect": "All allies' Thunder ATK\u2191(++) \/ Water RST\u2191(++) (Limit Break \u2606\u2606\u2606\u2606)\nAll allies' Thunder ATK\u2191(+++) \/ Water RST\u2191(++) (Limit Break \u2605\u2606\u2606\u2606)",
         "summonAttackCooldown": "8 turns",
         "eidolonsEffect": "Eidolon Effect - Divine Shield of the Lightning Dragon",
         "eidolonEffectTier0Effect": "Thunder characters' Healing Ability recovery power\u2191",
@@ -2694,7 +2952,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Whatever this thunder Eidolon does, she does it fast. Her thunder is powerful enough to turn reduce an enemy to ash in the blink of an eye.\"",
+        "image": "\/images\/e\/e8\/PulseKaiserDragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Quetzalcoatl": {
         "name": "Quetzalcoatl",
@@ -2723,7 +2984,10 @@
         "eidolonEffectTier3Effect": "Wind characters' ATK\u2191 40% \/ HP\u2191 15%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind characters' ATK\u2191 40% \/ HP\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A polite, peace-loving Eidolon who may go on a violent rampage when drunk.\"",
+        "image": "\/images\/f\/f2\/QuetzalcoatlClose.PNG",
+        "obtained": "Cursed Feathered Serpent"
     },
     "Radon": {
         "name": "Radon",
@@ -2752,7 +3016,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon with a hundred-headed dragon who guards a holy apple tree. All one hundred heads can breathe fire.\"",
+        "image": "\/images\/0\/0f\/RadonClose.PNG",
+        "obtained": "Premium GachaMagical Jewel Gacha"
     },
     "Rahab": {
         "name": "Rahab",
@@ -2769,7 +3036,7 @@
         "rarity": "SSR",
         "element": "WaterSymbol",
         "summonAttack": "Summon Attack - Tidal Stream",
-        "summonAttackEffect": "Water DMG to all enemies(++++)Applies  Thunder RST\u2191 (+) to allies",
+        "summonAttackEffect": "Water DMG to all enemies(++++)\nApplies  Thunder RST\u2191 (+) to allies",
         "summonAttackCooldown": "10 turns",
         "eidolonsEffect": "Eidolon Effect - Water Dragon's Icy Blood",
         "eidolonEffectTier0Effect": "Water characters' ATK\u2191 20% \/ Ability DMG\u2191",
@@ -2781,7 +3048,10 @@
         "eidolonEffectTier3Effect": "Water characters' ATK\u2191 30% \/ Ability DMG\u2191 (+)",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Water characters' ATK\u2191 30% \/ Ability DMG\u2191 (++)",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A giant Eidolon mesmerized by her own beauty.Thanks to her large size, the waves she creates can cause disaster-level damage.\"",
+        "image": "\/images\/4\/4e\/RahabClose.PNG",
+        "obtained": "Advent Battle vs Rahab"
     },
     "Ray Dragoon": {
         "name": "Ray Dragoon",
@@ -2810,7 +3080,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A member of a dragon series created to be guardian beasts. Part angel, she's capable of purifying anything with a magical light.\"",
+        "image": "\/images\/6\/62\/Ray_DragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Salamander": {
         "name": "Salamander",
@@ -2839,7 +3112,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A ferocious Eidolon who lives in a volcanic area. Covered in scales stronger than steel, she is highly heat resistant.\"",
+        "image": "\/images\/5\/59\/SalamanderClose.PNG",
+        "obtained": "Exchange Shop"
     },
     "Sandalphon": {
         "name": "Sandalphon",
@@ -2868,7 +3144,10 @@
         "eidolonEffectTier3Effect": "Thunder characters' ATK\u2191 40% \/ HP\u2191 15%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder characters' ATK\u2191 40% \/ HP\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A mechanized archangel Eidolon. Her manueverability and unparalleled accuracy make it impossible to dodge her attacks.\"",
+        "image": "\/images\/a\/a2\/SandalphonClose.PNG",
+        "obtained": "Lightning Clockwork Angel"
     },
     "Scylla": {
         "name": "Scylla",
@@ -2897,7 +3176,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Once a beautiful spirit of the sea, a curse merged with a dog. Able to control water, she spends most of her time in the water.\"",
+        "image": "\/images\/a\/a8\/ScyllaClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Sea Serpent": {
         "name": "Sea Serpent",
@@ -2926,7 +3208,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Made in the likeness of a legendary pre-Ragnarok beast and known for her mane-like hair, she is also known as the \"Great Sea Serpent.\"\"",
+        "image": "\/images\/6\/6a\/Sea_SerpentClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Sephiroth": {
         "name": "Sephiroth",
@@ -2955,7 +3240,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Once the spirit of a giant tree that supports the earth. This Eidolon supposedly lives to guard the fruit of the tree and the holy grail.\"",
+        "image": "\/images\/d\/d3\/SephirothClose.PNG",
+        "obtained": "Exchange Shop"
     },
     "Shine Spirit": {
         "name": "Shine Spirit",
@@ -2984,7 +3272,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon transformed into a spirit by light magic.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/f\/f1\/Shine_SpiritClose.PNG",
+        "obtained": "Gem GachaDaily QuestsVarious Events"
     },
     "Siren (N)": {
         "name": "Siren (N)",
@@ -3013,7 +3304,10 @@
         "eidolonEffectTier3Effect": "Water DMG\u2193 12%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Water DMG\u2193 15%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon made in a coastal country to steal aboard enemy ships.She uses her beautiful voice to steal the hearts of men before devouring them.\"",
+        "image": "\/images\/c\/c2\/SirenClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Siren": {
         "name": "Siren",
@@ -3071,7 +3365,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind characters' ATK\u2191 70% \/ Item drop rate\u2191 +",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Wind surrounds this Eidolon. Her eight legs and large size allow her to trample any enemy who crosses her path.\"",
+        "image": "\/images\/b\/bb\/Sleipnir_Small.png",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Slime": {
         "name": "Slime",
@@ -3100,7 +3397,10 @@
         "eidolonEffectTier3Effect": "Light DMG\u2193 18%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Light DMG\u2193 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A shape-shifter, this Eidolon controls gelatinous creatures.You'll be begging for death if she tricks you while changed into a cute form.\"",
+        "image": "\/images\/e\/e0\/SlimeClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Succubus": {
         "name": "Succubus",
@@ -3129,7 +3429,10 @@
         "eidolonEffectTier3Effect": "Fire DMG\u2193 18%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire DMG\u2193 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Succubus thirsts for the seed of man.Men who fall into her clutches are destined to die a peaceful death while experiencing the ultimate bliss.\"",
+        "image": "\/images\/f\/f5\/SuccubusClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Sugaar": {
         "name": "Sugaar",
@@ -3158,7 +3461,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Capable of creating electricity on a cellular level, this dragon can send out powerful electric shocks. Her fierce disposition makes her dangerous.\"",
+        "image": "\/images\/1\/1e\/SugaarClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Surtr": {
         "name": "Surtr",
@@ -3187,7 +3493,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A god who controls a fire giant who, at his largest, is bigger than a mountain. The giant can change size, so she usually uses him as a vehicle.\"",
+        "image": "\/images\/4\/44\/SurtrClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Sylph (N)": {
         "name": "Sylph (N)",
@@ -3216,7 +3525,10 @@
         "eidolonEffectTier3Effect": "Wind characters' HP\u2191 20%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind characters' HP\u2191 25%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"One of the four great spirits, this Eidolon rules over the wind.Capable of controlling the air, she can even make herself disappear.\"",
+        "image": "\/images\/b\/bc\/SylphClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Sylph": {
         "name": "Sylph",
@@ -3274,7 +3586,10 @@
         "eidolonEffectTier3Effect": "Thunder\/Wind\/Dark ATK\u2191 45%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder\/Wind\/Dark ATK\u2191 50%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A thunder Eidolon who wields a thunder sword. Extroverted, this hero once led troops in battle.\"",
+        "image": "\/images\/d\/d9\/TakeClose.png",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Tempest Dragoon": {
         "name": "Tempest Dragoon",
@@ -3303,7 +3618,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A member of a dragon series created to be guardian beasts. Uses the protective power of wind to cover and provide support.\"",
+        "image": "\/images\/2\/29\/Tempest_DragoonClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Thunder Spirit": {
         "name": "Thunder Spirit",
@@ -3332,7 +3650,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon transformed into a spirit by thunder magic.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/9\/95\/Thunder_SpiritClose.PNG",
+        "obtained": "Gem GachaDaily QuestsVarious Events"
     },
     "Thunderbird": {
         "name": "Thunderbird",
@@ -3361,7 +3682,10 @@
         "eidolonEffectTier3Effect": "Thunder\/Light ATK\u2191 55%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder\/Light ATK\u2191 60%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A thunderbird Eidolon who stores thunder in her beautiful, glowing wings. She uses lightning, easily twisting the bolts' trajectory to toy with her foes.\"",
+        "image": "\/images\/1\/12\/ThunderbirdClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Typhon": {
         "name": "Typhon",
@@ -3390,7 +3714,10 @@
         "eidolonEffectTier3Effect": "Fire characters' ATK\u2191 30% \/ Burst Streak DMG\u2191 25%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire characters' ATK\u2191 30% \/ Burst Streak DMG\u2191 30%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon with nonstandard fighting skills. She's trying to get Ragnarok's power in order to regain the power she possessed in her heyday.\"",
+        "image": "\/images\/d\/d4\/TyphonClose.PNG",
+        "obtained": "Advent Battle vs Typhon"
     },
     "Unicorn": {
         "name": "Unicorn",
@@ -3419,7 +3746,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An especially good fighter, even among Eidolons. They say the horn on her head can cure any illness.\"",
+        "image": "\/images\/0\/08\/UnicornClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Vampire": {
         "name": "Vampire",
@@ -3448,7 +3778,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Mankind's natural enemy, Vampire tricks men to suck their blood.She has many weaknesses, but her strength more than makes up for those.\"",
+        "image": "\/images\/2\/20\/VampireClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Vritra": {
         "name": "Vritra",
@@ -3465,7 +3798,7 @@
         "rarity": "SSR",
         "element": "WaterSymbol",
         "summonAttack": "Summon Attack - Sea Lance of Annihlation",
-        "summonAttackEffect": "Water DMG to all enemies (++++)Applies  Drowned",
+        "summonAttackEffect": "Water DMG to all enemies (++++)\nApplies  Drowned",
         "summonAttackCooldown": "8 turns turns",
         "eidolonsEffect": "Eidolon Effect - Tyran Dragon's Protection",
         "eidolonEffectTier0Effect": "Water Characters' ATK\u2191 20% \/ Burst Streak DMG\u2191 20%",
@@ -3477,7 +3810,10 @@
         "eidolonEffectTier3Effect": "Water Characters' ATK\u2191 30% \/ Burst Streak DMG\u2191 25%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Water Characters' ATK\u2191 30% \/ Burst Streak DMG\u2191 30%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A youthful Eidolon who controls water.So greedy that she covets the entire world and has stolen entire cities' water supplies, destroying them.\"",
+        "image": "\/images\/0\/0a\/VritraClose.png",
+        "obtained": "Advent Battle vs Vritra"
     },
     "Will-o'-Wisp": {
         "name": "Will-o'-Wisp",
@@ -3506,7 +3842,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"As punishment for her sins in the pre-Ragnarok world she was given an immortal body. She, however, enjoys her unique body to the fullest.\"",
+        "image": "\/images\/6\/64\/Will-o%27-WispClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Wind Spirit": {
         "name": "Wind Spirit",
@@ -3535,7 +3874,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon transformed into a spirit by wind magic.Able to access latent magic by connecting with the souls of other Eidolon.\"",
+        "image": "\/images\/6\/6a\/Wind_SpiritClose.PNG",
+        "obtained": "Gem GachaDaily QuestsVarious Events"
     },
     "Wood Nymph (N)": {
         "name": "Wood Nymph (N)",
@@ -3564,7 +3906,10 @@
         "eidolonEffectTier3Effect": "Wind DMG\u2193 12%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind DMG\u2193 15%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A fairy Eidolon built in the pre-Ragnarok world.A die-hard prankster, she often attacks people.\"",
+        "image": "\/images\/2\/2a\/Wood_NymphClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Wood Nymph": {
         "name": "Wood Nymph",
@@ -3622,7 +3967,10 @@
         "eidolonEffectTier3Effect": "Wind ATK\u2191 12%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Wind ATK\u2191 15%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An Eidolon who fights with the tentacles that come out of the bag on her back.\"",
+        "image": "\/images\/f\/f5\/WormClose.PNG",
+        "obtained": "Gem GachaVarious Quests"
     },
     "Wyvern": {
         "name": "Wyvern",
@@ -3651,7 +3999,10 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"Based on a dragon, this Eidolon was worshipped as the symbol of a nation.She was loyal during the war, but is more capricious these days.\"",
+        "image": "\/images\/9\/94\/WyvernClose.PNG",
+        "obtained": "Premium GachaMagic Jewel GachaGem Gacha"
     },
     "Yamata no Orochi": {
         "name": "Yamata no Orochi",
@@ -3680,7 +4031,10 @@
         "eidolonEffectTier3Effect": "Water characters' ATK\u2191 35%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Water characters' ATK\u2191 40%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A great serpent princess who ruled over a small nation of oriental culture. She desires to create descendants with a worthy man.\"",
+        "image": "\/images\/2\/28\/Yamata_no_OrochiClose.PNG",
+        "obtained": "Premium GachaMagic Jewel Gacha"
     },
     "Yatagarasu": {
         "name": "Yatagarasu",
@@ -3709,7 +4063,10 @@
         "eidolonEffectTier3Effect": "Fire Characters' ATK\u2191 30% \/ Ability DMG\u2191 (+)",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Fire Characters' ATK\u2191 30% \/ Ability DMG\u2191 (++)",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"An ambitious cartographer Eidolon who guards the sun's path. She is tempermental but, adorably, loves shiny things.\"",
+        "image": "\/images\/0\/0d\/YatagarasuClose.png",
+        "obtained": "Advent Battle vs Yatagarasu"
     },
     "Yggdrasil": {
         "name": "Yggdrasil",
@@ -3726,7 +4083,7 @@
         "rarity": "SSR",
         "element": "ThunderSymbol",
         "summonAttack": "Summon Attack - Discharge Blaster",
-        "summonAttackEffect": "Thunder DMG to all enemies(++++)Applies  Regeneration to all allies",
+        "summonAttackEffect": "Thunder DMG to all enemies(++++)\nApplies  Regeneration to all allies",
         "summonAttackCooldown": "9 turns",
         "eidolonsEffect": "Eidolon Effect - Mimil's Holy Thunder",
         "eidolonEffectTier0Effect": "Thunder characters' ATK\u2191 30% \/ HP\u2191 10%",
@@ -3738,7 +4095,10 @@
         "eidolonEffectTier3Effect": "Thunder characters' ATK\u2191 40% \/ HP\u2191 15%",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": "Thunder characters' ATK\u2191 40% \/ HP\u2191 20%",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"This Eidolon, born from the tree of life, thirsts for energy.She assimilates machines to grow and become more powerful.\"",
+        "obtained": "The World Tree's Seed of Despair",
+        "image": "\/images\/1\/1d\/YggdrasilClose.PNG"
     },
     "Yinglong": {
         "name": "Yinglong",
@@ -3767,6 +4127,9 @@
         "eidolonEffectTier3Effect": ".",
         "eidolonEffectTier3Stars": "\u2605 \u2605 \u2605 \u2606",
         "eidolonEffectTier4Effect": ".",
-        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605"
+        "eidolonEffectTier4Stars": "\u2605 \u2605 \u2605 \u2605",
+        "description": "\"A dragon girl created by a program focused on justice. She punishes evil, intent on bringing justice to the new world.\"",
+        "image": "\/images\/9\/9a\/YinglongClose.PNG",
+        "obtained": "Exchange Shop"
     }
 }

@@ -91,6 +91,7 @@ exports.run     = (client, message, args) => {
       var ed_name                     = EDdatas[khname].name;
       var ed_link                     = config.wikidomain+EDdatas[khname].link;
       var ed_thumb                    = config.thumbrooturl+EDdatas[khname].thumb;
+      var ed_image                    = config.thumbrooturl+EDdatas[khname].image;
       var ed_raritythumb              = config.thumbrooturl+EDdatas[khname].raritythumb;
       var ed_rarity                   = EDdatas[khname].rarity;
       var ed_elementthumb             = config.thumbrooturl+EDdatas[khname].elementthumb;
@@ -114,12 +115,15 @@ exports.run     = (client, message, args) => {
       var ed_eidolonEffectTier2Effect = EDdatas[khname].eidolonEffectTier2Effect;
       var ed_eidolonEffectTier3Stars  = EDdatas[khname].eidolonEffectTier3Stars;
       var ed_eidolonEffectTier3Effect = EDdatas[khname].eidolonEffectTier3Effect;
+      var ed_eidolonEffectTier4Stars  = EDdatas[khname].eidolonEffectTier4Stars;
+      var ed_eidolonEffectTier4Effect = EDdatas[khname].eidolonEffectTier4Effect;
 
 
       const embed = new Discord.RichEmbed()
       .setTitle(config.eimojis[ed_rarity]+" "+config.eimojis[ed_element])
       .setAuthor("Eidolon: "+ed_name, "")
       .setColor("#00AE86")
+      .setDescription(EDdatas[khname].description)
       .setThumbnail(ed_thumb)
       .setURL(ed_link)
       .addField("Statistics:", ":crossed_swords: " + ed_attackMin + " - " + ed_attackMax + "    :green_heart: " + ed_HPMin + " - " + ed_HPMax + "    :muscle: " + ed_totalPowerMin + " - " + ed_totalPowerMax, false);
@@ -132,9 +136,13 @@ exports.run     = (client, message, args) => {
         embed.addField(ed_eidolonsEffect, ed_eidolonEffectTier0Stars+" "+ed_eidolonEffectTier0Effect+"\n"+
           ed_eidolonEffectTier1Stars+" "+ed_eidolonEffectTier1Effect+"\n"+
           ed_eidolonEffectTier2Stars+" "+ed_eidolonEffectTier2Effect+"\n"+
-          ed_eidolonEffectTier3Stars+" "+ed_eidolonEffectTier3Effect+"\n"
+          ed_eidolonEffectTier3Stars+" "+ed_eidolonEffectTier3Effect+"\n"+
+          ed_eidolonEffectTier4Stars+" "+ed_eidolonEffectTier4Effect+"\n"
           ,false);
       }
+
+      embed.addField("Obtained from:",EDdatas[khname].obtained,false);
+      embed.setImage(ed_image);
 
       message.channel.send({embed});
       khfound = true;
