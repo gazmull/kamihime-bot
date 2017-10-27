@@ -84,16 +84,26 @@ exports.run     = (client, message, args) => {
       .addField("Statistics:", ":crossed_swords: " + kh_attackMin + " - " + kh_attackMax + "    :green_heart: " + kh_HPMin + " - " + kh_HPMax + "    :muscle: " + kh_totalPowerMin + " - " + kh_totalPowerMax, false);
 
       if (KHdatas[khname].burst){
-        embed.addField("Burst: "+KHdatas[khname].burst,KHdatas[khname].burstdesc,false)
+        var burstdesc = KHdatas[khname].burstdesc.replace("\u2605","\n\u2605");
+        embed.addField("Burst: "+KHdatas[khname].burst,burstdesc,false)
       }
       if (KHdatas[khname].ability1){
-        embed.addField("Ability: "+KHdatas[khname].ability1+" ("+KHdatas[khname].abilitycool1+")",KHdatas[khname].abilitydesc1,false)
+        var abilitydesc1 = KHdatas[khname].abilitydesc1.replace("\u2605","\n\u2605");
+        var abilitycool1 = KHdatas[khname].abilitycool1.replace('Cooldown:',':battery:');
+        abilitycool1 = abilitycool1.replace('Duration:',':hourglass:');
+        embed.addField("Ability: "+KHdatas[khname].ability1+" "+abilitycool1,abilitydesc1,false)
       }
       if (KHdatas[khname].ability2){
-        embed.addField("Ability: "+KHdatas[khname].ability2+" ("+KHdatas[khname].abilitycool2+")",KHdatas[khname].abilitydesc2,false)
+        var abilitydesc2 = KHdatas[khname].abilitydesc2.replace("\u2605","\n\u2605");
+        var abilitycool2 = KHdatas[khname].abilitycool2.replace('Cooldown:',':battery:');
+        abilitycool2 = abilitycool2.replace('Duration:',':hourglass:');
+        embed.addField("Ability: "+KHdatas[khname].ability2+" "+abilitycool2,abilitydesc2,false)
       }
       if (KHdatas[khname].ability3){
-        embed.addField("Ability: "+KHdatas[khname].ability3+" ("+KHdatas[khname].abilitycool3+")",KHdatas[khname].abilitydesc3,false)
+        var abilitydesc3 = KHdatas[khname].abilitydesc3.replace("\u2605","\n\u2605");
+        var abilitycool3 = KHdatas[khname].abilitycool3.replace('Cooldown:',':battery:');
+        abilitycool3 = abilitycool3.replace('Duration:',':hourglass:');
+        embed.addField("Ability: "+KHdatas[khname].ability3+" "+abilitycool3,abilitydesc3,false)
       }
       if (KHdatas[khname].assist){
         embed.addField("Assist: "+KHdatas[khname].assist,KHdatas[khname].assistdesc,false)
