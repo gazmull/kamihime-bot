@@ -60,11 +60,12 @@ exports.run     = (client, message, args) => {
       var kh_name           = KHdatas[khname].name;
       var kh_link           = config.wikidomain+KHdatas[khname].link;
       var kh_thumb          = config.thumbrooturl+KHdatas[khname].thumb;
+      var kh_image          = config.thumbrooturl+KHdatas[khname].image;
       var kh_raritythumb    = config.thumbrooturl+KHdatas[khname].raritythumb;
       var kh_rarity         = KHdatas[khname].rarity;
       var kh_elementthumb   = config.thumbrooturl+KHdatas[khname].elementthumb;
       var kh_element        = KHdatas[khname].element;
-      var kh_classthumb     = config.thumbrooturl+KHdatas[khname].classthumb;
+      var kh_class          = KHdatas[khname].class;
       var kh_attackMin      = KHdatas[khname].attackMin;
       var kh_attackMax      = KHdatas[khname].attackMax;
       var kh_HPMin          = KHdatas[khname].HPMin;
@@ -73,13 +74,34 @@ exports.run     = (client, message, args) => {
       var kh_totalPowerMax  = KHdatas[khname].totalPowerMax;
 
       const embed = new Discord.RichEmbed()
-      .setTitle(config.eimojis[kh_rarity]+" "+config.eimojis[kh_element])
+      .setTitle(config.eimojis[kh_rarity]+" "+config.eimojis[kh_element]+" ("+kh_class+")")
       .setAuthor("Kamihime: "+kh_name, "")
       .setColor("#00AE86")
+      .setDescription("*"+KHdatas[khname].description+"*")
       .setThumbnail(kh_thumb)
       .setURL(kh_link)
-      .setImage(kh_classthumb)
+      .setImage(kh_image)
       .addField("Statistics:", ":crossed_swords: " + kh_attackMin + " - " + kh_attackMax + "    :green_heart: " + kh_HPMin + " - " + kh_HPMax + "    :muscle: " + kh_totalPowerMin + " - " + kh_totalPowerMax, false);
+
+      if (KHdatas[khname].burst){
+        embed.addField("Burst: "+KHdatas[khname].burst,KHdatas[khname].burstdesc,false)
+      }
+      if (KHdatas[khname].ability1){
+        embed.addField("Ability: "+KHdatas[khname].ability1+" ("+KHdatas[khname].abilitycool1+")",KHdatas[khname].abilitydesc1,false)
+      }
+      if (KHdatas[khname].ability2){
+        embed.addField("Ability: "+KHdatas[khname].ability2+" ("+KHdatas[khname].abilitycool2+")",KHdatas[khname].abilitydesc2,false)
+      }
+      if (KHdatas[khname].ability3){
+        embed.addField("Ability: "+KHdatas[khname].ability3+" ("+KHdatas[khname].abilitycool3+")",KHdatas[khname].abilitydesc3,false)
+      }
+      if (KHdatas[khname].assist){
+        embed.addField("Assist: "+KHdatas[khname].assist,KHdatas[khname].assistdesc,false)
+      }
+
+      embed.addField("Obtained from:",KHdatas[khname].obtained,false);
+      embed.addField("Released weapon:",KHdatas[khname].weapon,false);
+
       message.channel.send({embed});
       khfound = true;
     }
@@ -123,7 +145,7 @@ exports.run     = (client, message, args) => {
       .setTitle(config.eimojis[ed_rarity]+" "+config.eimojis[ed_element])
       .setAuthor("Eidolon: "+ed_name, "")
       .setColor("#00AE86")
-      .setDescription(EDdatas[khname].description)
+      .setDescription("*"+EDdatas[khname].description+"*")
       .setThumbnail(ed_thumb)
       .setURL(ed_link)
       .addField("Statistics:", ":crossed_swords: " + ed_attackMin + " - " + ed_attackMax + "    :green_heart: " + ed_HPMin + " - " + ed_HPMax + "    :muscle: " + ed_totalPowerMin + " - " + ed_totalPowerMax, false);
