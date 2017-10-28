@@ -85,28 +85,28 @@ exports.run     = (client, message, args) => {
 
       if (KHdatas[khname].burst){
         var burstdesc = KHdatas[khname].burstdesc.replace("\u2605","\n\u2605");
-        embed.addField("Burst: "+KHdatas[khname].burst,burstdesc,false)
+        embed.addField(":b: "+KHdatas[khname].burst,burstdesc,false)
       }
       if (KHdatas[khname].ability1){
         var abilitydesc1 = KHdatas[khname].abilitydesc1.replace("\u2605","\n\u2605");
         var abilitycool1 = KHdatas[khname].abilitycool1.replace('Cooldown:',':battery:');
         abilitycool1 = abilitycool1.replace('Duration:',':hourglass:');
-        embed.addField("Ability: "+KHdatas[khname].ability1+" "+abilitycool1,abilitydesc1,false)
+        embed.addField(":regional_indicator_a: "+KHdatas[khname].ability1+" "+abilitycool1,abilitydesc1,false)
       }
       if (KHdatas[khname].ability2){
         var abilitydesc2 = KHdatas[khname].abilitydesc2.replace("\u2605","\n\u2605");
         var abilitycool2 = KHdatas[khname].abilitycool2.replace('Cooldown:',':battery:');
         abilitycool2 = abilitycool2.replace('Duration:',':hourglass:');
-        embed.addField("Ability: "+KHdatas[khname].ability2+" "+abilitycool2,abilitydesc2,false)
+        embed.addField(":regional_indicator_a: "+KHdatas[khname].ability2+" "+abilitycool2,abilitydesc2,false)
       }
       if (KHdatas[khname].ability3){
         var abilitydesc3 = KHdatas[khname].abilitydesc3.replace("\u2605","\n\u2605");
         var abilitycool3 = KHdatas[khname].abilitycool3.replace('Cooldown:',':battery:');
         abilitycool3 = abilitycool3.replace('Duration:',':hourglass:');
-        embed.addField("Ability: "+KHdatas[khname].ability3+" "+abilitycool3,abilitydesc3,false)
+        embed.addField(":regional_indicator_a: "+KHdatas[khname].ability3+" "+abilitycool3,abilitydesc3,false)
       }
       if (KHdatas[khname].assist){
-        embed.addField("Assist: "+KHdatas[khname].assist,KHdatas[khname].assistdesc,false)
+        embed.addField(":white_check_mark: "+KHdatas[khname].assist,KHdatas[khname].assistdesc,false)
       }
 
       embed.addField("Obtained from:",KHdatas[khname].obtained,false);
