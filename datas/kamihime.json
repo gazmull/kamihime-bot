@@ -31,7 +31,8 @@
         "description": "\"Nergal has been rediscovering her emotions ever since she met you.Her fire powers have also been changing, transforming into light magic.\"",
         "image": "\/images\/6\/69\/%28Beach_Light%29_NergalClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha(Limited)",
-        "weapon": "Starfish Blade"
+        "weapon": "Starfish Blade",
+        "weaponlink": "\/wiki\/Starfish_Blade"
     },
     "(Mid Summer Sun) Sol": {
         "name": "(Mid Summer Sun) Sol",
@@ -65,7 +66,8 @@
         "description": "\"An energetic Kamihime who illuminates the beach with a light like the sun.Her new staff is specially made to resemble the misummer sun.\"",
         "image": "\/images\/8\/87\/%28Mid_Summer_Sun%29_SolClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha(Limited)",
-        "weapon": "Sun Staff Summersol"
+        "weapon": "Sun Staff Summersol",
+        "weaponlink": "\/wiki\/Sun_Staff_Summersol"
     },
     "(Pretty Pumpkin) Artemis": {
         "name": "(Pretty Pumpkin) Artemis",
@@ -99,7 +101,8 @@
         "description": "\"Artemis wears a Halloween costume and wields a thunder hammer.Her attacks, however, are anything but sweet like candy.\"",
         "image": "\/images\/9\/92\/%28Pretty_Pumpkin%29_ArtemisClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Jack-o-Hammer"
+        "weapon": "Jack-o-Hammer",
+        "weaponlink": "\/wiki\/Jack-o-Hammer"
     },
     "(Sunlight) Brynhildr": {
         "name": "(Sunlight) Brynhildr",
@@ -133,7 +136,8 @@
         "description": "\"She hangs out at the beach, using a parasol to protect her porcelain white skin.Close the parasol and it doubles as a weapon.\"",
         "image": "\/images\/0\/08\/%28Sunlight%29_BrynhildrClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha(Limited)",
-        "weapon": "Flamea Parasol"
+        "weapon": "Flamea Parasol",
+        "weaponlink": "\/wiki\/Flamea_Parasol"
     },
     "(Thunder Witch) Michael": {
         "name": "(Thunder Witch) Michael",
@@ -167,7 +171,8 @@
         "description": "\"Michael has learned thunder magic and become a witch. She flies on a broom that illuminates up the sky with lightning.\"",
         "image": "\/images\/7\/74\/%28Thunder_Witch%29_MichaelClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Witch Broom"
+        "weapon": "Witch Broom",
+        "weaponlink": "\/wiki\/Witch_Broom"
     },
     "Acala": {
         "name": "Acala",
@@ -201,7 +206,8 @@
         "description": "\"This Kamihime possesses knowledge of the core of Ragnarok. However, she has lost part of her memory and thus sets out on a journey to get it back.\"",
         "image": "\/images\/3\/3f\/AcalaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Vajra Trident Sword"
+        "weapon": "Vajra Trident Sword",
+        "weaponlink": "\/wiki\/Vajra_Trident_Sword"
     },
     "Agni": {
         "name": "Agni",
@@ -235,7 +241,8 @@
         "description": "\"A flaming Kamihime created by scientists who worship fire.She is quite hotheaded, but can convert anger into power.\"",
         "image": "\/images\/8\/80\/AgniClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Heaven's Fire Axe"
+        "weapon": "Heaven's Fire Axe",
+        "weaponlink": "\/wiki\/Heaven%27s_Fire_Axe"
     },
     "Amaterasu": {
         "name": "Amaterasu",
@@ -269,7 +276,8 @@
         "description": "\"The sun goddess who guarded over a once prosperous eastern island nation.This classy, beautiful lady loves the aesthetics of man-on-man action.\"",
         "image": "\/images\/1\/19\/AmaterasuClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Yata no Kagami"
+        "weapon": "Yata no Kagami",
+        "weaponlink": "\/wiki\/Yata_no_Kagami"
     },
     "Amon (Unleashed)": {
         "name": "Amon (Unleashed)",
@@ -303,7 +311,8 @@
         "description": "\"Amon's true form with her powers unleashed.She emits the power of darkness. Naturally, she still loves Diabolos when in this state.\"",
         "image": "\/images\/c\/ce\/Amon_%28Unleashed%29Close.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Avaricious Grimoire"
+        "weapon": "Avaricious Grimoire",
+        "weaponlink": "\/wiki\/Avaricious_Grimoire"
     },
     "Amon": {
         "name": "Amon",
@@ -337,7 +346,8 @@
         "description": "\"A perfectionist maid who serves Diabolos and often appears unexpectedly.Naturally, she loves Diabolos.\"",
         "image": "\/images\/e\/ef\/AmonClose.png",
         "obtained": "Complete Main QuestChapter 4",
-        "weapon": "N\/A"
+        "weapon": "N\/A",
+        "weaponlink": ""
     },
     "Aphrodite": {
         "name": "Aphrodite",
@@ -371,7 +381,8 @@
         "description": "\"A Kamihime willing to face any danger for beauty.She uses water magic to attack her foes with bubbles of death.\"",
         "image": "\/images\/5\/5f\/AphroditeClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Aphros Beauty"
+        "weapon": "Aphros Beauty",
+        "weaponlink": "\/wiki\/Aphros_Beauty"
     },
     "Apsara": {
         "name": "Apsara",
@@ -405,7 +416,8 @@
         "description": "\"A Kamihime born to control the firearms of the gods.She travels the globe, trying to bring about world peace.\"",
         "image": "\/images\/b\/ba\/ApsaraClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Nimbus Ramayana"
+        "weapon": "Nimbus Ramayana",
+        "weaponlink": "\/wiki\/Nimbus_Ramayana"
     },
     "Ares": {
         "name": "Ares",
@@ -439,7 +451,8 @@
         "description": "\"She was once plunged into a volcano by the gods for her brutality.Despite being repeatedly sealed away, she has yet to repent and remains untamed.\"",
         "image": "\/images\/e\/ec\/AresClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Scorpion Axe Antares"
+        "weapon": "Scorpion Axe Antares",
+        "weaponlink": "\/wiki\/Scorpion_Axe_Antares"
     },
     "Artemis": {
         "name": "Artemis",
@@ -473,7 +486,8 @@
         "description": "\"A Kamihime who earned the title of Moon Goddess at the Moon lab.She tends to be tsundere with men whom she likes.\"",
         "image": "\/images\/1\/1e\/ArtemisClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Divine Moonlight Bow"
+        "weapon": "Divine Moonlight Bow",
+        "weaponlink": "\/wiki\/Divine_Moonlight_Bow"
     },
     "Astaroth": {
         "name": "Astaroth",
@@ -507,7 +521,8 @@
         "description": "\"She held the title of great marchioness of a demon organization before Ragnarok.However, she is extremely lazy.\"",
         "image": "\/images\/9\/9b\/AstarothClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Poison Blade Astaroth"
+        "weapon": "Poison Blade Astaroth",
+        "weaponlink": "\/wiki\/Poison_Blade_Astaroth"
     },
     "Aurora": {
         "name": "Aurora",
@@ -541,7 +556,8 @@
         "description": "\"Her aurora-like waves control opponents.She may seem like humorless, but she's just earnest.\"",
         "image": "\/images\/a\/ac\/AuroraClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Light Lance"
+        "weapon": "Light Lance",
+        "weaponlink": "\/wiki\/Light_Lance"
     },
     "Azazel": {
         "name": "Azazel",
@@ -575,7 +591,8 @@
         "description": "\"A Kamihime who once led a nation's revolution. She's lace, onlymotivated in a fight. She uses an expandable sword to defeat evil.\"",
         "image": "\/images\/4\/4d\/AzazelClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Asiel Blade"
+        "weapon": "Asiel Blade",
+        "weaponlink": "\/wiki\/Asiel_Blade"
     },
     "Baal": {
         "name": "Baal",
@@ -609,7 +626,8 @@
         "description": "\"A Kamihime who once had human flesh and acted as the leader of the Baal bandit gang.Due to certain circumstances, she submitted her body to her creator.\"",
         "image": "\/images\/f\/fc\/BaalClose.png",
         "obtained": "Complete Main QuestChapter 14",
-        "weapon": "N\/A"
+        "weapon": "N\/A",
+        "weaponlink": ""
     },
     "Baldr": {
         "name": "Baldr",
@@ -643,7 +661,8 @@
         "description": "\"A Kamihime whose reactive armor can defend against any attack.She's sweet and gentle despite her tough armor.\"",
         "image": "\/images\/0\/0d\/BaldrClose.png",
         "obtained": "The World Tree's Seed of Despair",
-        "weapon": "Prism Hammer"
+        "weapon": "Prism Hammer",
+        "weaponlink": "\/wiki\/Prism_Hammer"
     },
     "Balor": {
         "name": "Balor",
@@ -677,7 +696,8 @@
         "description": "\"A Kamihime who bears the evil eye.It curses those she looks upon, so she keeps it hidden with a special patch.\"",
         "image": "\/images\/2\/24\/BalorClose.png",
         "obtained": "Raging Fury of the Inferno Dragon",
-        "weapon": "Fomoir Crystal"
+        "weapon": "Fomoir Crystal",
+        "weaponlink": "\/wiki\/Fomoir_Crystal"
     },
     "Baphomet": {
         "name": "Baphomet",
@@ -711,7 +731,8 @@
         "description": "\"A selfish and bloodthirsty demon who operates the Sabbath.She absorbs power from semen in order to become a high-ranking Kamihime.\"",
         "image": "\/images\/a\/a1\/BaphometClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Sorceress' Staff Sabbath"
+        "weapon": "Sorceress' Staff Sabbath",
+        "weaponlink": "\/wiki\/Sorceress%27_Staff_Sabbath"
     },
     "Beelzebub": {
         "name": "Beelzebub",
@@ -745,7 +766,8 @@
         "description": "\"A punk musician demon whose music causes its listeners to die of madness.She was once sealed away by the gods for her arrogance.\"",
         "image": "\/images\/0\/08\/BeelzebubClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Ba'al Zebub's Rod"
+        "weapon": "Ba'al Zebub's Rod",
+        "weaponlink": "\/wiki\/Ba%27al_Zebub%27s_Rod"
     },
     "Belobog": {
         "name": "Belobog",
@@ -779,7 +801,8 @@
         "description": "\"A Kamihime with innate combat skills, she was born from a dazzling light.Behind her cheerful front lie sentiments for an estranged childhood friend.\"",
         "image": "\/images\/b\/b0\/BelobogClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Heavenly Werkbau"
+        "weapon": "Heavenly Werkbau",
+        "weaponlink": "\/wiki\/Heavenly_Werkbau"
     },
     "Belphegor": {
         "name": "Belphegor",
@@ -813,7 +836,8 @@
         "description": "\"Despite looking childish, this demon possesses unrivaled power.For some reason, she rides a training potty shaped motorbike.\"",
         "image": "\/images\/f\/f4\/BelphegorClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Demon Baselard"
+        "weapon": "Demon Baselard",
+        "weaponlink": "\/wiki\/Demon_Baselard"
     },
     "Boreas": {
         "name": "Boreas",
@@ -847,7 +871,8 @@
         "description": "\"The third of four Anemoi sisters and manager of the north wind.At times her wind magic will tear even her own clothing away.\"",
         "image": "\/images\/a\/ae\/BoreasClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Wind Staff Anemoi"
+        "weapon": "Wind Staff Anemoi",
+        "weaponlink": "\/wiki\/Wind_Staff_Anemoi"
     },
     "Brahma": {
         "name": "Brahma",
@@ -881,7 +906,8 @@
         "description": "\"With powers come from space, she used too much power and reverted her body to a childlike state,but her thunder powers are still intact.\"",
         "image": "\/images\/7\/72\/BrahmaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Trimurti Rifle"
+        "weapon": "Trimurti Rifle",
+        "weaponlink": "\/wiki\/Trimurti_Rifle"
     },
     "Brynhildr": {
         "name": "Brynhildr",
@@ -915,7 +941,8 @@
         "description": "\"A fire-wielding Kamihime proficient in the combat arts.She once served as the leader and matron of a mercenary army.\"",
         "image": "\/images\/8\/82\/BrynhildrClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Nothung"
+        "weapon": "Nothung",
+        "weaponlink": "\/wiki\/Nothung"
     },
     "Caspiel": {
         "name": "Caspiel",
@@ -949,7 +976,8 @@
         "description": "\"A just Kamihime born from the moon. She was once charged with defending a facility there, but opposed their human experiments.\"",
         "image": "\/images\/5\/57\/CaspielClose.png",
         "obtained": "Magic jewel GachaPremium Gacha",
-        "weapon": "Moon Staff"
+        "weapon": "Moon Staff",
+        "weaponlink": "\/wiki\/Moon_Staff"
     },
     "Circe": {
         "name": "Circe",
@@ -983,7 +1011,8 @@
         "description": "\"A Kamihime who seduces men for her own pleasure. Thanks to that behavior, she has a bounty on her head.\"",
         "image": "\/images\/7\/77\/CirceClose.png",
         "obtained": "Magic Jewel GachaPremium Gacha",
-        "weapon": "Madness Breaker"
+        "weapon": "Madness Breaker",
+        "weaponlink": "\/wiki\/Madness_Breaker"
     },
     "Cronus": {
         "name": "Cronus",
@@ -1017,7 +1046,8 @@
         "description": "\"A Kamihime who once ruled as a dictator.Due to her long slumber, her body has regressed to that of a little girl.\"",
         "image": "\/images\/5\/5a\/CronusClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Adamas"
+        "weapon": "Adamas",
+        "weaponlink": "\/wiki\/Adamas"
     },
     "Cthulhu": {
         "name": "Cthulhu",
@@ -1051,7 +1081,8 @@
         "description": "\" A Kamihime in the ancient undersea city of R'lyeh. She thinks of humans as nuisances and throws those who defy her into sea.\"",
         "image": "\/images\/f\/f1\/CthulhuClose.png",
         "obtained": "Magic Jewel GachaPremium Gacha",
-        "weapon": "Book of R'lyeh"
+        "weapon": "Book of R'lyeh",
+        "weaponlink": "\/wiki\/Book_of_R%27lyeh"
     },
     "Cu Chulainn": {
         "name": "Cu Chulainn",
@@ -1085,7 +1116,8 @@
         "abilitycool3": "Cooldown: 8 turns Duration: 2 turns",
         "assist": "Geas",
         "assistdesc": "ATK\u2191",
-        "class": "Offense"
+        "class": "Offense",
+        "weaponlink": "\/wiki\/Gae_Bolg"
     },
     "Cybele": {
         "name": "Cybele",
@@ -1119,7 +1151,8 @@
         "description": "\"A giant scissor-wielding, nature-loving goddess.Her trusty lion is alive and holds a secret on its back.\"",
         "image": "\/images\/b\/bd\/CybeleClose.png",
         "obtained": "Complete Main QuestChapter 9",
-        "weapon": "N\/A"
+        "weapon": "N\/A",
+        "weaponlink": ""
     },
     "Dagon": {
         "name": "Dagon",
@@ -1153,7 +1186,8 @@
         "abilitycool3": "",
         "assist": "",
         "assistdesc": "",
-        "class": "Tricky"
+        "class": "Tricky",
+        "weaponlink": "\/wiki\/Cult_Gun"
     },
     "Dazbog": {
         "name": "Dazbog",
@@ -1187,7 +1221,8 @@
         "description": "\"Clumsy, but extraordinarily lucky, this Kamihime could trip and fall only to find treasure at her feet.\"",
         "image": "\/images\/6\/6d\/DazbogClose.png",
         "obtained": "Magic Jewel GachaPremium Gacha",
-        "weapon": "Miracle Bow"
+        "weapon": "Miracle Bow",
+        "weaponlink": "\/wiki\/Miracle_Bow"
     },
     "Diana": {
         "name": "Diana",
@@ -1221,7 +1256,8 @@
         "description": "\"Born on the moon, she wields a long-range silver bow.She and Artemis are rivals.\"",
         "image": "\/images\/6\/6d\/DianaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Luna Bow"
+        "weapon": "Luna Bow",
+        "weaponlink": "\/wiki\/Luna_Bow"
     },
     "Dike": {
         "name": "Dike",
@@ -1255,7 +1291,8 @@
         "description": "\"A Kamihime who contributed to the advancement of mankind.She has risen to stop Ragnarok from reoccuring and to save mankind.\"",
         "image": "\/images\/2\/23\/DikeClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Horae Slash"
+        "weapon": "Horae Slash",
+        "weaponlink": "\/wiki\/Horae_Slash"
     },
     "Eligos": {
         "name": "Eligos",
@@ -1289,7 +1326,8 @@
         "description": "\"Captured and abused for her ability to give love's power to those who summon her,she's now emotionally withdrawn.\"",
         "image": "\/images\/7\/70\/EligosClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Abigor Lance"
+        "weapon": "Abigor Lance",
+        "weaponlink": "\/wiki\/Abigor_Lance"
     },
     "Freja": {
         "name": "Freja",
@@ -1323,7 +1361,8 @@
         "description": "\"A cheerful, moon goddess with a propensity for infidelity.Her beloved gun shoots star-shaped bullets.\"",
         "image": "\/images\/c\/c9\/FrejaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Vanadi Shot"
+        "weapon": "Vanadi Shot",
+        "weaponlink": "\/wiki\/Vanadi_Shot"
     },
     "Gabriel": {
         "name": "Gabriel",
@@ -1357,7 +1396,8 @@
         "description": "\"A well-informed Kamihime also referred to as the 'Holy Library.'She is traveling in search of information about Ragnarok.\"",
         "image": "\/images\/e\/e5\/GabrielClose.png",
         "obtained": "Lightning Clockwork Angel",
-        "weapon": "God Hand"
+        "weapon": "God Hand",
+        "weaponlink": "\/wiki\/God_Hand"
     },
     "Gaia": {
         "name": "Gaia",
@@ -1391,7 +1431,8 @@
         "description": "\"A goddess who controls all this world's natural phenomena and maintains order.She also helped create the pre-Ragnarok world.\"",
         "image": "\/images\/4\/4b\/GaiaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "God Destroyer Gaia Force"
+        "weapon": "God Destroyer Gaia Force",
+        "weaponlink": "\/wiki\/God_Destroyer_Gaia_Force"
     },
     "Gaia (Awakened)": {
         "name": "Gaia (Awakened)",
@@ -1425,7 +1466,8 @@
         "description": "\"??\"",
         "image": "\/images\/4\/43\/Gaia_%28Awakened%29Close.png",
         "obtained": "Awaken Gaia",
-        "weapon": "N\/A"
+        "weapon": "N\/A",
+        "weaponlink": ""
     },
     "Hades": {
         "name": "Hades",
@@ -1459,7 +1501,8 @@
         "description": "\"A Kamihime with an invisibility helmet.She may appear sinister, but she's actually quite shy.\"",
         "image": "\/images\/1\/17\/HadesClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Stealth Crown"
+        "weapon": "Stealth Crown",
+        "weaponlink": "\/wiki\/Stealth_Crown"
     },
     "Heimdallr": {
         "name": "Heimdallr",
@@ -1493,7 +1536,8 @@
         "description": "\"A tornado-wielding Kamihime with X-ray vision and extraordinary hearing.Her horn is endowed with the knowledge of the world's fate.\"",
         "image": "\/images\/7\/75\/HeimdallrClose.png",
         "obtained": "Wicked Emperor of the Abyss",
-        "weapon": "Gjallarhorn"
+        "weapon": "Gjallarhorn",
+        "weaponlink": "\/wiki\/Gjallarhorn"
     },
     "Hermes": {
         "name": "Hermes",
@@ -1527,7 +1571,8 @@
         "description": "\"She may be a multitalented, sharp-witted messenger,but she is incredibly thickheaded when it comes to her love affairs.\"",
         "image": "\/images\/d\/dc\/HermesClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Caduceus"
+        "weapon": "Caduceus",
+        "weaponlink": "\/wiki\/Caduceus"
     },
     "Hermod": {
         "name": "Hermod",
@@ -1561,7 +1606,8 @@
         "description": "\"Master of equestrian arts, this Kamihime is called the 'quick-witted Hermod.'With dauntless courage, she risks her life in pursuit of speed.\"",
         "image": "\/images\/d\/d1\/HermodClose.png",
         "obtained": "Magic Jewel GachaPremium Gacha",
-        "weapon": "Draupnir"
+        "weapon": "Draupnir",
+        "weaponlink": "\/wiki\/Draupnir"
     },
     "Hestia": {
         "name": "Hestia",
@@ -1595,7 +1641,8 @@
         "description": "\"A topnotch chef and goddess, though she tells no one what kind of goddess she is.She is quick in the kitchen but infuriatingly slow at almost anything else.\"",
         "image": "\/images\/b\/bf\/HestiaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Nuclear Gun Vesta"
+        "weapon": "Nuclear Gun Vesta",
+        "weaponlink": "\/wiki\/Nuclear_Gun_Vesta"
     },
     "Iblis": {
         "name": "Iblis",
@@ -1629,7 +1676,8 @@
         "description": "\"A Kamihime who wants revenge against Testament for destroying the organization she once built.\"",
         "image": "\/images\/c\/c3\/IblisClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Satan Axe"
+        "weapon": "Satan Axe",
+        "weaponlink": "\/wiki\/Satan_Axe"
     },
     "Ignis": {
         "name": "Ignis",
@@ -1663,7 +1711,8 @@
         "description": "\"A fire spirit who lost her pre-Ragnarok memories. She generates scarefires in battle as is currently studying how to control magic.\"",
         "image": "\/images\/b\/b1\/IgnisClose.png",
         "obtained": "Tutorial",
-        "weapon": "Hellfire Ignited Lance"
+        "weapon": "Hellfire Ignited Lance",
+        "weaponlink": "\/wiki\/Hellfire_Ignited_Lance"
     },
     "Inanna": {
         "name": "Inanna",
@@ -1697,7 +1746,8 @@
         "description": "\"This Kamihime is intelligent, but arrogant and stubbornly insists that her opinions are always right.She constantly stirs up trouble.\"",
         "image": "\/images\/d\/de\/InannaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Sumerian Hammer"
+        "weapon": "Sumerian Hammer",
+        "weaponlink": "\/wiki\/Sumerian_Hammer"
     },
     "Indra": {
         "name": "Indra",
@@ -1731,7 +1781,8 @@
         "description": "\"Extremely skilled in combat despite her clumsiness,she emits electrical power with the Vajra in her hand...clumsily.\"",
         "image": "\/images\/b\/b9\/IndraClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Phantom Bow Soma"
+        "weapon": "Phantom Bow Soma",
+        "weaponlink": "\/wiki\/Phantom_Bow_Soma"
     },
     "Kikuri-Hime": {
         "name": "Kikuri-Hime",
@@ -1765,7 +1816,8 @@
         "description": "\"A nosy, matchmaking Kamihime with a dark side.She sometimes uses her matchmaking powers for evil.\"",
         "image": "\/images\/8\/85\/Kikuri-HimeClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Shirayamanohime"
+        "weapon": "Shirayamanohime",
+        "weaponlink": "\/wiki\/Shirayamanohime"
     },
     "Krishna": {
         "name": "Krishna",
@@ -1799,7 +1851,8 @@
         "description": "\"A powerfully built Kamihime with a strong sense of justice.She can be selfish, but she cares about her friends.\"",
         "image": "\/images\/8\/89\/KrishnaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Chakram Lance"
+        "weapon": "Chakram Lance",
+        "weaponlink": "\/wiki\/Chakram_Lance"
     },
     "Kushinada": {
         "name": "Kushinada",
@@ -1833,7 +1886,8 @@
         "description": "\"A Kamihime who was saved by Susanoo in the past.Since then, however, she has started to lust after the same sex.\"",
         "image": "\/images\/5\/57\/KushinadaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Nadeshiko Staff"
+        "weapon": "Nadeshiko Staff",
+        "weaponlink": "\/wiki\/Nadeshiko_Staff"
     },
     "Maeve": {
         "name": "Maeve",
@@ -1867,7 +1921,8 @@
         "description": "\"The queen of Connaught and Cu Chulainn's nemesis,this dangerous Kamihime wields life-force draining roses.\"",
         "image": "\/images\/4\/44\/MaeveClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Bloody Roses"
+        "weapon": "Bloody Roses",
+        "weaponlink": "\/wiki\/Bloody_Roses"
     },
     "Mephistopheles": {
         "name": "Mephistopheles",
@@ -1901,7 +1956,8 @@
         "description": "\"A man-made demon created by the genius Dr.Faust.With no one to bind her now, she has risen again to run amok in the world.\"",
         "image": "\/images\/a\/a9\/MephistophelesClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Panzerfaust"
+        "weapon": "Panzerfaust",
+        "weaponlink": "\/wiki\/Panzerfaust"
     },
     "Metatron": {
         "name": "Metatron",
@@ -1935,7 +1991,8 @@
         "description": "\"A missile-wielding angel, she's dead serious when it comes to wiping out evil.\"",
         "image": "\/images\/5\/5e\/MetatronClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Missile Hammer"
+        "weapon": "Missile Hammer",
+        "weaponlink": "\/wiki\/Missile_Hammer"
     },
     "Michael": {
         "name": "Michael",
@@ -1969,7 +2026,8 @@
         "description": "\"One of three archangels and a legendary Kamihime.Her power rivals that of the gods, but she despises housework of all kinds.\"",
         "image": "\/images\/8\/8d\/MichaelClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Holy Winged Lance Enoch"
+        "weapon": "Holy Winged Lance Enoch",
+        "weaponlink": "\/wiki\/Holy_Winged_Lance_Enoch"
     },
     "Motu": {
         "name": "Motu",
@@ -2003,7 +2061,8 @@
         "description": "\"A fire wielding death god Kamihime. Her flames cremate her enemies.She hates nothing more than being called a Lolita.\"",
         "image": "\/images\/5\/50\/MotuClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Reaper Scythe"
+        "weapon": "Reaper Scythe",
+        "weaponlink": "\/wiki\/Reaper_Scythe"
     },
     "Naberius": {
         "name": "Naberius",
@@ -2037,7 +2096,8 @@
         "description": "\"A demonic necromancer with the power to summon the dead and use them as zombine minions.\"",
         "image": "\/images\/8\/8a\/NaberiusClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Hand of Glory"
+        "weapon": "Hand of Glory",
+        "weaponlink": "\/wiki\/Hand_of_Glory"
     },
     "Nemesis": {
         "name": "Nemesis",
@@ -2071,7 +2131,8 @@
         "description": "\"A goddess-type Kamihime who voices the anger of the gods.She fights evil for the sake of justice, but often goes a bit overboard.\"",
         "image": "\/images\/d\/de\/NemesisClose.png",
         "obtained": "Magic Jewel GachaPremium Gacha",
-        "weapon": "Blade of Divine Punishment"
+        "weapon": "Blade of Divine Punishment",
+        "weaponlink": "\/wiki\/Blade_of_Divine_Punishment"
     },
     "Nergal": {
         "name": "Nergal",
@@ -2105,7 +2166,8 @@
         "description": "\"A goddess once feared in battle as the Sun of Death.She lacks emotion and would not hesitate to commit a massacre for her master.\"",
         "image": "\/images\/a\/ab\/NergalClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Solar Eclipse"
+        "weapon": "Solar Eclipse",
+        "weaponlink": "\/wiki\/Solar_Eclipse"
     },
     "Nike (Unleashed)": {
         "name": "Nike (Unleashed)",
@@ -2139,7 +2201,8 @@
         "description": "\"This is Nike with her true magic unleashed.With her hidden powers revealed, she has become a much stronger fighter.\"",
         "image": "\/images\/4\/4c\/Nike_%28Unleashed%29Close.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Victoria Gun"
+        "weapon": "Victoria Gun",
+        "weaponlink": "\/wiki\/Victoria_Gun"
     },
     "Nike": {
         "name": "Nike",
@@ -2173,7 +2236,8 @@
         "description": "A young girl preserved as a human weapon and goddess since antiquity.She looks like a merciful saint, but is actually quite a dimwit.",
         "image": "\/images\/3\/34\/NikeClose.png",
         "obtained": "Tutorial",
-        "weapon": "N\/A"
+        "weapon": "N\/A",
+        "weaponlink": ""
     },
     "Nodens": {
         "name": "Nodens",
@@ -2207,7 +2271,8 @@
         "description": "\"Called the king of abyss, she rules the worl's dream boundary.She like humans and fights those that attack from the darkness.\"",
         "image": "\/images\/8\/83\/NodensClose.png",
         "obtained": "Creeping Flames of Madness",
-        "weapon": "Emperor Lance"
+        "weapon": "Emperor Lance",
+        "weaponlink": "\/wiki\/Emperor_Lance"
     },
     "Nyarlathotep": {
         "name": "Nyarlathotep",
@@ -2241,7 +2306,8 @@
         "description": "\"A mysterious Kamhime loves seeing other suffer.She would destroy and entire colony just to witness the despair..\"",
         "image": "\/images\/d\/d5\/NyarlathotepClose.png",
         "obtained": "Magic Jewel GachaPremium Gacha",
-        "weapon": "Necronomicon"
+        "weapon": "Necronomicon",
+        "weaponlink": "\/wiki\/Necronomicon"
     },
     "Oberon": {
         "name": "Oberon",
@@ -2275,7 +2341,8 @@
         "description": "\"A fairy queen Kamihime and one of the world's most knowledgeable beings with regard to magic.She loves mischief and can be moody.\"",
         "image": "\/images\/0\/0b\/OberonClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Belthronding"
+        "weapon": "Belthronding",
+        "weaponlink": "\/wiki\/Belthronding"
     },
     "Oceanus": {
         "name": "Oceanus",
@@ -2309,7 +2376,8 @@
         "description": "\"A sea Kamihime with power matching that of natural disasters.She emits her power in the form of waves and can also fly. She loves surfing.\"",
         "image": "\/images\/b\/b4\/OceanusClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Surfing Axe"
+        "weapon": "Surfing Axe",
+        "weaponlink": "\/wiki\/Surfing_Axe"
     },
     "Odin": {
         "name": "Odin",
@@ -2343,7 +2411,8 @@
         "description": "\"A powerful ruler of the Kamihime,her beloved spear Gungnir is legendary for its ability to pierce anything.\"",
         "image": "\/images\/0\/09\/OdinClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Gungnir"
+        "weapon": "Gungnir",
+        "weaponlink": "\/wiki\/Gungnir"
     },
     "Orpheus": {
         "name": "Orpheus",
@@ -2377,7 +2446,8 @@
         "description": "\"A young girl with a one-in-a-billion voice hailed as the songstress of light.However, a certain organization took notice of that and deified her.\"",
         "image": "\/images\/2\/29\/OrpheusClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Lyre Bow Orpheus"
+        "weapon": "Lyre Bow Orpheus",
+        "weaponlink": "\/wiki\/Lyre_Bow_Orpheus"
     },
     "Oto-hime": {
         "name": "Oto-hime",
@@ -2411,7 +2481,8 @@
         "description": "\"She can create magical barriers with Tamashige.She's fiercly protective of her friends and would never let any harm come to them.\"",
         "image": "\/images\/4\/48\/Oto-himeClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Tamakushige"
+        "weapon": "Tamakushige",
+        "weaponlink": "\/wiki\/Tamakushige"
     },
     "Pale Rider": {
         "name": "Pale Rider",
@@ -2445,7 +2516,8 @@
         "description": "\"This Kamihime is a harbinger of death.There is no escaping fate if she says your death is near.\"",
         "image": "\/images\/8\/86\/PaleRiderClose.png",
         "obtained": "Dark Knight's Slaughter",
-        "weapon": "Darkness Lance"
+        "weapon": "Darkness Lance",
+        "weaponlink": "\/wiki\/Darkness_Lance"
     },
     "Perun": {
         "name": "Perun",
@@ -2479,7 +2551,8 @@
         "description": "\"A Kamihime who was deified when a tragic fate befell her.She made efforts to ensure the same tragedy would not happen again.'\"",
         "image": "\/images\/e\/ef\/PerunClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Slav Tomahawk"
+        "weapon": "Slav Tomahawk",
+        "weaponlink": "\/wiki\/Slav_Tomahawk"
     },
     "Poseidon": {
         "name": "Poseidon",
@@ -2513,7 +2586,8 @@
         "description": "\"A top-class Kamihime. She could easily destroy the world if she went all out.She loves gambling and is a man-eater.\"",
         "image": "\/images\/e\/e9\/PoseidonClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Oceanic Trident"
+        "weapon": "Oceanic Trident",
+        "weaponlink": "\/wiki\/Oceanic_Trident"
     },
     "Puck": {
         "name": "Puck",
@@ -2547,7 +2621,8 @@
         "description": "\"A fairy Kamihime and habitual prankster.This troublesome Kamihime is always the one to blame if any mischief occurs.\"",
         "image": "\/images\/e\/e2\/PuckClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Temptation Cologne"
+        "weapon": "Temptation Cologne",
+        "weaponlink": "\/wiki\/Temptation_Cologne"
     },
     "Ragaraja": {
         "name": "Ragaraja",
@@ -2581,7 +2656,8 @@
         "description": "\"A law-abiding Kamihime who is aware of and actually proud of her own selfishness and lust. She's unmatched with a bow.\"",
         "image": "\/images\/6\/63\/RagarajaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Deva Bow"
+        "weapon": "Deva Bow",
+        "weaponlink": "\/wiki\/Deva_Bow"
     },
     "Raiko": {
         "name": "Raiko",
@@ -2615,7 +2691,8 @@
         "description": "\"A goddess of lightning who treats all people equally.If she were to exert her strength, she could level a whole town.\"",
         "image": "\/images\/a\/ab\/RaikoClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Lightning Drum Hammer"
+        "weapon": "Lightning Drum Hammer",
+        "weaponlink": "\/wiki\/Lightning_Drum_Hammer"
     },
     "Rakshasa": {
         "name": "Rakshasa",
@@ -2649,7 +2726,8 @@
         "description": "\"A Kamihime who punishes evildoers. She loses it when things don't go her way,but is good at heart.She worries that she is disingenuous.\"",
         "image": "\/images\/8\/8a\/RakshasaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Execution Axe"
+        "weapon": "Execution Axe",
+        "weaponlink": "\/wiki\/Execution_Axe"
     },
     "Ramiel": {
         "name": "Ramiel",
@@ -2683,7 +2761,8 @@
         "description": "\"Known as both the goddess of thunder and an angel who conveys prophecies as an idol.She wants to maintain her rank as top angel.\"",
         "image": "\/images\/4\/41\/RamielClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Lightning Laser Gun"
+        "weapon": "Lightning Laser Gun",
+        "weaponlink": "\/wiki\/Lightning_Laser_Gun"
     },
     "Raphael": {
         "name": "Raphael",
@@ -2717,7 +2796,8 @@
         "description": "\"A Kamihime skilled at soothing and protecting.Her powers are of history-making proportions, and her defensive magic is comparable to that of 100 Kamihime.\"",
         "image": "\/images\/1\/14\/RaphaelClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Winged Staff Raviel"
+        "weapon": "Winged Staff Raviel",
+        "weaponlink": "\/wiki\/Winged_Staff_Raviel"
     },
     "Reginleiv": {
         "name": "Reginleiv",
@@ -2751,7 +2831,8 @@
         "description": "\"A Kamihime who speaks the will of the gods and acts as their representative.She calls herself the heir of the gods.\"",
         "image": "\/images\/a\/aa\/ReginleivClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Divine Chaingun"
+        "weapon": "Divine Chaingun",
+        "weaponlink": "\/wiki\/Divine_Chaingun"
     },
     "Rusalka": {
         "name": "Rusalka",
@@ -2785,7 +2866,8 @@
         "description": "\"A legendary goddess said to have used her bewitching magic to spellbind all the world's men.She is every bit as powerful as she is beautiful.\"",
         "image": "\/images\/0\/0b\/RusalkaClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Sword of Enragement"
+        "weapon": "Sword of Enragement",
+        "weaponlink": "\/wiki\/Sword_of_Enragement"
     },
     "Ryu-Oh": {
         "name": "Ryu-Oh",
@@ -2819,7 +2901,8 @@
         "description": "\"Desperate to revive a sunken undersea fortress city,she carries a magic dragon gun that can fire tusnamis like bullets.\"",
         "image": "\/images\/3\/34\/Ryy-OhClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Royal Blaster"
+        "weapon": "Royal Blaster",
+        "weaponlink": "\/wiki\/Royal_Blaster"
     },
     "Satan": {
         "name": "Satan",
@@ -2853,7 +2936,8 @@
         "description": "\"A former archangel who held absolute authority in Eden.Sealed away in darkness for ages, her soul is now steeped in iniquity.\"",
         "image": "\/images\/b\/b8\/SatanClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Demonic Sword Lucifer"
+        "weapon": "Demonic Sword Lucifer",
+        "weaponlink": "\/wiki\/Demonic_Sword_Lucifer"
     },
     "Scathach": {
         "name": "Scathach",
@@ -2887,7 +2971,8 @@
         "description": "\"The queen of the shadow kingdom and Cu Chulainn's teacher.Her knife has the power to rip through space time.\"",
         "image": "\/images\/1\/1e\/ScathachClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Scaith Knife"
+        "weapon": "Scaith Knife",
+        "weaponlink": "\/wiki\/Scaith_Knife"
     },
     "Shiva": {
         "name": "Shiva",
@@ -2921,7 +3006,8 @@
         "description": "\"A destructive goddess who dismantled the world during Ragnarok.She has remained in a deep slumber as nature regenerates.\"",
         "image": "\/images\/d\/d1\/ShivaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Lethal Lance Trishula"
+        "weapon": "Lethal Lance Trishula",
+        "weaponlink": "\/wiki\/Lethal_Lance_Trishula"
     },
     "Skuld": {
         "name": "Skuld",
@@ -2955,7 +3041,8 @@
         "description": "\"She lent money to countless people and now collects debts like mad.However, there is a reason why she is so money-hungry...\"",
         "image": "\/images\/c\/cf\/SkuldClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Norn Delta Force"
+        "weapon": "Norn Delta Force",
+        "weaponlink": "\/wiki\/Norn_Delta_Force"
     },
     "Sol": {
         "name": "Sol",
@@ -2989,7 +3076,8 @@
         "description": "\"A goddess with latent power that rivals the stars.Despite her cheery looks, she shoulders a cruel fate.\"",
         "image": "\/images\/4\/4d\/SolClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Ray Gun Solignight"
+        "weapon": "Ray Gun Solignight",
+        "weaponlink": "\/wiki\/Ray_Gun_Solignight"
     },
     "Susanoo": {
         "name": "Susanoo",
@@ -3023,7 +3111,8 @@
         "description": "\"Though the younger sister of Amaterasu, she differs from her sister with her violent nature.With top-class stamina for a Kamihime, prolonged combat is her forte.\"",
         "image": "\/images\/4\/48\/SusanooClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Sword of Kusanagi"
+        "weapon": "Sword of Kusanagi",
+        "weaponlink": "\/wiki\/Sword_of_Kusanagi"
     },
     "Svarog": {
         "name": "Svarog",
@@ -3057,7 +3146,8 @@
         "description": "\"A Kamihime who is obsessed with weapons and fights with a customized axe.She loves to enhance her axe with found parts.\"",
         "image": "\/images\/2\/26\/SvarogClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Svaldish Axe"
+        "weapon": "Svaldish Axe",
+        "weaponlink": "\/wiki\/Svaldish_Axe"
     },
     "Tezcatlipoca": {
         "name": "Tezcatlipoca",
@@ -3091,7 +3181,8 @@
         "description": "\"A Kamihime with a wild personality . Jaguar-like, her fighting style is elegant and bold. She's especially handy with thunder magic.\"",
         "image": "\/images\/4\/4a\/TezcatlipocaClose.png",
         "obtained": "The World Tree's Seed of Despair",
-        "weapon": "Tezcatl Hammer"
+        "weapon": "Tezcatl Hammer",
+        "weaponlink": "\/wiki\/Tezcatl_Hammer"
     },
     "Thor": {
         "name": "Thor",
@@ -3125,7 +3216,8 @@
         "description": "\"She boasts supernatural strength in defiance of her looks.A top-class lightning goddess, her strikes can pulverize even the stars.\"",
         "image": "\/images\/5\/58\/ThorClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Mjolnir"
+        "weapon": "Mjolnir",
+        "weaponlink": "\/wiki\/Mjolnir"
     },
     "Titania": {
         "name": "Titania",
@@ -3159,7 +3251,8 @@
         "description": "\"A seemingly ladylike beauty with a strong possessive streak.She is faithful to those she loves, but grows jealous at the mention of other women.\"",
         "image": "\/images\/7\/76\/TitaniaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Fairy Prelude"
+        "weapon": "Fairy Prelude",
+        "weaponlink": "\/wiki\/Fairy_Prelude"
     },
     "Triton": {
         "name": "Triton",
@@ -3193,7 +3286,8 @@
         "description": "\"A Kamihime who controls water with an arcane tool.She is searching for a precious pearl she lost because of Ragnarok.\"",
         "image": "\/images\/d\/d9\/TritonClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Pearl Horn"
+        "weapon": "Pearl Horn",
+        "weaponlink": "\/wiki\/Pearl_Horn"
     },
     "Tsukuyomi": {
         "name": "Tsukuyomi",
@@ -3227,7 +3321,8 @@
         "description": "\"Ruler of the Moon, this Kamihime exerts her power in the darkness of night.Sister of Amaterasu and Susanoo, she was raised on the Moon.\"",
         "image": "\/images\/4\/4c\/TsukuyomiClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Yasakani Magatama"
+        "weapon": "Yasakani Magatama",
+        "weaponlink": "\/wiki\/Yasakani_Magatama"
     },
     "Tyr": {
         "name": "Tyr",
@@ -3261,7 +3356,8 @@
         "description": "\"A war goddess who has performed valorous deeds on countless battlefields.She is always torn between her femininity or combat power.\"",
         "image": "\/images\/8\/8b\/TyrClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Cursed Sword Gleipnir"
+        "weapon": "Cursed Sword Gleipnir",
+        "weaponlink": "\/wiki\/Cursed_Sword_Gleipnir"
     },
     "Undine": {
         "name": "Undine",
@@ -3295,7 +3391,8 @@
         "description": "\"A spirit deity who ruled a great trading city prior to the end of the world.She hopes to revive her city among the wreckage of the current world.\"",
         "image": "\/images\/a\/a3\/UndineClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Gold Axe"
+        "weapon": "Gold Axe",
+        "weaponlink": "\/wiki\/Gold_Axe"
     },
     "Urania": {
         "name": "Urania",
@@ -3329,7 +3426,8 @@
         "description": "\"An astonomer who studies the heavens, math, and sorcery.She is passionate about answering the world's questions.\"",
         "image": "\/images\/7\/7f\/UraniaClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Celestial Staff"
+        "weapon": "Celestial Staff",
+        "weaponlink": "\/wiki\/Celestial_Staff"
     },
     "Uranus": {
         "name": "Uranus",
@@ -3363,7 +3461,8 @@
         "description": "\"One of the original gods involved in the creation of the world.She uses archaic language and is good with puns...kind of.\"",
         "image": "\/images\/0\/06\/UranusClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Uranus Slice"
+        "weapon": "Uranus Slice",
+        "weaponlink": "\/wiki\/Uranus_Slice"
     },
     "Verethragna": {
         "name": "Verethragna",
@@ -3397,7 +3496,8 @@
         "description": "\"The hero who despises evil and exalts justice. She is, in fact, Verethragna herself.She continues to take on legions of evil today.\"",
         "image": "\/images\/2\/21\/VerethragnaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Hero's Sword"
+        "weapon": "Hero's Sword",
+        "weaponlink": "\/wiki\/Hero%27s_Sword"
     },
     "Yamaraja": {
         "name": "Yamaraja",
@@ -3431,7 +3531,8 @@
         "description": "\"A Kamihime who loves sentencing people to death. She once ruled hell but ran away to avoid the work. The sins of other give her power.\"",
         "image": "\/images\/1\/17\/YamarajaClose.png",
         "obtained": "Premium GachaMagic Jewel Gacha",
-        "weapon": "Hell Staff"
+        "weapon": "Hell Staff",
+        "weaponlink": "\/wiki\/Hell_Staff"
     },
     "Zephyrus": {
         "name": "Zephyrus",
@@ -3465,6 +3566,42 @@
         "description": "\"The deity of spring breezes and gentle eldest of the four Anemoi sisters.This tender loving woman has gaps in her memory.\"",
         "image": "\/images\/9\/9f\/ZephyrusClose.png",
         "obtained": "Any Gacha",
-        "weapon": "Zephyr Bow of Gales"
+        "weapon": "Zephyr Bow of Gales",
+        "weaponlink": "\/wiki\/Zephyr_Bow_of_Gales"
+    },
+    "Ceridwen": {
+        "name": "Ceridwen",
+        "link": "\/wiki\/Ceridwen",
+        "thumb": "\/images\/d\/d6\/CeridwenPortrait.png",
+        "raritythumb": "\/images\/3\/3b\/SR.png",
+        "elementthumb": "\/images\/3\/3c\/FireSymbol.png",
+        "classthumb": "\/images\/5\/50\/Balance.png",
+        "attackMin": "1180",
+        "attackMax": "5900",
+        "HPMin": "190",
+        "HPMax": "950",
+        "totalPowerMin": "1370",
+        "totalPowerMax": "6850",
+        "rarity": "SR",
+        "class": "Balance",
+        "element": "FireSymbol",
+        "burst": "Elemental Pot",
+        "burstdesc": "Fire DMG (++)  \u2605 (Limit Break \u2605\u2605\u2605\u2606) Powered Up",
+        "ability1": "Ingestion",
+        "abilitydesc1": "Applies  ATK\u2191 to all allies\u2605 (Lvl 45) Increases to  ATK\u2191 (+)",
+        "abilitycool1": "Cooldown: 5 turns Duration: 3 turns",
+        "ability2": "Immunize",
+        "abilitydesc2": "Applies  Affliction RST\u2191 to all allies\u2605 (Lvl 65) Powered up",
+        "abilitycool2": "Cooldown: 9 turns Duration: 3 turns",
+        "ability3": "Nutrient",
+        "abilitydesc3": "heals 1.200 HP and applies  DEF\u2191 (+) to self",
+        "abilitycool3": "Cooldown: 6 turns Duration: 13turn",
+        "assist": "Bio Pharmacy",
+        "assistdesc": "DEF\u2191",
+        "description": "\"Born on the moon, this Kamihime once helped study other Kamihime.She uses a lunar cauldron to make a variety of medicines.\"",
+        "image": "\/images\/2\/25\/CeridwenClose.png",
+        "obtained": "Trick or Treat",
+        "weapon": "Moon Cauldron",
+        "weaponlink": "\/wiki\/Moon_Cauldron"
     }
 }

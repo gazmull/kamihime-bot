@@ -110,7 +110,14 @@ exports.run     = (client, message, args) => {
       }
 
       embed.addField("Obtained from:",KHdatas[khname].obtained,false);
-      embed.addField("Released weapon:",KHdatas[khname].weapon,false);
+      if (KHdatas[khname].weapon) {
+        if (KHdatas[khname].weaponlink) {
+          embed.addField("Released weapon:","["+KHdatas[khname].weapon+"]("+config.wikidomain+KHdatas[khname].weaponlink+")",false);
+        }
+        else {
+          embed.addField("Released weapon:",KHdatas[khname].weapon,false);
+        }
+      }
 
       message.channel.send({embed});
       khfound = true;
