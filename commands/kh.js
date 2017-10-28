@@ -134,11 +134,10 @@ exports.run     = (client, message, args) => {
       var ed_HPMax                    = EDdatas[khname].HPMax;
       var ed_totalPowerMin            = EDdatas[khname].totalPowerMin;
       var ed_totalPowerMax            = EDdatas[khname].totalPowerMax;
-      var ed_summonAttack             = EDdatas[khname].summonAttack;
-      var ed_summonAttack             = EDdatas[khname].summonAttack;
+      var ed_summonAttack             = EDdatas[khname].summonAttack.replace("Summon Attack",":a: Summon Attack");
       var ed_summonAttackEffect       = EDdatas[khname].summonAttackEffect;
       var ed_summonAttackCooldown     = EDdatas[khname].summonAttackCooldown;
-      var ed_eidolonsEffect           = EDdatas[khname].eidolonsEffect;
+      var ed_eidolonsEffect           = EDdatas[khname].eidolonsEffect.replace("Eidolon Effect",":regional_indicator_e: Eidolon Effect");
       var ed_eidolonEffectTier0Stars  = EDdatas[khname].eidolonEffectTier0Stars;
       var ed_eidolonEffectTier0Effect = EDdatas[khname].eidolonEffectTier0Effect;
       var ed_eidolonEffectTier1Stars  = EDdatas[khname].eidolonEffectTier1Stars;
