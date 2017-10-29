@@ -193,22 +193,63 @@ exports.run     = (client, message, args) => {
       var sl_name           = SLdatas[khname].name;
       var sl_link           = config.wikidomain+SLdatas[khname].link;
       var sl_thumb          = config.thumbrooturl+SLdatas[khname].thumb;
+      var sl_image          = config.thumbrooturl+SLdatas[khname].image;
       var sl_rarity         = SLdatas[khname].rarity;
       var sl_classthumb     = config.thumbrooturl+SLdatas[khname].classthumb;
+      var sl_class          = SLdatas[khname].class;
       var sl_subType        = SLdatas[khname].subType;
       var sl_weapons1       = SLdatas[khname].weapons1;
       var sl_weapons2       = SLdatas[khname].weapons2;
       var sl_releaseCost    = SLdatas[khname].releaseCost;
+      var sl_releaseCond    = SLdatas[khname].releasecondition;
+      var sl_description    = "*"+SLdatas[khname].description+"*";
+
+      sl_description        += "\n\n__**Favourite Weapons:**__  "+sl_weapons1+" - "+sl_weapons2;
+      sl_description        += "\n__**Master Bonus:**__  "+SLdatas[khname].masterbonus;
+      sl_description        += "\n__**Release Conditions:**__  "+sl_releaseCond;
 
       const embed = new Discord.RichEmbed()
-      .setTitle(sl_rarity+" - "+sl_subType)
+      .setTitle(sl_rarity+" - "+sl_subType+" ("+sl_class+")")
       .setAuthor("Soul: "+sl_name, "")
       .setColor("#00AE86")
+      .setDescription(sl_description)
       .setThumbnail(sl_thumb)
       .setURL(sl_link)
-      .setImage(sl_classthumb)
-      .addField("Weapons:",sl_weapons1+" - "+sl_weapons2, false)
-      .addField("Release Cost:", sl_releaseCost, false);
+      .setImage(sl_image);
+
+      if (SLdatas[khname].burst){
+        var burstdesc = SLdatas[khname].burstdesc.replace("\u2605","\n\u2605");
+        embed.addField(":b: "+SLdatas[khname].burst,burstdesc,false)
+      }
+      if (SLdatas[khname].ability1){
+        var abilitydesc1 = SLdatas[khname].abilitydesc1.replace("\u2605","\n\u2605");
+        var abilitycool1 = SLdatas[khname].abilitycool1.replace('Cooldown:',':battery:');
+        abilitycool1 = abilitycool1.replace('Duration:',':hourglass:');
+        embed.addField(":regional_indicator_a: "+SLdatas[khname].ability1+" "+abilitycool1,abilitydesc1,false)
+      }
+      if (SLdatas[khname].ability2){
+        var abilitydesc2 = SLdatas[khname].abilitydesc2.replace("\u2605","\n\u2605");
+        var abilitycool2 = SLdatas[khname].abilitycool2.replace('Cooldown:',':battery:');
+        var unlock2      = SLdatas[khname].abilityunlock2.replace('Unlocks at',':unlock:');
+        abilitycool2 = abilitycool2.replace('Duration:',':hourglass:');
+        embed.addField(":regional_indicator_a: "+SLdatas[khname].ability2+" "+abilitycool2+" "+unlock2,abilitydesc2,false)
+      }
+      if (SLdatas[khname].ability3){
+        var abilitydesc3 = SLdatas[khname].abilitydesc3.replace("\u2605","\n\u2605");
+        var abilitycool3 = SLdatas[khname].abilitycool3.replace('Cooldown:',':battery:');
+        var unlock3      = SLdatas[khname].abilityunlock3.replace('Unlocks at',':unlock:');
+        abilitycool3 = abilitycool3.replace('Duration:',':hourglass:');
+        embed.addField(":regional_indicator_a: "+SLdatas[khname].ability3+" "+abilitycool3+" "+unlock3,abilitydesc3,false)
+      }
+      if (SLdatas[khname].assist1){
+        embed.addField(":white_check_mark: "+SLdatas[khname].assist1,SLdatas[khname].assistdesc1,false)
+      }
+      if (SLdatas[khname].assist2){
+        embed.addField(":white_check_mark: "+SLdatas[khname].assist2,SLdatas[khname].assistdesc2,false)
+      }
+
+
+
       message.channel.send({embed});
       khfound = true;
     }
