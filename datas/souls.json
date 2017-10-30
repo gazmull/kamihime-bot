@@ -31,7 +31,8 @@
         "description": "\"A renowned heroine who once slew dragons and giants.She is lively, aggressive, and refreshingly blunt.\"",
         "image": "\/images\/0\/05\/BeowulfClose.png",
         "releasecondition": "100 SP",
-        "masterbonus": "+1% Gauge Restriction"
+        "masterbonus": "+1% Gauge Restriction",
+        "totalbonus": "+5% Gauge Restriction"
     },
     "Billy the Kid": {
         "name": "Billy the Kid",
@@ -65,7 +66,8 @@
         "description": "\"Though young, this gunfighter boasts world-class marksmanship. Her terrible secret is that she still wets the bed.\"",
         "image": "\/images\/d\/d0\/BillytheKidClose.png",
         "releasecondition": "100 SP",
-        "masterbonus": "+1% HP"
+        "masterbonus": "+1% HP",
+        "totalbonus": "+10% Snatch Success Rate +250 HP"
     },
     "Crowley": {
         "name": "Crowley",
@@ -99,7 +101,8 @@
         "description": "\"User of Dark magic and founder of a cult, this Soul destroy the world order.She acts out of lust.'\"",
         "image": "\/images\/5\/56\/CrowleyClose.png",
         "releasecondition": "100 HSP",
-        "masterbonus": "+1% DEF"
+        "masterbonus": "+1% DEF",
+        "totalbonus": "+5% DEF +5% Affliction RST"
     },
     "Merlin": {
         "name": "Merlin",
@@ -133,7 +136,8 @@
         "description": "\"An archmage of tales both legendary and at times trivial. She loves freedom and detests being tied down.\"",
         "image": "\/images\/8\/8b\/MerlinClose.png",
         "releasecondition": "None",
-        "masterbonus": "+2% Ability DMG"
+        "masterbonus": "+2% Ability DMG",
+        "totalbonus": "+10% Ability DMG"
     },
     "Oliver": {
         "name": "Oliver",
@@ -167,7 +171,8 @@
         "description": "\"A paladin who brandishes the multi-weapon Hauteclere. She hopes to be reunited with Roland who she was sealed away.\"",
         "image": "\/images\/a\/a5\/OliverClose.png",
         "releasecondition": "None",
-        "masterbonus": "+1% DEF"
+        "masterbonus": "+1% DEF",
+        "totalbonus": "+10% DEF"
     },
     "Lancelot": {
         "name": "Lancelot",
@@ -201,7 +206,8 @@
         "description": "\"A wise Soul of the legendary Knight of the Round Table.She is serious and mannerly, but she has a singular weakness for sweets.\"",
         "image": "\/images\/8\/8d\/LancelotClose.png",
         "releasecondition": "None",
-        "masterbonus": "+1% ATK"
+        "masterbonus": "+1% ATK",
+        "totalbonus": "+1250 ATK"
     },
     "Spartacus": {
         "name": "Spartacus",
@@ -235,7 +241,8 @@
         "description": "\"She reconstructed herself to battle Kamihime and awoke as a Soul.She is determined to emancipate all slaves.\"",
         "image": "\/images\/2\/26\/SpartacusClose.png",
         "releasecondition": "100 SP",
-        "masterbonus": "+1% ATK"
+        "masterbonus": "+1% ATK",
+        "totalbonus": "+750 ATK  +250 HP"
     },
     "Van Helsing": {
         "name": "Van Helsing",
@@ -269,7 +276,8 @@
         "description": "\"A monster hunter who continues to subjugate vampires.She also worked as a university professor and is quite knowledgeable.\"",
         "image": "\/images\/0\/03\/VanHelsingClose.png",
         "releasecondition": "100 SP",
-        "masterbonus": "+2% Affliction RST"
+        "masterbonus": "+2% Affliction RST",
+        "totalbonus": "+5% DMG to Afflicted Enemy"
     },
     "Vivian": {
         "name": "Vivian",
@@ -303,7 +311,8 @@
         "description": "\"She can give magic visible form and freely use any element she wishes.This beauty is a skilled healer and cook and would make a good wife and devoted mother.\"",
         "image": "\/images\/c\/cd\/VivianClose.png",
         "releasecondition": "None",
-        "masterbonus": "+1% HP recovery Amount"
+        "masterbonus": "+1% HP recovery Amount",
+        "totalbonus": "+10% HP recovery Amount +250 HP"
     },
     "Achilles": {
         "name": "Achilles",
@@ -336,7 +345,9 @@
         "assistdesc2": "",
         "description": "\"Possessing the greatest defense power of any Soul, she has but one weakness, her heel.If her heel is attacked, she loses her power.\"",
         "image": "\/images\/8\/82\/AchillesClose.png",
-        "releasecondition": "Merlin Lvl 20 & Spartacus Lvl 20 & 300 SP"
+        "releasecondition": "Merlin Lvl 20 & Spartacus Lvl 20 & 300 SP",
+        "masterbonus": "+2% ATK",
+        "totalbonus": "+1500 ATK  +375 HP"
     },
     "Asmund": {
         "name": "Asmund",
@@ -369,7 +380,9 @@
         "assistdesc2": "",
         "description": "\"With brutish courage and a penchant for one-on-one combat, she escels in quick, decisive battles.Perphaps due to her feistiness towards men, she remians a virgin.\"",
         "image": "\/images\/b\/b0\/AsmundClose.png",
-        "releasecondition": "Merlin Lvl 20 & Van Helsing Lvl 20 & 200 SP"
+        "releasecondition": "Merlin Lvl 20 & Van Helsing Lvl 20 & 200 SP",
+        "masterbonus": "+4% Affliction RST",
+        "totalbonus": "DMG to Afflicted Enemy +10%"
     },
     "Cagliostro": {
         "name": "Cagliostro",
@@ -402,7 +415,9 @@
         "assistdesc2": "",
         "description": "\"A self proclaimed genius, this alchemist Soul is researching a way to create Kamihime. She is zealous about the Ragnarok enigma.\"",
         "image": "\/images\/d\/d3\/CagliostroClose.png",
-        "releasecondition": "Crowley Lvl 20 & Vivian Lvl 20 & 200 HSP"
+        "releasecondition": "Crowley Lvl 20 & Vivian Lvl 20 & 200 HSP",
+        "masterbonus": "+2% DEF",
+        "totalbonus": "+10% DEF +10% Affliction RST"
     },
     "Cassiopeia": {
         "name": "Cassiopeia",
@@ -435,7 +450,9 @@
         "assistdesc2": "",
         "description": "\"She is so confident in her power that she would not bat an eye if the gods were to turn on her.While her arm's strenght is fearsome, her beauty is her biggest pride.\"",
         "image": "\/images\/8\/83\/CassiopeiaClose.png",
-        "releasecondition": "Oliver Lvl 20 & Vivian Lvl 20 & 200 SP"
+        "releasecondition": "Oliver Lvl 20 & Vivian Lvl 20 & 200 SP",
+        "masterbonus": "+2% HP recovery Amount",
+        "totalbonus": "+15% HP recovery Ammount +250 HP"
     },
     "Gawain": {
         "name": "Gawain",
@@ -468,7 +485,9 @@
         "assistdesc2": "",
         "description": "\"A holy knight of the Round Table who performed acts worthy of legend.This soft- hearted big sis type has many secret admirers.\"",
         "image": "\/images\/9\/9a\/GawainClose.png",
-        "releasecondition": "Lancelot Lvl 20 & Van Helsing Lvl 20 & 200 SP"
+        "releasecondition": "Lancelot Lvl 20 & Van Helsing Lvl 20 & 200 SP",
+        "masterbonus": "+2% ATK",
+        "totalbonus": "+2500 ATK"
     },
     "Gilgamesh": {
         "name": "Gilgamesh",
@@ -501,7 +520,9 @@
         "assistdesc2": "",
         "description": "\"Her body is wrapped in a alf-mechanical serpent of immortality. She devotes herself fully to the men she falls for.\"",
         "image": "\/images\/9\/90\/GilgameshClose.png",
-        "releasecondition": "Beowulf Lvl 20 & Billy the Kid Lvl 20 & 200 SP"
+        "releasecondition": "Beowulf Lvl 20 & Billy the Kid Lvl 20 & 200 SP",
+        "masterbonus": "+2% Gauge Restriction",
+        "totalbonus": "+10% Gauge Restriction"
     },
     "Granuaile": {
         "name": "Granuaile",
@@ -534,7 +555,9 @@
         "assistdesc2": "",
         "description": "\"She once served as the captain of an aerial battleship.Though a bit rough at times, she is warm and reliable to her allies.\"",
         "image": "\/images\/3\/34\/GranuaileClose.png",
-        "releasecondition": "Vivian Lvl 20 & Billy the Kid Lvl 20 & 200 SP"
+        "releasecondition": "Vivian Lvl 20 & Billy the Kid Lvl 20 & 200 SP",
+        "masterbonus": "+2% HP",
+        "totalbonus": "+15% Snatch Success Rate +250 HP"
     },
     "Roland": {
         "name": "Roland",
@@ -567,7 +590,9 @@
         "assistdesc2": "",
         "description": "\"A greatsword-wielding holy knight granted the title of Paladin.Nimble and quick, she excels at speed based combat.\"",
         "image": "\/images\/0\/04\/RolandClose.png",
-        "releasecondition": "Beowulf Lvl 20 & Oliver Lvl 20 & 200 SP"
+        "releasecondition": "Beowulf Lvl 20 & Oliver Lvl 20 & 200 SP",
+        "masterbonus": "+2% DEF",
+        "totalbonus": "+15% DEF"
     },
     "Rosenkreuz": {
         "name": "Rosenkreuz",
@@ -600,7 +625,9 @@
         "assistdesc2": "",
         "description": "\"Combining beauty and strength, she is the leader of the Cross of Roses Knights.She can use all four elements freely.\"",
         "image": "\/images\/c\/cb\/RosenkreuzClose.png",
-        "releasecondition": "Merlin Lvl 20 & Lancelot Lvl 20 & 200 SP"
+        "releasecondition": "Merlin Lvl 20 & Lancelot Lvl 20 & 200 SP",
+        "masterbonus": "+4% Ability DMG",
+        "totalbonus": "+15% Ability DMG"
     },
     "Andromeda": {
         "name": "Andromeda",
@@ -634,7 +661,8 @@
         "assistdesc2": "Combo Attack rate\u2191 with abilities that grant 'ATK\u2191'",
         "abilityunlock1": "",
         "abilityunlock2": "Unlocks at Level 5",
-        "abilityunlock3": "Unlocks at Level 15"
+        "abilityunlock3": "Unlocks at Level 15",
+        "totalbonus": "+20% HP Recovery Amount +200 HP"
     },
     "Arthur": {
         "name": "Arthur",
@@ -667,7 +695,9 @@
         "assistdesc2": "Combo Attack rate\u2191 with abilities that grant 'ATK\u2191'",
         "description": "\"The legendary heroine who wields the holy sword Excalibur.However, at times, she fawns on men she is familiar with when they are alone.\"",
         "image": "\/images\/2\/23\/Arthur_zoomed.png",
-        "releasecondition": "Gawain Lvl 20 & Asmund Lvl 20 & 300 SP"
+        "releasecondition": "Gawain Lvl 20 & Asmund Lvl 20 & 300 SP",
+        "masterbonus": "+3% ATK",
+        "totalbonus": "+4000 ATK"
     },
     "D'Artagnan": {
         "name": "D'Artagnan",
@@ -700,7 +730,9 @@
         "assistdesc2": "ATK\u2191 based on depth of Snatch.",
         "description": "\"A living weapon created by the heroes called Three Musketeers.Despite her childlike appearance, she is intelligent and aloof.\"",
         "image": "\/images\/2\/27\/D%27ArtagnanClose.png",
-        "releasecondition": "Cassiopeia Lvl 20 & Granuaile Lvl 20 & 500 SP"
+        "releasecondition": "Cassiopeia Lvl 20 & Granuaile Lvl 20 & 500 SP",
+        "masterbonus": "+3% HP",
+        "totalbonus": "+20% Snatch Success Rate +250 HP"
     },
     "Joan of Arc": {
         "name": "Joan of Arc",
@@ -733,7 +765,9 @@
         "assistdesc2": "Orleans Call effect\u2191",
         "description": "\"A pure hearted maid and legendary knight who trusts the gods with her whole heart. A scientific amalgamation, her Orlean Flag's power is limitless.\"",
         "image": "\/images\/0\/01\/JoanOfArcClose.png",
-        "releasecondition": "Gilgamesh Lvl 20 & Roland Lvl 20 & 500 SP"
+        "releasecondition": "Gilgamesh Lvl 20 & Roland Lvl 20 & 500 SP",
+        "masterbonus": "+3% DEF",
+        "totalbonus": "+20% DEF"
     },
     "Mordred": {
         "name": "Mordred",
@@ -767,7 +801,8 @@
         "description": "\"A knight of the Round Table who betrayed Arthur.Possibly due to her past, the is something shadowy about her beautiful. ambitious nature.\"",
         "image": "\/images\/3\/3a\/Mordred_zoomed.png",
         "releasecondition": "Asmund Lvl 20 & Rosenkreuz Lvl 20 & 500 SP",
-        "masterbonus": "+6% DMG to Afflicted Enemy"
+        "masterbonus": "+6% DMG to Afflicted Enemy",
+        "totalbonus": "+15% DMG to Afflicted Enemy"
     },
     "Siegfried": {
         "name": "Siegfried",
@@ -800,7 +835,9 @@
         "assistdesc2": "Combo Attack Rate\u2191 when enemy is Stunned.",
         "description": "\"She was once fatally injured and escaped death by fusing herself with her beloved sword. She constantly communicates spiritually with her sword Balmung.\"",
         "image": "\/images\/9\/95\/SiegfriedClose.png",
-        "releasecondition": "Gilgamesh Lvl 20 & Granuaile Lvl 20 & 500 SP"
+        "releasecondition": "Gilgamesh Lvl 20 & Granuaile Lvl 20 & 500 SP",
+        "masterbonus": "+3% Gauge Restriction",
+        "totalbonus": "+15% Gauge Restriction"
     },
     "Solomon": {
         "name": "Solomon",
@@ -833,6 +870,8 @@
         "assistdesc2": "ATK\u2191 when using Book of Raziel.",
         "description": "\"A great legendary sorceress with a ring that lets her subjugate demons. She has knowledge of even the world's deepest inner workings.\"",
         "image": "\/images\/1\/1e\/SolomonClose.png",
-        "releasecondition": "Gawain Lvl 20 & Rosenkreuz Lvl 20 & 300 SP"
+        "releasecondition": "Gawain Lvl 20 & Rosenkreuz Lvl 20 & 300 SP",
+        "masterbonus": "+6% Ability DMG",
+        "totalbonus": "+20% Ability DMG"
     }
 }

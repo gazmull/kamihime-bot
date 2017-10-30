@@ -207,6 +207,7 @@ exports.run     = (client, message, args) => {
       sl_description        += "\n\n__**Favourite Weapons:**__  "+sl_weapons1+" - "+sl_weapons2;
       sl_description        += "\n__**Master Bonus:**__  "+SLdatas[khname].masterbonus;
       sl_description        += "\n__**Release Conditions:**__  "+sl_releaseCond;
+      sl_description        += "\n__**Bonus At Maximum Level:**__  "+SLdatas[khname].totalbonus;
 
       const embed = new Discord.RichEmbed()
       .setTitle(sl_rarity+" - "+sl_subType+" ("+sl_class+")")
