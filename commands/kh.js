@@ -18,26 +18,33 @@ exports.run     = (client, message, args) => {
     return;
   }
 
-  // --- Try to match results with the provided request
-
   var khnameList = [];
 
-  for(var key in KHdatas) {
-      if(key.indexOf(khrequest) == 0) {
-          khnameList.push(key);
-      }
+  if ( KHdatas.hasOwnProperty(khrequest) ||
+       EDdatas.hasOwnProperty(khrequest) ||
+       SLdatas.hasOwnProperty(khrequest) ) {
+      // --- Exact match
+      khnameList.push(khrequest);
   }
+  else {
 
-  for(var key in EDdatas) {
+    // --- Try to match results with the provided request
+
+    for (var key in KHdatas) {
       if(key.indexOf(khrequest) == 0) {
           khnameList.push(key);
       }
-  }
-
-  for(var key in SLdatas) {
+    }
+    for (var key in EDdatas) {
       if(key.indexOf(khrequest) == 0) {
           khnameList.push(key);
       }
+    }
+    for (var key in SLdatas) {
+      if(key.indexOf(khrequest) == 0) {
+          khnameList.push(key);
+      }
+    }
   }
 
   // --- Main Loop for Kamihimes, Eidolons & Souls
@@ -161,10 +168,13 @@ exports.run     = (client, message, args) => {
       .setTitle(config.eimojis[ed_rarity]+" "+config.eimojis[ed_element])
       .setAuthor("Eidolon: "+ed_name, "")
       .setColor("#00AE86")
-      .setDescription("*"+EDdatas[khname].description+"*")
       .setThumbnail(ed_thumb)
       .setURL(ed_link)
       .addField("Statistics:", ":crossed_swords: " + ed_attackMin + " - " + ed_attackMax + "    :green_heart: " + ed_HPMin + " - " + ed_HPMax + "    :muscle: " + ed_totalPowerMin + " - " + ed_totalPowerMax, false);
+
+      if (EDdatas[khname].description) {
+        embed.setDescription("*"+EDdatas[khname].description+"*")
+      }
 
       if (ed_summonAttack.length && ed_summonAttackEffect.length) {
         embed.addField(ed_summonAttack + " (" + ed_summonAttackCooldown + ")", ed_summonAttackEffect,false);
@@ -179,8 +189,12 @@ exports.run     = (client, message, args) => {
           ,false);
       }
 
-      embed.addField("Obtained from:",EDdatas[khname].obtained,false);
-      embed.setImage(ed_image);
+      if (EDdatas[khname].obtained) {
+        embed.addField("Obtained from:",EDdatas[khname].obtained,false);
+      }
+      if (ed_image) {
+        embed.setImage(ed_image);
+      }
 
       message.channel.send({embed});
       khfound = true;
@@ -212,11 +226,20 @@ exports.run     = (client, message, args) => {
       const embed = new Discord.RichEmbed()
       .setTitle(sl_rarity+" - "+sl_subType+" ("+sl_class+")")
       .setAuthor("Soul: "+sl_name, "")
-      .setColor("#00AE86")
-      .setDescription(sl_description)
-      .setThumbnail(sl_thumb)
-      .setURL(sl_link)
-      .setImage(sl_image);
+      .setColor("#00AE86");
+
+      if (sl_description){
+        embed.setDescription(sl_description);
+      }
+      if (sl_thumb){
+        embed.setThumbnail(sl_thumb);
+      }
+      if (sl_link){
+        embed.setURL(sl_link);
+      }
+      if (sl_image){
+        embed.setImage(sl_image);
+      }
 
       if (SLdatas[khname].burst){
         var burstdesc = SLdatas[khname].burstdesc.replace("\u2605","\n\u2605");
