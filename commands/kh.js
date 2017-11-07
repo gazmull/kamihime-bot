@@ -4,6 +4,8 @@
 var   KHdatas = require('../datas/kamihime.json');
 var   EDdatas = require('../datas/eidolons.json');
 var   SLdatas = require('../datas/souls.json');
+var   WPdatas = require('../datas/weapons.json');
+
 const Discord = require("discord.js");
 const config  = require("../config.json");
 
@@ -22,6 +24,7 @@ exports.run     = (client, message, args) => {
 
   if ( KHdatas.hasOwnProperty(khrequest) ||
        EDdatas.hasOwnProperty(khrequest) ||
+       WPdatas.hasOwnProperty(khrequest) ||
        SLdatas.hasOwnProperty(khrequest) ) {
       // --- Exact match
       khnameList.push(khrequest);
@@ -45,9 +48,15 @@ exports.run     = (client, message, args) => {
           khnameList.push(key);
       }
     }
+    for (var key in WPdatas) {
+      if(key.indexOf(khrequest) == 0) {
+          khnameList.push(key);
+      }
+    }
+
   }
 
-  // --- Main Loop for Kamihimes, Eidolons & Souls
+  // --- Main Loop for Kamihimes, Eidolons, Souls & Weapons
 
   for (khIndex = 0; khIndex < khnameList.length; ++khIndex)
   {
@@ -272,10 +281,53 @@ exports.run     = (client, message, args) => {
         embed.addField(":white_check_mark: "+SLdatas[khname].assist2,SLdatas[khname].assistdesc2,false)
       }
 
-
-
       message.channel.send({embed});
       khfound = true;
+    }
+
+    // --- Weapons
+
+    if(WPdatas.hasOwnProperty(khname))
+    {
+        var wp_name           = WPdatas[khname].name;
+        var wp_rarity         = WPdatas[khname].rarity;
+        var wp_element        = WPdatas[khname].element+"Symbol";
+        var wp_portraiturl    = config.thumbrooturl+WPdatas[khname].portraiturl;
+        var wp_imageurl       = config.thumbrooturl+WPdatas[khname].imageurl;
+        var wp_attackMin      = WPdatas[khname].atk_min;
+        var wp_attackMax      = WPdatas[khname].atk_max;
+        var wp_HPMin          = WPdatas[khname].hp_min;
+        var wp_HPMax          = WPdatas[khname].hp_max;
+        var wp_totalPowerMin  = wp_HPMin+wp_attackMin;
+        var wp_totalPowerMax  = wp_HPMax+wp_attackMax;
+
+        const embed = new Discord.RichEmbed()
+          .setTitle(config.eimojis[wp_rarity]+" "+config.eimojis[wp_element]+" ("+WPdatas[khname].type+")")
+          .setAuthor("Weapon: "+wp_name, "")
+          .setColor("#00AE86")
+          .setThumbnail(wp_portraiturl)
+          .addField("Statistics:", ":crossed_swords: " + wp_attackMin + " - " + wp_attackMax + "    :green_heart: " + wp_HPMin + " - " + wp_HPMax + "    :muscle: " + wp_totalPowerMin + " - " + wp_totalPowerMax, false);
+
+        if (WPdatas[khname].obtained) {
+          embed.addField("Obtained from:",WPdatas[khname].obtained,false);
+        }
+        if (WPdatas[khname].skill_type) {
+          embed.addField("SKill:",WPdatas[khname].skill_type,false);
+        }
+        if (WPdatas[khname].burst_desc) {
+          embed.addField("Burst:",WPdatas[khname].burst_desc,false);
+        }
+
+
+        if (wp_imageurl){
+          embed.setImage(wp_imageurl);
+        }
+        if (WPdatas[khname].description) {
+          embed.setDescription("*"+WPdatas[khname].description+"*")
+        }
+
+        message.channel.send({embed});
+        khfound = true;
     }
   }
 

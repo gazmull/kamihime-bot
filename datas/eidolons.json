@@ -4178,5 +4178,20 @@
         "eidolonEffectTier3Stars": "",
         "eidolonEffectTier4Effect": "",
         "eidolonEffectTier4Stars": ""
+    },
+    "Lilim Ira": {
+        "name": "Lilim Ira",
+        "link": "\/wiki\/Lilim_Ira",
+        "thumb": "\/images\/9\/90\/LilimIraPortrait.png",
+        "raritythumb": "\/images\/0\/06\/SSR.png",
+        "elementthumb": "\/images\/3\/3c\/FireSymbol.png",
+        "attackMin": "266",
+        "attackMax": "1596",
+        "HPMin": "66",
+        "HPMax": "396",
+        "totalPowerMin": "332",
+        "totalPowerMax": "1992",
+        "rarity": "SSR",
+        "element": "FireSymbol"
     }
 }
