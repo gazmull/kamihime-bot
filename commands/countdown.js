@@ -2,25 +2,29 @@
 const Discord     = require("discord.js");
 const _           = require("lodash");            // https://lodash.com
 const Countdown   = require("countdown");         // http://countdownjs.org
-const Moment      = require("moment");            // https://momentjs.com/
+const Moment      = require("moment-timezone");            // https://momentjs.com/
 const persist     = require("../datas/persist").persist;
 
+/*
+ * These, unlike custom countdowns added with the command, are in Pacific time
+ * to sync up with timezone changes for the game.
+ */
 const hardcoded_countdowns = [
   {
     name: 'Daily reset',
-    time: '7:00',
+    time: '0:00',
   },
   {
     name: 'First Burst Time',
-    time: '11:00',
+    time: '4:00',
   },
   {
     name: 'Quest reset',
-    time: '12:00',
+    time: '5:00',
   },
   {
     name: 'Second Burst Time',
-    time: '19:00',
+    time: '12:00',
   }
 ];
 
@@ -60,8 +64,8 @@ exports.run = (client, message, args) => {
     
     for (var hardcoded_countdown_key in hardcoded_countdowns) {
       var definition = hardcoded_countdowns[hardcoded_countdown_key];
-      var date = Moment.utc(definition.time, 'HH:mm').seconds(0);
-      if(Moment.utc().isAfter(date)) { date.add(1, 'day'); }
+      var date = Moment.tz(definition.time, 'HH:mm', 'America/Los_Angeles').seconds(0);
+      if(Moment.tz('America/Los_Angeles').isAfter(date)) { date.add(1, 'day'); }
       countdown_array.push([definition.name, date]);
     }
     
