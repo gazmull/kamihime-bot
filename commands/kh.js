@@ -290,6 +290,7 @@ exports.run     = (client, message, args) => {
     if(WPdatas.hasOwnProperty(khname))
     {
         var wp_name           = WPdatas[khname].name;
+        var ed_link           = config.wikidomain+WPdatas[khname].link;
         var wp_rarity         = WPdatas[khname].rarity;
         var wp_element        = WPdatas[khname].element+"Symbol";
         var wp_portraiturl    = config.thumbrooturl+WPdatas[khname].portraiturl;
@@ -298,8 +299,8 @@ exports.run     = (client, message, args) => {
         var wp_attackMax      = WPdatas[khname].atk_max;
         var wp_HPMin          = WPdatas[khname].hp_min;
         var wp_HPMax          = WPdatas[khname].hp_max;
-        var wp_totalPowerMin  = wp_HPMin+wp_attackMin;
-        var wp_totalPowerMax  = wp_HPMax+wp_attackMax;
+        var wp_totalPowerMin  = parseInt(wp_HPMin)+parseInt(wp_attackMin);
+        var wp_totalPowerMax  = parseInt(wp_HPMax)+parseInt(wp_attackMax);
 
         const embed = new Discord.RichEmbed()
           .setTitle(config.eimojis[wp_rarity]+" "+config.eimojis[wp_element]+" ("+WPdatas[khname].type+")")
@@ -308,14 +309,21 @@ exports.run     = (client, message, args) => {
           .setThumbnail(wp_portraiturl)
           .addField("Statistics:", ":crossed_swords: " + wp_attackMin + " - " + wp_attackMax + "    :green_heart: " + wp_HPMin + " - " + wp_HPMax + "    :muscle: " + wp_totalPowerMin + " - " + wp_totalPowerMax, false);
 
+        if (ed_link){
+          embed.setURL(ed_link);
+        }
+
         if (WPdatas[khname].obtained) {
           embed.addField("Obtained from:",WPdatas[khname].obtained,false);
         }
-        if (WPdatas[khname].skill_type) {
-          embed.addField("SKill:",WPdatas[khname].skill_type,false);
+        if (WPdatas[khname].burst_fulldesc) {
+          embed.addField(":b: Burst Effect:",WPdatas[khname].burst_fulldesc,false);
         }
-        if (WPdatas[khname].burst_desc) {
-          embed.addField("Burst:",WPdatas[khname].burst_desc,false);
+        if (WPdatas[khname].skill_name) {
+          embed.addField(":regional_indicator_s: "+WPdatas[khname].skill_name+":",WPdatas[khname].skill_desc,false);
+        }
+        if (WPdatas[khname].releases) {
+          embed.addField(":gift: Releases:",WPdatas[khname].releases,false);
         }
 
 
