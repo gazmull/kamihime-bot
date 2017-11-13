@@ -323,9 +323,13 @@ exports.run     = (client, message, args) => {
           embed.addField(":regional_indicator_s: "+WPdatas[khname].skill_name+":",WPdatas[khname].skill_desc,false);
         }
         if (WPdatas[khname].releases) {
-          embed.addField(":gift: Releases:",WPdatas[khname].releases,false);
+          if (WPdatas[khname].releases_link) {
+            embed.addField("Releases:","["+WPdatas[khname].releases+"]("+config.wikidomain+WPdatas[khname].releases_link+")",false);
+          }
+          else {
+            embed.addField("Releases:",WPdatas[khname].releases,false);
+          }
         }
-
 
         if (wp_imageurl){
           embed.setImage(wp_imageurl);
