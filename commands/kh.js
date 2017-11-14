@@ -75,22 +75,22 @@ exports.run     = (client, message, args) => {
     {
       var kh_name           = KHdatas[khname].name;
       var kh_link           = config.wikidomain+KHdatas[khname].link;
-      var kh_thumb          = config.thumbrooturl+KHdatas[khname].thumb;
-      var kh_image          = config.thumbrooturl+KHdatas[khname].image;
-      var kh_raritythumb    = config.thumbrooturl+KHdatas[khname].raritythumb;
+      var kh_thumb          = config.thumbrooturl+KHdatas[khname].portraiturl;
+      var kh_image          = config.thumbrooturl+KHdatas[khname].imageurl;
+      //var kh_raritythumb    = config.thumbrooturl+KHdatas[khname].raritythumb;
       var kh_rarity         = KHdatas[khname].rarity;
-      var kh_elementthumb   = config.thumbrooturl+KHdatas[khname].elementthumb;
+      //var kh_elementthumb   = config.thumbrooturl+KHdatas[khname].elementthumb;
       var kh_element        = KHdatas[khname].element;
-      var kh_class          = KHdatas[khname].class;
-      var kh_attackMin      = KHdatas[khname].attackMin;
-      var kh_attackMax      = KHdatas[khname].attackMax;
-      var kh_HPMin          = KHdatas[khname].HPMin;
-      var kh_HPMax          = KHdatas[khname].HPMax;
-      var kh_totalPowerMin  = KHdatas[khname].totalPowerMin;
-      var kh_totalPowerMax  = KHdatas[khname].totalPowerMax;
+      var kh_type          = KHdatas[khname].type;
+      var kh_attackMin      = KHdatas[khname].atk_min;
+      var kh_attackMax      = KHdatas[khname].atk_max;
+      var kh_HPMin          = KHdatas[khname].hp_min;
+      var kh_HPMax          = KHdatas[khname].hp_max;
+      var kh_totalPowerMin  = parseInt(kh_HPMin)+parseInt(kh_attackMin);
+      var kh_totalPowerMax  = parseInt(kh_HPMax)+parseInt(kh_attackMax);
 
       const embed = new Discord.RichEmbed()
-      .setTitle(config.eimojis[kh_rarity]+" "+config.eimojis[kh_element]+" ("+kh_class+")")
+      .setTitle(config.eimojis[kh_rarity]+" "+config.eimojis[kh_element+"Symbol"]+" ("+kh_type+")")
       .setAuthor("Kamihime: "+kh_name, "")
       .setColor("#00AE86")
       .setDescription("*"+KHdatas[khname].description+"*")
@@ -99,39 +99,49 @@ exports.run     = (client, message, args) => {
       .setImage(kh_image)
       .addField("Statistics:", ":crossed_swords: " + kh_attackMin + " - " + kh_attackMax + "    :green_heart: " + kh_HPMin + " - " + kh_HPMax + "    :muscle: " + kh_totalPowerMin + " - " + kh_totalPowerMax, false);
 
-      if (KHdatas[khname].burst){
-        var burstdesc = KHdatas[khname].burstdesc.replace("\u2605","\n\u2605");
-        embed.addField(":b: "+KHdatas[khname].burst,burstdesc,false)
+      if (KHdatas[khname].burst_name){
+        var burstdesc = KHdatas[khname].burst_desc;
+        embed.addField(":b: "+KHdatas[khname].burst_name,burstdesc,false)
       }
-      if (KHdatas[khname].ability1){
-        var abilitydesc1 = KHdatas[khname].abilitydesc1.replace("\u2605","\n\u2605");
-        var abilitycool1 = KHdatas[khname].abilitycool1.replace('Cooldown:',':battery:');
-        abilitycool1 = abilitycool1.replace('Duration:',':hourglass:');
-        embed.addField(":regional_indicator_a: "+KHdatas[khname].ability1+" "+abilitycool1,abilitydesc1,false)
+      if (KHdatas[khname].ability1_name){
+        var abilitycool1  = KHdatas[khname].ability1_cd;
+        var abilitydur1   = KHdatas[khname].ability1_dur;
+        if (abilitycool1.length)
+            abilitycool1 = ':battery: '+abilitycool1;
+        if (abilitydur1.length)
+            abilitydur1  = ':hourglass: '+abilitydur1;
+        embed.addField(":regional_indicator_a: "+KHdatas[khname].ability1_name+" "+abilitydur1+abilitycool1,KHdatas[khname].ability1_desc,false)
       }
-      if (KHdatas[khname].ability2){
-        var abilitydesc2 = KHdatas[khname].abilitydesc2.replace("\u2605","\n\u2605");
-        var abilitycool2 = KHdatas[khname].abilitycool2.replace('Cooldown:',':battery:');
-        abilitycool2 = abilitycool2.replace('Duration:',':hourglass:');
-        embed.addField(":regional_indicator_a: "+KHdatas[khname].ability2+" "+abilitycool2,abilitydesc2,false)
+      if (KHdatas[khname].ability2_name){
+        var abilitycool2  = KHdatas[khname].ability2_cd;
+        var abilitydur2   = KHdatas[khname].ability2_dur;
+        if (abilitycool2.length)
+            abilitycool2 = ':battery: '+abilitycool2;
+        if (abilitydur2.length)
+            abilitydur2  = ':hourglass: '+abilitydur2;
+        embed.addField(":regional_indicator_a: "+KHdatas[khname].ability2_name+" "+abilitydur2+abilitycool2,KHdatas[khname].ability2_desc,false)
       }
-      if (KHdatas[khname].ability3){
-        var abilitydesc3 = KHdatas[khname].abilitydesc3.replace("\u2605","\n\u2605");
-        var abilitycool3 = KHdatas[khname].abilitycool3.replace('Cooldown:',':battery:');
-        abilitycool3 = abilitycool3.replace('Duration:',':hourglass:');
-        embed.addField(":regional_indicator_a: "+KHdatas[khname].ability3+" "+abilitycool3,abilitydesc3,false)
+      if (KHdatas[khname].ability3_name){
+        var abilitycool3  = KHdatas[khname].ability3_cd;
+        var abilitydur3   = KHdatas[khname].ability3_dur;
+        if (abilitycool3.length)
+            abilitycool3 = ':battery: '+abilitycool3;
+        if (abilitydur3.length)
+            abilitydur3  = ':hourglass: '+abilitydur3;
+        embed.addField(":regional_indicator_a: "+KHdatas[khname].ability3_name+" "+abilitydur3+abilitycool3,KHdatas[khname].ability3_desc,false)
       }
-      if (KHdatas[khname].assist){
-        embed.addField(":white_check_mark: "+KHdatas[khname].assist,KHdatas[khname].assistdesc,false)
+
+      if (KHdatas[khname].assist_name){
+        embed.addField(":white_check_mark: "+KHdatas[khname].assist_name,KHdatas[khname].assist_desc,false)
       }
 
       embed.addField("Obtained from:",KHdatas[khname].obtained,false);
-      if (KHdatas[khname].weapon) {
-        if (KHdatas[khname].weaponlink) {
-          embed.addField("Released weapon:","["+KHdatas[khname].weapon+"]("+config.wikidomain+KHdatas[khname].weaponlink+")",false);
+      if (KHdatas[khname].release_weapon) {
+        if (KHdatas[khname].release_weapon_link) {
+          embed.addField("Released weapon:","["+KHdatas[khname].release_weapon+"]("+config.wikidomain+KHdatas[khname].release_weapon_link+")",false);
         }
         else {
-          embed.addField("Released weapon:",KHdatas[khname].weapon,false);
+          embed.addField("Released weapon:",KHdatas[khname].release_weapon,false);
         }
       }
 
