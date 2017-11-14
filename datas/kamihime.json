@@ -30,7 +30,7 @@
         "ability2_dur": "1 turn",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -41,7 +41,7 @@
         "imageurl": "\/images\/6\/69\/%28Beach_Light%29_NergalClose.png",
         "portraiturl": "\/images\/a\/a1\/%28BeachLight%29NergalPortrait.png",
         "timestamp": "2017-08-27T15:03:10Z",
-        "lastfullchecked": "2017-11-14T20:07:17Z"
+        "lastfullchecked": "2017-11-14T22:34:47Z"
     },
     "(Mid Summer Sun) Sol": {
         "name": "(Mid Summer Sun) Sol",
@@ -68,13 +68,13 @@
         "ability1_dur": "",
         "ability2_name": "Sunset Cure",
         "ability2_img": "",
-        "ability2_desc": "Heals all allies for 1200 & Recovers 1 affliction\n\u2605 (Lvl 55) Increases heal amount to 1500 & reduces the cooldown by 1 turn",
+        "ability2_desc": "Heals all allies for 1200 & Recovers 1 affliction\n\u2605 (Lvl 75) Increases heal amount to 1500 & reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Increases heal amount to 1500 & reduces the cooldown by 1 turn",
         "ability2_cd": "7 (6) turns",
         "ability2_dur": "",
         "ability3_name": "Corona Flower",
         "ability3_img": "",
-        "ability3_desc": "All allies  Fire ATK\u2191 & Regeneration limit\u2191\n\u2605 (Lvl 55) ",
+        "ability3_desc": "All allies  Fire ATK\u2191 & Regeneration limit\u2191",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -85,7 +85,7 @@
         "imageurl": "\/images\/8\/87\/%28Mid_Summer_Sun%29_SolClose.png",
         "portraiturl": "\/images\/6\/64\/%28MidSummerSun%29SolPortrait.png",
         "timestamp": "2017-08-19T10:52:34Z",
-        "lastfullchecked": "2017-11-14T20:07:19Z"
+        "lastfullchecked": "2017-11-14T22:34:48Z"
     },
     "(Pretty Pumpkin) Artemis": {
         "name": "(Pretty Pumpkin) Artemis",
@@ -112,13 +112,13 @@
         "ability1_dur": "",
         "ability2_name": "Sugary Crush",
         "ability2_img": "",
-        "ability2_desc": "Deals Thunder DMG to an enemy and removes one empowerment\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Deals Thunder DMG to an enemy and removes one empowerment\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "9(8) turns",
         "ability2_dur": "",
         "ability3_name": "Cheerful pastry",
         "ability3_img": "",
-        "ability3_desc": "Applies  Atk\u2191 and  Ability DMG\u2191 to all allies\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies  Atk\u2191 and  Ability DMG\u2191 to all allies",
         "ability3_powerup_desc": "",
         "ability3_cd": "5 turns",
         "ability3_dur": "2 turns",
@@ -129,7 +129,7 @@
         "imageurl": "\/images\/9\/92\/%28Pretty_Pumpkin%29_ArtemisClose.png",
         "portraiturl": "\/images\/4\/41\/%28PrettyPumpkin%29ArtemisPortrait.png",
         "timestamp": "2017-10-26T08:29:37Z",
-        "lastfullchecked": "2017-11-14T20:07:20Z"
+        "lastfullchecked": "2017-11-14T22:34:49Z"
     },
     "(Sunlight) Brynhildr": {
         "name": "(Sunlight) Brynhildr",
@@ -156,13 +156,13 @@
         "ability1_dur": "",
         "ability2_name": "Solar Healing",
         "ability2_img": "",
-        "ability2_desc": "Heals 1 ally for 1200 hp &  Dark RST\u2191\n\u2605 (Lvl 45) Increases heal amount to 1500 hp",
+        "ability2_desc": "Heals 1 ally for 1200 hp &  Dark RST\u2191\n\u2605 (Lvl 65) Increases heal amount to 1500 hp",
         "ability2_powerup_desc": "Increases heal amount to 1500 hp",
         "ability2_cd": "6 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Scintilating Summer",
         "ability3_img": "",
-        "ability3_desc": "Double attack rate\u2191 (++)\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Double attack rate\u2191 (++)",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "3 turns",
@@ -173,7 +173,7 @@
         "imageurl": "\/images\/0\/08\/%28Sunlight%29_BrynhildrClose.png",
         "portraiturl": "\/images\/7\/75\/%28Sunlight%29BrynhildrPortrait.png",
         "timestamp": "2017-08-22T19:47:55Z",
-        "lastfullchecked": "2017-11-14T20:07:21Z"
+        "lastfullchecked": "2017-11-14T22:34:51Z"
     },
     "(Thunder Witch) Michael": {
         "name": "(Thunder Witch) Michael",
@@ -200,13 +200,13 @@
         "ability1_dur": "",
         "ability2_name": "Sweet Scent",
         "ability2_img": "",
-        "ability2_desc": "Applies  ATK\u2191 (+) and  Combo Rate\u2191 to all allies\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Applies  ATK\u2191 (+) and  Combo Rate\u2191 to all allies\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "9(8) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Halloween Fate",
         "ability3_img": "",
-        "ability3_desc": "Applies  Burst Growth\u2191 to all allies\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Applies  Burst Growth\u2191 to all allies",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -217,7 +217,7 @@
         "imageurl": "\/images\/7\/74\/%28Thunder_Witch%29_MichaelClose.png",
         "portraiturl": "\/images\/6\/6c\/%28ThunderWitch%29MichaelPortrait.png",
         "timestamp": "2017-10-26T08:17:53Z",
-        "lastfullchecked": "2017-11-14T20:07:22Z"
+        "lastfullchecked": "2017-11-14T22:34:52Z"
     },
     "Abzu": {
         "name": "Abzu",
@@ -250,7 +250,7 @@
         "ability2_dur": "3 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -261,7 +261,7 @@
         "imageurl": "\/images\/2\/2f\/AbzuClose.png",
         "portraiturl": "\/images\/8\/88\/AbzuPortrait.png",
         "timestamp": "2017-11-02T09:57:37Z",
-        "lastfullchecked": "2017-11-14T20:07:23Z"
+        "lastfullchecked": "2017-11-14T22:34:53Z"
     },
     "Acala": {
         "name": "Acala",
@@ -288,13 +288,13 @@
         "ability1_dur": "",
         "ability2_name": "Hair Whip",
         "ability2_img": "",
-        "ability2_desc": "ATK\u2191 &  DEF\u2193 (++)\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn.",
+        "ability2_desc": "ATK\u2191 &  DEF\u2193 (++)\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn.",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn.",
         "ability2_cd": "7 (6) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Land of Ire",
         "ability3_img": "",
-        "ability3_desc": "Burst Gauge\u2191 &  Mode Gauge reduction\u2191\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Burst Gauge\u2191 &  Mode Gauge reduction\u2191",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "2 turns",
@@ -305,7 +305,7 @@
         "imageurl": "\/images\/3\/3f\/AcalaClose.png",
         "portraiturl": "\/images\/6\/66\/AcalaPortrait.png",
         "timestamp": "2017-08-13T13:30:10Z",
-        "lastfullchecked": "2017-11-14T20:07:24Z"
+        "lastfullchecked": "2017-11-14T22:34:54Z"
     },
     "Agni": {
         "name": "Agni",
@@ -332,13 +332,13 @@
         "ability1_dur": "",
         "ability2_name": "Blazing Adoration",
         "ability2_img": "",
-        "ability2_desc": "All allies'  Fire ATK\u2191\n\u2605 (Lvl 45) Increases to  Fire ATK\u2191 (+)",
+        "ability2_desc": "All allies'  Fire ATK\u2191\n\u2605 (Lvl 65) Increases to  Fire ATK\u2191 (+)",
         "ability2_powerup_desc": "Increases to  Fire ATK\u2191 (+)",
         "ability2_cd": "6 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Rage",
         "ability3_img": "",
-        "ability3_desc": "ATK\u2191 based on HP lost\n\u2605 (Lvl 45) ",
+        "ability3_desc": "ATK\u2191 based on HP lost",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "1 turn",
@@ -349,7 +349,7 @@
         "imageurl": "\/images\/8\/80\/AgniClose.png",
         "portraiturl": "\/images\/c\/c8\/AgniPortrait.png",
         "timestamp": "2017-08-19T13:51:50Z",
-        "lastfullchecked": "2017-11-14T20:07:26Z"
+        "lastfullchecked": "2017-11-14T22:34:55Z"
     },
     "Amaterasu": {
         "name": "Amaterasu",
@@ -376,13 +376,13 @@
         "ability1_dur": "3 turns",
         "ability2_name": "Hidden Stone Door",
         "ability2_img": "",
-        "ability2_desc": "Deals Fire DMG to all enemies & Applies  Blindness\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Deals Fire DMG to all enemies & Applies  Blindness\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "8 (7) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Solar Eclipse",
         "ability3_img": "",
-        "ability3_desc": "1 enemy  ATK &  DEF\u2193 (++)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "1 enemy  ATK &  DEF\u2193 (++)",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "180 sec",
@@ -393,7 +393,7 @@
         "imageurl": "\/images\/1\/19\/AmaterasuClose.png",
         "portraiturl": "\/images\/b\/bb\/AmaterasuPortrait.png",
         "timestamp": "2017-08-13T13:56:25Z",
-        "lastfullchecked": "2017-11-14T20:07:27Z"
+        "lastfullchecked": "2017-11-14T22:34:56Z"
     },
     "Amon (Unleashed)": {
         "name": "Amon (Unleashed)",
@@ -420,13 +420,13 @@
         "ability1_dur": "",
         "ability2_name": "Catastrophe Fist",
         "ability2_img": "",
-        "ability2_desc": "Deals 4.5~5.5x Dark DMG to Raging Enemies\n\u2605 (Lvl 55) Additionally reduces Mode Gauge",
+        "ability2_desc": "Deals 4.5~5.5x Dark DMG to Raging Enemies\n\u2605 (Lvl 75) Additionally reduces Mode Gauge",
         "ability2_powerup_desc": "Additionally reduces Mode Gauge",
         "ability2_cd": "8 turns",
         "ability2_dur": "",
         "ability3_name": "Hades Destroyer",
         "ability3_img": "",
-        "ability3_desc": "1 enemy  DEF\u2193 (++)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "1 enemy  DEF\u2193 (++)",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "180 sec",
@@ -437,7 +437,7 @@
         "imageurl": "\/images\/c\/ce\/Amon_%28Unleashed%29Close.png",
         "portraiturl": "\/images\/a\/a4\/Amon%28Unleashed%29Portrait.png",
         "timestamp": "2017-08-19T10:47:32Z",
-        "lastfullchecked": "2017-11-14T20:07:28Z"
+        "lastfullchecked": "2017-11-14T22:34:58Z"
     },
     "Amon": {
         "name": "Amon",
@@ -464,13 +464,13 @@
         "ability1_dur": "",
         "ability2_name": "Devil's Kiss",
         "ability2_img": "",
-        "ability2_desc": "Blocks 1 affliction for all allies\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Blocks 1 affliction for all allies\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "9 (8) turns",
         "ability2_dur": "",
         "ability3_name": "Mind's Eye",
         "ability3_img": "",
-        "ability3_desc": "Burst Gauge increased by 15%\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Burst Gauge increased by 15%",
         "ability3_powerup_desc": "",
         "ability3_cd": "7 turns",
         "ability3_dur": "",
@@ -481,7 +481,7 @@
         "imageurl": "\/images\/e\/ef\/AmonClose.png",
         "portraiturl": "\/images\/e\/e4\/AmonPortrait.png",
         "timestamp": "2017-08-22T11:24:27Z",
-        "lastfullchecked": "2017-11-14T20:08:51Z"
+        "lastfullchecked": "2017-11-14T22:36:02Z"
     },
     "Aphrodite": {
         "name": "Aphrodite",
@@ -508,13 +508,13 @@
         "ability1_dur": "3 turns",
         "ability2_name": "Wash Detox",
         "ability2_img": "",
-        "ability2_desc": "Recovers 1 affliction for all allies \/  Blocks affliction on self (once)\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Recovers 1 affliction for all allies \/  Blocks affliction on self (once)\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "5 (4) turns",
         "ability2_dur": "",
         "ability3_name": "Bubble Maquillage",
         "ability3_img": "",
-        "ability3_desc": "All allies  triple attack rate\u2191 \/  Double attack rate\u2191 to self\n\u2605 (Lvl 55) ",
+        "ability3_desc": "All allies  triple attack rate\u2191 \/  Double attack rate\u2191 to self",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -525,7 +525,7 @@
         "imageurl": "\/images\/5\/5f\/AphroditeClose.png",
         "portraiturl": "\/images\/b\/bc\/AphroditePortrait.png",
         "timestamp": "2017-08-13T14:37:00Z",
-        "lastfullchecked": "2017-11-14T20:08:52Z"
+        "lastfullchecked": "2017-11-14T22:36:03Z"
     },
     "Apep": {
         "name": "Apep",
@@ -544,7 +544,7 @@
         "burst_name": "Out in Shades",
         "burst_desc": "Dark DMG (+)\n\u2605 (Limit Break \u2605\u2605\u2606) Powered Up",
         "burst_powerup_desc": "",
-        "ability1_name": "Nether Darkness - Deals Dark DMG and applies Blindness to an enemy",
+        "ability1_name": "Nether Darkness",
         "ability1_img": "",
         "ability1_desc": "Deals Dark DMG and applies  Blindness to an enemy\n\u2605 (Lvl 45) Reduces cooldown by one turn",
         "ability1_powerup_desc": "Reduces cooldown by one turn",
@@ -558,7 +558,7 @@
         "ability2_dur": "2 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -568,8 +568,8 @@
         "release_weapon_link": "\/wiki\/Elfin_Khopesh",
         "imageurl": "\/images\/a\/aa\/ApepClose.png",
         "portraiturl": "\/images\/8\/8a\/ApepPortrait.png",
-        "timestamp": "2017-11-14T09:48:03Z",
-        "lastfullchecked": "2017-11-14T20:08:53Z"
+        "timestamp": "2017-11-14T21:39:17Z",
+        "lastfullchecked": "2017-11-14T22:36:04Z"
     },
     "Apsara": {
         "name": "Apsara",
@@ -602,7 +602,7 @@
         "ability2_dur": "5 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -613,7 +613,7 @@
         "imageurl": "\/images\/b\/ba\/ApsaraClose.png",
         "portraiturl": "\/images\/0\/01\/ApsaraPortrait.png",
         "timestamp": "2017-08-25T18:44:09Z",
-        "lastfullchecked": "2017-11-14T20:08:54Z"
+        "lastfullchecked": "2017-11-14T22:36:05Z"
     },
     "Ares": {
         "name": "Ares",
@@ -640,13 +640,13 @@
         "ability1_dur": "",
         "ability2_name": "Mars Flare",
         "ability2_img": "",
-        "ability2_desc": "ATK\u2191 (++++) & applies  scorched\n\u2605 (Lvl 55) Reduces the cooldown by 2 turns",
+        "ability2_desc": "ATK\u2191 (++++) & applies  scorched\n\u2605 (Lvl 75) Reduces the cooldown by 2 turns",
         "ability2_powerup_desc": "Reduces the cooldown by 2 turns",
         "ability2_cd": "8 (6) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Solar Eclipse",
         "ability3_img": "",
-        "ability3_desc": "Burst Gauge growth rate\u2191\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Burst Gauge growth rate\u2191",
         "ability3_powerup_desc": "",
         "ability3_cd": "7 turns",
         "ability3_dur": "3 turns",
@@ -657,7 +657,7 @@
         "imageurl": "\/images\/e\/ec\/AresClose.png",
         "portraiturl": "\/images\/4\/44\/AresPortrait.png",
         "timestamp": "2017-08-13T14:11:40Z",
-        "lastfullchecked": "2017-11-14T20:08:56Z"
+        "lastfullchecked": "2017-11-14T22:36:06Z"
     },
     "Artemis": {
         "name": "Artemis",
@@ -684,13 +684,13 @@
         "ability1_dur": "",
         "ability2_name": "Hunting Arrow",
         "ability2_img": "",
-        "ability2_desc": "Deals 2~3x Light DMG to an enemy\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Deals 2~3x Light DMG to an enemy\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "6 (5) turns",
         "ability2_dur": "",
         "ability3_name": "Full Moon Blood",
         "ability3_img": "",
-        "ability3_desc": "ATK &  Ability DMG\u2191 (+)\n\u2605 (Lvl 45) ",
+        "ability3_desc": "ATK &  Ability DMG\u2191 (+)",
         "ability3_powerup_desc": "",
         "ability3_cd": "5 turns",
         "ability3_dur": "2 turns",
@@ -701,7 +701,7 @@
         "imageurl": "\/images\/1\/1e\/ArtemisClose.png",
         "portraiturl": "\/images\/7\/79\/ArtemisPortrait.png",
         "timestamp": "2017-08-22T19:18:07Z",
-        "lastfullchecked": "2017-11-14T20:08:57Z"
+        "lastfullchecked": "2017-11-14T22:36:08Z"
     },
     "Astaroth": {
         "name": "Astaroth",
@@ -734,7 +734,7 @@
         "ability2_dur": "",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -745,7 +745,7 @@
         "imageurl": "\/images\/9\/9b\/AstarothClose.png",
         "portraiturl": "\/images\/a\/ae\/AstarothPortrait.png",
         "timestamp": "2017-08-27T15:24:04Z",
-        "lastfullchecked": "2017-11-14T20:08:58Z"
+        "lastfullchecked": "2017-11-14T22:36:09Z"
     },
     "Aurora": {
         "name": "Aurora",
@@ -778,7 +778,7 @@
         "ability2_dur": "3 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -789,7 +789,7 @@
         "imageurl": "\/images\/a\/ac\/AuroraClose.png",
         "portraiturl": "\/images\/b\/b1\/AuroraPortrait.png",
         "timestamp": "2017-08-27T14:48:06Z",
-        "lastfullchecked": "2017-11-14T20:08:59Z"
+        "lastfullchecked": "2017-11-14T22:36:10Z"
     },
     "Azazel": {
         "name": "Azazel",
@@ -816,13 +816,13 @@
         "ability1_dur": "5 turns",
         "ability2_name": "Brandish Air",
         "ability2_img": "",
-        "ability2_desc": "Deals Wind DMG to an enemy five times\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Deals Wind DMG to an enemy five times\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "6 (5) turns",
         "ability2_dur": "",
         "ability3_name": "Revitalize",
         "ability3_img": "",
-        "ability3_desc": "Applies  Energy Drain,  Reflect and  Regeneration to self.\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Applies  Energy Drain,  Reflect and  Regeneration to self.",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -833,7 +833,7 @@
         "imageurl": "\/images\/4\/4d\/AzazelClose.png",
         "portraiturl": "\/images\/0\/00\/AzazelPortrait.png",
         "timestamp": "2017-10-07T08:53:54Z",
-        "lastfullchecked": "2017-11-14T20:09:00Z"
+        "lastfullchecked": "2017-11-14T22:36:11Z"
     },
     "Baal": {
         "name": "Baal",
@@ -860,13 +860,13 @@
         "ability1_dur": "",
         "ability2_name": "Hadad Spark",
         "ability2_img": "",
-        "ability2_desc": "Deals 1.5~2x Thunder DMG to all enemies\n\u2605 (Lvl 45) Increases to 2~2.5x Thunder DMG",
+        "ability2_desc": "Deals 1.5~2x Thunder DMG to all enemies\n\u2605 (Lvl 65) Increases to 2~2.5x Thunder DMG",
         "ability2_powerup_desc": "Increases to 2~2.5x Thunder DMG",
         "ability2_cd": "7 turns",
         "ability2_dur": "",
         "ability3_name": "Lightning Charge",
         "ability3_img": "",
-        "ability3_desc": "Triple Attack rate\u2191\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Triple Attack rate\u2191",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -877,7 +877,7 @@
         "imageurl": "\/images\/f\/fc\/BaalClose.png",
         "portraiturl": "\/images\/4\/4c\/BaalPortrait.png",
         "timestamp": "2017-08-20T19:10:28Z",
-        "lastfullchecked": "2017-11-14T20:09:01Z"
+        "lastfullchecked": "2017-11-14T22:36:12Z"
     },
     "Baldr": {
         "name": "Baldr",
@@ -904,13 +904,13 @@
         "ability1_dur": "2 turns",
         "ability2_name": "Full Cover Guard",
         "ability2_img": "",
-        "ability2_desc": "Reduces all damage taken to 0\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Reduces all damage taken to 0\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "7 (6) turns",
         "ability2_dur": "",
         "ability3_name": "Almighty",
         "ability3_img": "",
-        "ability3_desc": "Deals Light DMG to an enemy & Heals self for 1500 hp\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Deals Light DMG to an enemy & Heals self for 1500 hp",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "",
@@ -921,7 +921,7 @@
         "imageurl": "\/images\/0\/0d\/BaldrClose.png",
         "portraiturl": "\/images\/5\/5c\/BaldrPortrait.png",
         "timestamp": "2017-08-22T19:32:18Z",
-        "lastfullchecked": "2017-11-14T20:09:10Z"
+        "lastfullchecked": "2017-11-14T22:36:20Z"
     },
     "Balor": {
         "name": "Balor",
@@ -948,13 +948,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Evil Wink",
         "ability2_img": "",
-        "ability2_desc": "Applies  Poison &  Dizziness to an enemy\n\u2605 (Lvl 45) Powered up",
+        "ability2_desc": "Applies  Poison &  Dizziness to an enemy\n\u2605 (Lvl 65) Powered up",
         "ability2_powerup_desc": "Powered up",
         "ability2_cd": "7 turns",
         "ability2_dur": "180 sec",
         "ability3_name": "Evil Eye's Curse",
         "ability3_img": "",
-        "ability3_desc": "Applies  Scorched,  Blindness &  Paralysis to an enemy\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies  Scorched,  Blindness &  Paralysis to an enemy",
         "ability3_powerup_desc": "",
         "ability3_cd": "7 turns",
         "ability3_dur": "15~180 sec",
@@ -965,7 +965,7 @@
         "imageurl": "\/images\/2\/24\/BalorClose.png",
         "portraiturl": "\/images\/b\/b7\/BalorPortrait.png",
         "timestamp": "2017-08-22T20:05:45Z",
-        "lastfullchecked": "2017-11-14T20:09:11Z"
+        "lastfullchecked": "2017-11-14T22:36:21Z"
     },
     "Baphomet": {
         "name": "Baphomet",
@@ -998,7 +998,7 @@
         "ability2_dur": "3 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -1009,7 +1009,7 @@
         "imageurl": "\/images\/a\/a1\/BaphometClose.png",
         "portraiturl": "\/images\/3\/3c\/BaphometPortrait.png",
         "timestamp": "2017-08-27T15:34:57Z",
-        "lastfullchecked": "2017-11-14T20:09:12Z"
+        "lastfullchecked": "2017-11-14T22:36:22Z"
     },
     "Bastet": {
         "name": "Bastet",
@@ -1036,13 +1036,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Catnip Power",
         "ability2_img": "",
-        "ability2_desc": "Applies Ability DMG\u2191 (+) to all allies\n\u2605 (Lvl 45) Increases to Ability DMG\u2191 (++)",
+        "ability2_desc": "Applies Ability DMG\u2191 (+) to all allies\n\u2605 (Lvl 65) Increases to Ability DMG\u2191 (++)",
         "ability2_powerup_desc": "Increases to Ability DMG\u2191 (++)",
         "ability2_cd": "6 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Dark Cat Force",
         "ability3_img": "",
-        "ability3_desc": "Applies ATK\u2191 (+) to all allies\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies ATK\u2191 (+) to all allies",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "3 turns",
@@ -1053,7 +1053,7 @@
         "imageurl": "\/images\/2\/21\/BastetClose.png",
         "portraiturl": "\/images\/9\/95\/BastetPortrait.png",
         "timestamp": "2017-11-14T09:36:21Z",
-        "lastfullchecked": "2017-11-14T20:09:13Z"
+        "lastfullchecked": "2017-11-14T22:36:23Z"
     },
     "Beelzebub": {
         "name": "Beelzebub",
@@ -1080,13 +1080,13 @@
         "ability1_dur": "2 turns",
         "ability2_name": "King of Flies' Dignity",
         "ability2_img": "",
-        "ability2_desc": "All allies'  Double Attack rate\u2191 (+) &  DEF\u2193 (+)\n\u2605 (Lvl 45) Reduces to  DEF\u2193",
+        "ability2_desc": "All allies'  Double Attack rate\u2191 (+) &  DEF\u2193 (+)\n\u2605 (Lvl 65) Reduces to  DEF\u2193",
         "ability2_powerup_desc": "Reduces to  DEF\u2193",
         "ability2_cd": "8 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Dark Riot",
         "ability3_img": "",
-        "ability3_desc": "All allies  ATK\u2191 (+)\n\u2605 (Lvl 45) ",
+        "ability3_desc": "All allies  ATK\u2191 (+)",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "3 turns",
@@ -1097,7 +1097,7 @@
         "imageurl": "\/images\/0\/08\/BeelzebubClose.png",
         "portraiturl": "\/images\/9\/99\/BeelzebubPortrait.png",
         "timestamp": "2017-08-23T07:40:40Z",
-        "lastfullchecked": "2017-11-14T20:09:15Z"
+        "lastfullchecked": "2017-11-14T22:36:24Z"
     },
     "Belobog": {
         "name": "Belobog",
@@ -1124,13 +1124,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Purification",
         "ability2_img": "",
-        "ability2_desc": "Recovers 1 affliction for all allies &  DEF\u2191\n\u2605 (Lvl 45) Increases to  DEF\u2191 (+)",
+        "ability2_desc": "Recovers 1 affliction for all allies &  DEF\u2191\n\u2605 (Lvl 65) Increases to  DEF\u2191 (+)",
         "ability2_powerup_desc": "Increases to  DEF\u2191 (+)",
         "ability2_cd": "6 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "White Recovery",
         "ability3_img": "",
-        "ability3_desc": "Applies 300hp  Regeneration to all allies\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies 300hp  Regeneration to all allies",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "4 turns",
@@ -1141,7 +1141,7 @@
         "imageurl": "\/images\/b\/b0\/BelobogClose.png",
         "portraiturl": "\/images\/c\/cf\/BelobogPortrait.png",
         "timestamp": "2017-08-22T19:40:07Z",
-        "lastfullchecked": "2017-11-14T20:09:16Z"
+        "lastfullchecked": "2017-11-14T22:36:25Z"
     },
     "Belphegor": {
         "name": "Belphegor",
@@ -1168,13 +1168,13 @@
         "ability1_dur": "",
         "ability2_name": "Paralyzer",
         "ability2_img": "",
-        "ability2_desc": "Extends stun on enemy\n\u2605 (Lvl 45) Powered up",
+        "ability2_desc": "Extends stun on enemy\n\u2605 (Lvl 65) Powered up",
         "ability2_powerup_desc": "Powered up",
         "ability2_cd": "9 turns",
         "ability2_dur": "",
         "ability3_name": "Seven Deadly sins",
         "ability3_img": "",
-        "ability3_desc": "One enemy's  ATK &  DEF\u2193 and  ATK &  DEF\u2191 on self\n\u2605 (Lvl 45) ",
+        "ability3_desc": "One enemy's  ATK &  DEF\u2193 and  ATK &  DEF\u2191 on self",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "3 turns \/\n180 sec",
@@ -1185,7 +1185,7 @@
         "imageurl": "\/images\/f\/f4\/BelphegorClose.png",
         "portraiturl": "\/images\/f\/f7\/BelphegorPortrait.png",
         "timestamp": "2017-08-19T14:19:24Z",
-        "lastfullchecked": "2017-11-14T20:09:17Z"
+        "lastfullchecked": "2017-11-14T22:36:27Z"
     },
     "Boreas": {
         "name": "Boreas",
@@ -1218,7 +1218,7 @@
         "ability2_dur": "",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -1229,7 +1229,7 @@
         "imageurl": "\/images\/a\/ae\/BoreasClose.png",
         "portraiturl": "\/images\/0\/01\/BoreasPortrait.png",
         "timestamp": "2017-08-25T19:06:52Z",
-        "lastfullchecked": "2017-11-14T20:09:18Z"
+        "lastfullchecked": "2017-11-14T22:36:28Z"
     },
     "Brahma": {
         "name": "Brahma",
@@ -1256,13 +1256,13 @@
         "ability1_dur": "",
         "ability2_name": "Cosmo Charge",
         "ability2_img": "",
-        "ability2_desc": "Heals self for 1200 hp &  DEF\u2191 (++)\n\u2605 (Lvl 55) Powered up",
+        "ability2_desc": "Heals self for 1200 hp &  DEF\u2191 (++)\n\u2605 (Lvl 75) Powered up",
         "ability2_powerup_desc": "Powered up",
         "ability2_cd": "6 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Hiranyagarbha",
         "ability3_img": "",
-        "ability3_desc": "Guarantees Combo Attack\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Guarantees Combo Attack",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -1273,7 +1273,7 @@
         "imageurl": "\/images\/7\/72\/BrahmaClose.png",
         "portraiturl": "\/images\/1\/18\/BrahmaPortrait.png",
         "timestamp": "2017-08-27T16:02:08Z",
-        "lastfullchecked": "2017-11-14T20:09:19Z"
+        "lastfullchecked": "2017-11-14T22:36:29Z"
     },
     "Brynhildr": {
         "name": "Brynhildr",
@@ -1300,13 +1300,13 @@
         "ability1_dur": "",
         "ability2_name": "Fiery Embrace",
         "ability2_img": "",
-        "ability2_desc": "Heals all allies for 800 hp\n\u2605 (Lvl 45) Increases heal amount to 1200 hp",
+        "ability2_desc": "Heals all allies for 800 hp\n\u2605 (Lvl 65) Increases heal amount to 1200 hp",
         "ability2_powerup_desc": "Increases heal amount to 1200 hp",
         "ability2_cd": "6 turns",
         "ability2_dur": "",
         "ability3_name": "Valkyrie Assault",
         "ability3_img": "",
-        "ability3_desc": "All allies'  ATK &  Double Attack rate\u2191 (+)\n\u2605 (Lvl 45) ",
+        "ability3_desc": "All allies'  ATK &  Double Attack rate\u2191 (+)",
         "ability3_powerup_desc": "",
         "ability3_cd": "7 turns",
         "ability3_dur": "3 turns",
@@ -1317,7 +1317,7 @@
         "imageurl": "\/images\/8\/82\/BrynhildrClose.png",
         "portraiturl": "\/images\/7\/7b\/BrynhildrPortrait.png",
         "timestamp": "2017-08-19T15:02:05Z",
-        "lastfullchecked": "2017-11-14T20:09:20Z"
+        "lastfullchecked": "2017-11-14T22:36:30Z"
     },
     "Caspiel": {
         "name": "Caspiel",
@@ -1350,7 +1350,7 @@
         "ability2_dur": "180s",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -1361,7 +1361,7 @@
         "imageurl": "\/images\/5\/57\/CaspielClose.png",
         "portraiturl": "\/images\/e\/e7\/CaspielPortrait.png",
         "timestamp": "2017-10-06T08:34:03Z",
-        "lastfullchecked": "2017-11-14T20:09:28Z"
+        "lastfullchecked": "2017-11-14T22:36:38Z"
     },
     "Ceridwen": {
         "name": "Ceridwen",
@@ -1388,13 +1388,13 @@
         "ability1_dur": "3 turns",
         "ability2_name": "Immunize",
         "ability2_img": "",
-        "ability2_desc": "Applies  Affliction RST\u2191 to all allies\n\u2605 (Lvl 45) Powered up",
+        "ability2_desc": "Applies  Affliction RST\u2191 to all allies\n\u2605 (Lvl 65) Powered up",
         "ability2_powerup_desc": "Powered up",
         "ability2_cd": "9 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Nutrient",
         "ability3_img": "",
-        "ability3_desc": "heals 1.200 HP and applies  DEF\u2191 (+) to self\n\u2605 (Lvl 45) ",
+        "ability3_desc": "heals 1.200 HP and applies  DEF\u2191 (+) to self",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "13turn",
@@ -1405,7 +1405,7 @@
         "imageurl": "\/images\/2\/25\/CeridwenClose.png",
         "portraiturl": "\/images\/d\/d6\/CeridwenPortrait.png",
         "timestamp": "2017-11-03T09:30:32Z",
-        "lastfullchecked": "2017-11-14T20:09:29Z"
+        "lastfullchecked": "2017-11-14T22:36:39Z"
     },
     "Circe": {
         "name": "Circe",
@@ -1438,7 +1438,7 @@
         "ability2_dur": "",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -1449,7 +1449,7 @@
         "imageurl": "\/images\/7\/77\/CirceClose.png",
         "portraiturl": "\/images\/6\/62\/CircePortrait.png",
         "timestamp": "2017-08-27T15:43:56Z",
-        "lastfullchecked": "2017-11-14T20:09:30Z"
+        "lastfullchecked": "2017-11-14T22:36:40Z"
     },
     "Cronus": {
         "name": "Cronus",
@@ -1476,13 +1476,13 @@
         "ability1_dur": "",
         "ability2_name": "Despot",
         "ability2_img": "",
-        "ability2_desc": "An enemy's  ATK\u2193 & Your  ATK\u2191\n\u2605 (Lvl 45) Increases  ATK\u2191 (+)",
+        "ability2_desc": "An enemy's  ATK\u2193 & Your  ATK\u2191\n\u2605 (Lvl 65) Increases  ATK\u2191 (+)",
         "ability2_powerup_desc": "Increases  ATK\u2191 (+)",
         "ability2_cd": "6 turns",
         "ability2_dur": "3 turns \/\n180 sec",
         "ability3_name": "Golden Age",
         "ability3_img": "",
-        "ability3_desc": "Ability DMG Up (stackable) once\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Ability DMG Up (stackable) once",
         "ability3_powerup_desc": "",
         "ability3_cd": "3 turns",
         "ability3_dur": "",
@@ -1493,7 +1493,7 @@
         "imageurl": "\/images\/5\/5a\/CronusClose.png",
         "portraiturl": "\/images\/e\/ef\/CronusPortrait.png",
         "timestamp": "2017-08-20T16:20:04Z",
-        "lastfullchecked": "2017-11-14T20:09:31Z"
+        "lastfullchecked": "2017-11-14T22:36:41Z"
     },
     "Cthulhu": {
         "name": "Cthulhu",
@@ -1520,13 +1520,13 @@
         "ability1_dur": "",
         "ability2_name": "Mental Abberation",
         "ability2_img": "",
-        "ability2_desc": "Deals Water DMG to all enemies and applies  DEF\u2193 (+)\n\u2605 (Lvl 55) Increases to  DEF\u2193 (++)",
+        "ability2_desc": "Deals Water DMG to all enemies and applies  DEF\u2193 (+)\n\u2605 (Lvl 75) Increases to  DEF\u2193 (++)",
         "ability2_powerup_desc": "Increases to  DEF\u2193 (++)",
         "ability2_cd": "8 turns",
         "ability2_dur": "180s",
         "ability3_name": "Mad Cultism -",
         "ability3_img": "",
-        "ability3_desc": "Applies  Dizziness and  ATK\u2193 to one enemy, and  ATK\u2191 to self\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Applies  Dizziness and  ATK\u2193 to one enemy, and  ATK\u2191 to self",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "3 turns \/ 180s",
@@ -1537,7 +1537,7 @@
         "imageurl": "\/images\/f\/f1\/CthulhuClose.png",
         "portraiturl": "\/images\/c\/c6\/CthulhuPortrait.png",
         "timestamp": "2017-09-06T09:55:03Z",
-        "lastfullchecked": "2017-11-14T20:09:32Z"
+        "lastfullchecked": "2017-11-14T22:36:42Z"
     },
     "Cu Chulainn": {
         "name": "Cu Chulainn",
@@ -1564,13 +1564,13 @@
         "ability1_dur": "",
         "ability2_name": "Foresight",
         "ability2_img": "",
-        "ability2_desc": "Nullifies all enemies' attacks &  ATK\u2191\n\u2605 (Lvl 55) Powered up",
+        "ability2_desc": "Nullifies all enemies' attacks &  ATK\u2191\n\u2605 (Lvl 75) Powered up",
         "ability2_powerup_desc": "Powered up",
         "ability2_cd": "6 turns",
         "ability2_dur": "1~3 turns",
         "ability3_name": "Cuchulainn Charge",
         "ability3_img": "",
-        "ability3_desc": "Guarantees  triple attack for duration\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Guarantees  triple attack for duration",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "2 turns",
@@ -1581,7 +1581,7 @@
         "imageurl": "\/images\/8\/8d\/Cu_ChulainnClose.png",
         "portraiturl": "\/images\/8\/8b\/CuChulainnPortrait.png",
         "timestamp": "2017-08-19T10:03:23Z",
-        "lastfullchecked": "2017-11-14T20:09:34Z"
+        "lastfullchecked": "2017-11-14T22:36:43Z"
     },
     "Cybele": {
         "name": "Cybele",
@@ -1608,13 +1608,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Mater Idea",
         "ability2_img": "",
-        "ability2_desc": "ATK\u2191 &  DEF\u2191 (+)\n\u2605 (Lvl 45) Powered up and reduces the cooldown by 1 turn",
+        "ability2_desc": "ATK\u2191 &  DEF\u2191 (+)\n\u2605 (Lvl 65) Powered up and reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Powered up and reduces the cooldown by 1 turn",
         "ability2_cd": "7 (6) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Hallucination",
         "ability3_img": "",
-        "ability3_desc": "Nullifies all enemies' attacks on self\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Nullifies all enemies' attacks on self",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "1 turn",
@@ -1625,7 +1625,7 @@
         "imageurl": "\/images\/b\/bd\/CybeleClose.png",
         "portraiturl": "\/images\/7\/7e\/CybelePortrait.png",
         "timestamp": "2017-08-20T16:33:47Z",
-        "lastfullchecked": "2017-11-14T20:09:35Z"
+        "lastfullchecked": "2017-11-14T22:36:45Z"
     },
     "Dagon": {
         "name": "Dagon",
@@ -1658,7 +1658,7 @@
         "ability2_dur": "",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -1669,7 +1669,7 @@
         "imageurl": "\/images\/5\/56\/DagonClose.png",
         "portraiturl": "\/images\/0\/0c\/DagonPortrait.png",
         "timestamp": "2017-09-07T10:19:29Z",
-        "lastfullchecked": "2017-11-14T20:09:36Z"
+        "lastfullchecked": "2017-11-14T22:36:46Z"
     },
     "Dazbog": {
         "name": "Dazbog",
@@ -1702,7 +1702,7 @@
         "ability2_dur": "1 turn",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -1713,7 +1713,7 @@
         "imageurl": "\/images\/6\/6d\/DazbogClose.png",
         "portraiturl": "\/images\/a\/aa\/DazbogPortrait.png",
         "timestamp": "2017-08-25T10:06:37Z",
-        "lastfullchecked": "2017-11-14T20:09:37Z"
+        "lastfullchecked": "2017-11-14T22:36:47Z"
     },
     "Diana": {
         "name": "Diana",
@@ -1740,13 +1740,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Lunar Rose",
         "ability2_img": "",
-        "ability2_desc": "All allies'  ATK\u2191 (+)\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "All allies'  ATK\u2191 (+)\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "7 (6) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Luminotherapy",
         "ability3_img": "",
-        "ability3_desc": "ATK &  DEF\u2191 (+) & Heals self for 1500 hp\n\u2605 (Lvl 45) ",
+        "ability3_desc": "ATK &  DEF\u2191 (+) & Heals self for 1500 hp",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "3 turns",
@@ -1757,7 +1757,7 @@
         "imageurl": "\/images\/6\/6d\/DianaClose.png",
         "portraiturl": "\/images\/f\/f5\/DianaPortrait.png",
         "timestamp": "2017-08-27T15:41:00Z",
-        "lastfullchecked": "2017-11-14T20:09:38Z"
+        "lastfullchecked": "2017-11-14T22:36:48Z"
     },
     "Dike": {
         "name": "Dike",
@@ -1790,7 +1790,7 @@
         "ability2_dur": "180 sec",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -1801,7 +1801,7 @@
         "imageurl": "\/images\/2\/23\/DikeClose.png",
         "portraiturl": "\/images\/b\/be\/DikePortrait.png",
         "timestamp": "2017-08-27T14:55:57Z",
-        "lastfullchecked": "2017-11-14T20:09:46Z"
+        "lastfullchecked": "2017-11-14T22:39:26Z"
     },
     "Ea": {
         "name": "Ea",
@@ -1828,13 +1828,13 @@
         "ability1_dur": "",
         "ability2_name": "Dimension Barrier",
         "ability2_img": "",
-        "ability2_desc": "Applies  and  Burst Gauge\u2191 to self\n\u2605 (Lvl 55) Reduces cooldown by one turn",
+        "ability2_desc": "Applies  and  Burst Gauge\u2191 to self\n\u2605 (Lvl 75) Reduces cooldown by one turn",
         "ability2_powerup_desc": "Reduces cooldown by one turn",
         "ability2_cd": "7(6) turns",
         "ability2_dur": "1 turn",
         "ability3_name": "Enuma Elis",
         "ability3_img": "",
-        "ability3_desc": "DMG\u2191 against stunned enemies (+++)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "DMG\u2191 against stunned enemies (+++)",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "1 turn",
@@ -1845,7 +1845,7 @@
         "imageurl": "\/images\/f\/fd\/EaClose.png",
         "portraiturl": "\/images\/9\/9c\/EaPortrait.png",
         "timestamp": "2017-11-03T09:30:16Z",
-        "lastfullchecked": "2017-11-14T20:09:48Z"
+        "lastfullchecked": "2017-11-14T22:39:27Z"
     },
     "Eligos": {
         "name": "Eligos",
@@ -1872,13 +1872,13 @@
         "ability1_dur": "",
         "ability2_name": "Whirling Insanity",
         "ability2_img": "",
-        "ability2_desc": "Combo Attack Rate\u2191\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Combo Attack Rate\u2191\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "9 (8) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Ray of Darkness",
         "ability3_img": "",
-        "ability3_desc": "Deals 1.5~2x Dark DMG to all enemies\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Deals 1.5~2x Dark DMG to all enemies",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "",
@@ -1889,7 +1889,7 @@
         "imageurl": "\/images\/7\/70\/EligosClose.png",
         "portraiturl": "\/images\/a\/ae\/EligosPortrait.png",
         "timestamp": "2017-08-22T20:23:10Z",
-        "lastfullchecked": "2017-11-14T20:09:49Z"
+        "lastfullchecked": "2017-11-14T22:39:28Z"
     },
     "Enkidu": {
         "name": "Enkidu",
@@ -1916,13 +1916,13 @@
         "ability1_dur": "",
         "ability2_name": "Demonic Release",
         "ability2_img": "",
-        "ability2_desc": "Applies  ATK\u2191 (+) to self\n\u2605 (Lvl 45) Increases to  ATK\u2191 (++)",
+        "ability2_desc": "Applies  ATK\u2191 (+) to self\n\u2605 (Lvl 65) Increases to  ATK\u2191 (++)",
         "ability2_powerup_desc": "Increases to  ATK\u2191 (++)",
         "ability2_cd": "6 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Giant Slayer",
         "ability3_img": "",
-        "ability3_desc": "Deals ~3.5-4x Water DMG against Raging enemies\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Deals ~3.5-4x Water DMG against Raging enemies",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "",
@@ -1933,7 +1933,7 @@
         "imageurl": "\/images\/8\/8a\/EnkiduClose.png",
         "portraiturl": "\/images\/a\/aa\/EnkiduPortrait.png",
         "timestamp": "2017-11-02T09:09:06Z",
-        "lastfullchecked": "2017-11-14T20:09:50Z"
+        "lastfullchecked": "2017-11-14T22:39:29Z"
     },
     "Freja": {
         "name": "Freja",
@@ -1960,13 +1960,13 @@
         "ability1_dur": "",
         "ability2_name": "Assault Sheild",
         "ability2_img": "",
-        "ability2_desc": "1 ally's  ATK\u2191 &  DEF\u2191 (+)\n\u2605 (Lvl 45) Increases to  ATK\u2191 &  DEF\u2191 (++)",
+        "ability2_desc": "1 ally's  ATK\u2191 &  DEF\u2191 (+)\n\u2605 (Lvl 65) Increases to  ATK\u2191 &  DEF\u2191 (++)",
         "ability2_powerup_desc": "Increases to  ATK\u2191 &  DEF\u2191 (++)",
         "ability2_cd": "5 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Moonlight Dance",
         "ability3_img": "",
-        "ability3_desc": "Applies  to self & 1 ally\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies  to self & 1 ally",
         "ability3_powerup_desc": "",
         "ability3_cd": "5 turns",
         "ability3_dur": "1 turn",
@@ -1977,7 +1977,7 @@
         "imageurl": "\/images\/c\/c9\/FrejaClose.png",
         "portraiturl": "\/images\/b\/bb\/FrejaPortrait.png",
         "timestamp": "2017-08-20T16:39:18Z",
-        "lastfullchecked": "2017-11-14T20:09:51Z"
+        "lastfullchecked": "2017-11-14T22:39:30Z"
     },
     "Gabriel": {
         "name": "Gabriel",
@@ -2004,13 +2004,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Divine Revelation",
         "ability2_img": "",
-        "ability2_desc": "All allies'  ATK &  DEF\u2191\n\u2605 (Lvl 45) Increases to  ATK &  DEF\u2191 (+)",
+        "ability2_desc": "All allies'  ATK &  DEF\u2191\n\u2605 (Lvl 65) Increases to  ATK &  DEF\u2191 (+)",
         "ability2_powerup_desc": "Increases to  ATK &  DEF\u2191 (+)",
         "ability2_cd": "7 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Burst Analysis",
         "ability3_img": "",
-        "ability3_desc": "All allies'  Burst Gauge growth rate\u2191\n\u2605 (Lvl 45) ",
+        "ability3_desc": "All allies'  Burst Gauge growth rate\u2191",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "2 turns",
@@ -2021,7 +2021,7 @@
         "imageurl": "\/images\/e\/e5\/GabrielClose.png",
         "portraiturl": "\/images\/d\/de\/GabrielPortrait.png",
         "timestamp": "2017-08-20T16:46:46Z",
-        "lastfullchecked": "2017-11-14T20:09:52Z"
+        "lastfullchecked": "2017-11-14T22:39:32Z"
     },
     "Gaia (Awakened)": {
         "name": "Gaia (Awakened)",
@@ -2048,7 +2048,7 @@
         "ability1_dur": "3 turns",
         "ability2_name": "Motherland+",
         "ability2_img": "",
-        "ability2_desc": "Covers all allies &  DEF\u2191 (++++) to self\n\u2605 (Lvl 65) Replaces  DEF\u2191 (++++) with  Nullify",
+        "ability2_desc": "Covers all allies &  DEF\u2191 (++++) to self\n\u2605 (Lvl 75) Replaces  DEF\u2191 (++++) with  Nullify",
         "ability2_powerup_desc": "Replaces  DEF\u2191 (++++) with  Nullify",
         "ability2_cd": "6 turns",
         "ability2_dur": "1~3 turns",
@@ -2065,7 +2065,7 @@
         "imageurl": "\/images\/4\/43\/Gaia_%28Awakened%29Close.png",
         "portraiturl": "\/images\/a\/aa\/Gaia%28Awakened%29Portrait.png",
         "timestamp": "2017-11-13T09:08:08Z",
-        "lastfullchecked": "2017-11-14T20:09:54Z"
+        "lastfullchecked": "2017-11-14T22:39:33Z"
     },
     "Gaia": {
         "name": "Gaia",
@@ -2092,13 +2092,13 @@
         "ability1_dur": "",
         "ability2_name": "Motherland",
         "ability2_img": "",
-        "ability2_desc": "Covers all allies &  DEF\u2191 (++)\n\u2605 (Lvl 55) Increases to  DEF\u2191 (++++)",
+        "ability2_desc": "Covers all allies &  DEF\u2191 (++)\n\u2605 (Lvl 75) Increases to  DEF\u2191 (++++)",
         "ability2_powerup_desc": "Increases to  DEF\u2191 (++++)",
         "ability2_cd": "6 turns",
         "ability2_dur": "1~3 turns",
         "ability3_name": "Regenesis",
         "ability3_img": "",
-        "ability3_desc": "All allies'  DMG taken\u2193 (40%)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "All allies'  DMG taken\u2193 (40%)",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "1 turn",
@@ -2109,7 +2109,7 @@
         "imageurl": "\/images\/4\/4b\/GaiaClose.png",
         "portraiturl": "\/images\/d\/d2\/GaiaPortrait.png",
         "timestamp": "2017-08-19T10:11:46Z",
-        "lastfullchecked": "2017-11-14T20:09:55Z"
+        "lastfullchecked": "2017-11-14T22:39:34Z"
     },
     "Hades": {
         "name": "Hades",
@@ -2136,13 +2136,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Death Spear",
         "ability2_img": "",
-        "ability2_desc": "Deals Dark DMG to an enemy &  ATK\u2193 (+)\n\u2605 (Lvl 55) Increases to  ATK\u2193 (++)",
+        "ability2_desc": "Deals Dark DMG to an enemy &  ATK\u2193 (+)\n\u2605 (Lvl 75) Increases to  ATK\u2193 (++)",
         "ability2_powerup_desc": "Increases to  ATK\u2193 (++)",
         "ability2_cd": "8 turns",
         "ability2_dur": "180 sec",
         "ability3_name": "Perfect Black",
         "ability3_img": "",
-        "ability3_desc": "Blocks one Affliction for all allies &  DEF\u2191 (+)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Blocks one Affliction for all allies &  DEF\u2191 (+)",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -2153,7 +2153,7 @@
         "imageurl": "\/images\/1\/17\/HadesClose.png",
         "portraiturl": "\/images\/9\/94\/HadesPortrait.png",
         "timestamp": "2017-09-23T17:25:58Z",
-        "lastfullchecked": "2017-11-14T20:09:56Z"
+        "lastfullchecked": "2017-11-14T22:39:35Z"
     },
     "Heimdallr": {
         "name": "Heimdallr",
@@ -2180,13 +2180,13 @@
         "ability1_dur": "",
         "ability2_name": "Premonition",
         "ability2_img": "",
-        "ability2_desc": "Blocks all damage to self\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Blocks all damage to self\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "6 (5) turns",
         "ability2_dur": "1 turn",
         "ability3_name": "Horn Call",
         "ability3_img": "",
-        "ability3_desc": "All allies  ATK\u2191\n\u2605 (Lvl 45) ",
+        "ability3_desc": "All allies  ATK\u2191",
         "ability3_powerup_desc": "",
         "ability3_cd": "5 turns",
         "ability3_dur": "3 turns",
@@ -2197,7 +2197,7 @@
         "imageurl": "\/images\/7\/75\/HeimdallrClose.png",
         "portraiturl": "\/images\/7\/75\/HeimdallrPortrait.png",
         "timestamp": "2017-08-20T16:46:10Z",
-        "lastfullchecked": "2017-11-14T20:09:57Z"
+        "lastfullchecked": "2017-11-14T22:39:36Z"
     },
     "Hermes": {
         "name": "Hermes",
@@ -2224,13 +2224,13 @@
         "ability1_dur": "",
         "ability2_name": "Interceptor",
         "ability2_img": "",
-        "ability2_desc": "Applies  Intercept to self\n\u2605 (Lvl 45) Increases the duration by 1 turn",
+        "ability2_desc": "Applies  Intercept to self\n\u2605 (Lvl 65) Increases the duration by 1 turn",
         "ability2_powerup_desc": "Increases the duration by 1 turn",
         "ability2_cd": "6 turns",
         "ability2_dur": "1 (2) turns",
         "ability3_name": "Trickster Bomb",
         "ability3_img": "",
-        "ability3_desc": "Applies  Scorched and  Drowned to an enemy\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies  Scorched and  Drowned to an enemy",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "180 sec",
@@ -2241,7 +2241,7 @@
         "imageurl": "\/images\/d\/dc\/HermesClose.png",
         "portraiturl": "\/images\/5\/56\/HermesPortrait.png",
         "timestamp": "2017-08-20T17:20:12Z",
-        "lastfullchecked": "2017-11-14T20:10:04Z"
+        "lastfullchecked": "2017-11-14T22:41:32Z"
     },
     "Hermod": {
         "name": "Hermod",
@@ -2268,13 +2268,13 @@
         "ability1_dur": "",
         "ability2_name": "Turbo Accel",
         "ability2_img": "",
-        "ability2_desc": "Applies  Intercept\n\u2605 (Lvl 45) Increases duration by 1 turn.",
+        "ability2_desc": "Applies  Intercept\n\u2605 (Lvl 65) Increases duration by 1 turn.",
         "ability2_powerup_desc": "Increases duration by 1 turn.",
         "ability2_cd": "7 turns",
         "ability2_dur": "1(2) turn(s)",
         "ability3_name": "Energy Charge",
         "ability3_img": "",
-        "ability3_desc": "Applies  ATK & Combo Attack rate\u2191 (+) &  Scorched to self\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies  ATK & Combo Attack rate\u2191 (+) &  Scorched to self",
         "ability3_powerup_desc": "",
         "ability3_cd": "1 turn",
         "ability3_dur": "1 turn",
@@ -2285,7 +2285,7 @@
         "imageurl": "\/images\/d\/d1\/HermodClose.png",
         "portraiturl": "\/images\/6\/6f\/HermodPortrait.png",
         "timestamp": "2017-08-27T15:41:53Z",
-        "lastfullchecked": "2017-11-14T20:10:05Z"
+        "lastfullchecked": "2017-11-14T22:41:33Z"
     },
     "Hestia": {
         "name": "Hestia",
@@ -2318,7 +2318,7 @@
         "ability2_dur": "1 turn",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -2329,7 +2329,7 @@
         "imageurl": "\/images\/b\/bf\/HestiaClose.png",
         "portraiturl": "\/images\/e\/e1\/HestiaPortrait.png",
         "timestamp": "2017-08-25T18:32:09Z",
-        "lastfullchecked": "2017-11-14T20:10:07Z"
+        "lastfullchecked": "2017-11-14T22:41:35Z"
     },
     "Iblis": {
         "name": "Iblis",
@@ -2356,13 +2356,13 @@
         "ability1_dur": "180s",
         "ability2_name": "Fair Wind",
         "ability2_img": "",
-        "ability2_desc": "Applies  Wind ATK\u2191 to all allies.\n\u2605 (Lvl 45) Powered up",
+        "ability2_desc": "Applies  Wind ATK\u2191 to all allies.\n\u2605 (Lvl 65) Powered up",
         "ability2_powerup_desc": "Powered up",
         "ability2_cd": "6 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Emprestelize",
         "ability3_img": "",
-        "ability3_desc": "Applies  ATK\u2193 and  DEF\u2193 to all enemies.\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies  ATK\u2193 and  DEF\u2193 to all enemies.",
         "ability3_powerup_desc": "",
         "ability3_cd": "7 turns",
         "ability3_dur": "180s",
@@ -2373,7 +2373,7 @@
         "imageurl": "\/images\/c\/c3\/IblisClose.png",
         "portraiturl": "\/images\/e\/e9\/IblisPortrait.png",
         "timestamp": "2017-10-07T09:06:10Z",
-        "lastfullchecked": "2017-11-14T20:10:08Z"
+        "lastfullchecked": "2017-11-14T22:41:36Z"
     },
     "Ignis": {
         "name": "Ignis",
@@ -2406,7 +2406,7 @@
         "ability2_dur": "4 turn",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -2417,7 +2417,7 @@
         "imageurl": "\/images\/b\/b1\/IgnisClose.png",
         "portraiturl": "\/images\/d\/d0\/IgnisPortrait.png",
         "timestamp": "2017-08-25T09:47:37Z",
-        "lastfullchecked": "2017-11-14T20:10:09Z"
+        "lastfullchecked": "2017-11-14T22:41:37Z"
     },
     "Inanna": {
         "name": "Inanna",
@@ -2450,7 +2450,7 @@
         "ability2_dur": "1 turn",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -2461,7 +2461,7 @@
         "imageurl": "\/images\/d\/de\/InannaClose.png",
         "portraiturl": "\/images\/5\/5a\/InannaPortrait.png",
         "timestamp": "2017-08-27T14:58:09Z",
-        "lastfullchecked": "2017-11-14T20:10:10Z"
+        "lastfullchecked": "2017-11-14T22:41:38Z"
     },
     "Indra": {
         "name": "Indra",
@@ -2494,7 +2494,7 @@
         "ability2_dur": "",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -2505,7 +2505,7 @@
         "imageurl": "\/images\/b\/b9\/IndraClose.png",
         "portraiturl": "\/images\/8\/8d\/IndraPortrait.png",
         "timestamp": "2017-08-25T19:33:21Z",
-        "lastfullchecked": "2017-11-14T20:10:11Z"
+        "lastfullchecked": "2017-11-14T22:41:39Z"
     },
     "Kikuri-Hime": {
         "name": "Kikuri-Hime",
@@ -2532,13 +2532,13 @@
         "ability1_dur": "",
         "ability2_name": "Pure Spirit",
         "ability2_img": "",
-        "ability2_desc": "All allies'  DEF\u2191 (+)\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "All allies'  DEF\u2191 (+)\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "6 (5) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Tusken Blast",
         "ability3_img": "",
-        "ability3_desc": "All allies'  Affliction RST\u2191 & Increases all allies' burst gauge by 15%\n\u2605 (Lvl 45) ",
+        "ability3_desc": "All allies'  Affliction RST\u2191 & Increases all allies' burst gauge by 15%",
         "ability3_powerup_desc": "",
         "ability3_cd": "10 turns",
         "ability3_dur": "3 turns",
@@ -2549,7 +2549,7 @@
         "imageurl": "\/images\/8\/85\/Kikuri-HimeClose.png",
         "portraiturl": "\/images\/5\/59\/Kikuri-HimePortrait.png",
         "timestamp": "2017-08-19T14:46:20Z",
-        "lastfullchecked": "2017-11-14T20:10:13Z"
+        "lastfullchecked": "2017-11-14T22:41:40Z"
     },
     "Krishna": {
         "name": "Krishna",
@@ -2576,13 +2576,13 @@
         "ability1_dur": "",
         "ability2_name": "Accumulate",
         "ability2_img": "",
-        "ability2_desc": "ATK\u2191 (+) & Applies 250 hp  energy drain to standard attacks\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "ATK\u2191 (+) & Applies 250 hp  energy drain to standard attacks\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "9 (8) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Bhagavad Gita",
         "ability3_img": "",
-        "ability3_desc": "Triple Attack rate\u2191\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Triple Attack rate\u2191",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -2593,7 +2593,7 @@
         "imageurl": "\/images\/8\/89\/KrishnaClose.png",
         "portraiturl": "\/images\/7\/72\/KrishnaPortrait.png",
         "timestamp": "2017-08-27T15:47:37Z",
-        "lastfullchecked": "2017-11-14T20:10:14Z"
+        "lastfullchecked": "2017-11-14T22:41:42Z"
     },
     "Kushinada": {
         "name": "Kushinada",
@@ -2626,7 +2626,7 @@
         "ability2_dur": "1 turn",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -2637,7 +2637,7 @@
         "imageurl": "\/images\/5\/57\/KushinadaClose.png",
         "portraiturl": "\/images\/d\/d8\/KushinadaPortrait.png",
         "timestamp": "2017-08-25T18:48:36Z",
-        "lastfullchecked": "2017-11-14T20:10:15Z"
+        "lastfullchecked": "2017-11-14T22:41:43Z"
     },
     "Maeve": {
         "name": "Maeve",
@@ -2664,13 +2664,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Pomp and Circumstances",
         "ability2_img": "",
-        "ability2_desc": "Applies  Reflect to self\n\u2605 (Lvl 45) Powered up",
+        "ability2_desc": "Applies  Reflect to self\n\u2605 (Lvl 65) Powered up",
         "ability2_powerup_desc": "Powered up",
         "ability2_cd": "8 turns",
         "ability2_dur": "2 turns",
         "ability3_name": "Rose Drain",
         "ability3_img": "",
-        "ability3_desc": "Deals Wind DMG to an enemy and Heals self for 1000 hp\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Deals Wind DMG to an enemy and Heals self for 1000 hp",
         "ability3_powerup_desc": "",
         "ability3_cd": "9 turns",
         "ability3_dur": "",
@@ -2681,7 +2681,7 @@
         "imageurl": "\/images\/4\/44\/MaeveClose.png",
         "portraiturl": "\/images\/9\/94\/MaevePortrait.png",
         "timestamp": "2017-08-20T17:27:08Z",
-        "lastfullchecked": "2017-11-14T20:10:20Z"
+        "lastfullchecked": "2017-11-14T22:42:05Z"
     },
     "Mephistopheles": {
         "name": "Mephistopheles",
@@ -2714,7 +2714,7 @@
         "ability2_dur": "180 sec",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -2725,7 +2725,7 @@
         "imageurl": "\/images\/a\/a9\/MephistophelesClose.png",
         "portraiturl": "\/images\/9\/92\/MephistophelesPortrait.png",
         "timestamp": "2017-08-27T15:29:24Z",
-        "lastfullchecked": "2017-11-14T20:10:21Z"
+        "lastfullchecked": "2017-11-14T22:42:06Z"
     },
     "Metatron": {
         "name": "Metatron",
@@ -2752,13 +2752,13 @@
         "ability1_dur": "",
         "ability2_name": "Overclock",
         "ability2_img": "",
-        "ability2_desc": "ATK\u2191 \/  DEF\u2193 (++)\n\u2605 (Lvl 55) Increases to  ATK\u2191 \/  DEF\u2193 (++++)",
+        "ability2_desc": "ATK\u2191 \/  DEF\u2193 (++)\n\u2605 (Lvl 75) Increases to  ATK\u2191 \/  DEF\u2193 (++++)",
         "ability2_powerup_desc": "Increases to  ATK\u2191 \/  DEF\u2193 (++++)",
         "ability2_cd": "6 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Launch Out",
         "ability3_img": "",
-        "ability3_desc": "Immediately fills own Burst Gauge\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Immediately fills own Burst Gauge",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "",
@@ -2769,7 +2769,7 @@
         "imageurl": "\/images\/5\/5e\/MetatronClose.png",
         "portraiturl": "\/images\/b\/b7\/MetatronPortrait.png",
         "timestamp": "2017-09-07T17:52:31Z",
-        "lastfullchecked": "2017-11-14T20:10:22Z"
+        "lastfullchecked": "2017-11-14T22:42:07Z"
     },
     "Michael": {
         "name": "Michael",
@@ -2796,13 +2796,13 @@
         "ability1_dur": "",
         "ability2_name": "San Michel",
         "ability2_img": "",
-        "ability2_desc": "All allies' Burst Gauge increased by 20%\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn",
+        "ability2_desc": "All allies' Burst Gauge increased by 20%\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "8 (7) turns",
         "ability2_dur": "",
         "ability3_name": "Sacred Conviction",
         "ability3_img": "",
-        "ability3_desc": "All allies'  Light ATK\u2191 (+) &  Dark RST\u2191 (++)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "All allies'  Light ATK\u2191 (+) &  Dark RST\u2191 (++)",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -2813,7 +2813,7 @@
         "imageurl": "\/images\/8\/8d\/MichaelClose.png",
         "portraiturl": "\/images\/3\/36\/MichaelPortrait.png",
         "timestamp": "2017-08-23T17:40:29Z",
-        "lastfullchecked": "2017-11-14T20:10:23Z"
+        "lastfullchecked": "2017-11-14T22:42:08Z"
     },
     "Motu": {
         "name": "Motu",
@@ -2840,13 +2840,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Sneek Step",
         "ability2_img": "",
-        "ability2_desc": "Nullifies all enemies' attacks\n\u2605 (Lvl 45) Additionally adds  ATK\u2191",
+        "ability2_desc": "Nullifies all enemies' attacks\n\u2605 (Lvl 65) Additionally adds  ATK\u2191",
         "ability2_powerup_desc": "Additionally adds  ATK\u2191",
         "ability2_cd": "6 turns",
         "ability2_dur": "1 turn",
         "ability3_name": "Flame Reaper",
         "ability3_img": "",
-        "ability3_desc": "2.5~3.5x Fire DMG to an enemy\n\u2605 (Lvl 45) ",
+        "ability3_desc": "2.5~3.5x Fire DMG to an enemy",
         "ability3_powerup_desc": "",
         "ability3_cd": "5 turns",
         "ability3_dur": "",
@@ -2857,7 +2857,7 @@
         "imageurl": "\/images\/5\/50\/MotuClose.png",
         "portraiturl": "\/images\/8\/89\/MotuPortrait.png",
         "timestamp": "2017-08-19T14:12:06Z",
-        "lastfullchecked": "2017-11-14T20:10:24Z"
+        "lastfullchecked": "2017-11-14T22:42:10Z"
     },
     "Naberius": {
         "name": "Naberius",
@@ -2890,7 +2890,7 @@
         "ability2_dur": "3 turns \/\n180 sec",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -2901,7 +2901,7 @@
         "imageurl": "\/images\/8\/8a\/NaberiusClose.png",
         "portraiturl": "\/images\/3\/32\/NaberiusPortrait.png",
         "timestamp": "2017-08-27T15:33:58Z",
-        "lastfullchecked": "2017-11-14T20:10:26Z"
+        "lastfullchecked": "2017-11-14T22:42:11Z"
     },
     "Nemesis": {
         "name": "Nemesis",
@@ -2928,13 +2928,13 @@
         "ability1_dur": "",
         "ability2_name": "Conviction of Thunder",
         "ability2_img": "",
-        "ability2_desc": "Deals 3.5~4x Thunder DMG to raging enemies\n\u2605 (Lvl 45) Damage increased to 4x",
+        "ability2_desc": "Deals 3.5~4x Thunder DMG to raging enemies\n\u2605 (Lvl 65) Damage increased to 4x",
         "ability2_powerup_desc": "Damage increased to 4x",
         "ability2_cd": "8 turns",
         "ability2_dur": "",
         "ability3_name": "Explosion of Rage",
         "ability3_img": "",
-        "ability3_desc": "Applies  ATK\u2191 (++) to self\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies  ATK\u2191 (++) to self",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turn",
         "ability3_dur": "3 turn",
@@ -2945,7 +2945,7 @@
         "imageurl": "\/images\/d\/de\/NemesisClose.png",
         "portraiturl": "\/images\/3\/38\/NemesisPortrait.png",
         "timestamp": "2017-08-27T15:43:00Z",
-        "lastfullchecked": "2017-11-14T20:10:27Z"
+        "lastfullchecked": "2017-11-14T22:42:12Z"
     },
     "Nergal": {
         "name": "Nergal",
@@ -2978,7 +2978,7 @@
         "ability2_dur": "1 turn",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -2989,7 +2989,7 @@
         "imageurl": "\/images\/a\/ab\/NergalClose.png",
         "portraiturl": "\/images\/8\/8c\/NergalPortrait.png",
         "timestamp": "2017-08-25T18:37:33Z",
-        "lastfullchecked": "2017-11-14T20:10:28Z"
+        "lastfullchecked": "2017-11-14T22:42:13Z"
     },
     "Nike (Unleashed)": {
         "name": "Nike (Unleashed)",
@@ -3016,13 +3016,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Deia Wing",
         "ability2_img": "",
-        "ability2_desc": "All allies'  ATK\u2191 &  DEF\u2191 (+)\n\u2605 (Lvl 55) Increases to  ATK\u2191 &  DEF\u2191 (++)",
+        "ability2_desc": "All allies'  ATK\u2191 &  DEF\u2191 (+)\n\u2605 (Lvl 75) Increases to  ATK\u2191 &  DEF\u2191 (++)",
         "ability2_powerup_desc": "Increases to  ATK\u2191 &  DEF\u2191 (++)",
         "ability2_cd": "8 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Recovery Phaser",
         "ability3_img": "",
-        "ability3_desc": "Heals all allies for 1800 hp\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Heals all allies for 1800 hp",
         "ability3_powerup_desc": "",
         "ability3_cd": "7 turns",
         "ability3_dur": "",
@@ -3033,7 +3033,7 @@
         "imageurl": "\/images\/4\/4c\/Nike_%28Unleashed%29Close.png",
         "portraiturl": "\/images\/f\/fa\/Nike%28Unleashed%29Portrait.png",
         "timestamp": "2017-08-19T10:49:52Z",
-        "lastfullchecked": "2017-11-14T20:10:29Z"
+        "lastfullchecked": "2017-11-14T22:42:14Z"
     },
     "Nike": {
         "name": "Nike",
@@ -3060,13 +3060,13 @@
         "ability1_dur": "",
         "ability2_name": "Angel Feather",
         "ability2_img": "",
-        "ability2_desc": "Heals 750 HP to all allies.\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn.",
+        "ability2_desc": "Heals 750 HP to all allies.\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn.",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn.",
         "ability2_cd": "6 (5) turns",
         "ability2_dur": "",
         "ability3_name": "Victor Shield",
         "ability3_img": "",
-        "ability3_desc": "All allies'  DEF\u2191 (+)\n\u2605 (Lvl 45) ",
+        "ability3_desc": "All allies'  DEF\u2191 (+)",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "3 turns",
@@ -3077,7 +3077,7 @@
         "imageurl": "\/images\/3\/34\/NikeClose.png",
         "portraiturl": "\/images\/4\/44\/NikePortrait.png",
         "timestamp": "2017-08-19T10:50:35Z",
-        "lastfullchecked": "2017-11-14T20:10:30Z"
+        "lastfullchecked": "2017-11-14T22:42:16Z"
     },
     "Nodens": {
         "name": "Nodens",
@@ -3104,13 +3104,13 @@
         "ability1_dur": "180s",
         "ability2_name": "Charitable Dream",
         "ability2_img": "",
-        "ability2_desc": "Applies  Regeneration to all allies\n\u2605 (Lvl 45) Reduces the cooldown by one turn.",
+        "ability2_desc": "Applies  Regeneration to all allies\n\u2605 (Lvl 65) Reduces the cooldown by one turn.",
         "ability2_powerup_desc": "Reduces the cooldown by one turn.",
         "ability2_cd": "8(7) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Raise Formea",
         "ability3_img": "",
-        "ability3_desc": "Recovers one affliction for all allies\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Recovers one affliction for all allies",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "",
@@ -3121,7 +3121,7 @@
         "imageurl": "\/images\/8\/83\/NodensClose.png",
         "portraiturl": "\/images\/2\/23\/NodensPortrait.png",
         "timestamp": "2017-09-06T09:29:04Z",
-        "lastfullchecked": "2017-11-14T20:10:34Z"
+        "lastfullchecked": "2017-11-14T22:42:36Z"
     },
     "Nyarlathotep": {
         "name": "Nyarlathotep",
@@ -3148,13 +3148,13 @@
         "ability1_dur": "3 turns \/ 180s",
         "ability2_name": "Apparition of Confusion",
         "ability2_img": "",
-        "ability2_desc": "Applies  DEF\u2193 and  Extends Stun to one enemy, and applies  DEF\u2191 (+) to one random ally.\n\u2605 (Lvl 45) Increases to  DEF\u2193(+) and  DEF\u2191 (++)",
+        "ability2_desc": "Applies  DEF\u2193 and  Extends Stun to one enemy, and applies  DEF\u2191 (+) to one random ally.\n\u2605 (Lvl 65) Increases to  DEF\u2193(+) and  DEF\u2191 (++)",
         "ability2_powerup_desc": "Increases to  DEF\u2193(+) and  DEF\u2191 (++)",
         "ability2_cd": "8 turns",
         "ability2_dur": "3 turns \/ 180s",
         "ability3_name": "Mystery Medicine",
         "ability3_img": "",
-        "ability3_desc": "Applies  Poisoned to one enemy\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies  Poisoned to one enemy",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "180s",
@@ -3165,7 +3165,7 @@
         "imageurl": "\/images\/d\/d5\/NyarlathotepClose.png",
         "portraiturl": "\/images\/c\/cf\/NyarlathotepPortrait.png",
         "timestamp": "2017-09-07T10:05:08Z",
-        "lastfullchecked": "2017-11-14T20:10:36Z"
+        "lastfullchecked": "2017-11-14T22:42:37Z"
     },
     "Oberon": {
         "name": "Oberon",
@@ -3192,13 +3192,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Tempest",
         "ability2_img": "",
-        "ability2_desc": "Deals Wind DMG to an enemy &  DEF\u2193\n\u2605 (Lvl 45) Increases to  DEF\u2193 (+)",
+        "ability2_desc": "Deals Wind DMG to an enemy &  DEF\u2193\n\u2605 (Lvl 65) Increases to  DEF\u2193 (+)",
         "ability2_powerup_desc": "Increases to  DEF\u2193 (+)",
         "ability2_cd": "6 turns",
         "ability2_dur": "180 sec",
         "ability3_name": "Wind of Lovesickness",
         "ability3_img": "",
-        "ability3_desc": "Deals Wind DMG to an enemy & Applies  Dizziness\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Deals Wind DMG to an enemy & Applies  Dizziness",
         "ability3_powerup_desc": "",
         "ability3_cd": "7 turns",
         "ability3_dur": "180 sec",
@@ -3209,7 +3209,7 @@
         "imageurl": "\/images\/0\/0b\/OberonClose.png",
         "portraiturl": "\/images\/4\/48\/OberonPortrait.png",
         "timestamp": "2017-08-20T17:33:56Z",
-        "lastfullchecked": "2017-11-14T20:10:37Z"
+        "lastfullchecked": "2017-11-14T22:42:38Z"
     },
     "Oceanus": {
         "name": "Oceanus",
@@ -3236,13 +3236,13 @@
         "ability1_dur": "",
         "ability2_name": "Top Turn",
         "ability2_img": "",
-        "ability2_desc": "Ability DMG\u2191 ~ DMG\u2191 (++)\n\u2605 (Lvl 45) Increases to  Ability DMG\u2191 (+) ~ (++)",
+        "ability2_desc": "Ability DMG\u2191 ~ DMG\u2191 (++)\n\u2605 (Lvl 65) Increases to  Ability DMG\u2191 (+) ~ (++)",
         "ability2_powerup_desc": "Increases to  Ability DMG\u2191 (+) ~ (++)",
         "ability2_cd": "8 turns",
         "ability2_dur": "1 turn",
         "ability3_name": "Current of Despair",
         "ability3_img": "",
-        "ability3_desc": "DMG\u2191 against stunned enemies (++++) once\n\u2605 (Lvl 45) ",
+        "ability3_desc": "DMG\u2191 against stunned enemies (++++) once",
         "ability3_powerup_desc": "",
         "ability3_cd": "9 turns",
         "ability3_dur": "",
@@ -3253,7 +3253,7 @@
         "imageurl": "\/images\/b\/b4\/OceanusClose.png",
         "portraiturl": "\/images\/c\/c7\/OceanusPortrait.png",
         "timestamp": "2017-08-19T14:53:07Z",
-        "lastfullchecked": "2017-11-14T20:10:38Z"
+        "lastfullchecked": "2017-11-14T22:42:40Z"
     },
     "Odin": {
         "name": "Odin",
@@ -3280,13 +3280,13 @@
         "ability1_dur": "",
         "ability2_name": "Full Throttle",
         "ability2_img": "",
-        "ability2_desc": "Combo Attack Rate\u2191 \/  DEF\u2193 (++)\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Combo Attack Rate\u2191 \/  DEF\u2193 (++)\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "8 (7) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Gaugin Lars",
         "ability3_img": "",
-        "ability3_desc": "ATK\u2191 according to DMG taken\n\u2605 (Lvl 55) ",
+        "ability3_desc": "ATK\u2191 according to DMG taken",
         "ability3_powerup_desc": "",
         "ability3_cd": "7 turns",
         "ability3_dur": "2 turns",
@@ -3297,7 +3297,7 @@
         "imageurl": "\/images\/0\/09\/OdinClose.png",
         "portraiturl": "\/images\/5\/5b\/OdinPortrait.png",
         "timestamp": "2017-08-27T16:10:17Z",
-        "lastfullchecked": "2017-11-14T20:10:39Z"
+        "lastfullchecked": "2017-11-14T22:42:41Z"
     },
     "Orpheus": {
         "name": "Orpheus",
@@ -3330,7 +3330,7 @@
         "ability2_dur": "3 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -3341,7 +3341,7 @@
         "imageurl": "\/images\/2\/29\/OrpheusClose.png",
         "portraiturl": "\/images\/c\/c7\/OrpheusPortrait.png",
         "timestamp": "2017-08-27T15:09:44Z",
-        "lastfullchecked": "2017-11-14T20:10:40Z"
+        "lastfullchecked": "2017-11-14T22:42:42Z"
     },
     "Osiris": {
         "name": "Osiris",
@@ -3368,13 +3368,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Sekhet Ial",
         "ability2_img": "",
-        "ability2_desc": "Applies  Nullify to self\n\u2605 (Lvl 55) Decreases cooldown by one turn.",
+        "ability2_desc": "Applies  Nullify to self\n\u2605 (Lvl 75) Decreases cooldown by one turn.",
         "ability2_powerup_desc": "Decreases cooldown by one turn.",
         "ability2_cd": "9(8) turns",
         "ability2_dur": "2 turns",
         "ability3_name": "Dark Harvest",
         "ability3_img": "",
-        "ability3_desc": "Heals all allies(1100) \/ Burst Gaugue\u2191 (15%)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Heals all allies(1100) \/ Burst Gaugue\u2191 (15%)",
         "ability3_powerup_desc": "",
         "ability3_cd": "5 turns",
         "ability3_dur": "",
@@ -3385,7 +3385,7 @@
         "imageurl": "\/images\/2\/21\/OsirisClose.png",
         "portraiturl": "\/images\/0\/00\/OsirisPortrait.png",
         "timestamp": "2017-11-14T09:36:18Z",
-        "lastfullchecked": "2017-11-14T20:10:41Z"
+        "lastfullchecked": "2017-11-14T22:42:43Z"
     },
     "Oto-hime": {
         "name": "Oto-hime",
@@ -3418,7 +3418,7 @@
         "ability2_dur": "2 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -3429,7 +3429,7 @@
         "imageurl": "\/images\/4\/48\/Oto-himeClose.png",
         "portraiturl": "\/images\/c\/cb\/Oto-himePortrait.png",
         "timestamp": "2017-08-25T18:53:59Z",
-        "lastfullchecked": "2017-11-14T20:10:43Z"
+        "lastfullchecked": "2017-11-14T22:42:44Z"
     },
     "Pale Rider": {
         "name": "Pale Rider",
@@ -3456,13 +3456,13 @@
         "ability1_dur": "180s",
         "ability2_name": "Putrify",
         "ability2_img": "",
-        "ability2_desc": "Deals Dark DMG to an enemy and applies  Putrefied\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn.",
+        "ability2_desc": "Deals Dark DMG to an enemy and applies  Putrefied\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn.",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn.",
         "ability2_cd": "9(8) turns",
         "ability2_dur": "180s",
         "ability3_name": "Blackout -Death Swords",
         "ability3_img": "",
-        "ability3_desc": "Deals Dark DMG to an enemy and applies  Blindness\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Deals Dark DMG to an enemy and applies  Blindness",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "180s",
@@ -3473,7 +3473,7 @@
         "imageurl": "\/images\/8\/86\/PaleRiderClose.png",
         "portraiturl": "\/images\/5\/5a\/PaleRiderPortrait.png",
         "timestamp": "2017-08-23T08:52:34Z",
-        "lastfullchecked": "2017-11-14T20:10:44Z"
+        "lastfullchecked": "2017-11-14T22:42:46Z"
     },
     "Perun": {
         "name": "Perun",
@@ -3506,7 +3506,7 @@
         "ability2_dur": "1 turn",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -3517,7 +3517,7 @@
         "imageurl": "\/images\/e\/ef\/PerunClose.png",
         "portraiturl": "\/images\/0\/00\/PerunPortrait.png",
         "timestamp": "2017-08-27T15:40:48Z",
-        "lastfullchecked": "2017-11-14T20:10:45Z"
+        "lastfullchecked": "2017-11-14T22:42:47Z"
     },
     "Poseidon": {
         "name": "Poseidon",
@@ -3544,13 +3544,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Tidal Deluge",
         "ability2_img": "",
-        "ability2_desc": "Deals Water DMG to all enemies & applies  Drowned\n\u2605 (Lvl 55) Increases Damage and reduces the cooldown by 1 turn",
+        "ability2_desc": "Deals Water DMG to all enemies & applies  Drowned\n\u2605 (Lvl 75) Increases Damage and reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Increases Damage and reduces the cooldown by 1 turn",
         "ability2_cd": "7 (6) turns",
         "ability2_dur": "180 sec",
         "ability3_name": "Pure Aqua",
         "ability3_img": "",
-        "ability3_desc": "Blocks 1 affliction for All allies &  Fire RST\u2191 (++)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Blocks 1 affliction for All allies &  Fire RST\u2191 (++)",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "2 turns",
@@ -3561,7 +3561,7 @@
         "imageurl": "\/images\/e\/e9\/PoseidonClose.png",
         "portraiturl": "\/images\/e\/e6\/PoseidonPortrait.png",
         "timestamp": "2017-08-13T17:26:49Z",
-        "lastfullchecked": "2017-11-14T20:10:49Z"
+        "lastfullchecked": "2017-11-14T22:43:13Z"
     },
     "Puck": {
         "name": "Puck",
@@ -3594,7 +3594,7 @@
         "ability2_dur": "3 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -3605,7 +3605,7 @@
         "imageurl": "\/images\/e\/e2\/PuckClose.png",
         "portraiturl": "\/images\/1\/16\/PuckPortrait.png",
         "timestamp": "2017-08-25T20:17:56Z",
-        "lastfullchecked": "2017-11-14T20:10:50Z"
+        "lastfullchecked": "2017-11-14T22:43:14Z"
     },
     "Ragaraja": {
         "name": "Ragaraja",
@@ -3632,13 +3632,13 @@
         "ability1_dur": "180s",
         "ability2_name": "Spring's Embrace",
         "ability2_img": "",
-        "ability2_desc": "Applies  Regenerate to all allies\n\u2605 (Lvl 45) Reduces the cooldown by one turn",
+        "ability2_desc": "Applies  Regenerate to all allies\n\u2605 (Lvl 65) Reduces the cooldown by one turn",
         "ability2_powerup_desc": "Reduces the cooldown by one turn",
         "ability2_cd": "8(7) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Dreams of Passion",
         "ability3_img": "",
-        "ability3_desc": "Applies Zeal to all allies\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies Zeal to all allies",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "2 turns.",
@@ -3649,7 +3649,7 @@
         "imageurl": "\/images\/6\/63\/RagarajaClose.png",
         "portraiturl": "\/images\/4\/47\/RagarajaPortrait.png",
         "timestamp": "2017-09-26T09:29:03Z",
-        "lastfullchecked": "2017-11-14T20:10:51Z"
+        "lastfullchecked": "2017-11-14T22:43:15Z"
     },
     "Raiko": {
         "name": "Raiko",
@@ -3676,13 +3676,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Cheer",
         "ability2_img": "",
-        "ability2_desc": "Applies Zeal &  DEF\u2191 (+) to all allies\n\u2605 (Lvl 55) Increases to  DEF\u2191 (++)",
+        "ability2_desc": "Applies Zeal &  DEF\u2191 (+) to all allies\n\u2605 (Lvl 75) Increases to  DEF\u2191 (++)",
         "ability2_powerup_desc": "Increases to  DEF\u2191 (++)",
         "ability2_cd": "8 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Raijin's Dance",
         "ability3_img": "",
-        "ability3_desc": "All allies'  DMG taken\u2193 (30%)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "All allies'  DMG taken\u2193 (30%)",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "1 turn",
@@ -3693,7 +3693,7 @@
         "imageurl": "\/images\/a\/ab\/RaikoClose.png",
         "portraiturl": "\/images\/9\/98\/RaikoPortrait.png",
         "timestamp": "2017-08-19T10:24:59Z",
-        "lastfullchecked": "2017-11-14T20:10:53Z"
+        "lastfullchecked": "2017-11-14T22:43:16Z"
     },
     "Rakshasa": {
         "name": "Rakshasa",
@@ -3726,7 +3726,7 @@
         "ability2_dur": "1 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -3737,7 +3737,7 @@
         "imageurl": "\/images\/8\/8a\/RakshasaClose.png",
         "portraiturl": "\/images\/4\/41\/RakshasaPortrait.png",
         "timestamp": "2017-10-11T08:02:19Z",
-        "lastfullchecked": "2017-11-14T20:10:54Z"
+        "lastfullchecked": "2017-11-14T22:43:17Z"
     },
     "Ramiel": {
         "name": "Ramiel",
@@ -3764,13 +3764,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Rising Heart",
         "ability2_img": "",
-        "ability2_desc": "All allies'  ATK &  DEF\u2191 & Applies  dizziness to a random enemy\n\u2605 (Lvl 45) Increases to  ATK &  DEF\u2191 (+)",
+        "ability2_desc": "All allies'  ATK &  DEF\u2191 & Applies  dizziness to a random enemy\n\u2605 (Lvl 65) Increases to  ATK &  DEF\u2191 (+)",
         "ability2_powerup_desc": "Increases to  ATK &  DEF\u2191 (+)",
         "ability2_cd": "7 turns",
         "ability2_dur": "3 turns \/\n180 sec",
         "ability3_name": "Pretty Shock",
         "ability3_img": "",
-        "ability3_desc": "All allies' Burst Gauge increases by 10% & Applies  dizziness to a random enemy\n\u2605 (Lvl 45) ",
+        "ability3_desc": "All allies' Burst Gauge increases by 10% & Applies  dizziness to a random enemy",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "180 sec",
@@ -3781,7 +3781,7 @@
         "imageurl": "\/images\/4\/41\/RamielClose.png",
         "portraiturl": "\/images\/f\/fc\/RamielPortrait.png",
         "timestamp": "2017-08-20T19:52:30Z",
-        "lastfullchecked": "2017-11-14T20:10:55Z"
+        "lastfullchecked": "2017-11-14T22:43:19Z"
     },
     "Raphael": {
         "name": "Raphael",
@@ -3808,13 +3808,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Particle Flash",
         "ability2_img": "",
-        "ability2_desc": "Mode Gauge\u2193 for an enemy &  ATK\u2193 (+)\n\u2605 (Lvl 55) Powered up",
+        "ability2_desc": "Mode Gauge\u2193 for an enemy &  ATK\u2193 (+)\n\u2605 (Lvl 75) Powered up",
         "ability2_powerup_desc": "Powered up",
         "ability2_cd": "8 turns",
         "ability2_dur": "180 sec",
         "ability3_name": "Angel Ring",
         "ability3_img": "",
-        "ability3_desc": "Deals Light DMG to an enemy & removes 1 active orb from the enemy overdrive meter\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Deals Light DMG to an enemy & removes 1 active orb from the enemy overdrive meter",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "",
@@ -3825,7 +3825,7 @@
         "imageurl": "\/images\/1\/14\/RaphaelClose.png",
         "portraiturl": "\/images\/6\/6d\/RaphaelPortrait.png",
         "timestamp": "2017-09-11T08:59:40Z",
-        "lastfullchecked": "2017-11-14T20:10:56Z"
+        "lastfullchecked": "2017-11-14T22:43:20Z"
     },
     "Reginleiv": {
         "name": "Reginleiv",
@@ -3858,7 +3858,7 @@
         "ability2_dur": "",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -3869,7 +3869,7 @@
         "imageurl": "\/images\/a\/aa\/ReginleivClose.png",
         "portraiturl": "\/images\/6\/60\/ReginleivPortrait.png",
         "timestamp": "2017-08-25T19:18:29Z",
-        "lastfullchecked": "2017-11-14T20:10:57Z"
+        "lastfullchecked": "2017-11-14T22:43:21Z"
     },
     "Rusalka": {
         "name": "Rusalka",
@@ -3902,7 +3902,7 @@
         "ability2_dur": "180 sec",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -3913,7 +3913,7 @@
         "imageurl": "\/images\/0\/0b\/RusalkaClose.png",
         "portraiturl": "\/images\/9\/95\/RusalkaPortrait.png",
         "timestamp": "2017-08-25T18:59:10Z",
-        "lastfullchecked": "2017-11-14T20:10:58Z"
+        "lastfullchecked": "2017-11-14T22:43:22Z"
     },
     "Ryu-Oh": {
         "name": "Ryu-Oh",
@@ -3940,13 +3940,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Aqua Tusk Blast",
         "ability2_img": "",
-        "ability2_desc": "Deals Water DMG to an enemy &  DEF\u2193 (+)\n\u2605 (Lvl 55) Applies  DEF\u2193 (++)",
+        "ability2_desc": "Deals Water DMG to an enemy &  DEF\u2193 (+)\n\u2605 (Lvl 75) Applies  DEF\u2193 (++)",
         "ability2_powerup_desc": "Applies  DEF\u2193 (++)",
         "ability2_cd": "8 turns",
         "ability2_dur": "180 sec",
         "ability3_name": "Sea Dragon's Bonds",
         "ability3_img": "",
-        "ability3_desc": "Deals Water DMG to an enemy &  Increases enemy overdrive meter by one.\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Deals Water DMG to an enemy &  Increases enemy overdrive meter by one.",
         "ability3_powerup_desc": "",
         "ability3_cd": "10 turns",
         "ability3_dur": "180 sec",
@@ -3957,7 +3957,7 @@
         "imageurl": "\/images\/3\/34\/Ryy-OhClose.png",
         "portraiturl": "\/images\/a\/a1\/Ryu-OhPortrait.png",
         "timestamp": "2017-08-13T17:40:37Z",
-        "lastfullchecked": "2017-11-14T20:11:00Z"
+        "lastfullchecked": "2017-11-14T22:43:23Z"
     },
     "Satan": {
         "name": "Satan",
@@ -3984,13 +3984,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Fall from Heaven",
         "ability2_img": "",
-        "ability2_desc": "Applies  Combo Attack rate\u2191 (+) and  Energy Drain to self.\n\u2605 (Lvl 55) Increases to  Combo Attack rate\u2191 (++) and reduces cooldown by 1 turn",
+        "ability2_desc": "Applies  Combo Attack rate\u2191 (+) and  Energy Drain to self.\n\u2605 (Lvl 75) Increases to  Combo Attack rate\u2191 (++) and reduces cooldown by 1 turn",
         "ability2_powerup_desc": "Increases to  Combo Attack rate\u2191 (++) and reduces cooldown by 1 turn",
         "ability2_cd": "8 (7) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Darkness Lost",
         "ability3_img": "",
-        "ability3_desc": "Deals Dark DMG to an enemy & removes 1 active orb from the enemy overdrive meter\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Deals Dark DMG to an enemy & removes 1 active orb from the enemy overdrive meter",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "",
@@ -4001,7 +4001,7 @@
         "imageurl": "\/images\/b\/b8\/SatanClose.png",
         "portraiturl": "\/images\/8\/80\/SatanPortrait.png",
         "timestamp": "2017-10-11T08:36:23Z",
-        "lastfullchecked": "2017-11-14T20:11:04Z"
+        "lastfullchecked": "2017-11-14T22:43:49Z"
     },
     "Scathach": {
         "name": "Scathach",
@@ -4034,7 +4034,7 @@
         "ability2_dur": "2 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -4045,7 +4045,7 @@
         "imageurl": "\/images\/1\/1e\/ScathachClose.png",
         "portraiturl": "\/images\/6\/6b\/ScathachPortrait.png",
         "timestamp": "2017-08-25T19:26:08Z",
-        "lastfullchecked": "2017-11-14T20:11:05Z"
+        "lastfullchecked": "2017-11-14T22:43:50Z"
     },
     "Shiva": {
         "name": "Shiva",
@@ -4072,13 +4072,13 @@
         "ability1_dur": "",
         "ability2_name": "Rig Veda",
         "ability2_img": "",
-        "ability2_desc": "All allies  ATK\u2191 (++)\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn",
+        "ability2_desc": "All allies  ATK\u2191 (++)\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "6 (5) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Mahakala",
         "ability3_img": "",
-        "ability3_desc": "2.5~3x Water DMG to all enemies\n\u2605 (Lvl 55) ",
+        "ability3_desc": "2.5~3x Water DMG to all enemies",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "",
@@ -4089,7 +4089,7 @@
         "imageurl": "\/images\/d\/d1\/ShivaClose.png",
         "portraiturl": "\/images\/c\/ca\/ShivaPortrait.png",
         "timestamp": "2017-08-14T22:12:05Z",
-        "lastfullchecked": "2017-11-14T20:11:07Z"
+        "lastfullchecked": "2017-11-14T22:43:51Z"
     },
     "Skuld": {
         "name": "Skuld",
@@ -4122,7 +4122,7 @@
         "ability2_dur": "",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -4133,7 +4133,7 @@
         "imageurl": "\/images\/c\/cf\/SkuldClose.png",
         "portraiturl": "\/images\/5\/56\/SkuldPortrait.png",
         "timestamp": "2017-08-25T19:41:40Z",
-        "lastfullchecked": "2017-11-14T20:11:08Z"
+        "lastfullchecked": "2017-11-14T22:43:53Z"
     },
     "Sol": {
         "name": "Sol",
@@ -4160,13 +4160,13 @@
         "ability1_dur": "",
         "ability2_name": "Alfrodull",
         "ability2_img": "",
-        "ability2_desc": "Deals Light DMG to an enemy & removes 1 Empowerment\n\u2605 (Lvl 55) Increases DMG and reduces the cooldown by 1 turn",
+        "ability2_desc": "Deals Light DMG to an enemy & removes 1 Empowerment\n\u2605 (Lvl 75) Increases DMG and reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Increases DMG and reduces the cooldown by 1 turn",
         "ability2_cd": "9 (8) turns",
         "ability2_dur": "",
         "ability3_name": "Caldo Luce",
         "ability3_img": "",
-        "ability3_desc": "ATK\u2193 (+) for all enemies\n\u2605 (Lvl 55) ",
+        "ability3_desc": "ATK\u2193 (+) for all enemies",
         "ability3_powerup_desc": "",
         "ability3_cd": "7 turns",
         "ability3_dur": "180 sec",
@@ -4177,7 +4177,7 @@
         "imageurl": "\/images\/4\/4d\/SolClose.png",
         "portraiturl": "\/images\/c\/c0\/SolPortrait.png",
         "timestamp": "2017-08-19T10:51:40Z",
-        "lastfullchecked": "2017-11-14T20:11:09Z"
+        "lastfullchecked": "2017-11-14T22:43:54Z"
     },
     "Susanoo": {
         "name": "Susanoo",
@@ -4204,13 +4204,13 @@
         "ability1_dur": "",
         "ability2_name": "Blood of Black God",
         "ability2_img": "",
-        "ability2_desc": "Heals self for 1500 hp &  Light RST\u2191 on self\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Heals self for 1500 hp &  Light RST\u2191 on self\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "8 (7) turns",
         "ability2_dur": "2 turns",
         "ability3_name": "Fury",
         "ability3_img": "",
-        "ability3_desc": "ATK\u2191 (stackable)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "ATK\u2191 (stackable)",
         "ability3_powerup_desc": "",
         "ability3_cd": "2 turns",
         "ability3_dur": "5 turns",
@@ -4221,7 +4221,7 @@
         "imageurl": "\/images\/4\/48\/SusanooClose.png",
         "portraiturl": "\/images\/9\/9e\/SusanooPortrait.png",
         "timestamp": "2017-08-19T15:05:45Z",
-        "lastfullchecked": "2017-11-14T20:11:10Z"
+        "lastfullchecked": "2017-11-14T22:43:55Z"
     },
     "Svarog": {
         "name": "Svarog",
@@ -4248,13 +4248,13 @@
         "ability1_dur": "",
         "ability2_name": "Sun Spread",
         "ability2_img": "",
-        "ability2_desc": "All allies'  ATK\u2191 (stackable)\n\u2605 (Lvl 55) Reduces the cooldown by 1 turn",
+        "ability2_desc": "All allies'  ATK\u2191 (stackable)\n\u2605 (Lvl 75) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "4 (3) turns",
         "ability2_dur": "9 turns",
         "ability3_name": "Raizu and Fight",
         "ability3_img": "",
-        "ability3_desc": "Ability DMG\u2191 (stackable once)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Ability DMG\u2191 (stackable once)",
         "ability3_powerup_desc": "",
         "ability3_cd": "3 turns",
         "ability3_dur": "",
@@ -4265,7 +4265,7 @@
         "imageurl": "\/images\/2\/26\/SvarogClose.png",
         "portraiturl": "\/images\/7\/75\/SvarogPortrait.png",
         "timestamp": "2017-08-16T19:51:44Z",
-        "lastfullchecked": "2017-11-14T20:11:11Z"
+        "lastfullchecked": "2017-11-14T22:43:56Z"
     },
     "Tezcatlipoca": {
         "name": "Tezcatlipoca",
@@ -4292,13 +4292,13 @@
         "ability1_dur": "",
         "ability2_name": "Boost Counter - A",
         "ability2_img": "",
-        "ability2_desc": "Applies  Intercept to self and fills 10% of the Burst Gauge meter\n\u2605 (Lvl 45) Fills 15% of Burst Gauge meter",
+        "ability2_desc": "Applies  Intercept to self and fills 10% of the Burst Gauge meter\n\u2605 (Lvl 65) Fills 15% of Burst Gauge meter",
         "ability2_powerup_desc": "Fills 15% of Burst Gauge meter",
         "ability2_cd": "6 turns",
         "ability2_dur": "1 turn",
         "ability3_name": "Wild Spirits",
         "ability3_img": "",
-        "ability3_desc": "Applies  ATK\u2191 (++) to self\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Applies  ATK\u2191 (++) to self",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turn",
         "ability3_dur": "2 turn",
@@ -4309,7 +4309,7 @@
         "imageurl": "\/images\/4\/4a\/TezcatlipocaClose.png",
         "portraiturl": "\/images\/f\/fe\/TezcatlipocaPortrait.png",
         "timestamp": "2017-08-27T15:41:20Z",
-        "lastfullchecked": "2017-11-14T20:11:12Z"
+        "lastfullchecked": "2017-11-14T22:43:57Z"
     },
     "Thor": {
         "name": "Thor",
@@ -4336,13 +4336,13 @@
         "ability1_dur": "15 sec",
         "ability2_name": "Hateful Smash",
         "ability2_img": "",
-        "ability2_desc": "Deals DMG (++) based on how much HP has been lost & Heals self\n\u2605 (Lvl 55) Increases performance",
+        "ability2_desc": "Deals DMG (++) based on how much HP has been lost & Heals self\n\u2605 (Lvl 75) Increases performance",
         "ability2_powerup_desc": "Increases performance",
         "ability2_cd": "6 turns",
         "ability2_dur": "",
         "ability3_name": "Meginjord",
         "ability3_img": "",
-        "ability3_desc": "Ability DMG\u2191 (stackable) once\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Ability DMG\u2191 (stackable) once",
         "ability3_powerup_desc": "",
         "ability3_cd": "3 turns",
         "ability3_dur": "",
@@ -4353,7 +4353,7 @@
         "imageurl": "\/images\/5\/58\/ThorClose.png",
         "portraiturl": "\/images\/2\/2b\/ThorPortrait.png",
         "timestamp": "2017-08-19T10:34:08Z",
-        "lastfullchecked": "2017-11-14T20:11:14Z"
+        "lastfullchecked": "2017-11-14T22:43:58Z"
     },
     "Titania": {
         "name": "Titania",
@@ -4380,13 +4380,13 @@
         "ability1_dur": "3 turns",
         "ability2_name": "Love Ballad",
         "ability2_img": "",
-        "ability2_desc": "One ally's  Ability DMG\u2191 (++) & Burst Gauge increased by 20%\n\u2605 (Lvl 55) Increases Burst Gauge increase to 30%",
+        "ability2_desc": "One ally's  Ability DMG\u2191 (++) & Burst Gauge increased by 20%\n\u2605 (Lvl 75) Increases Burst Gauge increase to 30%",
         "ability2_powerup_desc": "Increases Burst Gauge increase to 30%",
         "ability2_cd": "5 turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Power of Love",
         "ability3_img": "",
-        "ability3_desc": "Combo Attack rate\u2191 for one ally (++)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Combo Attack rate\u2191 for one ally (++)",
         "ability3_powerup_desc": "",
         "ability3_cd": "5 turns",
         "ability3_dur": "3 turns",
@@ -4397,7 +4397,7 @@
         "imageurl": "\/images\/7\/76\/TitaniaClose.png",
         "portraiturl": "\/images\/a\/a2\/TitaniaPortrait.png",
         "timestamp": "2017-08-27T16:16:13Z",
-        "lastfullchecked": "2017-11-14T20:11:15Z"
+        "lastfullchecked": "2017-11-14T22:44:00Z"
     },
     "Triton": {
         "name": "Triton",
@@ -4424,13 +4424,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Sea Splash",
         "ability2_img": "",
-        "ability2_desc": "Deals Water DMG to an enemy &  ATK\u2193\n\u2605 (Lvl 45) Increases to  ATK\u2193 (+)",
+        "ability2_desc": "Deals Water DMG to an enemy &  ATK\u2193\n\u2605 (Lvl 65) Increases to  ATK\u2193 (+)",
         "ability2_powerup_desc": "Increases to  ATK\u2193 (+)",
         "ability2_cd": "7 turns",
         "ability2_dur": "180 sec",
         "ability3_name": "Special Takoyaki",
         "ability3_img": "",
-        "ability3_desc": "Heals self for 1500 hp and  ATK &  DEF\u2191 (+)\n\u2605 (Lvl 45) ",
+        "ability3_desc": "Heals self for 1500 hp and  ATK &  DEF\u2191 (+)",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "3 turns",
@@ -4441,7 +4441,7 @@
         "imageurl": "\/images\/d\/d9\/TritonClose.png",
         "portraiturl": "\/images\/6\/61\/TritonPortrait.png",
         "timestamp": "2017-08-20T16:57:31Z",
-        "lastfullchecked": "2017-11-14T20:11:20Z"
+        "lastfullchecked": "2017-11-14T22:44:28Z"
     },
     "Tsukuyomi": {
         "name": "Tsukuyomi",
@@ -4468,13 +4468,13 @@
         "ability1_dur": "3 turns \/\n180 sec",
         "ability2_name": "Waning Moon",
         "ability2_img": "",
-        "ability2_desc": "Deals 1.5~2x Dark DMG to all enemies\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "Deals 1.5~2x Dark DMG to all enemies\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "6 (5) turns",
         "ability2_dur": "",
         "ability3_name": "Eternal Moon",
         "ability3_img": "",
-        "ability3_desc": "All allies  ATK\u2191 (+)\n\u2605 (Lvl 45) ",
+        "ability3_desc": "All allies  ATK\u2191 (+)",
         "ability3_powerup_desc": "",
         "ability3_cd": "6 turns",
         "ability3_dur": "3 turns",
@@ -4485,7 +4485,7 @@
         "imageurl": "\/images\/4\/4c\/TsukuyomiClose.png",
         "portraiturl": "\/images\/a\/a7\/TsukuyomiPortrait.png",
         "timestamp": "2017-08-22T20:28:26Z",
-        "lastfullchecked": "2017-11-14T20:11:21Z"
+        "lastfullchecked": "2017-11-14T22:44:29Z"
     },
     "Tyr": {
         "name": "Tyr",
@@ -4512,13 +4512,13 @@
         "ability1_dur": "180 sec",
         "ability2_name": "Tyr Rune",
         "ability2_img": "",
-        "ability2_desc": "ATK\u2191 (++)\n\u2605 (Lvl 55) Increases  ATK\u2191 (++++). Reduces the cooldown by 2 turns",
+        "ability2_desc": "ATK\u2191 (++)\n\u2605 (Lvl 75) Increases  ATK\u2191 (++++). Reduces the cooldown by 2 turns",
         "ability2_powerup_desc": "Increases  ATK\u2191 (++++). Reduces the cooldown by 2 turns",
         "ability2_cd": "9 (7) turns",
         "ability2_dur": "2 turns",
         "ability3_name": "Finish Impact",
         "ability3_img": "",
-        "ability3_desc": "DMG\u2191 against stunned enemies (++++) (once)\n\u2605 (Lvl 55) ",
+        "ability3_desc": "DMG\u2191 against stunned enemies (++++) (once)",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "1 turn",
@@ -4529,7 +4529,7 @@
         "imageurl": "\/images\/8\/8b\/TyrClose.png",
         "portraiturl": "\/images\/4\/4b\/TyrPortrait.png",
         "timestamp": "2017-08-19T10:26:29Z",
-        "lastfullchecked": "2017-11-14T20:11:22Z"
+        "lastfullchecked": "2017-11-14T22:44:30Z"
     },
     "Undine": {
         "name": "Undine",
@@ -4562,7 +4562,7 @@
         "ability2_dur": "180 sec",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -4573,7 +4573,7 @@
         "imageurl": "\/images\/a\/a3\/UndineClose.png",
         "portraiturl": "\/images\/f\/fc\/UndinePortrait.png",
         "timestamp": "2017-08-25T19:02:43Z",
-        "lastfullchecked": "2017-11-14T20:11:23Z"
+        "lastfullchecked": "2017-11-14T22:44:32Z"
     },
     "Urania": {
         "name": "Urania",
@@ -4606,7 +4606,7 @@
         "ability2_dur": "",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -4617,7 +4617,7 @@
         "imageurl": "\/images\/7\/7f\/UraniaClose.png",
         "portraiturl": "\/images\/a\/a4\/UraniaPortrait.png",
         "timestamp": "2017-08-27T15:20:17Z",
-        "lastfullchecked": "2017-11-14T20:11:25Z"
+        "lastfullchecked": "2017-11-14T22:44:33Z"
     },
     "Uranus": {
         "name": "Uranus",
@@ -4644,13 +4644,13 @@
         "ability1_dur": "",
         "ability2_name": "Galaxy Energy",
         "ability2_img": "",
-        "ability2_desc": "All allies  ATK\u2191 (+)\n\u2605 (Lvl 45) Reduces the cooldown by 1 turn",
+        "ability2_desc": "All allies  ATK\u2191 (+)\n\u2605 (Lvl 65) Reduces the cooldown by 1 turn",
         "ability2_powerup_desc": "Reduces the cooldown by 1 turn",
         "ability2_cd": "6 (5) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Cosmic Power",
         "ability3_img": "",
-        "ability3_desc": "All allies'  Double Attack rate\u2191 (+)\n\u2605 (Lvl 45) ",
+        "ability3_desc": "All allies'  Double Attack rate\u2191 (+)",
         "ability3_powerup_desc": "",
         "ability3_cd": "8 turns",
         "ability3_dur": "3 turns",
@@ -4661,7 +4661,7 @@
         "imageurl": "\/images\/0\/06\/UranusClose.png",
         "portraiturl": "\/images\/6\/62\/UranusPortrait.png",
         "timestamp": "2017-08-22T19:53:02Z",
-        "lastfullchecked": "2017-11-14T20:11:26Z"
+        "lastfullchecked": "2017-11-14T22:44:34Z"
     },
     "Verethragna": {
         "name": "Verethragna",
@@ -4694,7 +4694,7 @@
         "ability2_dur": "3 turns",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -4705,7 +4705,7 @@
         "imageurl": "\/images\/2\/21\/VerethragnaClose.png",
         "portraiturl": "\/images\/b\/be\/VerethragnaPortrait.png",
         "timestamp": "2017-08-25T19:45:31Z",
-        "lastfullchecked": "2017-11-14T20:11:27Z"
+        "lastfullchecked": "2017-11-14T22:44:35Z"
     },
     "Yamaraja": {
         "name": "Yamaraja",
@@ -4732,13 +4732,13 @@
         "ability1_dur": "180s",
         "ability2_name": "Blazing Heart",
         "ability2_img": "",
-        "ability2_desc": "Blocks Affliction for all allies (once) and applies  Fire ATK\u2191\n\u2605 (Lvl 55) Reduces the cooldown by one turn",
+        "ability2_desc": "Blocks Affliction for all allies (once) and applies  Fire ATK\u2191\n\u2605 (Lvl 75) Reduces the cooldown by one turn",
         "ability2_powerup_desc": "Reduces the cooldown by one turn",
         "ability2_cd": "9(8) turns",
         "ability2_dur": "3 turns",
         "ability3_name": "Absolute Ruin",
         "ability3_img": "",
-        "ability3_desc": "Deals Fire DMG based on the number of enemy Affliction\n\u2605 (Lvl 55) ",
+        "ability3_desc": "Deals Fire DMG based on the number of enemy Affliction",
         "ability3_powerup_desc": "",
         "ability3_cd": "9 turns",
         "ability3_dur": "",
@@ -4749,7 +4749,7 @@
         "imageurl": "\/images\/1\/17\/YamarajaClose.png",
         "portraiturl": "\/images\/f\/fa\/YamarajaPortrait.png",
         "timestamp": "2017-09-26T09:15:33Z",
-        "lastfullchecked": "2017-11-14T20:11:28Z"
+        "lastfullchecked": "2017-11-14T22:44:36Z"
     },
     "Zephyrus": {
         "name": "Zephyrus",
@@ -4782,7 +4782,7 @@
         "ability2_dur": "180 sec",
         "ability3_name": "",
         "ability3_img": "",
-        "ability3_desc": "\n\u2605 (Lvl 45) ",
+        "ability3_desc": "",
         "ability3_powerup_desc": "",
         "ability3_cd": "",
         "ability3_dur": "",
@@ -4793,6 +4793,6 @@
         "imageurl": "\/images\/9\/9f\/ZephyrusClose.png",
         "portraiturl": "\/images\/f\/fa\/ZephyrusPortrait.png",
         "timestamp": "2017-08-25T19:27:23Z",
-        "lastfullchecked": "2017-11-14T20:11:29Z"
+        "lastfullchecked": "2017-11-14T22:44:37Z"
     }
 }
