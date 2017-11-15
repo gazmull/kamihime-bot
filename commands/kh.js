@@ -155,39 +155,37 @@ exports.run     = (client, message, args) => {
     {
       var ed_name                     = EDdatas[khname].name;
       var ed_link                     = config.wikidomain+EDdatas[khname].link;
-      var ed_thumb                    = config.thumbrooturl+EDdatas[khname].thumb;
-      var ed_image                    = config.thumbrooturl+EDdatas[khname].image;
-      var ed_raritythumb              = config.thumbrooturl+EDdatas[khname].raritythumb;
+      var ed_thumb                    = config.thumbrooturl+EDdatas[khname].portraiturl;
+      var ed_image                    = config.thumbrooturl+EDdatas[khname].imageurl;
       var ed_rarity                   = EDdatas[khname].rarity;
-      var ed_elementthumb             = config.thumbrooturl+EDdatas[khname].elementthumb;
-      var ed_element                  = EDdatas[khname].element;
-      var ed_attackMin                = EDdatas[khname].attackMin;
-      var ed_attackMax                = EDdatas[khname].attackMax;
-      var ed_HPMin                    = EDdatas[khname].HPMin;
-      var ed_HPMax                    = EDdatas[khname].HPMax;
-      var ed_totalPowerMin            = EDdatas[khname].totalPowerMin;
-      var ed_totalPowerMax            = EDdatas[khname].totalPowerMax;
-      var ed_summonAttack             = EDdatas[khname].summonAttack.replace("Summon Attack",":a: Summon Attack");
-      var ed_summonAttackEffect       = EDdatas[khname].summonAttackEffect;
-      var ed_summonAttackCooldown     = EDdatas[khname].summonAttackCooldown;
-      var ed_eidolonsEffect           = EDdatas[khname].eidolonsEffect.replace("Eidolon Effect",":regional_indicator_e: Eidolon Effect");
-      var ed_eidolonEffectTier0Stars  = EDdatas[khname].eidolonEffectTier0Stars;
-      var ed_eidolonEffectTier0Effect = EDdatas[khname].eidolonEffectTier0Effect;
-      var ed_eidolonEffectTier1Stars  = EDdatas[khname].eidolonEffectTier1Stars;
-      var ed_eidolonEffectTier1Effect = EDdatas[khname].eidolonEffectTier1Effect;
-      var ed_eidolonEffectTier2Stars  = EDdatas[khname].eidolonEffectTier2Stars;
-      var ed_eidolonEffectTier2Effect = EDdatas[khname].eidolonEffectTier2Effect;
-      var ed_eidolonEffectTier3Stars  = EDdatas[khname].eidolonEffectTier3Stars;
-      var ed_eidolonEffectTier3Effect = EDdatas[khname].eidolonEffectTier3Effect;
-      var ed_eidolonEffectTier4Stars  = EDdatas[khname].eidolonEffectTier4Stars;
-      var ed_eidolonEffectTier4Effect = EDdatas[khname].eidolonEffectTier4Effect;
+      var ed_element                  = EDdatas[khname].element+"Symbol";
+      var ed_attackMin                = EDdatas[khname].atk_min;
+      var ed_attackMax                = EDdatas[khname].atk_max;
+      var ed_HPMin                    = EDdatas[khname].hp_min;
+      var ed_HPMax                    = EDdatas[khname].hp_max;
+      var ed_totalPowerMin            = parseInt(ed_attackMin)+parseInt(ed_HPMin);
+      var ed_totalPowerMax            = parseInt(ed_attackMax)+parseInt(ed_HPMax);
+      var ed_summonAttack             = ":a: Summon Attack - "+EDdatas[khname].summon_atk;
+      var ed_summonAttackEffect       = EDdatas[khname].summon_atk_des;
+      var ed_summonAttackCooldown     = EDdatas[khname].summon_cd +" turns";
+      var ed_eidolonsEffect           = ":regional_indicator_e: Eidolon Effect - "+EDdatas[khname].eidolon_effect;
+      var ed_eidolonEffectTier0Stars  = "\u2606 \u2606 \u2606 \u2606";
+      var ed_eidolonEffectTier0Effect = EDdatas[khname].eidolon_effect_des_0;
+      var ed_eidolonEffectTier1Stars  = "\u2605 \u2606 \u2606 \u2606";
+      var ed_eidolonEffectTier1Effect = EDdatas[khname].eidolon_effect_des_1;
+      var ed_eidolonEffectTier2Stars  = "\u2605 \u2605 \u2606 \u2606";
+      var ed_eidolonEffectTier2Effect = EDdatas[khname].eidolon_effect_des_2;
+      var ed_eidolonEffectTier3Stars  = "\u2605 \u2605 \u2605 \u2606";
+      var ed_eidolonEffectTier3Effect = EDdatas[khname].eidolon_effect_des_3;
+      var ed_eidolonEffectTier4Stars  = "\u2605 \u2605 \u2605 \u2605";
+      var ed_eidolonEffectTier4Effect = EDdatas[khname].eidolon_effect_des_4;
 
 
       const embed = new Discord.RichEmbed()
       .setTitle(config.eimojis[ed_rarity]+" "+config.eimojis[ed_element])
       .setAuthor("Eidolon: "+ed_name, "")
       .setColor("#00AE86")
-      .setThumbnail(ed_thumb)
+        .setThumbnail(ed_thumb)
       .setURL(ed_link)
       .addField("Statistics:", ":crossed_swords: " + ed_attackMin + " - " + ed_attackMax + "    :green_heart: " + ed_HPMin + " - " + ed_HPMax + "    :muscle: " + ed_totalPowerMin + " - " + ed_totalPowerMax, false);
 
