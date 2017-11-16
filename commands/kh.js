@@ -223,22 +223,21 @@ exports.run     = (client, message, args) => {
     {
       var sl_name           = SLdatas[khname].name;
       var sl_link           = config.wikidomain+SLdatas[khname].link;
-      var sl_thumb          = config.thumbrooturl+SLdatas[khname].thumb;
-      var sl_image          = config.thumbrooturl+SLdatas[khname].image;
-      var sl_rarity         = SLdatas[khname].rarity;
-      var sl_classthumb     = config.thumbrooturl+SLdatas[khname].classthumb;
-      var sl_class          = SLdatas[khname].class;
-      var sl_subType        = SLdatas[khname].subType;
-      var sl_weapons1       = SLdatas[khname].weapons1;
-      var sl_weapons2       = SLdatas[khname].weapons2;
-      var sl_releaseCost    = SLdatas[khname].releaseCost;
-      var sl_releaseCond    = SLdatas[khname].releasecondition;
+      var sl_thumb          = config.thumbrooturl+SLdatas[khname].portraiturl;
+      var sl_image          = config.thumbrooturl+SLdatas[khname].imageurl;
+      var sl_rarity         = SLdatas[khname].tier;
+      var sl_class          = SLdatas[khname].type;
+      var sl_subType        = SLdatas[khname].sub_type;
+      var sl_weapons1       = SLdatas[khname].weapon1;
+      var sl_weapons2       = SLdatas[khname].weapon2;
+
+      var sl_releaseCond    = SLdatas[khname].soul1+" Lvl 20 & "+SLdatas[khname].soul2+" Lvl 20 & "+SLdatas[khname].soul_p;
       var sl_description    = "*"+SLdatas[khname].description+"*";
 
       sl_description        += "\n\n__**Favourite Weapons:**__  "+sl_weapons1+" - "+sl_weapons2;
-      sl_description        += "\n__**Master Bonus:**__  "+SLdatas[khname].masterbonus;
+      sl_description        += "\n__**Master Bonus:**__  "+SLdatas[khname].master_bonus;
       sl_description        += "\n__**Release Conditions:**__  "+sl_releaseCond;
-      sl_description        += "\n__**Bonus At Maximum Level:**__  "+SLdatas[khname].totalbonus;
+      //sl_description        += "\n__**Bonus At Maximum Level:**__  "+" TODO";
 
       const embed = new Discord.RichEmbed()
       .setTitle(sl_rarity+" - "+sl_subType+" ("+sl_class+")")
@@ -258,35 +257,37 @@ exports.run     = (client, message, args) => {
         embed.setImage(sl_image);
       }
 
-      if (SLdatas[khname].burst){
-        var burstdesc = SLdatas[khname].burstdesc.replace("\u2605","\n\u2605");
-        embed.addField(":b: "+SLdatas[khname].burst,burstdesc,false)
+      if (SLdatas[khname].burst_name){
+        var burstdesc = SLdatas[khname].burst_desc;
+        embed.addField(":b: "+SLdatas[khname].burst_name,burstdesc,false)
       }
-      if (SLdatas[khname].ability1){
-        var abilitydesc1 = SLdatas[khname].abilitydesc1.replace("\u2605","\n\u2605");
-        var abilitycool1 = SLdatas[khname].abilitycool1.replace('Cooldown:',':battery:');
-        abilitycool1 = abilitycool1.replace('Duration:',':hourglass:');
-        embed.addField(":regional_indicator_a: "+SLdatas[khname].ability1+" "+abilitycool1,abilitydesc1,false)
+      if (SLdatas[khname].ability1_name){
+        if (SLdatas[khname].ability1_cd) SLdatas[khname].ability1_cd = ' :battery: '+SLdatas[khname].ability1_cd;
+        if (SLdatas[khname].ability1_dur) SLdatas[khname].ability1_dur = ' :hourglass: '+SLdatas[khname].ability1_dur;
+        var abilitydesc1  = SLdatas[khname].ability1_desc;
+        embed.addField(":regional_indicator_a: "+SLdatas[khname].ability1_name+SLdatas[khname].ability1_cd+SLdatas[khname].ability1_dur, abilitydesc1, false)
       }
-      if (SLdatas[khname].ability2){
-        var abilitydesc2 = SLdatas[khname].abilitydesc2.replace("\u2605","\n\u2605");
-        var abilitycool2 = SLdatas[khname].abilitycool2.replace('Cooldown:',':battery:');
-        var unlock2      = SLdatas[khname].abilityunlock2.replace('Unlocks at',':unlock:');
-        abilitycool2 = abilitycool2.replace('Duration:',':hourglass:');
-        embed.addField(":regional_indicator_a: "+SLdatas[khname].ability2+" "+abilitycool2+" "+unlock2,abilitydesc2,false)
+      if (SLdatas[khname].ability2_name){
+        if (SLdatas[khname].ability2_cd) SLdatas[khname].ability2_cd = ' :battery: '+SLdatas[khname].ability2_cd;
+        if (SLdatas[khname].ability2_dur) SLdatas[khname].ability2_dur = ' :hourglass: '+SLdatas[khname].ability2_dur;
+        var abilityunlock2  = ' :unlock: Lvl ';
+        if (sl_rarity=="standard") abilityunlock2+=" 10"; else abilityunlock2+=" 5";
+        var abilitydesc2    = SLdatas[khname].ability2_desc;
+        embed.addField(":regional_indicator_a: "+SLdatas[khname].ability2_name+SLdatas[khname].ability2_cd+SLdatas[khname].ability2_dur+abilityunlock2, abilitydesc2, false)
       }
-      if (SLdatas[khname].ability3){
-        var abilitydesc3 = SLdatas[khname].abilitydesc3.replace("\u2605","\n\u2605");
-        var abilitycool3 = SLdatas[khname].abilitycool3.replace('Cooldown:',':battery:');
-        var unlock3      = SLdatas[khname].abilityunlock3.replace('Unlocks at',':unlock:');
-        abilitycool3 = abilitycool3.replace('Duration:',':hourglass:');
-        embed.addField(":regional_indicator_a: "+SLdatas[khname].ability3+" "+abilitycool3+" "+unlock3,abilitydesc3,false)
+      if (SLdatas[khname].ability3_name){
+        if (SLdatas[khname].ability3_cd) SLdatas[khname].ability3_cd = ' :battery: '+SLdatas[khname].ability3_cd;
+        if (SLdatas[khname].ability3_dur) SLdatas[khname].ability3_dur = ' :hourglass: '+SLdatas[khname].ability3_dur;
+        var abilityunlock3  = ' :unlock: Lvl 15';
+        var abilitydesc3    = SLdatas[khname].ability3_desc;
+        embed.addField(":regional_indicator_a: "+SLdatas[khname].ability3_name+" "+SLdatas[khname].ability3_cd+SLdatas[khname].ability3_dur+abilityunlock3, abilitydesc3, false)
       }
-      if (SLdatas[khname].assist1){
-        embed.addField(":white_check_mark: "+SLdatas[khname].assist1,SLdatas[khname].assistdesc1,false)
+
+      if (SLdatas[khname].assist1_name){
+        embed.addField(":white_check_mark: "+SLdatas[khname].assist1_name,SLdatas[khname].assist1_desc,false)
       }
-      if (SLdatas[khname].assist2){
-        embed.addField(":white_check_mark: "+SLdatas[khname].assist2,SLdatas[khname].assistdesc2,false)
+      if (SLdatas[khname].assist2_name){
+        embed.addField(":white_check_mark: "+SLdatas[khname].assist2_name,SLdatas[khname].assist2_desc,false)
       }
 
       message.channel.send({embed});

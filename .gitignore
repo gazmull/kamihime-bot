@@ -61,3 +61,7 @@ typings/
 
 /config.json
 /datas/storage
+/datas/souls.json
+/datas/eidolons.json
+/datas/weapons.json
+/datas/kamihime.json
