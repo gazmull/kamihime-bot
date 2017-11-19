@@ -340,6 +340,11 @@ exports.run     = (client, message, args) => {
           }
         }
 
+        if(! WPdatas[khname].skill_type) {
+          embed.addField("This page is incomplete: ","[Help us by contributing to wikia]("+ed_link+")",false);
+        }
+
+
         if (wp_imageurl){
           embed.setImage(wp_imageurl);
         }
