@@ -197,13 +197,17 @@ exports.run     = (client, message, args) => {
         embed.addField(ed_summonAttack + " (" + ed_summonAttackCooldown + ")", ed_summonAttackEffect,false);
       }
 
-      if (ed_eidolonsEffect.length) {
+      if (ed_eidolonsEffect.length && EDdatas[khname].link) {
         embed.addField(ed_eidolonsEffect, ed_eidolonEffectTier0Stars+" "+ed_eidolonEffectTier0Effect+"\n"+
           ed_eidolonEffectTier1Stars+" "+ed_eidolonEffectTier1Effect+"\n"+
           ed_eidolonEffectTier2Stars+" "+ed_eidolonEffectTier2Effect+"\n"+
           ed_eidolonEffectTier3Stars+" "+ed_eidolonEffectTier3Effect+"\n"+
           ed_eidolonEffectTier4Stars+" "+ed_eidolonEffectTier4Effect+"\n"
           ,false);
+      }
+
+      if(!EDdatas[khname].link) {
+        embed.addField("This page is incomplete: ","[Help us by contributing to wikia]("+ed_link+")",false);
       }
 
       if (EDdatas[khname].obtained) {
