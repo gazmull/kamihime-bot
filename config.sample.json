@@ -16,5 +16,7 @@
 		"WindSymbol" : "<:K_Wind:your_eijoji_token_id>",
 		"ThunderSymbol" : "<:K_Thunder:your_eijoji_token_id>"
 	},
-	"node_persist_path": "datas/storage"
+	"node_persist_path": "datas/storage",
+	"countdown_authorized_roles" : ["Administrator", "Moderator", "Rolename_3"],
+	"countdown_authorized_servers" : ["Server_ID1", "Server_ID2", "Server_ID3"]
 }

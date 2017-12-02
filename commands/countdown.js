@@ -4,6 +4,7 @@ const _           = require("lodash");            // https://lodash.com
 const Countdown   = require("countdown");         // http://countdownjs.org
 const Moment      = require("moment-timezone");            // https://momentjs.com/
 const persist     = require("../datas/persist").persist;
+const config      = require("../config.json");
 
 /*
  * These, unlike custom countdowns added with the command, are in Pacific time
@@ -14,17 +15,17 @@ const hardcoded_countdowns = [
     name: 'Daily reset',
     time: '0:00',
   },
-  {
+  /*{
     name: 'First Burst Time',
     time: '4:00',
   },
   {
-    name: 'Quest reset',
-    time: '5:00',
-  },
-  {
     name: 'Second Burst Time',
     time: '12:00',
+  },*/
+  {
+    name: 'Quest reset',
+    time: '5:00',
   }
 ];
 
@@ -89,8 +90,11 @@ exports.run = (client, message, args) => {
 
   } else if (args.length > 0) {
 
-    if(!message.member.roles.some(r=>["Administrator", "Leader", "Subleader"].includes(r.name)) )
-    return message.reply("Sorry, you don't have permissions to use this!");
+    if(!config.countdown_authorized_servers.includes(message.guild.id))
+      return message.reply("Sorry, you don't have permissions to use this on this server!");
+
+    if(!message.member.roles.some(r=>config.countdown_authorized_roles.includes(r.name)) )
+      return message.reply("Sorry, you don't have permissions to use this!");
 
     if (args[0] === "test") {
       // /countdown test DATE ——— Prints a countdown to the provided DATE without storing it.
