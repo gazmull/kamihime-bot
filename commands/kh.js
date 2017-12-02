@@ -1,18 +1,51 @@
 // Return Simple Kamihime datasheets.
 // Currently supported items: Kamihimes Eidolons & Souls
 
-var   KHdatas = require('../datas/kamihime.json');
-var   EDdatas = require('../datas/eidolons.json');
-var   SLdatas = require('../datas/souls.json');
-var   WPdatas = require('../datas/weapons.json');
-
 const Discord = require("discord.js");
 const config  = require("../config.json");
+
+const     fuzzy   = require('fuzzy');
+const     KHdatas = require('../datas/kamihime.json');
+const     EDdatas = require('../datas/eidolons.json');
+const     SLdatas = require('../datas/souls.json');
+const     WPdatas = require('../datas/weapons.json');
+
+var fuzzyOptions = {
+  extract: function(el) { return el.name; }
+};
+
+// --- merge everything in one big ALLArray
+
+var     KHArray = Object.keys(KHdatas).map(function (key) { return KHdatas[key]; });
+for (var i = 0; i < KHArray.length; i++){
+  KHArray[i].objectType = "Kamihime";
+}
+var     EDArray = Object.keys(EDdatas).map(function (key) { return EDdatas[key]; });
+for (var i = 0; i < EDArray.length; i++){
+  EDArray[i].objectType = "Eidolon";
+}
+var     SLArray = Object.keys(SLdatas).map(function (key) { return SLdatas[key]; });
+for (var i = 0; i < SLArray.length; i++){
+  SLArray[i].objectType = "Soul";
+}
+var     WPArray = Object.keys(WPdatas).map(function (key) { return WPdatas[key]; });
+for (var i = 0; i < WPArray.length; i++){
+  WPArray[i].objectType = "Weapon";
+}
+var     ALLArray= KHArray.concat(EDArray, SLArray, WPArray);
+ALLArray.sort(function(a, b) {
+    var keyA = new Date(a.timestamp);
+    var keyB = new Date(b.timestamp);
+    if(keyA > keyB) return -1;
+    if(keyA < keyB) return 1;
+    return 0;
+});
+
+// --- process the command
 
 exports.run     = (client, message, args) => {
   var khfound   = false;
   var khrequest = args.join(" ");
-  khrequest     = khrequest.toLowerCase().replace( /\b./g, function(a){ return a.toUpperCase(); } );
 
   if (khrequest.length < 3)
   {
@@ -20,50 +53,18 @@ exports.run     = (client, message, args) => {
     return;
   }
 
-  var khnameList = [];
-
-  if ( KHdatas.hasOwnProperty(khrequest) ||
-       EDdatas.hasOwnProperty(khrequest) ||
-       WPdatas.hasOwnProperty(khrequest) ||
-       SLdatas.hasOwnProperty(khrequest) ) {
-      // --- Exact match
-      khnameList.push(khrequest);
-  }
-  else {
-
-    // --- Try to match results with the provided request
-
-    for (var key in KHdatas) {
-      if(key.indexOf(khrequest) == 0) {
-          khnameList.push(key);
-      }
-    }
-    for (var key in EDdatas) {
-      if(key.indexOf(khrequest) == 0) {
-          khnameList.push(key);
-      }
-    }
-    for (var key in SLdatas) {
-      if(key.indexOf(khrequest) == 0) {
-          khnameList.push(key);
-      }
-    }
-    for (var key in WPdatas) {
-      if(key.indexOf(khrequest) == 0) {
-          khnameList.push(key);
-      }
-    }
-
-  }
+  var results = fuzzy.filter(khrequest, ALLArray, fuzzyOptions);
+  var khnameList = results.map(function(el) { return el.original.name; });
+  console.log(khnameList);
 
   // --- Main Loop for Kamihimes, Eidolons, Souls & Weapons
 
   for (khIndex = 0; khIndex < khnameList.length; ++khIndex)
   {
 
-    // Limit the bot to 3 responses
-    if ( khIndex > 2) {
-      message.channel.send("```There's too much results. Please try to narrow your search```");
+    // Limit the bot to only one response
+    if ( khIndex > 0) {
+      //message.channel.send("```There's too much results. Please try to narrow your search```");
       return;
     }
 
@@ -77,9 +78,7 @@ exports.run     = (client, message, args) => {
       var kh_link           = config.wikidomain+KHdatas[khname].link;
       var kh_thumb          = config.thumbrooturl+KHdatas[khname].portraiturl;
       var kh_image          = config.thumbrooturl+KHdatas[khname].imageurl;
-      //var kh_raritythumb    = config.thumbrooturl+KHdatas[khname].raritythumb;
       var kh_rarity         = KHdatas[khname].rarity;
-      //var kh_elementthumb   = config.thumbrooturl+KHdatas[khname].elementthumb;
       var kh_element        = KHdatas[khname].element;
       var kh_type          = KHdatas[khname].type;
       var kh_attackMin      = KHdatas[khname].atk_min;
@@ -350,7 +349,6 @@ exports.run     = (client, message, args) => {
         if(! WPdatas[khname].skill_type) {
           embed.addField("This page is incomplete: ","[Help us by contributing to wikia]("+ed_link+")",false);
         }
-
 
         if (wp_imageurl){
           embed.setImage(wp_imageurl);
