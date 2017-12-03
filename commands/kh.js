@@ -55,7 +55,7 @@ exports.run     = (client, message, args) => {
 
   var results = fuzzy.filter(khrequest, ALLArray, fuzzyOptions);
   var khnameList = results.map(function(el) { return el.original.name; });
-  console.log(khnameList);
+  //console.log(khnameList);
 
   // --- Main Loop for Kamihimes, Eidolons, Souls & Weapons
 
