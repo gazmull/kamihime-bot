@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
   var image = config.thumbrooturl+"\/images_bot\/BotInstall.png";
 
   const embed = new Discord.RichEmbed()
-  .setTitle("Click here to add the kamihime bot to your server")
+  .setTitle("Click here to add the kamihime bot to your own server")
   .setAuthor("Kamihime Bot:")
   .setThumbnail(thumb)
   .setColor("#00AE86");
