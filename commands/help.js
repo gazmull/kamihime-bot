@@ -19,9 +19,11 @@ exports.run = (client, message, args) => {
   welcomeText    += " => Displays the 15 latest objects downloaded from the wiki website.\n";
   welcomeText    += "/countdown";
   welcomeText    += " => Displays countdowns related to ingame events.\n";
+  welcomeText    += "/invitebot";
+  welcomeText    += " => Provides informations on how to install this bot on your discord server.\n";  
   welcomeText    += "\n";
   welcomeText    += "#pro-tips\n";
-  welcomeText    += "A fuzzy logic is applied to [name], it will try to match incomplete or misspelled inputs.\n";
+  welcomeText    += "Fuzzy logic is applied to [name], it will try to match incomplete or misspelled inputs.\n";
   welcomeText    += "You can click the name field in the datasheet response to visit the related wiki page. \n";
   welcomeText    += "```*_\n";
 
