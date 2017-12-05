@@ -12,6 +12,9 @@ Displays information about the queried kamihime/soul/eidolon/weapon.
 **/latest**    
 Displays the 15 latest items downloaded from the wiki website.
 
+**/invitebot**   
+Provides a link to install this bot on your own discord server.
+
 **/countdown**  
 Displays the list game event countdowns.
 
