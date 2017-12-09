@@ -1,6 +1,6 @@
 const Discord     = require("discord.js");        // Load up the discord.js library
 const fs          = require("fs");
-const persist     = require("./datas/persist").persist;
+const persist     = require("./persist").persist;
 
 
 // This is your client. Some people call it `bot`, some people call it `self`,
@@ -25,7 +25,7 @@ fs.readdir("./events/", (err, files) => {
 // -------------------- event message ----------------------
 
 client.on("message", message => {
-  
+
   // This event will run on every single message received, from any channel or DM.
   if(message.author.bot) return;
 

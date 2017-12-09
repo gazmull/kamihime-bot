@@ -3,7 +3,7 @@ const Discord     = require("discord.js");
 const _           = require("lodash");            // https://lodash.com
 const Countdown   = require("countdown");         // http://countdownjs.org
 const Moment      = require("moment-timezone");            // https://momentjs.com/
-const persist     = require("../datas/persist").persist;
+const persist     = require("../persist").persist;
 const config      = require("../config.json");
 
 /*
@@ -14,18 +14,27 @@ const hardcoded_countdowns = [
   {
     name: 'Daily reset',
     time: '0:00',
-  },
-  /*{
-    name: 'First Burst Time',
-    time: '4:00',
+    dayofweek: '*',
   },
   {
-    name: 'Second Burst Time',
+    name: 'Weapon/Eidolon Enhancement Quest',
     time: '12:00',
-  },*/
+    dayofweek: '*',
+  },
+  {
+    name: 'Weapon/Eidolon Enhancement Quest',
+    time: '19:00',
+    dayofweek: '*',
+  },
+  {
+    name: 'Weapon/Eidolon Enhancement Quest',
+    time: '22:00',
+    dayofweek: '*',
+  },
   {
     name: 'Quest reset',
     time: '5:00',
+    dayofweek: '*',
   }
 ];
 
@@ -66,7 +75,9 @@ exports.run = (client, message, args) => {
     for (var hardcoded_countdown_key in hardcoded_countdowns) {
       var definition = hardcoded_countdowns[hardcoded_countdown_key];
       var date = Moment.tz(definition.time, 'HH:mm', 'America/Los_Angeles').seconds(0);
-      if(Moment.tz('America/Los_Angeles').isAfter(date)) { date.add(1, 'day'); }
+      if( (definition.dayofweek=="*") && (Moment.tz('America/Los_Angeles').isAfter(date)) ) {
+        date.add(1, 'day');
+      }
       countdown_array.push([definition.name, date]);
     }
 

@@ -3,6 +3,7 @@
 A simple Kamihime Discord bot.  
 * Displays datasheet infos from Kamihime, eidolons, souls and weapons.
 * Displays countdowns related to game events.
+* An optional quizz game.
 
 ### List of commands:
 
@@ -64,3 +65,6 @@ List of role names allowed to use sensible countdown commands.
 
 __countdown_authorized_servers:__  
 List of server id allowed to use sensible countdown commands.
+
+__quizz_channel_id:__
+Channel Id which will be used for the quizz game. Leave it empty, if you don't want to install the game.
