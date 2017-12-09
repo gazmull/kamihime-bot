@@ -25,16 +25,30 @@ fs.readdir("./events/", (err, files) => {
 // -------------------- event message ----------------------
 
 client.on("message", message => {
+  
   // This event will run on every single message received, from any channel or DM.
-
   if(message.author.bot) return;
-  if(message.content.indexOf(config.prefix) !== 0) return;
 
+  // --- special channel case for the quizz game
+
+  if (config.quizz_channel_id && (message.channel.id == config.quizz_channel_id)) {
+    try {
+      let quizz = require(`./quizz.js`);
+      quizz.read_answer(client, message);
+    } catch (err) {
+      console.error(err);
+    }
+    // prevent uses of bot commands in the game quizz channel
+    //return;
+  }
+
+  // --- Basic Command Handler
+
+  if(message.content.indexOf(config.prefix) !== 0) return;
   // Here we separate our "command" name, and our "arguments" for the command.
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
-  // Basic Command Handler
   try {
     let commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, message, args);
