@@ -1,8 +1,11 @@
 
+const     config    = require("./config.json");
 const     KHdatas   = require('./datas/kamihime.json');
 const     EDdatas   = require('./datas/eidolons.json');
 const     SLdatas   = require('./datas/souls.json');
 const     WPdatas   = require('./datas/weapons.json');
+const     crypto    = require('crypto');
+
 var       ALLArray  = [];
 
 exports.getKHInfos   = () => {
@@ -37,4 +40,13 @@ exports.initKHInfos     = () =>  {
       if(keyA < keyB) return 1;
       return 0;
   });
+}
+
+exports.encrypt =  (plain_text) => {
+    const encryptionMethod = 'AES-256-CBC';
+    const secret    = config.quizz_secret; //must be 32 char length
+    const iv        = secret.substr(0,16);
+    const encryptor = crypto.createCipheriv(encryptionMethod, secret, iv);
+    const encrypted = encryptor.update(plain_text, 'utf8', 'base64') + encryptor.final('base64');
+    return Buffer.from(encrypted).toString('base64')
 }

@@ -17,25 +17,65 @@ const hardcoded_countdowns = [
     dayofweek: '*',
   },
   {
-    name: 'Weapon/Eidolon Enhancement Quest',
+    name: 'Weapon/Eidolon Enhancement Quest1',
     time: '12:00',
     dayofweek: '*',
   },
   {
-    name: 'Weapon/Eidolon Enhancement Quest',
+    name: 'Weapon/Eidolon Enhancement Quest2',
     time: '19:00',
     dayofweek: '*',
   },
   {
-    name: 'Weapon/Eidolon Enhancement Quest',
+    name: 'Weapon/Eidolon Enhancement Quest3',
     time: '22:00',
     dayofweek: '*',
   },
-  {
+  /*{
     name: 'Quest reset',
     time: '5:00',
     dayofweek: '*',
-  }
+  },
+  {
+    name: 'Gem Quest1',
+    time: '19:30',
+    dayofweek: 'Friday',
+  },
+  {
+    name: 'Gem Quest2',
+    time: '23:30',
+    dayofweek: 'Friday',
+  },
+  {
+    name: 'Gem Quest3',
+    time: '12:00',
+    dayofweek: 'Saturday',
+  },
+  {
+    name: 'Gem Quest4',
+    time: '18:00',
+    dayofweek: 'Saturday',
+  },
+  {
+    name: 'Gem Quest5',
+    time: '22:00',
+    dayofweek: 'Saturday',
+  },
+  {
+    name: 'Gem Quest6',
+    time: '12:30',
+    dayofweek: 'Sunday',
+  },
+  {
+    name: 'Gem Quest7',
+    time: '19:00',
+    dayofweek: 'Sunday',
+  },
+  {
+    name: 'Gem Quest8',
+    time: '23:00',
+    dayofweek: 'Sunday',
+  }*/
 ];
 
 const Countdown_units = Countdown.YEARS |
@@ -75,10 +115,13 @@ exports.run = (client, message, args) => {
     for (var hardcoded_countdown_key in hardcoded_countdowns) {
       var definition = hardcoded_countdowns[hardcoded_countdown_key];
       var date = Moment.tz(definition.time, 'HH:mm', 'America/Los_Angeles').seconds(0);
+      var day = Moment().format('dddd');
       if( (definition.dayofweek=="*") && (Moment.tz('America/Los_Angeles').isAfter(date)) ) {
         date.add(1, 'day');
       }
-      countdown_array.push([definition.name, date]);
+      if ( (definition.dayofweek=="*" || (day == definition.dayofweek))) {
+        countdown_array.push([definition.name, date]);
+      }
     }
 
     get_countdowns_with_cleanup((countdowns) => {

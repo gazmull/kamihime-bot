@@ -66,5 +66,11 @@ List of role names allowed to use sensible countdown commands.
 __countdown_authorized_servers:__  
 List of server id allowed to use sensible countdown commands.
 
-__quizz_channel_id:__
+__quizz_channel_id:__  
 Channel Id which will be used for the quizz game. Leave it empty, if you don't want to install the game.
+
+__quizz_thumbrootencryptedurl:__
+To prevent cheating in the quizz game, image url are obfuscated
+
+__quizz_secret:__
+32 characters password for encryption
