@@ -44,7 +44,7 @@ exports.initKHInfos     = () =>  {
 
 exports.encrypt =  (plain_text) => {
     const encryptionMethod = 'AES-256-CBC';
-    const secret    = config.quizz_secret; //must be 32 char length
+    const secret    = config.quiz_secret; //must be 32 char length
     const iv        = secret.substr(0,16);
     const encryptor = crypto.createCipheriv(encryptionMethod, secret, iv);
     const encrypted = encryptor.update(plain_text, 'utf8', 'base64') + encryptor.final('base64');

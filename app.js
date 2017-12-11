@@ -29,16 +29,16 @@ client.on("message", message => {
   // This event will run on every single message received, from any channel or DM.
   if(message.author.bot) return;
 
-  // --- special channel case for the quizz game
+  // --- special channel case for the quiz game
 
-  if (config.quizz_channel_id && (message.channel.id == config.quizz_channel_id)) {
+  if (config.quiz_channel_id && (message.channel.id == config.quiz_channel_id)) {
     try {
-      let quizz = require(`./quizz.js`);
-      quizz.read_answer(client, message);
+      let quiz = require(`./quiz.js`);
+      quiz.read_answer(client, message);
     } catch (err) {
       console.error(err);
     }
-    // prevent uses of bot commands in the game quizz channel
+    // prevent uses of bot commands in the game quiz channel
     //return;
   }
 

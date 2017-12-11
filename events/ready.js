@@ -2,7 +2,7 @@
 
 const config  = require("../config.json");
 const khinfos = require("../khinfos.js");
-const quizz   = require("../quizz.js");
+const quiz   = require("../quiz.js");
 
 exports.run = (client) => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
@@ -15,8 +15,8 @@ exports.run = (client) => {
 
   khinfos.initKHInfos();
 
-  if (config.quizz_channel_id) {
-    quizz.init_question(client);
+  if (config.quiz_channel_id) {
+    quiz.init_question(client);
   }
 
 }

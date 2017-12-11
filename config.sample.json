@@ -19,7 +19,7 @@
 	"node_persist_path": "datas/storage",
 	"countdown_authorized_roles" : ["Administrator", "Moderator", "Rolename_3"],
 	"countdown_authorized_servers" : ["Server_ID1", "Server_ID2", "Server_ID3"],
-	"quizz_channel_id" : "Game_Channel_ID",
-	"quizz_thumbrootencryptedurl" : "https:\/\/myhost.com/obfuscated",
-	"quizz_secret" : "My32charPasswordAndInitVectorStr"
+	"quiz_channel_id" : "Game_Channel_ID",
+	"quiz_thumbrootencryptedurl" : "https:\/\/myhost.com/obfuscated",
+	"quiz_secret" : "My32charPasswordAndInitVectorStr"
 }
