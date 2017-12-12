@@ -43,10 +43,10 @@ exports.initKHInfos     = () =>  {
 }
 
 exports.encrypt =  (plain_text) => {
-    const encryptionMethod = 'AES-256-CBC';
-    const secret    = config.quiz_secret; //must be 32 char length
-    const iv        = secret.substr(0,16);
-    const encryptor = crypto.createCipheriv(encryptionMethod, secret, iv);
-    const encrypted = encryptor.update(plain_text, 'utf8', 'base64') + encryptor.final('base64');
+    const encryptionMethod  = 'AES-256-CBC';
+    const secret            = config.secret_key;      //must be 32 char length
+    const iv                = secret.substr(0,16);
+    const encryptor         = crypto.createCipheriv(encryptionMethod, secret, iv);
+    const encrypted         = encryptor.update(plain_text, 'utf8', 'base64') + encryptor.final('base64');
     return Buffer.from(encrypted).toString('base64')
 }

@@ -66,11 +66,17 @@ List of role names allowed to use sensible countdown commands.
 __countdown_authorized_servers:__  
 List of server id allowed to use sensible countdown commands.
 
-__quiz_channel_id:__  
-Channel Id which will be used for the quiz game. Leave it empty, if you don't want to install the game.
+__quiz__:  (optional quiz game)
+* __channel_id:__  Channel Id which will be used for the quiz game. Leave it empty, if you don't want to install the game.
 
-__quiz_thumbrootencryptedurl:__
-To prevent cheating in the quiz game, image url are obfuscated
+* __thumbrootencryptedurl:__  To prevent cheating in the quiz game, image url are obfuscated
 
-__quiz_secret:__
-32 characters password for encryption
+__secret_key:__  
+32 characters password for encryption (only needed by the quiz game)
+
+__twitter:__  (optional twitter feeds)
+* __consumer_key__: Twitter consumer_key
+* __consumer_secret__: Twitter consumer secret
+* __token_key__:   Twitter token key
+* __token_secret__: Twitter token secret
+* __streams__: List of twitter streams (including twitter_user_id and discord_channel)

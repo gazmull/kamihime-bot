@@ -2,7 +2,9 @@
 
 const config  = require("../config.json");
 const khinfos = require("../khinfos.js");
-const quiz   = require("../quiz.js");
+const quiz    = require("../quiz.js");
+const twitter = require("../twitter.js");
+
 
 exports.run = (client) => {
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
@@ -13,9 +15,11 @@ exports.run = (client) => {
   else
     client.user.setGame(`on ${client.guilds.size} server`);
 
+  twitter.init(client);
+
   khinfos.initKHInfos();
 
-  if (config.quiz_channel_id) {
+  if (config.hasOwnProperty('quiz')) {
     quiz.init_question(client);
   }
 

@@ -31,15 +31,18 @@ client.on("message", message => {
 
   // --- special channel case for the quiz game
 
-  if (config.quiz_channel_id && (message.channel.id == config.quiz_channel_id)) {
-    try {
-      let quiz = require(`./quiz.js`);
-      quiz.read_answer(client, message);
-    } catch (err) {
-      console.error(err);
+  if (config.hasOwnProperty('quiz'))
+  {
+    if (message.channel.id == config.quiz.channel_id) {
+      try {
+        let quiz = require(`./quiz.js`);
+        quiz.read_answer(client, message);
+      } catch (err) {
+        console.error(err);
+      }
+      // prevent uses of bot commands in the game quiz channel
+      //return;
     }
-    // prevent uses of bot commands in the game quiz channel
-    //return;
   }
 
   // --- Basic Command Handler

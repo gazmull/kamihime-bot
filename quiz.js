@@ -29,7 +29,7 @@ exports.read_answer = (client, message) => {
 // -----------
 
 exports.init_question = (client) => {
-  var channel = client.channels.get(config.quiz_channel_id);
+  var channel         = client.channels.get(config.quiz.channel_id);
 
   const khArray       = khinfos.getKHInfos();
   const nbTotalItem   = khArray.length;
@@ -37,10 +37,10 @@ exports.init_question = (client) => {
 
   const itemId          = Math.floor(Math.random()*nbTotalItem);
   const itemName        = khArray[itemId].name;
-  khquiz_goodResponse  = Math.floor(Math.random()*4);
+  khquiz_goodResponse   = Math.floor(Math.random()*4);
 
   const encryptedUrl    = khinfos.encrypt(khArray[itemId].portraiturl);
-  const itemThumb       = config.quiz_thumbrootencryptedurl+"/"+encryptedUrl;
+  const itemThumb       = config.quiz.thumbrootencryptedurl+"/"+encryptedUrl;
 
   for (var i=0;i<4;i++)  {
     responses[i] = Math.floor(Math.random()*nbTotalItem);
