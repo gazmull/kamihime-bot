@@ -68,11 +68,12 @@ List of server id allowed to use sensible countdown commands.
 
 __quiz__:  (optional quiz game)
 * __channel_id:__  Channel Id which will be used for the quiz game. Leave it empty, if you don't want to install the game.
+* __thumbrootencryptedurl:__  To prevent cheating in the quiz game, image url can be obfuscated.
 
-* __thumbrootencryptedurl:__  To prevent cheating in the quiz game, image url are obfuscated
-
-__secret_key:__  
-32 characters password for encryption (only needed by the quiz game)
+__secret_key:__  (optional encryption)  
+32 characters password for string encryption.  
+Optionnaly used by the quiz game for image url encryption to avoid cheating.  
+If activated, you will need to provide yourself a AES-256-CBC decryption feature on your image server.
 
 __twitter:__  (optional twitter feeds)
 * __consumer_key__: Twitter consumer_key

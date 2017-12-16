@@ -39,8 +39,12 @@ exports.init_question = (client) => {
   const itemName        = khArray[itemId].name;
   khquiz_goodResponse   = Math.floor(Math.random()*4);
 
+
+  let itemThumb         = config.thumbrooturl+khArray[itemId].portraiturl;
   const encryptedUrl    = khinfos.encrypt(khArray[itemId].portraiturl);
-  const itemThumb       = config.quiz.thumbrootencryptedurl+"/"+encryptedUrl;
+  if (encryptedUrl){
+    itemThumb           = config.quiz.thumbrootencryptedurl+"/"+encryptedUrl;
+  }
 
   for (var i=0;i<4;i++)  {
     responses[i] = Math.floor(Math.random()*nbTotalItem);
