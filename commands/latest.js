@@ -5,23 +5,31 @@ const   config  = require("../config.json");
 const   khinfos = require("../khinfos.js");
 
 let     nbResultToDisplay = 15;
-const   khArray = khinfos.getKHInfos();
+const   dataArray = khinfos.getKHInfos();
+const   khArray   = khinfos.getKamihimeInfos();
+const   edArray   = khinfos.getEidolonInfos();
+const   slArray   = khinfos.getSoulInfos();
+const   wpArray   = khinfos.getWeaponInfos();
 
 exports.run     = (client, message, args) => {
-  var khfound   = false;
-  var khrequest = args.join(" ");
+
+  let khrequest = args.join(" ");
 
   if (khrequest && (parseInt(khrequest)>0)) {
     nbResultToDisplay = parseInt(khrequest);
     if (nbResultToDisplay>15) nbResultToDisplay=15;
   }
 
-  var latestResponse = "```Markdown\n"
-  for (var i=0; i<nbResultToDisplay; i++) {
-      var link = config.wikidomain+khArray[i]['link'];
-      latestResponse += khArray[i]['timestamp']+' ['+khArray[i]['name']+"]("+khArray[i]['objectType']+")\n";
+  let latestResponse = "```Markdown\n";
+  for (let i=0; i<nbResultToDisplay; i++) {
+      let link = config.wikidomain+dataArray[i]['link'];
+      latestResponse += dataArray[i]['timestamp']+" ["+dataArray[i]['name']+"]("+dataArray[i]['objectType']+")\n";
   }
   latestResponse +="```";
   message.channel.send(latestResponse);
+  let stats = "```Markdown\n";
+  stats +="Totals: [Kamihime]("+khArray.length+")"+" [Eidolon]("+edArray.length+")"+" [Soul]("+slArray.length+")"+" [Weapon]("+wpArray.length+")\n";
+  stats +="```";
+  message.channel.send(stats);
 
 }

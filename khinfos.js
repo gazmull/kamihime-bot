@@ -7,28 +7,44 @@ const     WPdatas   = require('./datas/weapons.json');
 const     crypto    = require('crypto');
 
 var       ALLArray  = [];
+var       KHArray   = [];
+var       EDArray   = [];
+var       SLArray   = [];
+var       WPArray   = [];
 
 exports.getKHInfos   = () => {
   return ALLArray;
+}
+exports.getKamihimeInfos   = () => {
+  return KHArray;
+}
+exports.getEidolonInfos   = () => {
+  return EDArray;
+}
+exports.getSoulInfos   = () => {
+  return SLArray;
+}
+exports.getWeaponInfos   = () => {
+  return WPArray;
 }
 
 // --- merge everything in one big ALLArray
 
 exports.initKHInfos     = () =>  {
 
-  var     KHArray = Object.keys(KHdatas).map(function (key) { return KHdatas[key]; });
+  KHArray = Object.keys(KHdatas).map(function (key) { return KHdatas[key]; });
   for (var i = 0; i < KHArray.length; i++){
     KHArray[i].objectType = "Kamihime";
   }
-  var     EDArray = Object.keys(EDdatas).map(function (key) { return EDdatas[key]; });
+  EDArray = Object.keys(EDdatas).map(function (key) { return EDdatas[key]; });
   for (var i = 0; i < EDArray.length; i++){
     EDArray[i].objectType = "Eidolon";
   }
-  var     SLArray = Object.keys(SLdatas).map(function (key) { return SLdatas[key]; });
+  SLArray = Object.keys(SLdatas).map(function (key) { return SLdatas[key]; });
   for (var i = 0; i < SLArray.length; i++){
     SLArray[i].objectType = "Soul";
   }
-  var     WPArray = Object.keys(WPdatas).map(function (key) { return WPdatas[key]; });
+  WPArray = Object.keys(WPdatas).map(function (key) { return WPdatas[key]; });
   for (var i = 0; i < WPArray.length; i++){
     WPArray[i].objectType = "Weapon";
   }
