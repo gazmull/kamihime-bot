@@ -23,7 +23,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.19.1",
     "moment-timezone": "^0.5.14",
-    "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
     "node-persist": "^2.1.0",
     "twit": "^2.2.9"
   }
