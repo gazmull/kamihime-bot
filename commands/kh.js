@@ -66,7 +66,7 @@ exports.run     = (client, message, args) => {
       .addField("Statistics:", ":crossed_swords: " + kh_attackMin + " - " + kh_attackMax + "    :green_heart: " + kh_HPMin + " - " + kh_HPMax + "    :muscle: " + kh_totalPowerMin + " - " + kh_totalPowerMax, false);
 
       if (khItems[khIdx].burst_name){
-        var burstdesc = khItems[khIdx].burst_desc;
+        var burstdesc = khItems[khIdx].burst_description;
         embed.addField(":b: "+khItems[khIdx].burst_name,burstdesc,false)
       }
       if (khItems[khIdx].ability1_name){

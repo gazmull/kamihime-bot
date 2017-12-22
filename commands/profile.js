@@ -3,6 +3,7 @@
 const   discord = require("discord.js");
 const   config  = require("../config.json");
 const   khinfos = require("../khinfos.js");
+const   mysql   = require('mysql2');
 
 const   dataArray = khinfos.getKHInfos();
 const   khArray   = khinfos.getKamihimeInfos();
@@ -74,6 +75,20 @@ exports.run     = (client, message, args) => {
    return;
   }
 
+  var connection = mysql.createConnection({
+    host     : config.mysql.host,
+    user     : config.mysql.user,
+    password : config.mysql.password,
+    database : config.mysql.database
+  });
+
+  connection.connect();
+  connection.query('SELECT * FROM employees', function(err, rows, fields)
+  {
+    if (err) throw err;
+    console.log(rows[0]);
+  });
+  connection.end();
 
   const embed = new discord.RichEmbed()
   embed.setTitle(":regional_indicator_u: Union: "+unionName);
