@@ -17,9 +17,9 @@ exports.run     = (client, message, args) => {
   var khfound   = false;
   var khrequest = args.join(" ");
 
-  if (khrequest.length < 3)
+  if (khrequest.length < 2)
   {
-    message.channel.send("I need at least 3 characters to help you.");
+    message.channel.send("For a search query to be effective, you must enter at least two characters.");
     return;
   }
 
@@ -63,7 +63,7 @@ exports.run     = (client, message, args) => {
       .setThumbnail(kh_thumb)
       .setURL(kh_link)
       .setImage(kh_image)
-      .addField("Statistics:", ":crossed_swords: " + kh_attackMin + " - " + kh_attackMax + "    :green_heart: " + kh_HPMin + " - " + kh_HPMax + "    :muscle: " + kh_totalPowerMin + " - " + kh_totalPowerMax, false);
+      .addField("Statistics:", ":crossed_swords: ATK: " + kh_attackMin + "-" + kh_attackMax + " :green_heart: HP: " + kh_HPMin + "-" + kh_HPMax + " :muscle: PWR: " + kh_totalPowerMin + "-" + kh_totalPowerMax, false);
 
       if (khItems[khIdx].burst_name){
         var burstdesc = khItems[khIdx].burst_description;
@@ -153,7 +153,7 @@ exports.run     = (client, message, args) => {
       .setColor("#00AE86")
         .setThumbnail(ed_thumb)
       .setURL(ed_link)
-      .addField("Statistics:", ":crossed_swords: " + ed_attackMin + " - " + ed_attackMax + "    :green_heart: " + ed_HPMin + " - " + ed_HPMax + "    :muscle: " + ed_totalPowerMin + " - " + ed_totalPowerMax, false);
+      .addField("Statistics:", ":crossed_swords: ATK: " + ed_attackMin + "-" + ed_attackMax + " :green_heart: HP: " + ed_HPMin + "-" + ed_HPMax + " :muscle: PWR: " + ed_totalPowerMin + "-" + ed_totalPowerMax, false);
 
       if (khItems[khIdx].description) {
         embed.setDescription("*"+khItems[khIdx].description+"*")
@@ -286,7 +286,7 @@ exports.run     = (client, message, args) => {
           .setAuthor("Weapon: "+wp_name, "")
           .setColor("#00AE86")
           .setThumbnail(wp_portraiturl)
-          .addField("Statistics:", ":crossed_swords: " + wp_attackMin + " - " + wp_attackMax + "    :green_heart: " + wp_HPMin + " - " + wp_HPMax + "    :muscle: " + wp_totalPowerMin + " - " + wp_totalPowerMax, false);
+          .addField("Statistics:", ":crossed_swords: ATK: " + wp_attackMin + "-" + wp_attackMax + " :green_heart: HP: " + wp_HPMin + "-" + wp_HPMax + " :muscle: PWR: " + wp_totalPowerMin + "-" + wp_totalPowerMax, false);
 
         if (ed_link){
           embed.setURL(ed_link);
