@@ -75,9 +75,9 @@ __secret_key:__  (optional encryption)
 Optionnaly used by the quiz game for image url encryption to avoid cheating.  
 If activated, you will need to provide yourself a AES-256-CBC decryption feature on your image server.
 
-__twitter:__  (optional twitter feeds)
-* __consumer_key__: Twitter consumer_key
-* __consumer_secret__: Twitter consumer secret
-* __token_key__:   Twitter token key
-* __token_secret__: Twitter token secret
-* __streams__: List of twitter streams (including twitter_user_id and discord_channel)
+__twitter:__  (optional twitter feeds)  
+* __consumer_key__: Twitter consumer_key  
+* __consumer_secret__: Twitter consumer secret  
+* __token_key__:   Twitter token key  
+* __token_secret__: Twitter token secret  
+* __streams__: List of twitter streams (including twitter_user_id and discord_channel)  
