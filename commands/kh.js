@@ -145,7 +145,11 @@ exports.run     = (client, message, args) => {
       var ed_eidolonEffectTier3Effect = khItems[khIdx].eidolon_effect_des_3;
       var ed_eidolonEffectTier4Stars  = "\u2605 \u2605 \u2605 \u2605";
       var ed_eidolonEffectTier4Effect = khItems[khIdx].eidolon_effect_des_4;
+      var ed_summonEffectDur          = khItems[khIdx].summon_effect_dur;
 
+      if (ed_summonEffectDur) {
+        ed_summonEffectDur = " (Duration: "+ed_summonEffectDur+")";
+      }
 
       const embed = new discord.RichEmbed()
       .setTitle(config.eimojis[ed_rarity]+" "+config.eimojis[ed_element])
@@ -160,7 +164,7 @@ exports.run     = (client, message, args) => {
       }
 
       if (ed_summonAttack.length && ed_summonAttackEffect.length) {
-        embed.addField(ed_summonAttack + " (" + ed_summonAttackCooldown + ")", ed_summonAttackEffect,false);
+        embed.addField(ed_summonAttack + " (" + ed_summonAttackCooldown + ")", ed_summonAttackEffect+ed_summonEffectDur,false);
       }
 
       if (ed_eidolonsEffect.length && khItems[khIdx].link) {
