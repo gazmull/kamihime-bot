@@ -331,6 +331,34 @@ exports.run     = (client, message, args) => {
         message.channel.send({embed});
         khfound = true;
     }
+
+    // --- Accessories
+
+    if(khItems[khIdx].objectType == "Accessory")
+    {
+      var ac_name           = khItems[khIdx].name;
+      var ac_rarity         = khItems[khIdx].rarity;
+      var ac_element        = khItems[khIdx].element+"Symbol";
+      var ac_thumbnailurl   = config.thumbrooturl+khItems[khIdx].thumbnailurl;
+      var ac_attackMin      = khItems[khIdx].atk_min;
+      var ac_attackMax      = khItems[khIdx].atk_max;
+      var ac_HPMin          = khItems[khIdx].hp_min;
+      var ac_HPMax          = khItems[khIdx].hp_max;
+      var ac_totalPowerMin  = parseInt(ac_HPMin)+parseInt(ac_attackMin);
+      var ac_totalPowerMax  = parseInt(ac_HPMax)+parseInt(ac_attackMax);
+
+      const embed = new discord.RichEmbed()
+        .setTitle(config.eimojis[ac_rarity]+" "+config.eimojis[ac_element])
+        .setAuthor("Accessory: "+ac_name, "")
+        .setColor("#00AE86")
+        .setThumbnail(ac_thumbnailurl)
+        .addField("Statistics:", ":crossed_swords: ATK: " + ac_attackMin + "-" + ac_attackMax + " :green_heart: HP: " + ac_HPMin + "-" + ac_HPMax + " :muscle: PWR: " + ac_totalPowerMin + "-" + ac_totalPowerMax, false);
+
+      message.channel.send({embed});
+      khfound = true;
+    }
+
+
   }
 
   // --- Nothing found

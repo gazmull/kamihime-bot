@@ -10,6 +10,7 @@ const   khArray   = khinfos.getKamihimeInfos();
 const   edArray   = khinfos.getEidolonInfos();
 const   slArray   = khinfos.getSoulInfos();
 const   wpArray   = khinfos.getWeaponInfos();
+const   acArray   = khinfos.getAccessoryInfos();
 
 exports.run     = (client, message, args) => {
 
@@ -28,7 +29,7 @@ exports.run     = (client, message, args) => {
   latestResponse +="```";
   message.channel.send(latestResponse);
   let stats = "```Markdown\n";
-  stats +="Totals: [Kamihime]("+khArray.length+")"+" [Eidolon]("+edArray.length+")"+" [Soul]("+slArray.length+")"+" [Weapon]("+wpArray.length+")\n";
+  stats +="Totals: [Kamihime]("+khArray.length+")"+" [Eidolon]("+edArray.length+")"+" [Soul]("+slArray.length+")"+" [Weapon]("+wpArray.length+")"+" [Accessory]("+acArray.length+")\n";
   stats +="```";
   message.channel.send(stats);
 

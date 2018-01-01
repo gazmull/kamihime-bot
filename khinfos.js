@@ -4,6 +4,7 @@ const     KHdatas   = require('./datas/kamihime.json');
 const     EDdatas   = require('./datas/eidolons.json');
 const     SLdatas   = require('./datas/souls.json');
 const     WPdatas   = require('./datas/weapons.json');
+const     ACdatas   = require('./datas/accessories.json');
 const     crypto    = require('crypto');
 
 var       ALLArray  = [];
@@ -11,6 +12,7 @@ var       KHArray   = [];
 var       EDArray   = [];
 var       SLArray   = [];
 var       WPArray   = [];
+var       ACArray   = [];
 
 exports.getKHInfos   = () => {
   return ALLArray;
@@ -27,6 +29,10 @@ exports.getSoulInfos   = () => {
 exports.getWeaponInfos   = () => {
   return WPArray;
 }
+exports.getAccessoryInfos   = () => {
+  return ACArray;
+}
+
 
 // --- merge everything in one big ALLArray
 
@@ -48,7 +54,12 @@ exports.initKHInfos     = () =>  {
   for (var i = 0; i < WPArray.length; i++){
     WPArray[i].objectType = "Weapon";
   }
-  ALLArray = KHArray.concat(EDArray, SLArray, WPArray);
+  ACArray = Object.keys(ACdatas).map(function (key) { return ACdatas[key]; });
+  for (var i = 0; i < ACArray.length; i++){
+    ACArray[i].objectType = "Accessory";
+  }
+
+  ALLArray = KHArray.concat(ACArray, EDArray, SLArray, WPArray);
   ALLArray.sort(function(a, b) {
       var keyA = new Date(a.timestamp);
       var keyB = new Date(b.timestamp);
