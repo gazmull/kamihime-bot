@@ -40,12 +40,13 @@ exports.run = (client, message, args) => {
     break;
 
     case "profile":
-    helpText    += "_*```css\n";
+    helpText    += "*```\n";
     helpText    += "/profile => Display your profile.\n";
-    helpText    += "/profile @username => Display a user profile.\n";
-    helpText    += "/profile set description [text] => Edit description profile (255 characters max)\n";
-    helpText    += "/profile set gameid [playerid] => Edit your in-game player id.\n";
-    helpText    += "```*_\n";
+    helpText    += "/profile @username => Display a user profile. (Only supported in text channels, not in direct messages)\n";
+    helpText    += "/profile set desc [text] => Edit description profile. (512 characters and 15 lines max)\n";
+    helpText    += "/profile set gid [playerid] => Edit your in-game player id.\n";
+    helpText    += "/profile set country [2 letters country code] => Edit your country & timezone.\n";
+    helpText    += "```*\n";
     break;
 
     default:
