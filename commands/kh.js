@@ -346,9 +346,10 @@ exports.run     = (client, message, args) => {
       var ac_HPMax          = khItems[khIdx].hp_max;
       var ac_totalPowerMin  = parseInt(ac_HPMin)+parseInt(ac_attackMin);
       var ac_totalPowerMax  = parseInt(ac_HPMax)+parseInt(ac_attackMax);
+      var ac_effects        = khItems[khIdx].effects;
 
       const embed = new discord.RichEmbed()
-        .setTitle(config.eimojis[ac_rarity]+" "+config.eimojis[ac_element])
+        .setTitle(config.eimojis[ac_rarity]+" "+config.eimojis[ac_element]+" (Effects: "+ac_effects+")")
         .setAuthor("Accessory: "+ac_name, "")
         .setColor("#00AE86")
         .setThumbnail(ac_thumbnailurl)
