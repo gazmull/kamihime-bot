@@ -338,6 +338,7 @@ exports.run     = (client, message, args) => {
     {
       var ac_name           = khItems[khIdx].name;
       var ac_rarity         = khItems[khIdx].rarity;
+      var ac_link           = config.wikidomain+"/wiki/Accessories";
       var ac_element        = khItems[khIdx].element+"Symbol";
       var ac_thumbnailurl   = config.thumbrooturl+khItems[khIdx].thumbnailurl;
       var ac_attackMin      = khItems[khIdx].atk_min;
@@ -350,6 +351,7 @@ exports.run     = (client, message, args) => {
 
       const embed = new discord.RichEmbed()
         .setTitle(config.eimojis[ac_rarity]+" "+config.eimojis[ac_element]+" (Effects: "+ac_effects+")")
+        .setURL(ac_link)
         .setAuthor("Accessory: "+ac_name, "")
         .setColor("#00AE86")
         .setThumbnail(ac_thumbnailurl)
