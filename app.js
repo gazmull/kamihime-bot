@@ -57,6 +57,7 @@ client.on("message", message => {
     commandFile.run(client, message, args);
   } catch (err) {
     message.channel.send("Unknown command '"+config.prefix+command+"'. Use '"+config.prefix+"help' for the list of available commands.");
+    console.log(err);
   }
 
 });

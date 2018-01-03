@@ -2,9 +2,8 @@
 
 const   discord     = require("discord.js");
 const   config      = require("../config.json");
+const   db          = require("../dbconfig.js").pool;
 const   moment      = require("moment-timezone");
-const   mysql       = require('mysql2');
-
 const   momentZones = require('moment-timezone/data/meta/latest.json');
 
 const   defaultDescription = "Here is your default description. Use the command '/help profile' for the list of functions available to edit your profile.";
@@ -12,21 +11,13 @@ const   defaultDescription = "Here is your default description. Use the command 
 
 exports.run     = (client, message, args) => {
 
-  const connection = mysql.createConnection({
-    host     : config.mysql.host,
-    user     : config.mysql.user,
-    password : config.mysql.password,
-    database : config.mysql.database
-  });
-
-  // process set commands
+  // ============ process the 'set' command
 
   if (args[0]=="set")
   {
-
     if (message.channel.type!="dm") {
-        message.channel.send("Profile edition command: Output redirected to direct message as antispam measure.");
-        message.author.send("```To avoid spam, updating your profile is only allowed here. If you need help, use '/help profile'.\nYour last command was '"+message.content+"' and my response is:```");
+        message.channel.send("The response had been sent to you by direct message.");
+        message.author.send("```To limit spam in text channels, updating profile is always redirected here.\nIf you need help, use '/help profile'.\nYour last command was '"+message.content+"' and my response is:```");
     }
 
     switch (args[1]) {
@@ -51,7 +42,7 @@ exports.run     = (client, message, args) => {
 
       if (timezones.length>1) {
         if (!timezoneIdx) {
-          let timeZonesMessage = "There is more than one timezone available for your country, please select the desired timezone from the list bellow using the command:\n";
+          let timeZonesMessage = "There is more than one timezone available for your country, please select the desired timezone from the list below using the command:\n";
           timeZonesMessage    += "/profile set country "+countrycode+" [timeZoneNumber] ";
           timeZonesMessage    += "( exemple: /profile set country "+countrycode+" 1 )\n\n";
           timeZonesList       = "";
@@ -78,7 +69,7 @@ exports.run     = (client, message, args) => {
         return;
       }
 
-      connection.execute('UPDATE `users` SET `user_country_code`=?, `user_timezone`=? WHERE `user_discord_id`=?', [countrycode, timezones[timezoneIdx], message.author.id],
+      db.execute('UPDATE `users` SET `user_country_code`=?, `user_timezone`=? WHERE `user_discord_id`=?', [countrycode, timezones[timezoneIdx], message.author.id],
         function(err, results, fields) {
           if (err) {
             console.log(err);
@@ -106,7 +97,7 @@ exports.run     = (client, message, args) => {
         return;
       }
 
-      connection.execute('UPDATE `users` SET `user_description`=? WHERE `user_discord_id`=?', [description, message.author.id],
+      db.execute('UPDATE `users` SET `user_description`=? WHERE `user_discord_id`=?', [description, message.author.id],
         function(err, results, fields) {
           if (err) {
             console.log(err);
@@ -154,7 +145,7 @@ exports.run     = (client, message, args) => {
 
   }
 
-  // --- No special command : fallling back to the default display profile
+  // ============ No special command : fallling back to the default display profile
 
   let userSearch    = null;
   let searchId      = null;
@@ -217,7 +208,7 @@ exports.run     = (client, message, args) => {
 
   // --- Get additionnal user info from database (or store the new profile if not available)
 
-  connection.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
+  db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
     function(err, rows, fields) {
       if (err) {
         console.log(err);
@@ -230,7 +221,7 @@ exports.run     = (client, message, args) => {
         displayprofile(message, rows[0], user);
       }
       else {
-        connection.execute('INSERT INTO `users` (`user_discord_id`, `user_username`, `user_discriminator`, `user_description`) VALUES(?,?,?,?)', [user.id, user.username, user.discriminator, defaultDescription],
+        db.execute('INSERT INTO `users` (`user_discord_id`, `user_username`, `user_discriminator`, `user_description`) VALUES(?,?,?,?)', [user.id, user.username, user.discriminator, defaultDescription],
           function(err, results, fields) {
             if (err) {
               console.log(err);
