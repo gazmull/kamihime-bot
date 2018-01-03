@@ -46,6 +46,7 @@ exports.run = (client, message, args) => {
     helpText    += "/profile set desc [text] => Edit description profile. (512 characters and 15 lines max)\n";
     helpText    += "/profile set gid [playerid] => Edit your in-game player id.\n";
     helpText    += "/profile set country [2 letters country code] => Edit your country & timezone.\n";
+    helpText    += "/profile set lang [text] => Edit languages you can use on Discord.\n";
     helpText    += "```*\n";
     break;
 

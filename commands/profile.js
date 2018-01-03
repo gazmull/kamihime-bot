@@ -25,10 +25,13 @@ exports.run     = (client, message, args) => {
   {
 
     if (message.channel.type!="dm") {
-        message.channel.send("I'm glad to learn more about you, but let's keep this private ! Meet me in the private messages section. :hearts: ");
+        message.channel.send("Profile edition command: Output redirected to direct message as antispam measure.");
+        message.author.send("```To avoid spam, updating your profile is only allowed here. If you need help, use '/help profile'.\nYour last command was '"+message.content+"' and my response is:```");
     }
 
     switch (args[1]) {
+
+      // ------------ Country ----------
 
       case "country":
       if(!args[2]) {
@@ -42,14 +45,15 @@ exports.run     = (client, message, args) => {
 
 
       if (!timezones){
-        message.author.send(countrycode+" is not a valid country code (2 letters), for more informations, visit https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2");
+        message.author.send(countrycode+" is not a valid country code (2 letters), for a full list of supported country codes, visit https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2");
         return;
       }
 
       if (timezones.length>1) {
         if (!timezoneIdx) {
-          let timeZonesMessage = "There is more than one timeZone available for your country, please select the desired timezone from the list bellow using the command:\n";
-          timeZonesMessage    += "/profile set country "+countrycode+" [timeZoneNumber]\n";
+          let timeZonesMessage = "There is more than one timezone available for your country, please select the desired timezone from the list bellow using the command:\n";
+          timeZonesMessage    += "/profile set country "+countrycode+" [timeZoneNumber] ";
+          timeZonesMessage    += "( exemple: /profile set country "+countrycode+" 1 )\n\n";
           timeZonesList       = "";
           for (i=0;i<timezones.length;i++) {
             timeZonesList  +=(i+1)+" - "+timezones[i]+"\n";
@@ -87,6 +91,8 @@ exports.run     = (client, message, args) => {
       return;
       break;
 
+      // ------------ Description ----------
+
       case "desc":
       if(!args[2]) {
         message.author.send("please provide a description text");
@@ -113,8 +119,35 @@ exports.run     = (client, message, args) => {
       return;
       break;
 
+      // ------------ Game Id ----------
+
+      case "gid":
+      if(!args[2]) {
+        message.author.send("please provide your Nutaku game id");
+        return;
+      }
+      return;
+      break;
+
+      // ------------ Languages ----------
+
+      case "lang":
+      if(!args[2]) {
+        message.author.send("please provide the languages you're used to.");
+        return;
+      }
+      return;
+      break;
+
+      // ------------ Default: Nothing found ----------
+
       default:
-      message.author.send("unknown profile set function.");
+      if (args[1]) {
+        message.author.send("'"+args[1]+"' Unknown set profile function. Please use '/help profile' for more infos.");
+      }
+      else {
+        message.author.send("No function given for your set profile command. Please use '/help profile' for more infos.");
+      }
       return;
       break;
     }
@@ -151,7 +184,7 @@ exports.run     = (client, message, args) => {
   if (message.channel.type=="dm") {
     // dm channel
     if( userSearch !=  message.author.username) {
-      message.channel.send("Sorry, only your own profile is supported on direct message.");
+      message.channel.send("Sorry, searching @username is related to a memberlist, it's not possible on direct message. You need to be on a text channel to search for a user.");
       return;
     }
     else {
@@ -169,7 +202,7 @@ exports.run     = (client, message, args) => {
     }
   }
   if (!user) {
-    message.channel.send("Sorry, no profile found for '"+userSearch+"' in this Discord server.\n Use @ .");
+    message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\nDon't forget to add @ before the username.");
     return;
   }
 
@@ -228,7 +261,7 @@ function getCountryZones(countrycode) {
 function displayprofile(message, profileInfos, user) {
 
   let unionName     = "UnionName PlaceHolder";
-  let unionRole     = "Work in progress"
+  let unionRole     = "coming soon"
   let unionInvite   = "https://discord.gg/VeB4gjF";
 
 
@@ -261,6 +294,7 @@ function displayprofile(message, profileInfos, user) {
   embed.addField(":speech_left: Spoken Language:","English, Français",true);
   embed.addField(":heart: Favorite character:","[charName](http://foo.com/bar)",true);
   embed.addField(":military_medal: Reputation points",profileInfos['user_rep_point']+" point(s)", true);
+  embed.setFooter("Last update: "+createdDate,"");
 
   if (unionInvite){
     embed.setURL(unionInvite);
