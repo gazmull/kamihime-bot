@@ -6,7 +6,15 @@ const   db          = require("../dbconfig.js").pool;
 const   moment      = require("moment-timezone");
 const   momentZones = require('moment-timezone/data/meta/latest.json');
 
-const   defaultDescription = "Here is your default description. Use the command '/help profile' for the list of functions available to edit your profile.";
+const   khinfos     = require("../khinfos.js");
+const   fuzzy     = require('fuzzy');
+const   khArray  = khinfos.getKHInfos();
+
+const   defaultDescription = "Here is your default description. Use the command '"+config.prefix+"help profile' for the list of functions available to edit your profile.";
+
+var fuzzyOptions = {
+  extract: function(el) { return el.name; }
+};
 
 
 exports.run     = (client, message, args) => {
@@ -17,8 +25,10 @@ exports.run     = (client, message, args) => {
   {
     if (message.channel.type!="dm") {
         message.channel.send("The response had been sent to you by direct message.");
-        message.author.send("```To limit spam in text channels, updating profile is always redirected here.\nIf you need help, use '/help profile'.\nYour last command was '"+message.content+"' and my response is:```");
+        message.author.send("```To limit spam in text channels, updating profile is always redirected here.\nIf you need help, use '"+config.prefix+"help profile'.\nYour last command was '"+message.content+"' and my response is:```");
     }
+
+    const dateUpdated = moment().format("YYYY-MM-DD HH:mm:ss");
 
     switch (args[1]) {
 
@@ -69,7 +79,7 @@ exports.run     = (client, message, args) => {
         return;
       }
 
-      db.execute('UPDATE `users` SET `user_country_code`=?, `user_timezone`=? WHERE `user_discord_id`=?', [countrycode, timezones[timezoneIdx], message.author.id],
+      db.execute('UPDATE `users` SET `user_country_code`=?, `user_timezone`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [countrycode, timezones[timezoneIdx], dateUpdated, message.author.id],
         function(err, results, fields) {
           if (err) {
             console.log(err);
@@ -97,7 +107,7 @@ exports.run     = (client, message, args) => {
         return;
       }
 
-      db.execute('UPDATE `users` SET `user_description`=? WHERE `user_discord_id`=?', [description, message.author.id],
+      db.execute('UPDATE `users` SET `user_description`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [description, dateUpdated, message.author.id],
         function(err, results, fields) {
           if (err) {
             console.log(err);
@@ -114,11 +124,54 @@ exports.run     = (client, message, args) => {
 
       case "gid":
       if(!args[2]) {
-        message.author.send("please provide your Nutaku game id");
+        message.author.send("please provide your Nutaku game Id");
         return;
       }
+
+      const gid = parseInt(args[2]);
+      if (gid<=0) {
+        message.author.send(args[2]+" is not a valid game Id.");
+        return;
+      }
+      db.execute('UPDATE `users` SET `user_nutaku_id`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [gid, dateUpdated, message.author.id],
+        function(err, results, fields) {
+          if (err) {
+            console.log(err);
+            message.author.send("Error updating Nutaku game Id");
+            return;
+          }
+          message.author.send("Nutaku game Id set to: "+gid);
+        }
+      );
       return;
       break;
+
+      // ------------ Level ----------
+
+      case "level":
+      if(!args[2]) {
+        message.author.send("please provide your current game level");
+        return;
+      }
+
+      const level = parseInt(args[2]);
+      if (level<=0) {
+        message.author.send(args[2]+" is not a valid level.");
+        return;
+      }
+      db.execute('UPDATE `users` SET `user_level`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [level, dateUpdated, message.author.id],
+        function(err, results, fields) {
+          if (err) {
+            console.log(err);
+            message.author.send("Error updating game level");
+            return;
+          }
+          message.author.send("Game level set to: "+level);
+        }
+      );
+      return;
+      break;
+
 
       // ------------ Languages ----------
 
@@ -127,17 +180,99 @@ exports.run     = (client, message, args) => {
         message.author.send("please provide the languages you're used to.");
         return;
       }
+      const lang = args.join(" ").slice(args[0].length+args[1].length+2);
+
+      db.execute('UPDATE `users` SET `user_lang`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [lang, dateUpdated, message.author.id],
+        function(err, results, fields) {
+          if (err) {
+            console.log(err);
+            message.author.send("Error updating Language");
+            return;
+          }
+          message.author.send("Language set to: "+lang);
+        }
+      );
       return;
       break;
+
+      // ------------ Online habit ----------
+
+      case "online":
+      if(!args[2]) {
+        message.author.send("please provide your game habits.");
+        return;
+      }
+      const online = args.join(" ").slice(args[0].length+args[1].length+2);
+
+      db.execute('UPDATE `users` SET `user_online_habit`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [online, dateUpdated, message.author.id],
+        function(err, results, fields) {
+          if (err) {
+            console.log(err);
+            message.author.send("Error updating Online habits");
+            return;
+          }
+          message.author.send("Online habit set to: "+online);
+        }
+      );
+      return;
+      break;
+
+      // ------------ Waifu ----------
+
+      case "waifu":
+      if(!args[2]) {
+        message.author.send("please provide a character name (Kamihime, Soul or Eidolon).");
+        return;
+      }
+      const waifu = args.join(" ").slice(args[0].length+args[1].length+2);
+
+      var khfound   = false;
+      if (waifu.length < 2)
+      {
+        message.channel.send("You must enter at least two letters.");
+        return;
+      }
+
+      var results = fuzzy.filter(waifu, khArray, fuzzyOptions);
+      var khItems = results.map(function(el) { return el.original; });
+      if (khItems.length)
+      {
+        const foundWaifu = khItems[0].name;
+        if(khItems[0].objectType == "Weapon") {
+          message.author.send("Sorry, but your request matches '"+foundWaifu+"' , and it's a weapon...");
+          return;
+        }
+        const waifuLink      = config.wikidomain+khItems[0].link;
+
+        db.execute('UPDATE `users` SET `user_waifu`=?, `user_waifu_link`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [foundWaifu, waifuLink, dateUpdated, message.author.id],
+          function(err, results, fields) {
+            if (err) {
+              console.log(err);
+              message.author.send("Error updating your favorite character");
+              return;
+            }
+            message.author.send("Favorite character set to: '"+foundWaifu+"'");
+          }
+        );
+        return;
+      }
+      else {
+        message.author.send("No character matches your request "+waifu);
+        return;
+      }
+
+
+      break;
+
 
       // ------------ Default: Nothing found ----------
 
       default:
       if (args[1]) {
-        message.author.send("'"+args[1]+"' Unknown set profile function. Please use '/help profile' for more infos.");
+        message.author.send("'"+args[1]+"' Unknown set profile function. Please use '"+config.prefix+"help profile' for more infos.");
       }
       else {
-        message.author.send("No function given for your set profile command. Please use '/help profile' for more infos.");
+        message.author.send("No function given for your set profile command. Please use '"+config.prefix+"help profile' for more infos.");
       }
       return;
       break;
@@ -251,12 +386,18 @@ function getCountryZones(countrycode) {
 
 function displayprofile(message, profileInfos, user) {
 
-  let unionName     = "UnionName PlaceHolder";
-  let unionRole     = "coming soon"
-  let unionInvite   = "https://discord.gg/VeB4gjF";
+  const unionName     = "UnionName PlaceHolder";
+  const unionRole     = "coming soon"
+  const unionInvite   = "https://discord.gg/VeB4gjF";
 
 
-  let createdDate   = moment(profileInfos['user_created_on']).format("MMMM DD YYYY");
+  const createdDate   = moment(profileInfos['user_created_on']).format("MMMM DD YYYY");
+  let updatedDate     = "Never, this is the defaut profile";
+
+  if (profileInfos['user_updated_on']) {
+    updatedDate     = moment(profileInfos['user_updated_on']).format("MMMM DD YYYY HH:mm:ss");
+  }
+
 
   let countryFlag = ":earth_africa:";
   let localTime   = "Not provided";
@@ -273,19 +414,49 @@ function displayprofile(message, profileInfos, user) {
     nutakuID = profileInfos['user_nutaku_id'];
   }
 
+  reputationText = "None reveived";
+  if (profileInfos['user_rep_point']==1) {
+    reputationText = "1 point received";
+  }
+  if (profileInfos['user_rep_point']>1) {
+    reputationText = profileInfos['user_rep_point']+" points received";
+  }
+
+  let userLang = "English";
+  if (profileInfos['user_lang']) {
+    userLang = profileInfos['user_lang'];
+  }
+
+  let onlineHabit = "Not specified";
+  if (profileInfos['user_online_habit']) {
+    onlineHabit = profileInfos['user_online_habit'];
+  }
+
+  let waifu = "None";
+  if (profileInfos['user_waifu']) {
+    waifu = profileInfos['user_waifu'];
+  }
+  if (profileInfos['user_waifu_link']) {
+    waifu = "["+waifu+"]("+profileInfos['user_waifu_link']+")";
+  }
+  
   const embed = new discord.RichEmbed()
   embed.setTitle(":regional_indicator_u: "+unionName+" ["+unionRole+"]");
   embed.setAuthor("Name: "+profileInfos['fullUserName'], "");
   embed.setColor("#00AE86");
   embed.setDescription("```\n"+profileInfos['user_description']+"```");
   embed.setThumbnail(user.avatarURL);
+
   embed.addField(":timer: Profile created:", createdDate, true);
+  embed.addField(":military_medal: Reputation points", reputationText, true);
+  embed.addField(":arrow_up: Player Level:", "Level "+profileInfos['user_level'], true);
   embed.addField(":id: Game Player ID:", nutakuID, true);
+  embed.addField(":speech_left: Spoken Language:", userLang ,true);
   embed.addField(countryFlag+" Country & Local Time:", localTime, true);
-  embed.addField(":speech_left: Spoken Language:","English, Français",true);
-  embed.addField(":heart: Favorite character:","[charName](http://foo.com/bar)",true);
-  embed.addField(":military_medal: Reputation points",profileInfos['user_rep_point']+" point(s)", true);
-  embed.setFooter("Last update: "+createdDate,"");
+  embed.addField(":heart: Favorite character:",waifu, true);
+  embed.addField(":hourglass: Online habits:", onlineHabit ,true);
+
+  embed.setFooter("Last time updated: "+updatedDate,"");
 
   if (unionInvite){
     embed.setURL(unionInvite);
