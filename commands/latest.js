@@ -1,6 +1,5 @@
 // Return the n latest updates for Kamihimes Eidolons Weapons & Souls
 
-const   Discord = require("discord.js");
 const   config  = require("../config.json");
 const   khinfos = require("../khinfos.js");
 
