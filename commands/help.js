@@ -41,17 +41,16 @@ exports.run = (client, message, args) => {
     helpText    += "```*_\n";
     break;
 
-    case "profile":
+    case "kp":
     helpText    += "*```\n";
-    helpText    += config.prefix+"profile => Display your profile.\n";
-    helpText    += config.prefix+"profile @username => Display a user profile. (Only supported in text channels, not in direct messages)\n";
-    helpText    += config.prefix+"profile set desc [text] => Edit description profile. (512 characters and 15 lines max)\n";
-    helpText    += config.prefix+"profile set gid [playerid] => Edit your in-game player id.\n";
-    helpText    += config.prefix+"profile set country [2 letters country code] => Edit your country & timezone.\n";
-    helpText    += config.prefix+"profile set lang [text] => Edit languages you can use on Discord.\n";
-    helpText    += config.prefix+"profile set level [level] => Edit your in-game level.\n";
-    helpText    += config.prefix+"profile set online [text] => Edit your favorite playtime.\n";
-    helpText    += config.prefix+"profile set fav [CharacterName] => Edit your favorite character.\n";
+    helpText    += config.prefix+"kp => Display your profile.\n";
+    helpText    += config.prefix+"kp @username => Display a user profile. (Only supported in text channels, not in direct messages)\n\n";
+    helpText    += config.prefix+"kp set desc [text] => Edit description profile. (512 characters and 15 lines max)\n";
+    helpText    += config.prefix+"kp set gid [playerid] => Edit your in-game player id.\n";
+    helpText    += config.prefix+"kp set country [2 letters country code] => Edit your country & timezone.\n";
+    helpText    += config.prefix+"kp set lang [text] => Edit languages you can use on Discord.\n";
+    helpText    += config.prefix+"kp set level [level] => Edit your in-game level.\n";
+    helpText    += config.prefix+"kp set fav [CharacterName] => Edit your favorite character.\n";
     helpText    += "```*\n";
     break;
 

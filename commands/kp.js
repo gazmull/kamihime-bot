@@ -10,12 +10,16 @@ const   khinfos     = require("../khinfos.js");
 const   fuzzy     = require('fuzzy');
 const   khArray  = khinfos.getKHInfos();
 
-const   defaultDescription = "Here is your default description. Use the command '"+config.prefix+"help profile' for the list of functions available to edit your profile.";
+const   defaultDescription = "This is the default description. Use the command '"+config.prefix+"help kp' for the list of functions available to edit your profile.";
 
 var fuzzyOptions = {
   extract: function(el) { return el.name; }
 };
 
+
+exports.createProfile     = (user) => {
+  createNewProfile(user);
+}
 
 exports.run     = (client, message, args) => {
 
@@ -25,7 +29,7 @@ exports.run     = (client, message, args) => {
   {
     if (message.channel.type!="dm") {
         message.channel.send("The response had been sent to you by direct message.");
-        message.author.send("```To limit spam in text channels, updating profile is always redirected here.\nIf you need help, use '"+config.prefix+"help profile'.\nYour last command was '"+message.content+"' and my response is:```");
+        message.author.send("```To limit spam in text channels, updating profile is always redirected here.\nIf you need help, use '"+config.prefix+"help kp'.\nYour last command was '"+message.content+"' and my response is:```");
     }
 
     const dateUpdated = moment().format("YYYY-MM-DD HH:mm:ss");
@@ -195,28 +199,6 @@ exports.run     = (client, message, args) => {
       return;
       break;
 
-      // ------------ Online habit ----------
-
-      case "online":
-      if(!args[2]) {
-        message.author.send("please provide your game habits.");
-        return;
-      }
-      const online = args.join(" ").slice(args[0].length+args[1].length+2);
-
-      db.execute('UPDATE `users` SET `user_online_habit`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [online, dateUpdated, message.author.id],
-        function(err, results, fields) {
-          if (err) {
-            console.log(err);
-            message.author.send("Error updating Online habits");
-            return;
-          }
-          message.author.send("Online habit set to: "+online);
-        }
-      );
-      return;
-      break;
-
       // ------------ Waifu ----------
 
       case "waifu":
@@ -269,10 +251,10 @@ exports.run     = (client, message, args) => {
 
       default:
       if (args[1]) {
-        message.author.send("'"+args[1]+"' Unknown set profile function. Please use '"+config.prefix+"help profile' for more infos.");
+        message.author.send("'"+args[1]+"' Unknown set profile function. Please use '"+config.prefix+"help kp' for more infos.");
       }
       else {
-        message.author.send("No function given for your set profile command. Please use '"+config.prefix+"help profile' for more infos.");
+        message.author.send("No function given for your set profile command. Please use '"+config.prefix+"help kp' for more infos.");
       }
       return;
       break;
@@ -280,13 +262,12 @@ exports.run     = (client, message, args) => {
 
   }
 
-  // ============ No special command : fallling back to the default display profile
+  // =======================================================================================
+  // ============ No special command : fallling back to the default search & display profile
 
   let userSearch    = null;
   let searchId      = null;
-  let useNickname   = false;
   let user          = null;
-  let fullUserName  = null;
   let nickName      = null;
 
   // --- Format the user search request
@@ -294,13 +275,11 @@ exports.run     = (client, message, args) => {
   if (args.length==0){
     userSearch    = message.author.username;
     searchId      = message.author.id;
-    useNickname   = true;
   }
   else {
     userSearch    = args.join(" ");
     searchId = userSearch.slice(2, -1);
     if( searchId.charAt(0) === "!") {
-      useNickname = true;
       searchId = searchId.substr(1);
     }
   }
@@ -313,32 +292,12 @@ exports.run     = (client, message, args) => {
       message.channel.send("Sorry, searching @username is related to a memberlist, it's not possible on direct message. You need to be on a text channel to search for a user.");
       return;
     }
-    else {
-      user = client.users.get(searchId);
-    }
   }
-  else {
-    // text channels
-    user = client.users.get(searchId);
-    if (user && useNickname){
-      guildUser = message.guild.members.get(user.id);
-      if (guildUser) {
-        nickName = guildUser.nickname;
-      }
-    }
-  }
+
+  user = client.users.get(searchId);
   if (!user) {
     message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\nDon't forget to add @ before the username.");
     return;
-  }
-
-  // --- Build user fullname
-
-  if(nickName){
-    fullUserName  = nickName+" / "+user.username;
-  }
-  else {
-    fullUserName = user.username;
   }
 
   // --- Get additionnal user info from database (or store the new profile if not available)
@@ -351,21 +310,30 @@ exports.run     = (client, message, args) => {
         return;
       }
       if (rows.length) {
-        //console.log(results[0]); // results contains rows returned by server
-        rows[0]['fullUserName'] = fullUserName;
-        displayprofile(message, rows[0], user);
+        displayprofile(message, user, rows[0]);
       }
       else {
-        db.execute('INSERT INTO `users` (`user_discord_id`, `user_username`, `user_discriminator`, `user_description`) VALUES(?,?,?,?)', [user.id, user.username, user.discriminator, defaultDescription],
-          function(err, results, fields) {
-            if (err) {
-              console.log(err);
-              message.channel.send("Error creating profile");
-              return;
-            }
-            message.channel.send("profile created");
-          }
-        );
+        createNewProfile(user, message);
+      }
+    }
+  );
+}
+
+// ==================== Create a new profile ============
+
+function createNewProfile (user, message = null) {
+
+  db.execute('INSERT INTO `users` (`user_discord_id`, `user_username`, `user_discriminator`, `user_description`) VALUES(?,?,?,?)', [user.id, user.username, user.discriminator, defaultDescription],
+    function(err, results, fields) {
+      if (err) {
+        console.log(err);
+        if (message) {
+          message.channel.send("Error creating profile");
+        }
+        return;
+      }
+      if (message) {
+        displayprofile(message, user);
       }
     }
   );
@@ -383,80 +351,122 @@ function getCountryZones(countrycode) {
 
 // ==================== Display a Formatted profile ============
 
+function displayprofile(message, user, dbProfileInfos=null) {
 
-function displayprofile(message, profileInfos, user) {
-
-  const unionName     = "UnionName PlaceHolder";
+  const unionName     = "UserClass PlaceHolder";
   const unionRole     = "coming soon"
-  const unionInvite   = "https://discord.gg/VeB4gjF";
+  const unionInvite   = "http://kamihime-project.wikia.com/wiki/Kamihime_Project_Wikia";
 
-
-  const createdDate   = moment(profileInfos['user_created_on']).format("MMMM DD YYYY");
-  let updatedDate     = "Never, this is the defaut profile";
-
-  if (profileInfos['user_updated_on']) {
-    updatedDate     = moment(profileInfos['user_updated_on']).format("MMMM DD YYYY HH:mm:ss");
+  if (dbProfileInfos == null) {
+    db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
+      function(err, rows, fields) {
+        if (err) {
+          console.log(err);
+          message.channel.send("Error reading profile");
+          return;
+        }
+        if (rows.length) {
+          displayprofile(message, user, rows[0]);
+          return;
+        }
+        else {
+          message.channel.send("Error no profile found for display.");
+          return;
+        }
+      }
+    );
+    return;
   }
 
+  let nickName        = null;
+
+  // --- get nickName when using text channels
+  if (message.channel.type!="dm") {
+    guildUser = message.guild.members.get(user.id);
+    if (guildUser) {
+      nickName = guildUser.nickname;
+    }
+  }
+
+  // --- Build user fullname
+  let fullUserName = user.username;
+  if(nickName){
+    fullUserName  = nickName+" / "+user.username;
+  }
+
+  const createdDate   = moment(dbProfileInfos['user_created_on']).format("MMMM DD YYYY");
+
+  let updatedDate     = "Never, this is the defaut profile";
+  if (dbProfileInfos['user_updated_on']) {
+    updatedDate     = moment(dbProfileInfos['user_updated_on']).format("MM-DD-YYYY HH:mm:ss");
+  }
 
   let countryFlag = ":earth_africa:";
   let localTime   = "Not provided";
-  let countrycode = profileInfos['user_country_code'];
-  let timezone    = profileInfos['user_timezone'];
+  let countrycode = dbProfileInfos['user_country_code'];
+  let timezone    = dbProfileInfos['user_timezone'];
 
   if (moment.tz.zone(timezone)) {
-    localTime = moment().tz(timezone).format("ddd, HH:mm");
+    localTime = moment().tz(timezone).format("dddd, HH:mm");
     countryFlag = ":flag_"+countrycode.toLowerCase()+":";
   }
 
   let nutakuID = "Not provided";
-  if (profileInfos['user_nutaku_id']){
-    nutakuID = profileInfos['user_nutaku_id'];
+  if (dbProfileInfos['user_nutaku_id']){
+    nutakuID = dbProfileInfos['user_nutaku_id'];
   }
 
-  reputationText = "None reveived";
-  if (profileInfos['user_rep_point']==1) {
-    reputationText = "1 point received";
-  }
-  if (profileInfos['user_rep_point']>1) {
-    reputationText = profileInfos['user_rep_point']+" points received";
+  reputationText = "No kudos";
+  if (dbProfileInfos['user_rep_point']>0) {
+    reputationText = dbProfileInfos['user_rep_point']+" kudos received";
   }
 
   let userLang = "English";
-  if (profileInfos['user_lang']) {
-    userLang = profileInfos['user_lang'];
-  }
-
-  let onlineHabit = "Not specified";
-  if (profileInfos['user_online_habit']) {
-    onlineHabit = profileInfos['user_online_habit'];
+  if (dbProfileInfos['user_lang']) {
+    userLang = dbProfileInfos['user_lang'];
   }
 
   let waifu = "None";
-  if (profileInfos['user_waifu']) {
-    waifu = profileInfos['user_waifu'];
+  if (dbProfileInfos['user_waifu']) {
+    waifu = dbProfileInfos['user_waifu'];
   }
-  if (profileInfos['user_waifu_link']) {
-    waifu = "["+waifu+"]("+profileInfos['user_waifu_link']+")";
+  if (dbProfileInfos['user_waifu_link']) {
+    waifu = "["+waifu+"]("+dbProfileInfos['user_waifu_link']+")";
   }
-  
+
+  let avatarURL = user.avatarURL;
+  if ( avatarURL == null) {
+    avatarURL = config.thumbrooturl+"\/images_bot\/default_avatar.png";
+  }
+
   const embed = new discord.RichEmbed()
   embed.setTitle(":regional_indicator_u: "+unionName+" ["+unionRole+"]");
-  embed.setAuthor("Name: "+profileInfos['fullUserName'], "");
+  embed.setAuthor("Name: "+fullUserName, "");
   embed.setColor("#00AE86");
-  embed.setDescription("```\n"+profileInfos['user_description']+"```");
-  embed.setThumbnail(user.avatarURL);
+  embed.setDescription("```\n"+dbProfileInfos['user_description']+"```");
+  embed.setThumbnail(avatarURL);
+
+  let presence = user.presence.status.charAt(0).toUpperCase() + user.presence.status.slice(1);
+  if (user.presence.status=="offline") {
+    if (dbProfileInfos['user_last_online']) {
+      presence = "Last visit: "+moment(dbProfileInfos['user_last_online']).fromNow();
+    }
+    else {
+      presence = "Offline";
+    }
+  }
+
 
   embed.addField(":timer: Profile created:", createdDate, true);
   embed.addField(":military_medal: Reputation points", reputationText, true);
-  embed.addField(":arrow_up: Player Level:", "Level "+profileInfos['user_level'], true);
+  embed.addField(":arrow_up: Player Level:", "Level "+dbProfileInfos['user_level'], true);
   embed.addField(":id: Game Player ID:", nutakuID, true);
   embed.addField(":speech_left: Spoken Language:", userLang ,true);
   embed.addField(countryFlag+" Country & Local Time:", localTime, true);
   embed.addField(":heart: Favorite character:",waifu, true);
-  embed.addField(":hourglass: Online habits:", onlineHabit ,true);
+  embed.addField(":hourglass: Online Status:", presence ,true);
 
-  embed.setFooter("Last time updated: "+updatedDate,"");
+  embed.setFooter("Profile updated on: "+updatedDate,"");
 
   if (unionInvite){
     embed.setURL(unionInvite);
