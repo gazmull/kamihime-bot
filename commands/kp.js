@@ -361,7 +361,7 @@ function getCountryZones(countrycode) {
 
 function displayprofile(message, user, dbProfileInfos=null) {
 
-  const unionName     = "UserName PlaceHolder";
+  const unionName     = "UnionName PlaceHolder";
   const unionRole     = "coming soon"
   const unionInvite   = "https://discord.gg/QGUhtaK";
 
