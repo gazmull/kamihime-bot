@@ -25,6 +25,8 @@
     "moment-timezone": "^0.5.14",
     "mysql2": "^1.5.1",
     "node-persist": "^2.1.0",
-    "twit": "^2.2.9"
+    "twit": "^2.2.9",
+    "winston": "^2.4.0",
+    "winston-daily-rotate-file": "^1.7.2"
   }
 }
