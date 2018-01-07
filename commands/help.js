@@ -42,9 +42,12 @@ exports.run = (client, message, args) => {
     break;
 
     case "kp":
-    helpText    += "*```\n";
+    helpText    += "*```md\n";
+    helpText    += "#Display commands:\n\n";
     helpText    += config.prefix+"kp => Display your profile.\n";
     helpText    += config.prefix+"kp @username => Display a user profile. (Only supported in text channels, not in direct messages)\n\n";
+    helpText    += "#Edition commands:\n";
+    helpText    += "#Using edition commands in text channels is considered as spam, and will be redirected to direct messages with the bot.\n\n";
     helpText    += config.prefix+"kp set desc [text] => Edit description profile. (512 characters and 15 lines max)\n";
     helpText    += config.prefix+"kp set gid [playerid] => Edit your in-game player id.\n";
     helpText    += config.prefix+"kp set country [2 letters country code] => Edit your country & timezone.\n";
@@ -75,6 +78,10 @@ exports.run = (client, message, args) => {
     helpText    += "#tips\n";
     helpText    += "Fuzzy logic is applied to [name], it will try to match incomplete or misspelled inputs. (Exemple: "+config.prefix+"kh ytaga -> displays Yatagarasu)\n";
     helpText    += "You can click the name field in the datasheet response to visit the related wiki page.\n";
+    helpText    += "\n";
+    helpText    += "#spam\n";
+    helpText    += "Using the "+config.prefix+"kh command can be very intrusive in text channels.\n";
+    helpText    += "If it's for personal use only, we recommend you to contact the bot by direct message, and enter your commands there.\n";
     helpText    += "```*_\n";
     break;
 

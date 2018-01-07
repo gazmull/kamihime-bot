@@ -7,15 +7,16 @@ const   moment      = require("moment-timezone");
 const   momentZones = require('moment-timezone/data/meta/latest.json');
 
 const   khinfos     = require("../khinfos.js");
-const   fuzzy     = require('fuzzy');
-const   khArray  = khinfos.getKHInfos();
+const   fuzzy       = require('fuzzy');
+
+khinfos.initKHInfos();        // todo: Fixed the init placed in events.
+const   khArray     = khinfos.getKHInfos();
 
 const   defaultDescription = "This is the default description. Use the command '"+config.prefix+"help kp' for the list of functions available to edit your profile.";
 
 var fuzzyOptions = {
   extract: function(el) { return el.name; }
 };
-
 
 exports.createProfile     = (user) => {
   createNewProfile(user);
@@ -29,7 +30,14 @@ exports.run     = (client, message, args) => {
   {
     if (message.channel.type!="dm") {
         message.channel.send("The response had been sent to you by direct message.");
-        message.author.send("```To limit spam in text channels, updating profile is always redirected here.\nIf you need help, use '"+config.prefix+"help kp'.\nYour last command was '"+message.content+"' and my response is:```");
+
+        let spamMessage    = "```css\nTo limit spam in text channels, updating profiles will be redirected to direct messages.\n";
+        spamMessage       += "[Please type your next update commands here.]\n";
+        spamMessage       += "[Do not use text channels for updating your profile.]\n";
+        spamMessage       += "If you need help, type '"+config.prefix+"help kp'.```";
+        spamMessage       += "```\nYour last command was '"+message.content+"' and my response is:```";
+
+        message.author.send(spamMessage);
     }
 
     const dateUpdated = moment().format("YYYY-MM-DD HH:mm:ss");
@@ -40,7 +48,7 @@ exports.run     = (client, message, args) => {
 
       case "country":
       if(!args[2]) {
-        message.author.send("please provide your 2 letters country code");
+        message.author.send("Please provide your 2 letters country code.\nFor a full list of supported country codes, visit https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements");
         return;
       }
 
@@ -48,9 +56,8 @@ exports.run     = (client, message, args) => {
       let timezoneIdx = parseInt(args[3]);
       let timezones    = getCountryZones(countrycode);
 
-
       if (!timezones){
-        message.author.send(countrycode+" is not a valid country code (2 letters), for a full list of supported country codes, visit https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2");
+        message.author.send(countrycode+" is not a valid country code (2 letters)\nFor a full list of supported country codes, visit https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements");
         return;
       }
 
@@ -58,7 +65,7 @@ exports.run     = (client, message, args) => {
         if (!timezoneIdx) {
           let timeZonesMessage = "There is more than one timezone available for your country, please select the desired timezone from the list below using the command:\n";
           timeZonesMessage    += "/profile set country "+countrycode+" [timeZoneNumber] ";
-          timeZonesMessage    += "( exemple: /profile set country "+countrycode+" 1 )\n\n";
+          timeZonesMessage    += "( example: /profile set country "+countrycode+" 1 )\n\n";
           timeZonesList       = "";
           for (i=0;i<timezones.length;i++) {
             timeZonesList  +=(i+1)+" - "+timezones[i]+"\n";
@@ -128,12 +135,13 @@ exports.run     = (client, message, args) => {
 
       case "gid":
       if(!args[2]) {
-        message.author.send("please provide your Nutaku game Id");
+        message.author.send("Please, provide your Nutaku game Id");
         return;
       }
 
       const gid = parseInt(args[2]);
-      if (gid<=0) {
+
+      if (gid<=0 || isNaN(args[2])) {
         message.author.send(args[2]+" is not a valid game Id.");
         return;
       }
@@ -141,7 +149,7 @@ exports.run     = (client, message, args) => {
         function(err, results, fields) {
           if (err) {
             console.log(err);
-            message.author.send("Error updating Nutaku game Id");
+            message.author.send("Error updating Nutaku game Id: "+gid);
             return;
           }
           message.author.send("Nutaku game Id set to: "+gid);
@@ -159,7 +167,7 @@ exports.run     = (client, message, args) => {
       }
 
       const level = parseInt(args[2]);
-      if (level<=0) {
+      if (level<=0 || isNaN(args[2])) {
         message.author.send(args[2]+" is not a valid level.");
         return;
       }
@@ -201,7 +209,7 @@ exports.run     = (client, message, args) => {
 
       // ------------ Waifu ----------
 
-      case "waifu":
+      case "fav":
       if(!args[2]) {
         message.author.send("please provide a character name (Kamihime, Soul or Eidolon).");
         return;
@@ -239,7 +247,7 @@ exports.run     = (client, message, args) => {
         return;
       }
       else {
-        message.author.send("No character matches your request "+waifu);
+        message.author.send("No character matches your request '"+waifu+"'");
         return;
       }
 
