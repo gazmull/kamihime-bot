@@ -65,7 +65,7 @@ exports.run     = (client, message, args) => {
           const deltaDate = moment.duration(moment().diff(lastKudosDate));
           const minutesDelta = deltaDate.asMinutes();
           if (minutesDelta<(24*60)) {
-            message.channel.send("Sending kudos is allowed once every day. You already send one on "+moment(rows[0]['user_last_given_rep']).format("YYYY-MM-DD HH:mm:ss"));
+            message.channel.send("Sending kudos is allowed once every day. You already sent one on "+moment(rows[0]['user_last_given_rep']).format("YYYY-MM-DD HH:mm:ss"));
             return;
           }
         }

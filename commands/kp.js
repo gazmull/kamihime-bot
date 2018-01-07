@@ -48,7 +48,7 @@ exports.run     = (client, message, args) => {
 
       case "country":
       if(!args[2]) {
-        message.author.send("Please provide your 2 letters country code.\nFor a full list of supported country codes, visit https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements");
+        message.author.send("Please provide your 2 letters country code. (example: '"+config.prefix+"kp set country us' )\nFor a full list of supported country codes, visit https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements");
         return;
       }
 
@@ -361,9 +361,9 @@ function getCountryZones(countrycode) {
 
 function displayprofile(message, user, dbProfileInfos=null) {
 
-  const unionName     = "UserClass PlaceHolder";
+  const unionName     = "UserName PlaceHolder";
   const unionRole     = "coming soon"
-  const unionInvite   = "http://kamihime-project.wikia.com/wiki/Kamihime_Project_Wikia";
+  const unionInvite   = "https://discord.gg/QGUhtaK";
 
   if (dbProfileInfos == null) {
     db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
@@ -406,7 +406,7 @@ function displayprofile(message, user, dbProfileInfos=null) {
 
   let updatedDate     = "Never, this is the defaut profile";
   if (dbProfileInfos['user_updated_on']) {
-    updatedDate     = moment(dbProfileInfos['user_updated_on']).format("MM-DD-YYYY HH:mm:ss");
+    updatedDate     = moment(dbProfileInfos['user_updated_on']).format("MMMM DD YYYY HH:mm:ss");
   }
 
   let countryFlag = ":earth_africa:";
@@ -424,7 +424,7 @@ function displayprofile(message, user, dbProfileInfos=null) {
     nutakuID = dbProfileInfos['user_nutaku_id'];
   }
 
-  reputationText = "No kudos";
+  reputationText = "No kudos yet";
   if (dbProfileInfos['user_rep_point']>0) {
     reputationText = dbProfileInfos['user_rep_point']+" kudos received";
   }
@@ -464,14 +464,13 @@ function displayprofile(message, user, dbProfileInfos=null) {
     }
   }
 
-
-  embed.addField(":timer: Profile created:", createdDate, true);
-  embed.addField(":military_medal: Reputation points", reputationText, true);
   embed.addField(":arrow_up: Player Level:", "Level "+dbProfileInfos['user_level'], true);
   embed.addField(":id: Game Player ID:", nutakuID, true);
   embed.addField(":speech_left: Spoken Language:", userLang ,true);
   embed.addField(countryFlag+" Country & Local Time:", localTime, true);
-  embed.addField(":heart: Favorite character:",waifu, true);
+  embed.addField(":military_medal: Kudos Points:", reputationText, true);
+  embed.addField(":heart: Favorite Character:",waifu, true);
+  embed.addField(":timer: Created On:", createdDate, true);
   embed.addField(":hourglass: Online Status:", presence ,true);
 
   embed.setFooter("Profile updated on: "+updatedDate,"");
