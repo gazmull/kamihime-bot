@@ -404,7 +404,7 @@ function displayprofile(message, user, dbProfileInfos=null) {
 
   const createdDate   = moment(dbProfileInfos['user_created_on']).format("MMMM DD YYYY");
 
-  let updatedDate     = "Never, this is the defaut profile";
+  let updatedDate     = "Never, this is the default profile";
   if (dbProfileInfos['user_updated_on']) {
     updatedDate     = moment(dbProfileInfos['user_updated_on']).format("MMMM DD YYYY HH:mm:ss");
   }
