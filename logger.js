@@ -25,7 +25,8 @@ const logger = new (winston.Logger)({
       prepend: true,
       level: env === 'development' ? 'verbose' : 'info'
     })
-  ]
+  ],
+  exitOnError: false
 });
 
 exports.logger = logger;

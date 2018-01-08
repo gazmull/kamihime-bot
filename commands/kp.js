@@ -5,9 +5,9 @@ const   config      = require("../config.json");
 const   db          = require("../dbconfig.js").pool;
 const   moment      = require("moment-timezone");
 const   momentZones = require('moment-timezone/data/meta/latest.json');
-
 const   khinfos     = require("../khinfos.js");
 const   fuzzy       = require('fuzzy');
+const   logger      = require("../logger.js").logger;
 
 khinfos.initKHInfos();        // todo: Fixed the init placed in events.
 const   khArray     = khinfos.getKHInfos();
@@ -334,12 +334,13 @@ function createNewProfile (user, message = null) {
   db.execute('INSERT INTO `users` (`user_discord_id`, `user_username`, `user_discriminator`, `user_description`) VALUES(?,?,?,?)', [user.id, user.username, user.discriminator, defaultDescription],
     function(err, results, fields) {
       if (err) {
-        console.log(err);
+        logger.error(err);
         if (message) {
           message.channel.send("Error creating profile");
         }
         return;
       }
+      logger.info("New profile created: "+user.username+" - id: "+user.id);
       if (message) {
         displayprofile(message, user);
       }
