@@ -26,3 +26,9 @@ ALTER TABLE `users`
 
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `users`
+  ADD UNIQUE(`user_discord_id`);
+
+ALTER TABLE `users`
+  ADD UNIQUE(`user_nutaku_id`);
