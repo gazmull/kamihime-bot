@@ -93,7 +93,7 @@ exports.run     = (client, message, args) => {
       db.execute('UPDATE `users` SET `user_country_code`=?, `user_timezone`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [countrycode, timezones[timezoneIdx], dateUpdated, message.author.id],
         function(err, results, fields) {
           if (err) {
-            console.log(err);
+            logger.error(err);
             message.author.send("Error updating country or timezone");
             return;
           }
@@ -121,7 +121,7 @@ exports.run     = (client, message, args) => {
       db.execute('UPDATE `users` SET `user_description`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [description, dateUpdated, message.author.id],
         function(err, results, fields) {
           if (err) {
-            console.log(err);
+            logger.error(err);
             message.author.send("Error updating description");
             return;
           }
@@ -148,7 +148,7 @@ exports.run     = (client, message, args) => {
       db.execute('UPDATE `users` SET `user_nutaku_id`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [gid, dateUpdated, message.author.id],
         function(err, results, fields) {
           if (err) {
-            console.log(err);
+            logger.error(err);
             message.author.send("Error updating Nutaku game Id: "+gid);
             return;
           }
@@ -174,7 +174,7 @@ exports.run     = (client, message, args) => {
       db.execute('UPDATE `users` SET `user_level`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [level, dateUpdated, message.author.id],
         function(err, results, fields) {
           if (err) {
-            console.log(err);
+            logger.error(err);
             message.author.send("Error updating game level");
             return;
           }
@@ -197,7 +197,7 @@ exports.run     = (client, message, args) => {
       db.execute('UPDATE `users` SET `user_lang`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [lang, dateUpdated, message.author.id],
         function(err, results, fields) {
           if (err) {
-            console.log(err);
+            logger.error(err);
             message.author.send("Error updating Language");
             return;
           }
@@ -237,7 +237,7 @@ exports.run     = (client, message, args) => {
         db.execute('UPDATE `users` SET `user_waifu`=?, `user_waifu_link`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [foundWaifu, waifuLink, dateUpdated, message.author.id],
           function(err, results, fields) {
             if (err) {
-              console.log(err);
+              logger.error(err);
               message.author.send("Error updating your favorite character");
               return;
             }
@@ -313,7 +313,7 @@ exports.run     = (client, message, args) => {
   db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
     function(err, rows, fields) {
       if (err) {
-        console.log(err);
+        logger.error(err);
         message.channel.send("Error reading profile");
         return;
       }
@@ -370,7 +370,7 @@ function displayprofile(message, user, dbProfileInfos=null) {
     db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
       function(err, rows, fields) {
         if (err) {
-          console.log(err);
+          logger.error(err);
           message.channel.send("Error reading profile");
           return;
         }

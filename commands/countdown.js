@@ -5,6 +5,7 @@ const Countdown   = require("countdown");         // http://countdownjs.org
 const Moment      = require("moment-timezone");            // https://momentjs.com/
 const persist     = require("../persist").persist;
 const config      = require("../config.json");
+const logger      = require("../logger.js").logger;
 
 /*
  * These, unlike custom countdowns added with the command, are in Pacific time
@@ -91,7 +92,7 @@ function get_countdowns_with_cleanup(callback) {
     for(var countdown_key in countdowns) {
       var date = Moment.utc(countdowns[countdown_key]).seconds(0);
       if(Moment.utc().isAfter(date)) {
-        console.log(`Countdown ` + countdown_key + ` points to the past. Removing...`);
+        logger.info(`Countdown ` + countdown_key + ` points to the past. Removing...`);
         delete countdowns[countdown_key];
         needs_saving = true;
       }

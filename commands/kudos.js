@@ -4,6 +4,7 @@ const   discord     = require("discord.js");
 const   config      = require("../config.json");
 const   db          = require("../dbconfig.js").pool;
 const   moment      = require("moment-timezone");
+const   logger      = require("../logger.js").logger;
 
 exports.run     = (client, message, args) => {
 
@@ -52,7 +53,7 @@ exports.run     = (client, message, args) => {
   db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [message.author.id],
     function(err, rows, fields) {
       if (err) {
-        console.log(err);
+        logger.error(err);
         message.channel.send("Error reading your profile");
         return;
       }
@@ -80,7 +81,7 @@ exports.run     = (client, message, args) => {
       db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
         function(err, rows, fields) {
           if (err) {
-            console.log(err);
+            logger.error(err);
             message.channel.send("Error reading user profile");
             return;
           }
@@ -91,7 +92,7 @@ exports.run     = (client, message, args) => {
             db.execute('UPDATE `users` SET `user_rep_point`=? WHERE `user_discord_id`=?', [kudos, user.id],
               function(err, results, fields) {
                 if (err) {
-                  console.log(err);
+                  logger.error(err);
                   message.channel.send("Error updating user kudos");
                   return;
                 }
@@ -99,7 +100,7 @@ exports.run     = (client, message, args) => {
                 db.execute('UPDATE `users` SET `user_last_given_rep`=? WHERE `user_discord_id`=?', [dateNow, message.author.id],
                   function(err, results, fields) {
                     if (err) {
-                      console.log(err);
+                      logger.error(err);
                       message.channel.send("Error updating kudos");
                       return;
                     }

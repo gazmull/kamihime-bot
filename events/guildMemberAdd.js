@@ -4,17 +4,18 @@ const   config      = require("../config.json");
 const   db          = require("../dbconfig.js").pool;
 const   moment      = require("moment-timezone");
 const   kp          = require("../commands/kp.js");
+const   logger      = require("../logger.js").logger;
 
 exports.run = (client, member) => {
   let guild = member.guild;
-  console.log(`New member joined: ${member.user}} `);
+  logger.info(`New member joined: ${member.user}} `);
 
   const dateUpdated = moment().format("YYYY-MM-DD HH:mm:ss");
 
   db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [member.user.id],
     function(err, rows, fields) {
       if (err) {
-        console.log(err);
+        logger.error(err);
         return;
       }
       if (!rows.length) {
