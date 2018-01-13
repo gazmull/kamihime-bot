@@ -82,13 +82,14 @@ exports.run = (client, message, args) => {
 
     helpText    += "```css\n";
     helpText    += "#Bot-command-list:\n\n";
-    helpText    += "Use "+config.prefix+"help [command] to get more info on a specific command. ( Example: "+config.prefix+"help kh )\n\n";
+    helpText    += "Type '"+config.prefix+"help' for a general help message or '"+config.prefix+"help [command]' to get more info on a specific command. ( Example: "+config.prefix+"help kh )\n\n";
     helpText    += "[kh] - Displays info about a specific in-game character, weapon or accessory.\n";
     helpText    += "[countdown] - Displays countdowns related to in-game events.\n";
     helpText    += "[latest] - Displays the 15 latest objects downloaded from the wiki website.\n";
     helpText    += "[kp] - Displays or updates member profiles\n";
     helpText    += "[kudos] - Send a Kudos point to someone.\n";
-    helpText    += "[invitebot] - Provides a link to install this bot on your own Discord server.\n";
+    helpText    += "[invitebot] - Provides a link to install this bot on your own Discord server.\n\n";
+    helpText    += "Don't include the example brackets when using commands!\n";
     helpText    += "```\n";
 
     helpText    += "```css\n";
