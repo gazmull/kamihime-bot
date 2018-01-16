@@ -17,4 +17,16 @@ persist.get('countdowns').then((countdowns) => {
 	}
 });
 
+persist.get('bakas').then((bakas) => {
+	console.log(`Init bakas value: ` + bakas);
+
+	if(bakas === undefined) {
+
+		persist.set('bakas', []).then(function() {
+			console.log(`Init bakas value was undefined, initialized to []`);
+		})
+
+	}
+});
+
 exports.persist = persist;

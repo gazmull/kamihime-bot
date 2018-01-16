@@ -29,7 +29,22 @@ client.on("message", message => {
   // This event will run on every single message received, from any channel or DM.
   if(message.author.bot) return;
 
-  // --- special channel case for the quiz game
+
+  // --- special case: User is on the baka list
+
+  persist.get('bakas').then((bakas) => {
+    if (bakas.indexOf(message.author.id)>-1) {
+      try {
+        let kbaka = require(`./commands/kbaka.js`);
+        kbaka.insult(client, message);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+  });
+
+
+  // --- special case: Channel for the quiz game
 
   if (config.hasOwnProperty('quiz'))
   {
