@@ -145,11 +145,8 @@ exports.run = (client, message, args) => {
 
   } else if (args.length > 0) {
 
-    if(!config.countdown_authorized_servers.includes(message.guild.id))
+    if(!config.countdown_authorized_users.includes(message.author.id))
       return message.reply("Sorry, you don't have permissions to use this on this server!");
-
-    if(!message.member.roles.some(r=>config.countdown_authorized_roles.includes(r.name)) )
-      return message.reply("Sorry, you don't have permissions to use this!");
 
     if (args[0] === "test") {
       // /countdown test DATE ——— Prints a countdown to the provided DATE without storing it.

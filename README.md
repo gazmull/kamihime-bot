@@ -60,11 +60,8 @@ On discord, use the command \\:K_myeimojishortcut: (example: \\:K_SSR:) to get y
 __node_persist_path:__  
 Relative path to local folder that will store persistent data.
 
-__countdown_authorized_roles:__  
-List of role names allowed to use sensible countdown commands.
-
-__countdown_authorized_servers:__  
-List of server id allowed to use sensible countdown commands.
+__countdown_authorized_users:__  
+List of user ids allowed to use sensible countdown commands.
 
 __quiz__:  (optional quiz game)
 * __channel_id:__  Channel Id which will be used for the quiz game. Leave it empty, if you don't want to install the game.
