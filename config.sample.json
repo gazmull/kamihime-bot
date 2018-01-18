@@ -21,5 +21,27 @@
 	"kbaka_authorized_users" : ["User_ID1", "User_ID2", "User_ID3"],
 	"quiz_channel_id" : "Game_Channel_ID",
 	"quiz_thumbrootencryptedurl" : "https:\/\/myhost.com/obfuscated",
-	"quiz_secret" : "My32charPasswordAndInitVectorStr"
+	"quiz_secret" : "My32charPasswordAndInitVectorStr",
+	"mysql" : {
+		"host" : "localhost",
+		"database" : "database_name",
+		"user" : "database_user",
+		"password" : "database_paswword"
+	},
+	"quiz" : {
+		"channel_id" : "discord_channel_id_for_the_game",
+		"thumbrootencryptedurl" : "http:\/\/kamihime.xyz/kamihime-grabber/obfuscated"
+	},
+	"twitter" : {
+    "consumer_key" : "twitter_consumer_key",
+	  "consumer_secret" : "twitter_consumer_secret",
+	  "token_key" : "twitter_token_key",
+	  "token_secret" : "twitter_token_secret",
+		"streams" : {
+			"Kamihime_Nutaku" : {
+		    "twitter_id" : "806331327108653057",
+				"discord_channel_id" : "discord_channel_id_for_this_feed"
+			}
+		}
+	}
 }
