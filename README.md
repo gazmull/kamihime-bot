@@ -35,6 +35,10 @@ Removes the countdown that matches the *NAME*.
 (Restricted to specific roles & servers)  
 Displays a message to help understanding *DATE* formatting.
 
+### Database Configuration:
+
+Create a new kamihime_bot mysql database, and execute the db.sql queries on it.
+
 ### Configuration:
 
 Copy "*config.sample.json*" to "*config.json*" and edit your configuration file:
