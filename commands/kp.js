@@ -286,25 +286,35 @@ exports.run     = (client, message, args) => {
   }
   else {
     userSearch    = args.join(" ");
-    searchId = userSearch.slice(2, -1);
-    if( searchId.charAt(0) === "!") {
-      searchId = searchId.substr(1);
+    if (userSearch.startsWith('<@')) {
+      searchId = userSearch.slice(2, -1);
+      if (searchId.charAt(0) === "!") {
+        searchId = searchId.substr(1);
+      }
+    }
+    else {
+      if (!isNaN(userSearch) && userSearch.length === 18)
+        searchId = userSearch;
+      else
+        searchId = message.guild
+          ? message.guild.members.exists('username', userSearch)
+            ? message.guild.members.find('username', userSearch).id
+            : null
+          : null;
     }
   }
 
-  // --- Try to match a user (Own profile only in Direct message, Everything in Text channels using @shortcut)
+  // --- Try to match a user (Own profile only in Direct message, Everything in Text channels using Mention/User ID/Username)
 
   if (message.channel.type=="dm") {
     // dm channel
-    if( userSearch !=  message.author.username) {
-      message.channel.send("Sorry, searching @username is related to a memberlist, it's not possible on direct message. You need to be on a text channel to search for a user.");
-      return;
-    }
+    if(args.length >= 1)
+      return message.channel.send("Sorry, searching a user is related to a memberlist, it's not possible on direct message. You need to be on a text channel to search for a user.");
   }
 
   user = client.users.get(searchId);
   if (!user) {
-    message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\nDon't forget to add @ before the username.");
+    message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\nHave you tried: Mention/User ID/**Complete** Username in your query?");
     return;
   }
 
