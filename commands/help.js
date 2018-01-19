@@ -11,8 +11,8 @@ exports.run = (client, message, args) => {
 
     case "kh":
     helpText    += "_*```css\n";
-    helpText    += config.prefix+"kh [name]\n\n";
-    helpText    += "Displays info about a specific in-game character, weapon or accessory. (Example: "+config.prefix+"kh apep)\n\n";
+    helpText    += config.prefix+"kh [name] | "+config.prefix+"kh \"[name]\" [parameter]\n\n";
+    helpText    += "Displays info about a specific in-game character, weapon or accessory.\n(Example: "+config.prefix+"kh apep or "+config.prefix+"kh \"masamune\" soul)\n\n";
     helpText    += "#Tips\n";
     helpText    += "Fuzzy logic is applied to [name], it will try to match incomplete or misspelled inputs. (Exemple: "+config.prefix+"kh ytaga => displays Yatagarasu)\n";
     helpText    += "You can click the name field in the datasheet response to visit the related wiki page.\n";
