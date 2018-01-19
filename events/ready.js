@@ -12,9 +12,9 @@ exports.run = (client) => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
   if(client.guilds.size > 1)
-    client.user.setGame(`on ${client.guilds.size} servers`);
+    client.user.setActivity(`${client.guilds.size} servers`, { type: 'WATCHING' });
   else
-    client.user.setGame(`on ${client.guilds.size} server`);
+    client.user.setActivity(`${client.guilds.size} server`, { type: 'WATCHING' });
 
   twitter.init(client);
 
