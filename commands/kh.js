@@ -7,53 +7,84 @@ const khinfos   = require("../khinfos.js");
 const fuzzy     = require('fuzzy');
 const khArray  = khinfos.getKHInfos();
 
-var fuzzyOptions = {
+const fuzzyOptions = {
   extract: function(el) { return el.name; }
+};
+
+// --- added for parameter feature
+const objectTypes = [
+  'Kamihime',
+  'Eidolon',
+  'Soul',
+  'Weapon',
+  'Accessory'
+];
+
+// --- parses result; added due to checking for khParameter.
+// --- from '/kh kagutsuchi' to '/kh "kagutsuchi" kamihime'
+// --- parameter is optional but recommended (user)
+
+const parseResult = (objectType, result, parameter) => {
+  let returningResult;
+
+  parameter === null
+    ? returningResult = result == objectType
+    : returningResult = result == objectType && parameter == objectType;
+  
+  return returningResult;
 };
 
 // --- process the command
 
 exports.run     = (client, message, args) => {
-  var khfound   = false;
-  var khrequest = args.join(" ");
+  let khFound   = false;
+  let khRequest = args.join(' ');
+  let khParameter = null;
 
-  if (khrequest.length < 2)
+  if(/(["'])(?:(?=(\\?))\2.)*?\1/g.test(khRequest)) {
+    khRequest = args.slice(0, -1).join(' ').replace(/\"/g, '');
+    khParameter = new Array (args.slice(-1).toString().replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); }));
+
+    if (khParameter.some(el => el === khParameter))
+      return message.channel.send("Invalid parameter.");
+
+    khParameter = khParameter.toString();
+  }
+
+  if (khRequest.length < 2)
   {
     message.channel.send("For a search query to be effective, you must enter at least two characters.");
     return;
   }
 
-  var results = fuzzy.filter(khrequest, khArray, fuzzyOptions);
-  var khItems = results.map(function(el) { return el.original; });
+  const results = fuzzy.filter(khRequest, khArray, fuzzyOptions);
+  const khItems = results.map(function(el) { return el.original; });
 
   // --- Main Loop for Kamihimes, Eidolons, Souls & Weapons
 
-  for (khIdx = 0; khIdx < khItems.length; khIdx++)
+  for (let khIdx = 0; khIdx < khItems.length; khIdx++)
   {
 
-    // Limit the bot to only one response
-    if ( khIdx > 0) {
-      //message.channel.send("```There's too much results. Please try to narrow your search```");
-      return;
-    }
+    // Limit the bot to only output specified parameter, if there is.
+    if (khParameter !== null && khItems[khIdx].objectType !== khParameter) continue;
 
     // --- Kamihimes
 
-    if(khItems[khIdx].objectType == "Kamihime")
+    if(parseResult('Kamihime', khItems[khIdx].objectType, khParameter))
     {
-      var kh_name           = khItems[khIdx].name;
-      var kh_link           = config.wikidomain+khItems[khIdx].link;
-      var kh_thumb          = config.thumbrooturl+khItems[khIdx].portraiturl;
-      var kh_image          = config.thumbrooturl+khItems[khIdx].imageurl;
-      var kh_rarity         = khItems[khIdx].rarity;
-      var kh_element        = khItems[khIdx].element;
-      var kh_type          = khItems[khIdx].type;
-      var kh_attackMin      = khItems[khIdx].atk_min;
-      var kh_attackMax      = khItems[khIdx].atk_max;
-      var kh_HPMin          = khItems[khIdx].hp_min;
-      var kh_HPMax          = khItems[khIdx].hp_max;
-      var kh_totalPowerMin  = parseInt(kh_HPMin)+parseInt(kh_attackMin);
-      var kh_totalPowerMax  = parseInt(kh_HPMax)+parseInt(kh_attackMax);
+      const kh_name           = khItems[khIdx].name;
+      const kh_link           = config.wikidomain+khItems[khIdx].link;
+      const kh_thumb          = config.thumbrooturl+khItems[khIdx].portraiturl;
+      const kh_image          = config.thumbrooturl+khItems[khIdx].imageurl;
+      const kh_rarity         = khItems[khIdx].rarity;
+      const kh_element        = khItems[khIdx].element;
+      const kh_type          = khItems[khIdx].type;
+      const kh_attackMin      = khItems[khIdx].atk_min;
+      const kh_attackMax      = khItems[khIdx].atk_max;
+      const kh_HPMin          = khItems[khIdx].hp_min;
+      const kh_HPMax          = khItems[khIdx].hp_max;
+      const kh_totalPowerMin  = parseInt(kh_HPMin)+parseInt(kh_attackMin);
+      const kh_totalPowerMax  = parseInt(kh_HPMax)+parseInt(kh_attackMax);
 
       const embed = new discord.RichEmbed()
       .setTitle(config.eimojis[kh_rarity]+" "+config.eimojis[kh_element+"Symbol"]+" ("+kh_type+")")
@@ -66,12 +97,12 @@ exports.run     = (client, message, args) => {
       .addField("Statistics:", ":crossed_swords: ATK: " + kh_attackMin + "-" + kh_attackMax + " :green_heart: HP: " + kh_HPMin + "-" + kh_HPMax + " :muscle: PWR: " + kh_totalPowerMin + "-" + kh_totalPowerMax, false);
 
       if (khItems[khIdx].burst_name){
-        var burstdesc = khItems[khIdx].burst_description;
+        const burstdesc = khItems[khIdx].burst_description;
         embed.addField(":b: "+khItems[khIdx].burst_name,burstdesc,false)
       }
       if (khItems[khIdx].ability1_name){
-        var abilitycool1  = khItems[khIdx].ability1_cd;
-        var abilitydur1   = khItems[khIdx].ability1_dur;
+        let abilitycool1  = khItems[khIdx].ability1_cd;
+        let abilitydur1   = khItems[khIdx].ability1_dur;
         if (abilitycool1.length)
             abilitycool1 = ':battery: '+abilitycool1;
         if (abilitydur1.length)
@@ -79,8 +110,8 @@ exports.run     = (client, message, args) => {
         embed.addField(":regional_indicator_a: "+khItems[khIdx].ability1_name+" "+abilitydur1+abilitycool1,khItems[khIdx].ability1_desc,false)
       }
       if (khItems[khIdx].ability2_name){
-        var abilitycool2  = khItems[khIdx].ability2_cd;
-        var abilitydur2   = khItems[khIdx].ability2_dur;
+        let abilitycool2  = khItems[khIdx].ability2_cd;
+        let abilitydur2   = khItems[khIdx].ability2_dur;
         if (abilitycool2.length)
             abilitycool2 = ':battery: '+abilitycool2;
         if (abilitydur2.length)
@@ -88,8 +119,8 @@ exports.run     = (client, message, args) => {
         embed.addField(":regional_indicator_a: "+khItems[khIdx].ability2_name+" "+abilitydur2+abilitycool2,khItems[khIdx].ability2_desc,false)
       }
       if (khItems[khIdx].ability3_name){
-        var abilitycool3  = khItems[khIdx].ability3_cd;
-        var abilitydur3   = khItems[khIdx].ability3_dur;
+        let abilitycool3  = khItems[khIdx].ability3_cd;
+        let abilitydur3   = khItems[khIdx].ability3_dur;
         if (abilitycool3.length)
             abilitycool3 = ':battery: '+abilitycool3;
         if (abilitydur3.length)
@@ -112,40 +143,41 @@ exports.run     = (client, message, args) => {
       }
 
       message.channel.send({embed});
-      khfound = true;
+      khFound = true;
+      break;
     }
 
     // --- eidolons
 
-    if(khItems[khIdx].objectType == "Eidolon")
+    if(parseResult('Eidolon', khItems[khIdx].objectType, khParameter))
     {
-      var ed_name                     = khItems[khIdx].name;
-      var ed_link                     = config.wikidomain+khItems[khIdx].link;
-      var ed_thumb                    = config.thumbrooturl+khItems[khIdx].portraiturl;
-      var ed_image                    = config.thumbrooturl+khItems[khIdx].imageurl;
-      var ed_rarity                   = khItems[khIdx].rarity;
-      var ed_element                  = khItems[khIdx].element+"Symbol";
-      var ed_attackMin                = khItems[khIdx].atk_min;
-      var ed_attackMax                = khItems[khIdx].atk_max;
-      var ed_HPMin                    = khItems[khIdx].hp_min;
-      var ed_HPMax                    = khItems[khIdx].hp_max;
-      var ed_totalPowerMin            = parseInt(ed_attackMin)+parseInt(ed_HPMin);
-      var ed_totalPowerMax            = parseInt(ed_attackMax)+parseInt(ed_HPMax);
-      var ed_summonAttack             = ":a: Summon Attack - "+khItems[khIdx].summon_atk;
-      var ed_summonAttackEffect       = khItems[khIdx].summon_atk_des;
-      var ed_summonAttackCooldown     = khItems[khIdx].summon_cd +" turns";
-      var ed_eidolonsEffect           = ":regional_indicator_e: Eidolon Effect - "+khItems[khIdx].eidolon_effect;
-      var ed_eidolonEffectTier0Stars  = "\u2606 \u2606 \u2606 \u2606";
-      var ed_eidolonEffectTier0Effect = khItems[khIdx].eidolon_effect_des_0;
-      var ed_eidolonEffectTier1Stars  = "\u2605 \u2606 \u2606 \u2606";
-      var ed_eidolonEffectTier1Effect = khItems[khIdx].eidolon_effect_des_1;
-      var ed_eidolonEffectTier2Stars  = "\u2605 \u2605 \u2606 \u2606";
-      var ed_eidolonEffectTier2Effect = khItems[khIdx].eidolon_effect_des_2;
-      var ed_eidolonEffectTier3Stars  = "\u2605 \u2605 \u2605 \u2606";
-      var ed_eidolonEffectTier3Effect = khItems[khIdx].eidolon_effect_des_3;
-      var ed_eidolonEffectTier4Stars  = "\u2605 \u2605 \u2605 \u2605";
-      var ed_eidolonEffectTier4Effect = khItems[khIdx].eidolon_effect_des_4;
-      var ed_summonEffectDur          = khItems[khIdx].summon_effect_dur;
+      const ed_name                     = khItems[khIdx].name;
+      const ed_link                     = config.wikidomain+khItems[khIdx].link;
+      const ed_thumb                    = config.thumbrooturl+khItems[khIdx].portraiturl;
+      const ed_image                    = config.thumbrooturl+khItems[khIdx].imageurl;
+      const ed_rarity                   = khItems[khIdx].rarity;
+      const ed_element                  = khItems[khIdx].element+"Symbol";
+      const ed_attackMin                = khItems[khIdx].atk_min;
+      const ed_attackMax                = khItems[khIdx].atk_max;
+      const ed_HPMin                    = khItems[khIdx].hp_min;
+      const ed_HPMax                    = khItems[khIdx].hp_max;
+      const ed_totalPowerMin            = parseInt(ed_attackMin)+parseInt(ed_HPMin);
+      const ed_totalPowerMax            = parseInt(ed_attackMax)+parseInt(ed_HPMax);
+      const ed_summonAttack             = ":a: Summon Attack - "+khItems[khIdx].summon_atk;
+      const ed_summonAttackEffect       = khItems[khIdx].summon_atk_des;
+      const ed_summonAttackCooldown     = khItems[khIdx].summon_cd +" turns";
+      const ed_eidolonsEffect           = ":regional_indicator_e: Eidolon Effect - "+khItems[khIdx].eidolon_effect;
+      const ed_eidolonEffectTier0Stars  = "\u2606 \u2606 \u2606 \u2606";
+      const ed_eidolonEffectTier0Effect = khItems[khIdx].eidolon_effect_des_0;
+      const ed_eidolonEffectTier1Stars  = "\u2605 \u2606 \u2606 \u2606";
+      const ed_eidolonEffectTier1Effect = khItems[khIdx].eidolon_effect_des_1;
+      const ed_eidolonEffectTier2Stars  = "\u2605 \u2605 \u2606 \u2606";
+      const ed_eidolonEffectTier2Effect = khItems[khIdx].eidolon_effect_des_2;
+      const ed_eidolonEffectTier3Stars  = "\u2605 \u2605 \u2605 \u2606";
+      const ed_eidolonEffectTier3Effect = khItems[khIdx].eidolon_effect_des_3;
+      const ed_eidolonEffectTier4Stars  = "\u2605 \u2605 \u2605 \u2605";
+      const ed_eidolonEffectTier4Effect = khItems[khIdx].eidolon_effect_des_4;
+      const ed_summonEffectDur          = khItems[khIdx].summon_effect_dur;
 
       if (ed_summonEffectDur) {
         ed_summonEffectDur = " (Duration: "+ed_summonEffectDur+")";
@@ -188,25 +220,26 @@ exports.run     = (client, message, args) => {
       }
 
       message.channel.send({embed});
-      khfound = true;
+      khFound = true;
+      break;
     }
 
     // --- Souls
 
-    if(khItems[khIdx].objectType == "Soul")
+    if(parseResult('Soul', khItems[khIdx].objectType, khParameter))
     {
-      var sl_name           = khItems[khIdx].name;
-      var sl_link           = config.wikidomain+khItems[khIdx].link;
-      var sl_thumb          = config.thumbrooturl+khItems[khIdx].portraiturl;
-      var sl_image          = config.thumbrooturl+khItems[khIdx].imageurl;
-      var sl_rarity         = khItems[khIdx].tier;
-      var sl_class          = khItems[khIdx].type;
-      var sl_subType        = khItems[khIdx].sub_type;
-      var sl_weapons1       = khItems[khIdx].weapon1;
-      var sl_weapons2       = khItems[khIdx].weapon2;
+      const sl_name           = khItems[khIdx].name;
+      const sl_link           = config.wikidomain+khItems[khIdx].link;
+      const sl_thumb          = config.thumbrooturl+khItems[khIdx].portraiturl;
+      const sl_image          = config.thumbrooturl+khItems[khIdx].imageurl;
+      const sl_rarity         = khItems[khIdx].tier;
+      const sl_class          = khItems[khIdx].type;
+      const sl_subType        = khItems[khIdx].sub_type;
+      const sl_weapons1       = khItems[khIdx].weapon1;
+      const sl_weapons2       = khItems[khIdx].weapon2;
 
-      var sl_releaseCond    = khItems[khIdx].soul1+" Lvl 20 & "+khItems[khIdx].soul2+" Lvl 20 & "+khItems[khIdx].soul_p;
-      var sl_description    = "*"+khItems[khIdx].description+"*";
+      const sl_releaseCond    = khItems[khIdx].soul1+" Lvl 20 & "+khItems[khIdx].soul2+" Lvl 20 & "+khItems[khIdx].soul_p;
+      let sl_description    = "*"+khItems[khIdx].description+"*";
 
       sl_description        += "\n\n__**Favourite Weapons:**__  "+sl_weapons1+" - "+sl_weapons2;
       sl_description        += "\n__**Master Bonus:**__  "+khItems[khIdx].master_bonus;
@@ -232,28 +265,28 @@ exports.run     = (client, message, args) => {
       }
 
       if (khItems[khIdx].burst_name){
-        var burstdesc = khItems[khIdx].burst_desc;
+        const burstdesc = khItems[khIdx].burst_desc;
         embed.addField(":b: "+khItems[khIdx].burst_name,burstdesc,false)
       }
       if (khItems[khIdx].ability1_name){
         if (khItems[khIdx].ability1_cd) khItems[khIdx].ability1_cd = ' :battery: '+khItems[khIdx].ability1_cd;
         if (khItems[khIdx].ability1_dur) khItems[khIdx].ability1_dur = ' :hourglass: '+khItems[khIdx].ability1_dur;
-        var abilitydesc1  = khItems[khIdx].ability1_desc;
+        const abilitydesc1  = khItems[khIdx].ability1_desc;
         embed.addField(":regional_indicator_a: "+khItems[khIdx].ability1_name+khItems[khIdx].ability1_cd+khItems[khIdx].ability1_dur, abilitydesc1, false)
       }
       if (khItems[khIdx].ability2_name){
         if (khItems[khIdx].ability2_cd) khItems[khIdx].ability2_cd = ' :battery: '+khItems[khIdx].ability2_cd;
         if (khItems[khIdx].ability2_dur) khItems[khIdx].ability2_dur = ' :hourglass: '+khItems[khIdx].ability2_dur;
-        var abilityunlock2  = ' :unlock: Lvl ';
+        let abilityunlock2  = ' :unlock: Lvl ';
         if (sl_rarity=="standard") abilityunlock2+=" 10"; else abilityunlock2+=" 5";
-        var abilitydesc2    = khItems[khIdx].ability2_desc;
+        const abilitydesc2    = khItems[khIdx].ability2_desc;
         embed.addField(":regional_indicator_a: "+khItems[khIdx].ability2_name+khItems[khIdx].ability2_cd+khItems[khIdx].ability2_dur+abilityunlock2, abilitydesc2, false)
       }
       if (khItems[khIdx].ability3_name){
         if (khItems[khIdx].ability3_cd) khItems[khIdx].ability3_cd = ' :battery: '+khItems[khIdx].ability3_cd;
         if (khItems[khIdx].ability3_dur) khItems[khIdx].ability3_dur = ' :hourglass: '+khItems[khIdx].ability3_dur;
-        var abilityunlock3  = ' :unlock: Lvl 15';
-        var abilitydesc3    = khItems[khIdx].ability3_desc;
+        const abilityunlock3  = ' :unlock: Lvl 15';
+        const abilitydesc3    = khItems[khIdx].ability3_desc;
         embed.addField(":regional_indicator_a: "+khItems[khIdx].ability3_name+" "+khItems[khIdx].ability3_cd+khItems[khIdx].ability3_dur+abilityunlock3, abilitydesc3, false)
       }
 
@@ -265,25 +298,26 @@ exports.run     = (client, message, args) => {
       }
 
       message.channel.send({embed});
-      khfound = true;
+      khFound = true;
+      break;
     }
 
     // --- Weapons
 
-    if(khItems[khIdx].objectType == "Weapon")
+    if(parseResult('Weapon', khItems[khIdx].objectType, khParameter))
     {
-        var wp_name           = khItems[khIdx].name;
-        var ed_link           = config.wikidomain+khItems[khIdx].link;
-        var wp_rarity         = khItems[khIdx].rarity;
-        var wp_element        = khItems[khIdx].element+"Symbol";
-        var wp_portraiturl    = config.thumbrooturl+khItems[khIdx].portraiturl;
-        var wp_imageurl       = config.thumbrooturl+khItems[khIdx].imageurl;
-        var wp_attackMin      = khItems[khIdx].atk_min;
-        var wp_attackMax      = khItems[khIdx].atk_max;
-        var wp_HPMin          = khItems[khIdx].hp_min;
-        var wp_HPMax          = khItems[khIdx].hp_max;
-        var wp_totalPowerMin  = parseInt(wp_HPMin)+parseInt(wp_attackMin);
-        var wp_totalPowerMax  = parseInt(wp_HPMax)+parseInt(wp_attackMax);
+        const wp_name           = khItems[khIdx].name;
+        const ed_link           = config.wikidomain+khItems[khIdx].link;
+        const wp_rarity         = khItems[khIdx].rarity;
+        const wp_element        = khItems[khIdx].element+"Symbol";
+        const wp_portraiturl    = config.thumbrooturl+khItems[khIdx].portraiturl;
+        const wp_imageurl       = config.thumbrooturl+khItems[khIdx].imageurl;
+        const wp_attackMin      = khItems[khIdx].atk_min;
+        const wp_attackMax      = khItems[khIdx].atk_max;
+        const wp_HPMin          = khItems[khIdx].hp_min;
+        const wp_HPMax          = khItems[khIdx].hp_max;
+        const wp_totalPowerMin  = parseInt(wp_HPMin)+parseInt(wp_attackMin);
+        const wp_totalPowerMax  = parseInt(wp_HPMax)+parseInt(wp_attackMax);
 
         const embed = new discord.RichEmbed()
           .setTitle(config.eimojis[wp_rarity]+" "+config.eimojis[wp_element]+" ("+khItems[khIdx].type+")")
@@ -329,25 +363,26 @@ exports.run     = (client, message, args) => {
         }
 
         message.channel.send({embed});
-        khfound = true;
+        khFound = true;
+        break;
     }
 
     // --- Accessories
 
-    if(khItems[khIdx].objectType == "Accessory")
+    if(parseResult('Accessory', khItems[khIdx].objectType, khParameter))
     {
-      var ac_name           = khItems[khIdx].name;
-      var ac_rarity         = khItems[khIdx].rarity;
-      var ac_link           = config.wikidomain+"/wiki/Accessories";
-      var ac_element        = khItems[khIdx].element+"Symbol";
-      var ac_thumbnailurl   = config.thumbrooturl+khItems[khIdx].thumbnailurl;
-      var ac_attackMin      = khItems[khIdx].atk_min;
-      var ac_attackMax      = khItems[khIdx].atk_max;
-      var ac_HPMin          = khItems[khIdx].hp_min;
-      var ac_HPMax          = khItems[khIdx].hp_max;
-      var ac_totalPowerMin  = parseInt(ac_HPMin)+parseInt(ac_attackMin);
-      var ac_totalPowerMax  = parseInt(ac_HPMax)+parseInt(ac_attackMax);
-      var ac_effects        = khItems[khIdx].effects;
+      const ac_name           = khItems[khIdx].name;
+      const ac_rarity         = khItems[khIdx].rarity;
+      const ac_link           = config.wikidomain+"/wiki/Accessories";
+      const ac_element        = khItems[khIdx].element+"Symbol";
+      const ac_thumbnailurl   = config.thumbrooturl+khItems[khIdx].thumbnailurl;
+      const ac_attackMin      = khItems[khIdx].atk_min;
+      const ac_attackMax      = khItems[khIdx].atk_max;
+      const ac_HPMin          = khItems[khIdx].hp_min;
+      const ac_HPMax          = khItems[khIdx].hp_max;
+      const ac_totalPowerMin  = parseInt(ac_HPMin)+parseInt(ac_attackMin);
+      const ac_totalPowerMax  = parseInt(ac_HPMax)+parseInt(ac_attackMax);
+      const ac_effects        = khItems[khIdx].effects;
 
       const embed = new discord.RichEmbed()
         .setTitle(config.eimojis[ac_rarity]+" "+config.eimojis[ac_element]+" (Effects: "+ac_effects+")")
@@ -358,7 +393,8 @@ exports.run     = (client, message, args) => {
         .addField("Statistics:", ":crossed_swords: ATK: " + ac_attackMin + "-" + ac_attackMax + " :green_heart: HP: " + ac_HPMin + "-" + ac_HPMax + " :muscle: PWR: " + ac_totalPowerMin + "-" + ac_totalPowerMax, false);
 
       message.channel.send({embed});
-      khfound = true;
+      khFound = true;
+      break;
     }
 
 
@@ -366,8 +402,8 @@ exports.run     = (client, message, args) => {
 
   // --- Nothing found
 
-  if( khfound == false)
+  if( khFound == false)
   {
-    message.channel.send("I don't know '"+khrequest+"'");
+    message.channel.send("Query '"+khRequest+"' is not found, or there are multiple results.");
   }
 }
