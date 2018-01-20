@@ -44,37 +44,50 @@ exports.run = (message, config, khItems, khIdx) => {
   }
 
   if (khItems[khIdx].ability1_name) {
-    if (khItems[khIdx].ability1_cd)
-      khItems[khIdx].ability1_cd = ' :battery: '+khItems[khIdx].ability1_cd;
-    if (khItems[khIdx].ability1_dur)
-      khItems[khIdx].ability1_dur = ' :hourglass: '+khItems[khIdx].ability1_dur;
-    const abilitydesc1  = khItems[khIdx].ability1_desc;
-  
-    embed.addField(':regional_indicator_a: '+khItems[khIdx].ability1_name+khItems[khIdx].ability1_cd+khItems[khIdx].ability1_dur, abilitydesc1, false)
+
+    let abilitycool1  = khItems[khIdx].ability1_cd;
+    let abilitydur1   = khItems[khIdx].ability1_dur;
+    if (abilitycool1.length)
+        abilitycool1 = ':battery: '+abilitycool1;
+    if (abilitydur1.length)
+        abilitydur1  = ':hourglass: '+abilitydur1;
+
+    embed.addField(':regional_indicator_a: '+khItems[khIdx].ability1_name+' '+abilitydur1+abilitycool1,khItems[khIdx].ability1_desc,false)
+
   }
 
   if (khItems[khIdx].ability2_name) {
-    if (khItems[khIdx].ability2_cd)
-      khItems[khIdx].ability2_cd = ' :battery: '+khItems[khIdx].ability2_cd;
-    if (khItems[khIdx].ability2_dur)
-      khItems[khIdx].ability2_dur = ' :hourglass: '+khItems[khIdx].ability2_dur;
+
+    let abilitycool2  = khItems[khIdx].ability2_cd;
+    let abilitydur2   = khItems[khIdx].ability2_dur;
+    if (abilitycool2.length)
+        abilitycool2 = ':battery: '+abilitycool2;
+    if (abilitydur2.length)
+        abilitydur2  = ':hourglass: '+abilitydur2;
+
     let abilityunlock2  = ' :unlock: Lvl ';
     if (sl_rarity=='standard')
       abilityunlock2+=' 10'; else abilityunlock2+=' 5';
     const abilitydesc2    = khItems[khIdx].ability2_desc;
 
-    embed.addField(':regional_indicator_a: '+khItems[khIdx].ability2_name+khItems[khIdx].ability2_cd+khItems[khIdx].ability2_dur+abilityunlock2, abilitydesc2, false)
+    embed.addField(':regional_indicator_a: '+khItems[khIdx].ability2_name+' '+abilitydur2+abilitycool2+abilityunlock2,khItems[khIdx].ability2_desc,false)
+
   }
 
   if (khItems[khIdx].ability3_name) {
-    if (khItems[khIdx].ability3_cd)
-      khItems[khIdx].ability3_cd = ' :battery: '+khItems[khIdx].ability3_cd;
-    if (khItems[khIdx].ability3_dur)
-      khItems[khIdx].ability3_dur = ' :hourglass: '+khItems[khIdx].ability3_dur;
-    const abilityunlock3  = ' :unlock: Lvl 15';
-    const abilitydesc3    = khItems[khIdx].ability3_desc;
 
-    embed.addField(':regional_indicator_a: '+khItems[khIdx].ability3_name+' '+khItems[khIdx].ability3_cd+khItems[khIdx].ability3_dur+abilityunlock3, abilitydesc3, false)
+
+      let abilitycool3  = khItems[khIdx].ability3_cd;
+      let abilitydur3   = khItems[khIdx].ability3_dur;
+      if (abilitycool3.length)
+          abilitycool3 = ':battery: '+abilitycool3;
+      if (abilitydur3.length)
+          abilitydur3  = ':hourglass: '+abilitydur3;
+
+      const abilityunlock3  = ' :unlock: Lvl 15';
+      
+      embed.addField(':regional_indicator_a: '+khItems[khIdx].ability3_name+' '+abilitydur3+abilitycool3+abilityunlock3,khItems[khIdx].ability3_desc,false)
+
   }
 
   if (khItems[khIdx].assist1_name)
