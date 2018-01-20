@@ -11,10 +11,18 @@ exports.run = (client, message, args) => {
 
     case "kh":
     helpText    += "_*```css\n";
-    helpText    += config.prefix+"kh [name] | "+config.prefix+"kh \"[name]\" [parameter]\n\n";
-    helpText    += "Displays info about a specific in-game character, weapon or accessory.\n(Example: "+config.prefix+"kh apep or "+config.prefix+"kh \"masamune\" soul)\n\n";
+    helpText    += config.prefix+"kh [name] | "+config.prefix+"kh [name] [parameter] | "+config.prefix+"kh [parameter] [name]\n\n";
+    helpText    += "Displays info about a specific in-game character, weapon or accessory.\n(Example: "+config.prefix+"kh masamune, "+config.prefix+"kh masamune --soul or "+config.prefix+"kh --soul masamune)\n\n";
+    helpText    += "#Available-Parameters\n";
+    helpText    += "[-k], [--kamihime]    Search by Kamihime\n";
+    helpText    += "[-e], [--eidolon]     Search by Eidolon\n";
+    helpText    += "[-s], [--soul]        Search by Soul\n";
+    helpText    += "[-w], [--weapon]      Search by Weapon\n";
+    helpText    += "[-a], [--accessory]   Search by Accessory\n";
+    helpText    += "\n";
     helpText    += "#Tips\n";
     helpText    += "Fuzzy logic is applied to [name], it will try to match incomplete or misspelled inputs. (Exemple: "+config.prefix+"kh ytaga => displays Yatagarasu)\n";
+    helpText    += "Having a parameter will give you better result when looking for a specific item.\n"
     helpText    += "You can click the name field in the datasheet response to visit the related wiki page.\n";
     helpText    += "\n";
     helpText    += "#Anti-spam-advice\n";

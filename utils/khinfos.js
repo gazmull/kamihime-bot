@@ -1,10 +1,10 @@
 
-const     config    = require("./config.json");
-const     KHdatas   = require('./datas/kamihime.json');
-const     EDdatas   = require('./datas/eidolons.json');
-const     SLdatas   = require('./datas/souls.json');
-const     WPdatas   = require('./datas/weapons.json');
-const     ACdatas   = require('./datas/accessories.json');
+const     config    = require("../config.json");
+const     KHdatas   = require('../datas/kamihime.json');
+const     EDdatas   = require('../datas/eidolons.json');
+const     SLdatas   = require('../datas/souls.json');
+const     WPdatas   = require('../datas/weapons.json');
+const     ACdatas   = require('../datas/accessories.json');
 const     crypto    = require('crypto');
 
 var       ALLArray  = [];

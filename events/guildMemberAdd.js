@@ -1,10 +1,10 @@
 // This event triggers when a member joins a guild.
 
 const   config      = require("../config.json");
-const   db          = require("../dbconfig.js").pool;
+const   db          = require("../utils/dbconfig").pool;
 const   moment      = require("moment-timezone");
-const   kp          = require("../commands/kp.js");
-const   logger      = require("../logger.js").logger;
+const   kp          = require("../commands/kp");
+const   logger      = require("../utils/logger").logger;
 
 exports.run = (client, member) => {
   let guild = member.guild;
