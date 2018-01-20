@@ -19,7 +19,7 @@ const logger = new (winston.Logger)({
       level: 'info'
     }),
     new (require('winston-daily-rotate-file'))({
-      filename: `${logDir}/-results.log`,
+      filename: `${__dirname}/../${logDir}/-results.log`,
       timestamp: tsFormat,
       datePattern: 'yyyy-MM-dd',
       prepend: true,

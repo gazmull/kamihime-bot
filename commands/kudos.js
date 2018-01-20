@@ -2,9 +2,9 @@
 
 const   discord     = require("discord.js");
 const   config      = require("../config.json");
-const   db          = require("../dbconfig.js").pool;
+const   db          = require("../utils/dbconfig").pool;
 const   moment      = require("moment-timezone");
-const   logger      = require("../logger.js").logger;
+const   logger      = require("../utils/logger").logger;
 
 exports.run     = (client, message, args) => {
 

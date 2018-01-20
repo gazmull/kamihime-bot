@@ -2,12 +2,12 @@
 
 const   discord     = require("discord.js");
 const   config      = require("../config.json");
-const   db          = require("../dbconfig.js").pool;
+const   db          = require("../utils/dbconfig").pool;
 const   moment      = require("moment-timezone");
 const   momentZones = require('moment-timezone/data/meta/latest.json');
-const   khinfos     = require("../khinfos.js");
+const   khinfos     = require("../utils/khinfos");
 const   fuzzy       = require('fuzzy');
-const   logger      = require("../logger.js").logger;
+const   logger      = require("../utils/logger").logger;
 
 khinfos.initKHInfos();        // todo: Fixed the init placed in events.
 const   khArray     = khinfos.getKHInfos();
@@ -295,16 +295,22 @@ exports.run     = (client, message, args) => {
     else {
       if (!isNaN(userSearch) && userSearch.length === 18)
         searchId = userSearch;
+      else if (/#(\d{4})\b/.test(userSearch))
+        searchId = message.guild
+          ? client.users.exists('tag', userSearch)
+            ? client.users.find('tag', userSearch).id
+            : null
+          : null;
       else
         searchId = message.guild
-          ? message.guild.members.exists('username', userSearch)
-            ? message.guild.members.find('username', userSearch).id
+          ? client.users.exists('username', userSearch)
+            ? client.users.find('username', userSearch).id
             : null
           : null;
     }
   }
 
-  // --- Try to match a user (Own profile only in Direct message, Everything in Text channels using Mention/User ID/Username)
+  // --- Try to match a user (Own profile only in Direct message, Everything in Text channels using Mention/User ID/Exact Username/Exact User Tag)
 
   if (message.channel.type=="dm") {
     // dm channel
@@ -314,7 +320,7 @@ exports.run     = (client, message, args) => {
 
   user = client.users.get(searchId);
   if (!user) {
-    message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\nHave you tried: Mention/User ID/**Complete** Username in your query?");
+    message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\nHave you tried: Mention/User ID/**Exact** Username or User Tag in your query?");
     return;
   }
 

@@ -1,6 +1,6 @@
 const Discord     = require("discord.js");        // Load up the discord.js library
 const fs          = require("fs");
-const persist     = require("./persist").persist;
+const persist     = require("./utils/persist").persist;
 
 
 // This is your client. Some people call it `bot`, some people call it `self`,
@@ -50,7 +50,7 @@ client.on("message", message => {
   {
     if (message.channel.id == config.quiz.channel_id) {
       try {
-        let quiz = require(`./quiz.js`);
+        let quiz = require(`./functions/quiz.js`);
         quiz.read_answer(client, message);
       } catch (err) {
         console.error(err);

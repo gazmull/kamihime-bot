@@ -1,7 +1,7 @@
 
 const Discord = require("discord.js");
-const config  = require("./config.json");
-const khinfos = require("./khinfos.js");
+const config  = require("../config.json");
+const khinfos = require("../utils/khinfos.js");
 
 global.khquiz_goodResponse;
 
