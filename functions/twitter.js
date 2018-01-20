@@ -1,6 +1,6 @@
 
 //const Discord = require("discord.js");
-const config  = require("./config.json");
+const config  = require("../config.json");
 const _       = require('lodash');
 const Twit    = require('twit')
 

@@ -3,9 +3,9 @@ const Discord     = require("discord.js");
 const _           = require("lodash");            // https://lodash.com
 const Countdown   = require("countdown");         // http://countdownjs.org
 const Moment      = require("moment-timezone");            // https://momentjs.com/
-const persist     = require("../persist").persist;
+const persist     = require("../utils/persist").persist;
 const config      = require("../config.json");
-const logger      = require("../logger.js").logger;
+const logger      = require("../utils/logger").logger;
 
 /*
  * These, unlike custom countdowns added with the command, are in Pacific time
