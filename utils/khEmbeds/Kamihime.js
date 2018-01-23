@@ -74,5 +74,5 @@ exports.run = (message, config, khItems, khIdx) => {
     }
   }
 
-  message.channel.send({embed});
+  return embed;
 }

@@ -17,6 +17,8 @@
 		"ThunderSymbol" : "<:K_Thunder:your_eijoji_token_id>"
 	},
 	"node_persist_path": "datas/storage",
+	"owners" : ["User_ID1", "User_ID2", "User_ID3"],
+	"discord_code": "FAXErB2",
 	"countdown_authorized_users" : ["User_ID1", "User_ID2", "User_ID3"],
 	"kbaka_authorized_users" : ["User_ID1", "User_ID2", "User_ID3"],
 	"quiz_channel_id" : "Game_Channel_ID",

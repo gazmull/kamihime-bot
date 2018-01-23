@@ -376,7 +376,7 @@ function getCountryZones(countrycode) {
 
 // ==================== Display a Formatted profile ============
 
-function displayprofile(message, user, dbProfileInfos=null) {
+ function displayprofile(message, user, dbProfileInfos=null) {
 
   const unionName     = "UnionName PlaceHolder";
   const unionRole     = "coming soon"
@@ -496,6 +496,6 @@ function displayprofile(message, user, dbProfileInfos=null) {
     embed.setURL(unionInvite);
   }
 
-  message.channel.send({embed});
+  message.channel.send({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
 
 }
