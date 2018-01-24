@@ -131,11 +131,11 @@ exports.run     = (client, message, args) => {
       parameterResults.length > 1) {
       message.channel.send(
         `The following items match with query '${khRequest}'${khParameter ? ` and parameter '${khParameter}'` : ''}:`
-        +`\n\`\`\`js\n{\n${parameterResults.slice(0, 9).map(el => `\t${parameterResults.indexOf(el) + 1}_${el.objectType}: "${el.name}"`).join(',\n')}\n}\`\`\``
+        +`\n\`\`\`js\n{\n\t0_Void: "Cancel the Selection",\n${parameterResults.slice(0, 9).map(el => `\t${parameterResults.indexOf(el) + 1}_${el.objectType}: "${el.name}"`).join(',\n')}\n}\`\`\``
         +`\nSelect an item by their designated number to prompt me to continue. Say \`cancel\` to cancel the command.`
         +`\nExpires within 30 seconds.`
       ).then(sentMessage => { 
-        client.awaitSelection(message, sentMessage, parameterResults);
+        client.awaitSelection(message, sentMessage, parameterResults.slice(0, 9));
         client.awaitingUsers.set(message.author.id, true);
       });
       return;
@@ -148,11 +148,11 @@ exports.run     = (client, message, args) => {
       parameterResults.length > 1) {
       message.channel.send(
         `The following items match with query '${khRequest}':`
-        +`\n\`\`\`js\n{\n${parameterResults.slice(0, 9).map(el => `\t${parameterResults.indexOf(el) + 1}_${el.objectType}: "${el.name}"`).join(',\n')}\n}\`\`\``
+        +`\n\`\`\`js\n{\n\t0_Void: "Cancel the Selection",\n${parameterResults.slice(0, 9).map(el => `\t${parameterResults.indexOf(el) + 1}_${el.objectType}: "${el.name}"`).join(',\n')}\n}\`\`\``
         +`\nSelect an item by their designated number to prompt me to continue. Say \`cancel\` to cancel the command.`
         +`\nExpires within 30 seconds.`
       ).then(sentMessage => { 
-        client.awaitSelection(message, sentMessage, parameterResults);
+        client.awaitSelection(message, sentMessage, parameterResults.slice(0, 9));
         client.awaitingUsers.set(message.author.id, true);
       });
       return;
@@ -169,35 +169,32 @@ exports.run     = (client, message, args) => {
 
     case parseResult('Kamihime', parameterResults[0].objectType, khParameter):
       embed = require('../utils/khEmbeds/Kamihime').run(message, config, parameterResults, 0);
-      message.channel.send({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
       break;
 
     // --- eidolons
 
     case parseResult('Eidolon', parameterResults[0].objectType, khParameter):
       embed = require('../utils/khEmbeds/Eidolon').run(message, config, parameterResults, 0);
-      message.channel.send({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
       break;
 
     // --- Souls
 
     case parseResult('Soul', parameterResults[0].objectType, khParameter):
       embed = require('../utils/khEmbeds/Soul').run(message, config, parameterResults, 0);
-      message.channel.send({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
       break;
 
     // --- Weapons
 
     case parseResult('Weapon', parameterResults[0].objectType, khParameter):
       embed = require('../utils/khEmbeds/Weapon').run(message, config, parameterResults, 0);
-      message.channel.send({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
       break;
 
     // --- Accessories
 
     case parseResult('Accessory', parameterResults[0].objectType, khParameter):
       embed = require('../utils/khEmbeds/Accessory').run(message, config, parameterResults, 0);
-      message.channel.send({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
       break;
   }
+
+  message.channel.send({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
 }

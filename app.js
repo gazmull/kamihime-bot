@@ -92,8 +92,8 @@ client.on("message", message => {
     message.channel.send(
       `Sorry, something happened: \`${err.message}\`\n\n`
       + `If this is a feature-breaking issue, please contact: `
-      + `${owners.map(o => `\`${client.users.get(o).tag}\``).join(', ')}\n`
-      + `Or proceed to this Discord invite code: \`${discord_code}\``
+      + `${owners ? owners.map(o => `\`${client.users.get(o).tag}\``).join(', ') : 'No bot developers were in the configuration'}\n`
+      + `Or proceed to this Discord invite code: \`${discord_code ? discord_code : 'No invite code was in the configuration'}\``
     );
     client.logger.error(err);
   }

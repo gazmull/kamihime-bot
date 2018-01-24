@@ -10,7 +10,7 @@ module.exports = async (message, dialog, result) => {
         const responses = await message.channel.awaitMessages(
             m =>
                 m.author.id === message.author.id &&
-                ( m.content.toLowerCase() === 'cancel' ||
+                ( m.content.toLowerCase() === 'cancel' || parseInt(m.content) === 0 ||
                 ( parseInt(m.content) >= 1 && parseInt(m.content) <= result.length) ), {
                     max: 1,
                     time: 30 * 1000,
@@ -20,12 +20,12 @@ module.exports = async (message, dialog, result) => {
         
         const response = responses.first();
         let embed;
-        if(response.content.toLowerCase() === 'cancel') {
+        if(response.content.toLowerCase() === 'cancel' || parseInt(response.content) === 0) {
             message.client.awaitingUsers.delete(message.author.id);
             return dialog.edit('Selection cancelled.');
         }
 
-        const responseIdx = parseInt(response) - 1;
+        const responseIdx = parseInt(response.content) - 1;
 
         switch(true) {
 
@@ -33,46 +33,48 @@ module.exports = async (message, dialog, result) => {
         
             case parseResult('Kamihime', result[responseIdx].objectType):
                 embed = require('./Kamihime').run(message, config, result, responseIdx);
-                if(message.channel.permissionsFor(message.client.user).has('MANAGE_MESSAGES')) response.delete();
-                dialog.edit({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
                 break;
         
             // --- eidolons
         
             case parseResult('Eidolon', result[responseIdx].objectType):
                 embed = require('./Eidolon').run(message, config, result, responseIdx);
-                if(message.channel.permissionsFor(message.client.user).has('MANAGE_MESSAGES')) response.delete();
-                dialog.edit({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
                 break;
         
             // --- Souls
         
             case parseResult('Soul', result[responseIdx].objectType):
                 embed = require('./Soul').run(message, config, result, responseIdx);
-                if(message.channel.permissionsFor(message.client.user).has('MANAGE_MESSAGES')) response.delete();
-                dialog.edit({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
                 break;
         
             // --- Weapons
         
             case parseResult('Weapon', result[responseIdx].objectType):
                 embed = require('./Weapon').run(message, config, result, responseIdx);
-                if(message.channel.permissionsFor(message.client.user).has('MANAGE_MESSAGES')) response.delete();
-                dialog.edit({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
                 break;
         
             // --- Accessories
         
             case parseResult('Accessory', result[responseIdx].objectType):
                 embed = require('./Accessory').run(message, config, result, responseIdx);
-                if(message.channel.permissionsFor(message.client.user).has('MANAGE_MESSAGES')) response.delete();
-                dialog.edit({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
                 break;
         }
+
+        if (message.channel.type === 'text' && message.channel.permissionsFor(message.client.user).has('MANAGE_MESSAGES')) response.delete();
+        dialog.edit({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
     }
     catch (c) {
-        dialog.edit('Selection expired.');
-        typeof c.stack !== 'undefined' ? message.client.logger.error(c) : null;
+        if (typeof c.stack !== 'undefined') {
+            dialog.edit(
+                `Sorry, something happened: \`${err.message}\`\n\n`
+                + `If this is a feature-breaking issue, please contact: `
+                + `${config.owners ? config.owners.map(o => `\`${client.users.get(o).tag}\``).join(', ') : 'No bot developers were in the configuration'}\n`
+                + `Or proceed to this Discord invite code: \`${config.discord_code ? config.discord_code : 'No invite code was in the configuration'}\``
+              );
+            message.client.logger.error(err);
+        }
+        else
+            dialog.edit('Selection expired.');
     }
   message.client.awaitingUsers.delete(message.author.id);
 };
