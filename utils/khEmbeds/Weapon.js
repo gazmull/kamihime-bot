@@ -55,5 +55,5 @@ exports.run = (message, config, khItems, khIdx) => {
   if (khItems[khIdx].description)
     embed.setDescription('*'+khItems[khIdx].description+'*')
 
-  message.channel.send({embed});
+  return embed;
 }

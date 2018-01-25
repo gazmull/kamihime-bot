@@ -1,13 +1,30 @@
 const Discord     = require("discord.js");        // Load up the discord.js library
 const fs          = require("fs");
 const persist     = require("./utils/persist").persist;
+const {
+  owners,       // An Array of Owners' IDs
+  discord_code, // Your server's permanent invite code
+  token,        // Your bot's token
+  quiz,         // Quiz property
+  prefix        // Your bot's prefix
+}                 = require("./config.json");     // This is your configuration file, see an example on "config.sample.json"
 
+// --- Client Class Extension for Utilities
+class KamihimeClient extends Discord.Client {
+  constructor(options) {
+    super(options);
+    this.clearDialog = require('./utils/clearDialog');
+    this.awaitSelection = require('./utils/khEmbeds/awaitSelection');
+    this.logger = require('./utils/logger').logger;
+    this.awaitingUsers = new Discord.Collection();
+  }
+}
 
 // This is your client. Some people call it `bot`, some people call it `self`,
-const client = new Discord.Client();
-// Here we load the config.json file that contains our token and our prefix values.
-const config = require("./config.json");
-
+const client = new KamihimeClient({
+  disabledEvents: ['TYPING_START'],
+  disableEveryone: true
+});
 
 // -------------- This loop reads the /events/ folder and attaches each event file to the appropriate event.
 
@@ -46,9 +63,9 @@ client.on("message", message => {
 
   // --- special case: Channel for the quiz game
 
-  if (config.hasOwnProperty('quiz'))
+  if (quiz)
   {
-    if (message.channel.id == config.quiz.channel_id) {
+    if (message.channel.id == quiz.channel_id) {
       try {
         let quiz = require(`./functions/quiz.js`);
         quiz.read_answer(client, message);
@@ -62,19 +79,25 @@ client.on("message", message => {
 
   // --- Basic Command Handler
 
-  if(message.content.indexOf(config.prefix) !== 0) return;
+  if(message.content.indexOf(prefix) !== 0) return;
   // Here we separate our "command" name, and our "arguments" for the command.
-  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
   try {
+    if (!fs.existsSync(`./commands/${command}.js`)) return;
     let commandFile = require(`./commands/${command}.js`);
     commandFile.run(client, message, args);
   } catch (err) {
-    message.channel.send("Unknown command '"+config.prefix+command+"'. Use '"+config.prefix+"help' for the list of available commands.");
-    console.log(err);
+    message.channel.send(
+      `Sorry, something happened: \`${err.message}\`\n\n`
+      + `If this is a feature-breaking issue, please contact: `
+      + `${owners ? owners.map(o => `\`${client.users.get(o).tag}\``).join(', ') : 'No bot developers were in the configuration'}\n`
+      + `Or proceed to this Discord invite code: \`${discord_code ? discord_code : 'No invite code was in the configuration'}\``
+    );
+    client.logger.error(err);
   }
 
 });
 
-client.login(config.token);
+client.login(token);

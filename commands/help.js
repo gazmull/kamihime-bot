@@ -111,5 +111,5 @@ exports.run = (client, message, args) => {
   }
 
 
-  message.channel.send(helpText);
+  message.channel.send(helpText).then(sentMessage => client.clearDialog(message, sentMessage));
 }

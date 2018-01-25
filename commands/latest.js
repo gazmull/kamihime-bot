@@ -26,10 +26,12 @@ exports.run     = (client, message, args) => {
       latestResponse += dataArray[i]['timestamp']+" ["+dataArray[i]['name']+"]("+dataArray[i]['objectType']+")\n";
   }
   latestResponse +="```";
-  message.channel.send(latestResponse);
+
   let stats = "```Markdown\n";
   stats +="Totals: [Kamihime]("+khArray.length+")"+" [Eidolon]("+edArray.length+")"+" [Soul]("+slArray.length+")"+" [Weapon]("+wpArray.length+")"+" [Accessory]("+acArray.length+")\n";
   stats +="```";
-  message.channel.send(stats);
+
+  const response = latestResponse.concat(stats)
+  message.channel.send(response).then(sentMessage => client.clearDialog(message, sentMessage));
 
 }

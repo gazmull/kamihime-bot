@@ -53,17 +53,22 @@ String.prototype.toTitleCase = function () {
 // --- process the command
 
 exports.run     = (client, message, args) => {
+  if(client.awaitingUsers.get(message.author.id)) return message.channel.send(`You have an existing selection ongoing. Please say \`cancel\` if you wish to issue a new ${config.prefix}kh command.`);
+
   let khRequest = args.join(' ');
   let khParameter = null;
 
   // --- RegExp for e.g. "-a" or "--accessory"
-  const khRegExp = /\-{1}[a-zA-Z]|\-{2}[a-zA-Z]+/g;
+  const khRegExp = /(^| )\-{1,2}[a-zA-Z]+/g;
 
   if(khRegExp.test(khRequest)) {
     const khMatch  = args.join(' ').match(khRegExp);
-    const khIndex  = args.indexOf(khMatch[0]);
-    khRequest = khIndex === 0 ? args.slice(1).join(' ') : args.slice(0, -1).join(' ');
-    khParameter = args.slice(khIndex, khIndex + 1).toString().replace(/\-/g, '').toTitleCase();
+    const khIndex  = args.indexOf((khMatch[0].toString()[0] === ' ' ? khMatch[0].toString().slice(1) : khMatch[0]));
+    khRequest = khIndex === 0 ? args.slice(1).join(' ') : args.slice(0, khIndex).join(' ');
+    khParameter =
+      khIndex + 1 === args.length
+        ? args.slice(1).toString().replace(/\-/g, '').toTitleCase()
+        : args.slice(0, 1).toString().replace(/\-/g, '').toTitleCase();
 
     // --- Parse shortHand parameter to longHand parameter for comparison with objectType later
 
@@ -87,7 +92,10 @@ exports.run     = (client, message, args) => {
     }
 
     if (!(objectTypes.shortHands.some(el => khParameter === el) || objectTypes.longHands.some(el => khParameter === el)))
-      return message.channel.send('Invalid parameter.');
+      return message.channel.send(
+        `Invalid parameter.\n`
+        +`Proper usage: \`${config.prefix}kh [name]\` | \`${config.prefix}kh [name] [parameter]\` | \`${config.prefix}kh [parameter] [name]\``
+      );
   }
 
   // --- Added condition where character names only has two characters
@@ -120,65 +128,73 @@ exports.run     = (client, message, args) => {
   else if (khParameter) {
     if (!(shortNames.some( el => new RegExp(khRequest, 'i').test(el.name) && khParameter === el.objectType ) ||
       shortNames.some( el => el.name === khRequest.toTitleCase() && khParameter === el.objectType )) &&
-      parameterResults.length > 5)
-    return message.channel.send(
-      `The following items match with query '${khRequest}'${khParameter ? ` and parameter '${khParameter}'` : ''}:`
-      +`\n\`\`\`js\n{\n${
-        parameterResults.length > 7
-          ? `${parameterResults.slice(0, 6).map(el =>  `\t${el.objectType}: "${el.name}"`).join(',\n')},\n\tFurther: "Results..."`
-          : parameterResults.map(el => `\t${el.objectType}: "${el.name}"`).join(',\n')
-        }\n}\`\`\``
-      +`\nPlease be more specific with the search query.`
-    );
+      parameterResults.length > 1) {
+      message.channel.send(
+        `The following items match with query '${khRequest}'${khParameter ? ` and parameter '${khParameter}'` : ''}:`
+        +`\n\`\`\`js\n{\n\t0_Void: "Cancel the Selection",\n${parameterResults.slice(0, 9).map(el => `\t${parameterResults.indexOf(el) + 1}_${el.objectType}: "${el.name}"`).join(',\n')}\n}\`\`\``
+        +`\nSelect an item by their designated number to prompt me to continue. Say \`cancel\` to cancel the command.`
+        +`\nExpires within 30 seconds.`
+      ).then(sentMessage => { 
+        client.awaitSelection(message, sentMessage, parameterResults.slice(0, 9));
+        client.awaitingUsers.set(message.author.id, true);
+      });
+      return;
+    }
   }
 
    else if (!khParameter) {
     if (!(shortNames.some( el => new RegExp(khRequest, 'i').test(el.name) ) ||
       shortNames.some( el => el.name === khRequest.toTitleCase() )) &&
-      parameterResults.length > 5)
-    return message.channel.send(
-      `The following items match with query '${khRequest}':`
-      +`\n\`\`\`js\n{\n${
-        parameterResults.length > 7
-          ? `${parameterResults.slice(0, 6).map(el =>  `\t${el.objectType}: "${el.name}"`).join(',\n')},\n\tFurther: "Results..."`
-          : parameterResults.map(el => `\t${el.objectType}: "${el.name}"`).join(',\n')
-        }\n}\`\`\``
-      +`\nPlease be more specific with the search query.`
-    );
+      parameterResults.length > 1) {
+      message.channel.send(
+        `The following items match with query '${khRequest}':`
+        +`\n\`\`\`js\n{\n\t0_Void: "Cancel the Selection",\n${parameterResults.slice(0, 9).map(el => `\t${parameterResults.indexOf(el) + 1}_${el.objectType}: "${el.name}"`).join(',\n')}\n}\`\`\``
+        +`\nSelect an item by their designated number to prompt me to continue. Say \`cancel\` to cancel the command.`
+        +`\nExpires within 30 seconds.`
+      ).then(sentMessage => { 
+        client.awaitSelection(message, sentMessage, parameterResults.slice(0, 9));
+        client.awaitingUsers.set(message.author.id, true);
+      });
+      return;
+    }
    }
 
   // --- Condition check from parseResult() for Kamihimes, Eidolons, Souls, Weapons, and Accessories
+
+  let embed;
   
   switch(true) {
 
     // --- Kamihimes
 
     case parseResult('Kamihime', parameterResults[0].objectType, khParameter):
-      require('../utils/khEmbeds/Kamihime').run(message, config, parameterResults, 0);
+      embed = require('../utils/khEmbeds/Kamihime').run(message, config, parameterResults, 0);
       break;
 
     // --- eidolons
 
     case parseResult('Eidolon', parameterResults[0].objectType, khParameter):
-      require('../utils/khEmbeds/Eidolon').run(message, config, parameterResults, 0);
+      embed = require('../utils/khEmbeds/Eidolon').run(message, config, parameterResults, 0);
       break;
 
     // --- Souls
 
     case parseResult('Soul', parameterResults[0].objectType, khParameter):
-      require('../utils/khEmbeds/Soul').run(message, config, parameterResults, 0);
+      embed = require('../utils/khEmbeds/Soul').run(message, config, parameterResults, 0);
       break;
 
     // --- Weapons
 
     case parseResult('Weapon', parameterResults[0].objectType, khParameter):
-      require('../utils/khEmbeds/Weapon').run(message, config, parameterResults, 0);
+      embed = require('../utils/khEmbeds/Weapon').run(message, config, parameterResults, 0);
       break;
 
     // --- Accessories
 
     case parseResult('Accessory', parameterResults[0].objectType, khParameter):
-      require('../utils/khEmbeds/Accessory').run(message, config, parameterResults, 0);
+      embed = require('../utils/khEmbeds/Accessory').run(message, config, parameterResults, 0);
       break;
   }
+
+  message.channel.send({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
 }
