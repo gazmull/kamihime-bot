@@ -4,7 +4,7 @@ const   discord     = require("discord.js");
 const   config      = require("../config.json");
 const   insults     = require('../datas/insults.json');
 const   persist     = require("../utils/persist").persist;
-const   logger      = require("../utilslogger").logger;
+const   logger      = require("../utils/logger").logger;
 
 exports.run     = (client, message, args) => {
 
