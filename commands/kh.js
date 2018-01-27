@@ -40,7 +40,7 @@ const parseResult = (objectType, result, parameter) => {
   parameter === null
     ? returningResult = result == objectType
     : returningResult = result == objectType && parameter == objectType;
-  
+
   return returningResult;
 };
 
@@ -53,7 +53,7 @@ String.prototype.toTitleCase = function () {
 // --- process the command
 
 exports.run     = (client, message, args) => {
-  if(client.awaitingUsers.get(message.author.id)) return message.channel.send(`You have an existing selection ongoing. Please say \`cancel\` if you wish to issue a new ${config.prefix}kh command.`);
+  if(client.awaitingUsers.get(message.author.id)) return message.channel.send(`You have an existing selection ongoing. Please say \`cancel\` or \`0\` if you wish to issue a new ${config.prefix}kh command.`);
 
   let khRequest = args.join(' ');
   let khParameter = null;
@@ -132,9 +132,9 @@ exports.run     = (client, message, args) => {
       message.channel.send(
         `The following items match with query '${khRequest}'${khParameter ? ` and parameter '${khParameter}'` : ''}:`
         +`\n\`\`\`js\n{\n\t0_Void: "Cancel the Selection",\n${parameterResults.slice(0, 9).map(el => `\t${parameterResults.indexOf(el) + 1}_${el.objectType}: "${el.name}"`).join(',\n')}\n}\`\`\``
-        +`\nSelect an item by their designated number to prompt me to continue. Say \`cancel\` to cancel the command.`
+        +`\nSelect an item by their designated number to prompt me to continue. Say \`cancel\` or \`0\` to cancel the command.`
         +`\nExpires within 30 seconds.`
-      ).then(sentMessage => { 
+      ).then(sentMessage => {
         client.awaitSelection(message, sentMessage, parameterResults.slice(0, 9));
         client.awaitingUsers.set(message.author.id, true);
       });
@@ -149,9 +149,9 @@ exports.run     = (client, message, args) => {
       message.channel.send(
         `The following items match with query '${khRequest}':`
         +`\n\`\`\`js\n{\n\t0_Void: "Cancel the Selection",\n${parameterResults.slice(0, 9).map(el => `\t${parameterResults.indexOf(el) + 1}_${el.objectType}: "${el.name}"`).join(',\n')}\n}\`\`\``
-        +`\nSelect an item by their designated number to prompt me to continue. Say \`cancel\` to cancel the command.`
+        +`\nSelect an item by their designated number to prompt me to continue. Say \`cancel\` or \`0\` to cancel the command.`
         +`\nExpires within 30 seconds.`
-      ).then(sentMessage => { 
+      ).then(sentMessage => {
         client.awaitSelection(message, sentMessage, parameterResults.slice(0, 9));
         client.awaitingUsers.set(message.author.id, true);
       });
@@ -162,7 +162,7 @@ exports.run     = (client, message, args) => {
   // --- Condition check from parseResult() for Kamihimes, Eidolons, Souls, Weapons, and Accessories
 
   let embed;
-  
+
   switch(true) {
 
     // --- Kamihimes

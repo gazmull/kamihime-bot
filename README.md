@@ -2,14 +2,26 @@
 
 A simple Kamihime Discord bot.
 
-* Displays datasheet infos from Kamihime, eidolons, souls and weapons.
+* Displays datasheet infos from Kamihime, eidolons, souls, weapons and accessories.
 * Displays countdowns related to game events.
-* An optional quiz game.
+* Support for User profile.
+* Play an optional quiz game (work in progress).
 
-### List of commands:
+*****
 
-**/kh [name]**  
-Displays information about the queried kamihime/soul/eidolon/weapon.
+## List of commands:
+
+**/kh [name] | /kh [name] [parameter] | /kh [parameter] [name]**  
+Displays info about a specific in-game character, weapon or accessory. Available Parameters:  
+
+* [-k], [--kamihime] Search by Kamihime
+* [-e], [--eidolon] Search by Eidolon
+* [-s], [--soul] Search by Soul
+* [-w], [--weapon] Search by Weapon
+* [-a], [--accessory] Search by Accessory
+
+**/kp | /kp [@username]**  
+Display your user profile, or search for a user profile.  
 
 **/latest**    
 Displays the 15 latest items downloaded from the wiki website.
@@ -36,11 +48,16 @@ Removes the countdown that matches the *NAME*.
 (Restricted to specific roles & servers)  
 Displays a message to help understanding *DATE* formatting.
 
-### Database Configuration:
+*****
 
-Create a new kamihime_bot mysql database, and execute the db.sql queries on it.
+## Database Configuration:
 
-### Configuration:
+Create a new 'kamihime_bot' mysql database.  
+Execute the queries from the db.sql file on it.
+
+*****
+
+## JSON Configuration:
 
 Copy "*config.sample.json*" to "*config.json*" and edit your configuration file:
 

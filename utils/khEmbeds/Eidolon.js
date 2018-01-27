@@ -57,8 +57,8 @@ exports.run = (message, config, khItems, khIdx) => {
       false
     );
 
-  if(!khItems[khIdx].link)
-    embed.addField('This page is incomplete: ','[Help us by contributing to wikia]('+ed_link+')',false);
+  //if(!khItems[khIdx].link)
+  //  embed.addField('This page is incomplete: ','[Help us by contributing to wikia]('+ed_link+')',false);
 
   if (khItems[khIdx].obtained)
     embed.addField('Obtained from:',khItems[khIdx].obtained,false);
