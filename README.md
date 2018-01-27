@@ -1,6 +1,7 @@
 # kamihime-bot
 
 A simple Kamihime Discord bot.
+
 * Displays datasheet infos from Kamihime, eidolons, souls and weapons.
 * Displays countdowns related to game events.
 * An optional quiz game.
@@ -82,16 +83,19 @@ Optionnaly used by the quiz game for image url encryption to avoid cheating.
 If activated, you will need to provide yourself a AES-256-CBC decryption feature on your image server (kamihime-grabber).  
 
 __mysql__:
+
 * __host:__  Database host.
 * __database:__  Database name.
 * __user:__  Database user.
 * __password:__  Databse password.
 
 __quiz__:  (optional quiz game / rename or remove this key to disable this feature)  
+
 * __channel_id:__  Channel Id which will be used for the quiz game. Leave it empty, if you don't want to install the game.
 * __thumbrootencryptedurl:__  To prevent cheating in the quiz game, image url can be obfuscated.
 
 __twitter:__  (optional twitter feeds / rename or remove this key to disable this feature)  
+
 * __consumer_key__: Twitter consumer_key
 * __consumer_secret__: Twitter consumer secret
 * __token_key__: Twitter token key
