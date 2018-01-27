@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drumicube/kamihime-bot.git"
+    "url": "https://git@bitbucket.org:drumicube/kamihime-bot.git"
   },
   "author": "drumicube",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/drumicube/kamihime-bot/issues"
+    "url": "https://bitbucket.org/drumicube/kamihime-bot/issues"
   },
-  "homepage": "https://github.com/drumicube/kamihime-bot#readme",
+  "homepage": "https://bitbucket.org/drumicube/kamihime-bot/overview",
   "dependencies": {
     "countdown": "^2.6.0",
     "discord.js": "^11.3.0",
