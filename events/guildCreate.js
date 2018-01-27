@@ -1,5 +1,6 @@
 // This event triggers when the bot joins a guild.
 
+const   config      = require("../config.json");
 const   logger      = require("../utils/logger").logger;
 
 exports.run = (client, guild) => {

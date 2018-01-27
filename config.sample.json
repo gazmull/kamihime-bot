@@ -2,7 +2,7 @@
 	"token"  : "your_discord_bot_token",
 	"prefix" : "/",
 	"wikidomain" : "https:\/\/kamihime-project.wikia.com",
-	"thumbrooturl" : "https:\/\/myhost.com/kimihime-images-folder",
+	"thumbrooturl" : "https:\/\/kamihime-grabber.host/datas-folder",
 	"eimojis" : {
 		"N" : "<:K_N:your_eijoji_token_id>",
 		"R" : "<:K_R:your_eijoji_token_id>",
@@ -21,9 +21,7 @@
 	"discord_code": "FAXErB2",
 	"countdown_authorized_users" : ["User_ID1", "User_ID2", "User_ID3"],
 	"kbaka_authorized_users" : ["User_ID1", "User_ID2", "User_ID3"],
-	"quiz_channel_id" : "Game_Channel_ID",
-	"quiz_thumbrootencryptedurl" : "https:\/\/myhost.com/obfuscated",
-	"quiz_secret" : "My32charPasswordAndInitVectorStr",
+	"secret_key" : "My32charPasswordAndInitVectorStr",
 	"mysql" : {
 		"host" : "localhost",
 		"database" : "database_name",
@@ -32,7 +30,7 @@
 	},
 	"quiz" : {
 		"channel_id" : "discord_channel_id_for_the_game",
-		"thumbrootencryptedurl" : "http:\/\/kamihime.xyz/kamihime-grabber/obfuscated"
+		"thumbrootencryptedurl" : "http:\/\/kamihime-grabber.host/obfuscated"
 	},
 	"twitter" : {
     "consumer_key" : "twitter_consumer_key",
