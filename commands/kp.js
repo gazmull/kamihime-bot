@@ -347,7 +347,7 @@ exports.run     = (client, message, args) => {
 
 function createNewProfile (user, message = null) {
 
-  db.execute('INSERT INTO `users` (`user_discord_id`, `user_username`, `user_discriminator`, `user_description`) VALUES(?,?,?,?)', [user.id, user.username, user.discriminator, defaultDescription],
+  db.execute('INSERT INTO `users` (`user_discord_id`, `user_username`, `user_discriminator`, `user_description`) VALUES(?,?,?,?) ON DUPLICATE KEY UPDATE `user_discord_id` = ?', [user.id, user.username, user.discriminator, defaultDescription, user.id],
     function(err, results, fields) {
       if (err) {
         logger.error(err);
