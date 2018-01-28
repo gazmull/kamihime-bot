@@ -32,3 +32,29 @@ ALTER TABLE `users`
 
 ALTER TABLE `users`
   ADD UNIQUE(`user_nutaku_id`);
+
+
+########################
+###### UNION TOOLS #####
+########################
+
+CREATE TABLE `unions` (
+  `union_id` int(11) NOT NULL,
+  `union_leader_discord_id` bigint(20) DEFAULT NULL,
+  `union_name` varchar(128) DEFAULT NULL,
+  `union_created_on` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `union_updated_on` DATETIME DEFAULT NULL,
+  `union_description` varchar(512) DEFAULT NULL,
+  `union_active` tinyint(1) DEFAULT '1'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `unions`
+  ADD PRIMARY KEY (`union_id`);
+
+ALTER TABLE `unions`
+  MODIFY `union_id` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `unions`
+  ADD UNIQUE(`union_leader_discord_id`);
+
+ALTER TABLE `users` ADD `user_union_id` INT(11) NULL DEFAULT NULL AFTER `user_discriminator`;
