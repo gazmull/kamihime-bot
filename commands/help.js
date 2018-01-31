@@ -76,7 +76,7 @@ exports.run = (client, message, args) => {
     helpText    += "#Union Display commands:\n\n";
 
     helpText    += config.prefix+"ku => display information about your union\n";
-    helpText    += config.prefix+"kh [@username] => display union info about a specific user\n";
+    helpText    += config.prefix+"ku [@username] => display union info about a specific user\n";
     helpText    += config.prefix+"ku [name] => display information about a specific union\n";
     helpText    += config.prefix+"ku list [pageNumber] => display the list of registered unions\n\n";
 

@@ -9,7 +9,7 @@ const   momentZones = require('moment-timezone/data/meta/latest.json');
 const   logger      = require("../utils/logger").logger;
 
 
-exports.run     = (client, message, args) => {
+exports.run     = async (client, message, args) => {
 
   // ============ process the 'set' command
 
@@ -69,25 +69,22 @@ exports.run     = (client, message, args) => {
     return;
   }
 
-
-
   // --- Get additionnal user info from database (or store the new profile if not available)
 
-  db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
-    function(err, rows, fields) {
-      if (err) {
-        logger.error(err);
-        message.channel.send("Error reading profile");
-        return;
-      }
-      if (rows.length) {
-        displayUnion(message, user, rows[0]['user_union_id']);
-      }
-      else {
-        message.channel.send("No profile found for this user in our database");
-      }
+  try {
+    const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id]);
+    if (rows.length) {
+      displayUnion(message, user, rows[0]['user_union_id']);
     }
-  );
+    else {
+      message.channel.send("No profile found for this user in our database");
+    }
+  } catch (err) {
+    logger.error(err);
+    message.channel.send("Error reading profile");
+    return;
+  }
+
 }
 
 
