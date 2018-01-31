@@ -58,6 +58,11 @@ exports.run     = (client, message, args) => {
   let khRequest = args.join(' ');
   let khParameter = null;
 
+  if(!khRequest) {
+    message.channel.send('For the search query to be effective, you must enter at least three characters.');
+    return;
+  }
+
   // --- RegExp for e.g. "-a" or "--accessory"
   const khRegExp = /(^| )\-{1,2}[a-zA-Z]+/g;
 
