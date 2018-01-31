@@ -22,7 +22,7 @@ exports.createProfile     = (user) => {
   createNewProfile(user);
 }
 
-exports.run     = (client, message, args) => {
+exports.run     = async (client, message, args) => {
 
   // ============ process the 'set' command
 
@@ -90,16 +90,13 @@ exports.run     = (client, message, args) => {
         return;
       }
 
-      db.execute('UPDATE `users` SET `user_country_code`=?, `user_timezone`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [countrycode, timezones[timezoneIdx], dateUpdated, message.author.id],
-        function(err, results, fields) {
-          if (err) {
-            logger.error(err);
-            message.author.send("Error updating country or timezone");
-            return;
-          }
-          message.author.send("Country set to '"+countrycode+"' and timezone set to '"+timezones[timezoneIdx]+"'");
-        }
-      );
+      try {
+        const [results, fields] = await db.execute('UPDATE `users` SET `user_country_code`=?, `user_timezone`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [countrycode, timezones[timezoneIdx], dateUpdated, message.author.id]);
+        message.author.send("Country set to '"+countrycode+"' and timezone set to '"+timezones[timezoneIdx]+"'");
+      } catch (err) {
+        logger.error(err);
+        message.author.send("Error updating country or timezone");
+      }
       return;
       break;
 
@@ -118,16 +115,13 @@ exports.run     = (client, message, args) => {
         return;
       }
 
-      db.execute('UPDATE `users` SET `user_description`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [description, dateUpdated, message.author.id],
-        function(err, results, fields) {
-          if (err) {
-            logger.error(err);
-            message.author.send("Error updating description");
-            return;
-          }
-          message.author.send("description profile set to: ```\n"+description+"```");
-        }
-      );
+      try {
+        const [results, fields] = await db.execute('UPDATE `users` SET `user_description`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [description, dateUpdated, message.author.id]);
+        message.author.send("description profile set to: ```\n"+description+"```");
+      } catch (err) {
+        logger.error(err);
+        message.author.send("Error updating description");
+      }
       return;
       break;
 
@@ -145,16 +139,14 @@ exports.run     = (client, message, args) => {
         message.author.send(args[2]+" is not a valid game Id.");
         return;
       }
-      db.execute('UPDATE `users` SET `user_nutaku_id`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [gid, dateUpdated, message.author.id],
-        function(err, results, fields) {
-          if (err) {
-            logger.error(err);
-            message.author.send("Error updating Nutaku game Id: "+gid);
-            return;
-          }
-          message.author.send("Nutaku game Id set to: "+gid);
-        }
-      );
+
+      try {
+        const [results, fields] = await db.execute('UPDATE `users` SET `user_nutaku_id`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [gid, dateUpdated, message.author.id]);
+        message.author.send("Nutaku game Id set to: "+gid);
+      } catch (err) {
+        logger.error(err);
+        message.author.send("Error updating Nutaku game Id: "+gid);
+      }
       return;
       break;
 
@@ -171,16 +163,14 @@ exports.run     = (client, message, args) => {
         message.author.send(args[2]+" is not a valid level.");
         return;
       }
-      db.execute('UPDATE `users` SET `user_level`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [level, dateUpdated, message.author.id],
-        function(err, results, fields) {
-          if (err) {
-            logger.error(err);
-            message.author.send("Error updating game level");
-            return;
-          }
-          message.author.send("Game level set to: "+level);
-        }
-      );
+
+      try {
+        const [results, fields] = await db.execute('UPDATE `users` SET `user_level`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [level, dateUpdated, message.author.id]);
+        message.author.send("Game level set to: "+level);
+      } catch (err) {
+        logger.error(err);
+        message.author.send("Error updating game level");
+      }
       return;
       break;
 
@@ -194,16 +184,13 @@ exports.run     = (client, message, args) => {
       }
       const lang = args.join(" ").slice(args[0].length+args[1].length+2);
 
-      db.execute('UPDATE `users` SET `user_lang`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [lang, dateUpdated, message.author.id],
-        function(err, results, fields) {
-          if (err) {
-            logger.error(err);
-            message.author.send("Error updating Language");
-            return;
-          }
-          message.author.send("Language set to: "+lang);
-        }
-      );
+      try {
+        const [results, fields] = await db.execute('UPDATE `users` SET `user_lang`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [lang, dateUpdated, message.author.id]);
+        message.author.send("Language set to: "+lang);
+      } catch (err) {
+        logger.error(err);
+        message.author.send("Error updating Language");
+      }
       return;
       break;
 
@@ -234,24 +221,19 @@ exports.run     = (client, message, args) => {
         }
         const waifuLink      = config.wikidomain+khItems[0].link;
 
-        db.execute('UPDATE `users` SET `user_waifu`=?, `user_waifu_link`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [foundWaifu, waifuLink, dateUpdated, message.author.id],
-          function(err, results, fields) {
-            if (err) {
-              logger.error(err);
-              message.author.send("Error updating your favorite character");
-              return;
-            }
-            message.author.send("Favorite character set to: '"+foundWaifu+"'");
-          }
-        );
+        try {
+          const [results, fields] = await db.execute('UPDATE `users` SET `user_waifu`=?, `user_waifu_link`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [foundWaifu, waifuLink, dateUpdated, message.author.id]);
+          message.author.send("Favorite character set to: '"+foundWaifu+"'");
+        } catch (err) {
+          logger.error(err);
+          message.author.send("Error updating your favorite character");
+        }
         return;
       }
       else {
         message.author.send("No character matches your request '"+waifu+"'");
         return;
       }
-
-
       break;
 
 
@@ -271,7 +253,7 @@ exports.run     = (client, message, args) => {
   }
 
   // =======================================================================================
-  // ============ No special command : fallling back to the default search & display profile
+  // ============ No special command : fallback to the default search & display profile
 
   let userSearch    = null;
   let searchId      = null;
@@ -326,42 +308,37 @@ exports.run     = (client, message, args) => {
 
   // --- Get additionnal user info from database (or store the new profile if not available)
 
-  db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
-    function(err, rows, fields) {
-      if (err) {
-        logger.error(err);
-        message.channel.send("Error reading profile");
-        return;
-      }
-      if (rows.length) {
-        displayprofile(message, user, rows[0]);
-      }
-      else {
-        createNewProfile(user, message);
-      }
+  try {
+    const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id]);
+    if (rows.length) {
+      displayprofile(message, user, rows[0]);
     }
-  );
+    else {
+      createNewProfile(user, message);
+    }
+  } catch (err) {
+    logger.error(err);
+    message.channel.send("Error reading profile");
+    return;
+  }
 }
 
 // ==================== Create a new profile ============
 
-function createNewProfile (user, message = null) {
+async function createNewProfile (user, message = null) {
 
-  db.execute('INSERT INTO `users` (`user_discord_id`, `user_username`, `user_discriminator`, `user_description`) VALUES(?,?,?,?) ON DUPLICATE KEY UPDATE `user_discord_id` = ?', [user.id, user.username, user.discriminator, defaultDescription, user.id],
-    function(err, results, fields) {
-      if (err) {
-        logger.error(err);
-        if (message) {
-          message.channel.send("Error creating profile");
-        }
-        return;
-      }
-      logger.info("New profile created: "+user.username+" - id: "+user.id);
-      if (message) {
-        displayprofile(message, user);
-      }
+  try {
+    const [results, fields] = await db.execute('INSERT INTO `users` (`user_discord_id`, `user_username`, `user_discriminator`, `user_description`) VALUES(?,?,?,?) ON DUPLICATE KEY UPDATE `user_discord_id` = ?', [user.id, user.username, user.discriminator, defaultDescription, user.id]);
+    logger.info("New profile created: "+user.username+" - id: "+user.id);
+    if (message) {
+      displayprofile(message, user);
     }
-  );
+  } catch (err) {
+    logger.error(err);
+    if (message) {
+      message.channel.send("Error creating profile");
+    }
+  }
 }
 
 // ==================== Get Timezones by countryCode ============
@@ -376,30 +353,25 @@ function getCountryZones(countrycode) {
 
 // ==================== Display a Formatted profile ============
 
- function displayprofile(message, user, dbProfileInfos=null) {
+ async function displayprofile(message, user, dbProfileInfos=null) {
 
   const unionName     = "UnionName PlaceHolder";
   const unionRole     = "coming soon"
   const unionInvite   = "https://discord.gg/QGUhtaK";
 
   if (dbProfileInfos == null) {
-    db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
-      function(err, rows, fields) {
-        if (err) {
-          logger.error(err);
-          message.channel.send("Error reading profile");
-          return;
-        }
-        if (rows.length) {
-          displayprofile(message, user, rows[0]);
-          return;
-        }
-        else {
-          message.channel.send("Error no profile found for display.");
-          return;
-        }
+    try {
+      const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id]);
+      if (rows.length) {
+        displayprofile(message, user, rows[0]);
       }
-    );
+      else {
+        message.channel.send("Error no profile found for display.");
+      }
+    } catch (err) {
+      logger.error(err);
+      message.channel.send("Error reading profile");
+    }
     return;
   }
 

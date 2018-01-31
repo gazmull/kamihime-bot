@@ -6,7 +6,7 @@ const   db          = require("../utils/dbconfig").pool;
 const   moment      = require("moment-timezone");
 const   logger      = require("../utils/logger").logger;
 
-exports.run     = (client, message, args) => {
+exports.run     = async (client, message, args) => {
 
   let userSearch    = null;
   let searchId      = null;
@@ -50,73 +50,70 @@ exports.run     = (client, message, args) => {
 
   const dateNow = moment().format("YYYY-MM-DD HH:mm:ss");
 
-  db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [message.author.id],
-    function(err, rows, fields) {
-      if (err) {
-        logger.error(err);
-        message.channel.send("Error reading your profile");
-        return;
+  try {
+    const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [message.author.id]);
+    if (rows.length) {
+
+      // Check last kudos data from the sender (24 hours limit)
+      if(rows[0]['user_last_given_rep']) {
+        const lastKudosDate = moment(rows[0]['user_last_given_rep']);
+        const deltaDate = moment.duration(moment().diff(lastKudosDate));
+        const minutesDelta = deltaDate.asMinutes();
+        if (minutesDelta<(24*60)) {
+          message.channel.send("Sending kudos is allowed once every day. You already sent one on "+moment(rows[0]['user_last_given_rep']).format("YYYY-MM-DD HH:mm:ss"));
+          return;
+        }
       }
+    }
+    else {
+      message.channel.send("Error reading your profile");
+      return;
+    }
+
+    // Load the targetted user
+
+    try {
+      const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id]);
 
       if (rows.length) {
 
-        // Check last kudos data from the sender (24 hours limit)
-        if(rows[0]['user_last_given_rep']) {
-          const lastKudosDate = moment(rows[0]['user_last_given_rep']);
-          const deltaDate = moment.duration(moment().diff(lastKudosDate));
-          const minutesDelta = deltaDate.asMinutes();
-          if (minutesDelta<(24*60)) {
-            message.channel.send("Sending kudos is allowed once every day. You already sent one on "+moment(rows[0]['user_last_given_rep']).format("YYYY-MM-DD HH:mm:ss"));
+        // Add one kudos to the targetted user
+        let kudos = rows[0]['user_rep_point'];
+        kudos++;
+
+        try {
+          const [rows, fields] = await db.execute('UPDATE `users` SET `user_rep_point`=? WHERE `user_discord_id`=?', [kudos, user.id]);
+
+          // Update Last kudos date for the sender
+          try {
+            const [results, fields] = await db.execute('UPDATE `users` SET `user_last_given_rep`=? WHERE `user_discord_id`=?', [dateNow, message.author.id]);
+            message.channel.send("One kudos sent to "+userSearch)
+          } catch (err) {
+            logger.error(err);
+            message.channel.send("Error updating kudos");
             return;
           }
+        } catch (err) {
+          logger.error(err);
+          message.channel.send("Error updating user kudos");
+          return;
         }
-      }
-      else {
-        message.channel.send("Error reading your profile");
         return;
       }
+      else {
+        message.channel.send("Sorry, no profile found for '"+userSearch+"' on our database.");
+      }
 
-      // Load the targetted user
-
-      db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id],
-        function(err, rows, fields) {
-          if (err) {
-            logger.error(err);
-            message.channel.send("Error reading user profile");
-            return;
-          }
-          if (rows.length) {
-            // Add one kudos to the targetted user
-            let kudos = rows[0]['user_rep_point'];
-            kudos++;
-            db.execute('UPDATE `users` SET `user_rep_point`=? WHERE `user_discord_id`=?', [kudos, user.id],
-              function(err, results, fields) {
-                if (err) {
-                  logger.error(err);
-                  message.channel.send("Error updating user kudos");
-                  return;
-                }
-                // Update Last kudos date for the sender
-                db.execute('UPDATE `users` SET `user_last_given_rep`=? WHERE `user_discord_id`=?', [dateNow, message.author.id],
-                  function(err, results, fields) {
-                    if (err) {
-                      logger.error(err);
-                      message.channel.send("Error updating kudos");
-                      return;
-                    }
-                    message.channel.send("One kudos sent to "+userSearch);
-                  }
-                );
-              }
-            );
-            return;
-          }
-          else {
-            message.channel.send("Sorry, no profile found for '"+userSearch+"' on our database.");
-          }
-        }
-      );
+    } catch (err) {
+      logger.error(err);
+      message.channel.send("Error reading user profile");
+      return;
     }
-  );
+
+  } catch (err) {
+    logger.error(err);
+    message.channel.send("Error reading your profile");
+    return;
+  }
 
 }
