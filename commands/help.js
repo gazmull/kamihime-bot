@@ -75,13 +75,13 @@ exports.run = (client, message, args) => {
     helpText    += "*```md\n";
     helpText    += "#Union Display commands:\n\n";
 
-    helpText    += config.prefix+"ku => display information about your union\n";
-    helpText    += config.prefix+"ku [@username] => display union info about a specific user\n";
-    helpText    += config.prefix+"ku [name] => display information about a specific union\n";
-    helpText    += config.prefix+"ku list [pageNumber] => display the list of registered unions\n\n";
+    helpText    += config.prefix+"ku => display union information about the current Discord server\n";
+    helpText    += config.prefix+"ku [@username] => display union info about a specific user or yourself\n";
+    helpText    += config.prefix+"ku [union name] => display information about a specific union\n";
+    helpText    += config.prefix+"ku list [pageNumber] => display the list of registered unions\n";
+    helpText    += config.prefix+"ku new => (temporary) Register your union on Discord and assign the Discord owner as leader of this union\n\n";
 
     helpText    += "#Command restricted to Discord server owner\n\n";
-    helpText    += config.prefix+"ku new [name] => register your union on Discord and affect you as Leader of this union\n";
     helpText    += config.prefix+"ku role subleader [discordrolename] => all discord members with the role [discordrolename] will be affected to your union as SubLeaders\n";
     helpText    += config.prefix+"ku role officer [discordrolename] => all discord members with the role [discordrolename] will be affected to your union as Officers\n";
     helpText    += config.prefix+"ku role member [discordrolename] => all discord members with the role [discordrolename] will be affected to your union as Members\n\n";
@@ -95,7 +95,7 @@ exports.run = (client, message, args) => {
     helpText    += config.prefix+"ku set recruitdesc [text] => Set Text for your recruitment campaign (the text is displayed only if recruitment is on)\n";
     helpText    += config.prefix+"ku set timezone => Set favorite Timezone for gathering\n";
     helpText    += config.prefix+"ku set discordinvit [link] => link to your discord server\n";
-    helpText    += config.prefix+"ku set private [on/off] => Exclude the union from the public union list & recruitment (default off)\n\n";
+    helpText    += config.prefix+"ku set private [on/off] => Include/Exclude the union from the public union list & public recruitment (default off)\n\n";
 
     helpText    += "Once roles are configured, the bot will automatically update the union Memberlist regarding discord member status.\n";
     helpText    += "The profile field 'UnionName PlaceHolder [coming soon]' will also be replaced by your Union name and role (subleader/leader)\n\n";
@@ -121,7 +121,7 @@ exports.run = (client, message, args) => {
 
     helpText    += "```css\n";
     helpText    += "#Bot-command-list:\n\n";
-    helpText    += "Type '"+config.prefix+"help' for this general help message or '"+config.prefix+"help [command]' to get more info on a specific command. ( Example: "+config.prefix+"help kh )\n\n";
+    helpText    += "Type '"+config.prefix+"help' for this general help message and '"+config.prefix+"help [command]' to get more info on a specific command. ( Example: "+config.prefix+"help kh )\n\n";
     helpText    += "[kh] - Displays info about a specific in-game character, weapon or accessory.\n";
     helpText    += "[countdown] - Displays countdowns related to in-game events.\n";
     helpText    += "[latest] - Displays the 15 latest objects downloaded from the wiki website.\n";

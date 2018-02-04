@@ -42,9 +42,9 @@ CREATE TABLE `unions` (
   `union_id` int(11) NOT NULL,
   `union_discord_guild_id` bigint(20) DEFAULT NULL,
   `union_discord_guild_name` varchar(255) DEFAULT NULL,
-  `union_discord_leader_id` bigint(20) DEFAULT NULL,
+  `union_discord_owner_id` bigint(20) DEFAULT NULL,
   `union_discord_twitter_channel_id` bigint(20) DEFAULT NULL,
-  `union_name` varchar(128) DEFAULT NULL,
+  `union_name` varchar(255) DEFAULT NULL,
   `union_created_on` DATETIME DEFAULT NULL,
   `union_updated_on` DATETIME DEFAULT NULL,
   `union_description` varchar(512) DEFAULT NULL,
@@ -60,4 +60,4 @@ ALTER TABLE `unions`
 ALTER TABLE `unions`
   ADD UNIQUE(`union_discord_guild_id`);
 
-ALTER TABLE `users` ADD `user_union_id` INT(11) NULL DEFAULT NULL AFTER `user_discriminator`;
+ALTER TABLE `users` ADD `user_discord_union_id` bigint(20) DEFAULT NULL AFTER `user_discriminator`;

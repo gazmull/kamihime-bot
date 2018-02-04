@@ -9,6 +9,11 @@ const   momentZones = require('moment-timezone/data/meta/latest.json');
 const   logger      = require("../utils/logger").logger;
 
 
+exports.createUnion     = (guild) => {
+  createNewUnion(guild);
+}
+
+
 exports.run     = async (client, message, args) => {
 
   // ============ process the 'set' command
@@ -18,7 +23,7 @@ exports.run     = async (client, message, args) => {
     return;
   }
   if (args[0]=="new") {
-    unionNewCommand(client, message, args);
+    createNewUnion(message.guild, message);
     return;
   }
   if (args[0]=="role") {
@@ -38,8 +43,8 @@ exports.run     = async (client, message, args) => {
 
   if (args.length==0){
     // no query: get user union
-    userSearch    = message.author.username;
-    searchId      = message.author.id;
+    userSearch    = message.guild.name;
+    searchId      = message.guild.ownerID;
   }
   else {
     userSearch    = args.join(" ");
@@ -74,7 +79,18 @@ exports.run     = async (client, message, args) => {
   try {
     const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id]);
     if (rows.length) {
-      displayUnion(message, user, rows[0]['user_union_id']);
+      try {
+        const [urows, ufields] = await db.execute('SELECT * FROM `unions` WHERE `union_discord_guild_id` = ?', [rows[0]['user_discord_union_id']]);
+        if (urows.length) {
+          displayUnion(message, urows[0]);
+        }
+        else {
+          message.channel.send("Error no union found for "+userSearch);
+        }
+      } catch (err) {
+        logger.error(err);
+        message.channel.send("Error reading union");
+      }
     }
     else {
       message.channel.send("No profile found for this user in our database");
@@ -192,31 +208,76 @@ function unionRoleCommand(client, message, args) {
     break;
   }
 
-
 }
-
-// ==================== Union New Commands ============
-
-function unionNewCommand(client, message, args) {
-
-  const dateCreated = moment().format("YYYY-MM-DD HH:mm:ss");
-
-  if (!args[1]) {
-    message.author.send("No name given to register your union. Please use '"+config.prefix+"help ku' for more infos.");
-  }
-
-}
-
 
 // ==================== Display a Formatted Union ============
 
- function displayUnion(message, user, unionId) {
+ function displayUnion(message, union) {
 
-  if (!unionId) {
+  if (!union) {
     message.channel.send("No union found, or no union for this user.");
     return;
   }
 
-  message.channel.send("UnionId: "+unionId);
+  message.channel.send("UnionId: "+union['union_discord_guild_id']+"\nUnionName: "+union['union_name']+ "\nUnion OwnerId: "+union['union_discord_owner_id'] );
+
+}
+
+
+// ==================== Create a new Union ============
+
+async function createNewUnion (guild, message = null) {
+
+  const dateCreated = moment().format("YYYY-MM-DD HH:mm:ss");
+
+  try {
+    const [rows, fields] = await db.execute('SELECT * FROM `unions` WHERE `union_discord_guild_id` = ?', [guild.id]);
+    if (rows.length) {
+      if (message) {
+        message.channel.send("Union Already registered");
+      }
+    }
+    else {
+      try {
+        const [results, fields] = await db.execute('INSERT INTO `unions` (`union_discord_guild_id`, `union_discord_guild_name`, `union_discord_owner_id`, `union_name`, `union_created_on`,`union_active`) VALUES(?,?,?,?,?,1) ON DUPLICATE KEY UPDATE `union_discord_guild_id` = ?', [guild.id, guild.name, guild.ownerID, guild.name, dateCreated, guild.id]);
+        logger.info("New union created: "+guild.name+" - id: "+guild.id);
+
+        try {
+          const [results, fields] = await db.execute('UPDATE `users` SET `user_discord_union_id`=? WHERE `user_discord_id`=?', [guild.id, guild.ownerID]);
+          logger.info("union owner updated: "+guild.name+" - userId: "+guild.ownerID);
+        } catch (err) {
+          logger.error(err);
+          if (message) {
+            message.channel.send("Enable to update OwnerId for this union.");
+            return;
+          }
+        }
+
+        if (message) {
+          try {
+            const [rows, fields] = await db.execute('SELECT * FROM `unions` WHERE `union_discord_guild_id` = ?', [guild.id]);
+            if (rows.length) {
+              displayUnion(message, rows[0]);
+            }
+            else {
+              message.channel.send("Error no union found.");
+            }
+          } catch (err) {
+            logger.error(err);
+            message.channel.send("Error reading union");
+          }
+        }
+      } catch (err) {
+        logger.error(err);
+        if (message) {
+          message.channel.send("Error creating Union");
+        }
+      }
+    }
+  } catch (err) {
+    logger.error(err);
+    message.channel.send("Error reading union");
+    return;
+  }
 
 }

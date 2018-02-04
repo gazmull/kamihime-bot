@@ -10,7 +10,9 @@ const pool = mysql.createPool({
   host     : host ? host : null,
   user     : user ? user : null,
   password : password ? password : null,
-  database : database ? database : null
+  database : database ? database : null,
+  supportBigNumbers: true, 
+  bigNumberStrings: true
 });
 
 exports.pool = pool;
