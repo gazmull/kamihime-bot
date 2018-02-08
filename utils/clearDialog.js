@@ -7,7 +7,8 @@ module.exports = async (message, dialog) => {
       if(!message.guild) return;
       if(
           ( !message.channel.permissionsFor(message.client.user).has('MANAGE_MESSAGES') ||
-            !message.channel.permissionsFor(message.client.user).has('ADD_REACTIONS') )
+            !message.channel.permissionsFor(message.client.user).has('ADD_REACTIONS') ||
+            !message.channel.permissionsFor(message.client.user).has('READ_MESSAGE_HISTORY') )
         ) return;
       await dialog.react('🗑');
       const toDelete = await dialog.awaitReactions((r, u) =>
