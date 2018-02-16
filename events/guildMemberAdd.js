@@ -10,8 +10,6 @@ exports.run = async (client, member) => {
   let guild = member.guild;
   logger.info(`New member joined: ${member.user}} `);
 
-  const dateUpdated = moment().format("YYYY-MM-DD HH:mm:ss");
-
   try {
     const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [member.user.id]);
     if (!rows.length) {

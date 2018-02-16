@@ -64,8 +64,8 @@ exports.run     = async (client, message, args) => {
       if (timezones.length>1) {
         if (!timezoneIdx) {
           let timeZonesMessage = "There is more than one timezone available for your country, please select the desired timezone from the list below using the command:\n";
-          timeZonesMessage    += "/profile set country "+countrycode+" [timeZoneNumber] ";
-          timeZonesMessage    += "( example: /profile set country "+countrycode+" 1 )\n\n";
+          timeZonesMessage    += "/kp set country "+countrycode+" [timeZoneNumber] ";
+          timeZonesMessage    += "( example: /kp set country "+countrycode+" 1 )\n\n";
           timeZonesList       = "";
           for (i=0;i<timezones.length;i++) {
             timeZonesList  +=(i+1)+" - "+timezones[i]+"\n";

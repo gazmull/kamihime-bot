@@ -54,12 +54,14 @@ String.prototype.toTitleCase = function () {
 
 exports.run     = (client, message, args) => {
 
-  if( !message.channel.permissionsFor(message.client.user).has('SEND_MESSAGES') ) {
-    return;
-  }
-  if( !message.channel.permissionsFor(message.client.user).has('EMBED_LINKS') ) {
-    message.channel.send("'Embed Links' permission had been deactivated for me in this channel, please update my permissions to allow a response.");
-    return;
+   if(message.guild) {
+    if( !message.channel.permissionsFor(message.client.user).has('SEND_MESSAGES') ) {
+      return;
+    }
+    if( !message.channel.permissionsFor(message.client.user).has('EMBED_LINKS') ) {
+      message.channel.send("'Embed Links' permission had been deactivated for me in this channel, please update my permissions to allow a response.");
+      return;
+    }
   }
 
   if(client.awaitingUsers.get(message.author.id)) return message.channel.send(`You have an existing selection ongoing. Please say \`cancel\` or \`0\` if you wish to issue a new ${config.prefix}kh command.`);
