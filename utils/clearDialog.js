@@ -17,7 +17,7 @@ module.exports = async (message, dialog) => {
           await dialog.delete();
   }
   catch (c) {
-      dialog.clearReactions();
+      dialog.clearReactions().catch(() => {});
       typeof c.stack !== 'undefined' ? message.client.logger.error(c) : null;
   }
 };
