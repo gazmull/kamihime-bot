@@ -22,5 +22,5 @@ exports.run = (message, config, khItems, khIdx) => {
     .setThumbnail(ac_thumbnailurl)
     .addField('Statistics:', ':crossed_swords: ATK: ' + ac_attackMin + '-' + ac_attackMax + ' :green_heart: HP: ' + ac_HPMin + '-' + ac_HPMax + ' :muscle: PWR: ' + ac_totalPowerMin + '-' + ac_totalPowerMax, false);
 
-  message.channel.send({embed});
+    return embed;
 }

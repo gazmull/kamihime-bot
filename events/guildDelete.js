@@ -1,6 +1,7 @@
 // this event triggers when the bot is removed from a guild.
 
-const logger  = require("../utils/logger").logger;
+const   config    = require("../config.json");
+const   logger    = require("../utils/logger").logger;
 
 exports.run = (client, guild) => {
   logger.info(`I have been removed from: ${guild.name} (id: ${guild.id})`);

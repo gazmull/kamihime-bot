@@ -96,5 +96,5 @@ exports.run = (message, config, khItems, khIdx) => {
   if (khItems[khIdx].assist2_name)
     embed.addField(':white_check_mark: '+khItems[khIdx].assist2_name,khItems[khIdx].assist2_desc,false)
 
-  message.channel.send({embed});
+  return embed;
 }

@@ -1,25 +1,28 @@
-// The usual help command
-// Display a Welcome text and all the avaialable commands
+// Provide a link for bot easy install on other Discord server
+// Permissions: 3072 (Read messages / Send messages) see: https://discordapi.com/permissions.html
 
-const Discord = require("discord.js");
-const config  = require("../config.json");
-
+const Discord     = require("discord.js");
+const config      = require("../config.json");
+const permissions = 3072;
 
 exports.run = (client, message, args) => {
-  const query = args.join(" ");
 
-  var thumb = config.thumbrooturl+"\/images_bot\/BotPortrait.png";
+  const botUser = client.user;
+
+  let avatarURL = botUser.avatarURL;
+  if ( avatarURL == null) {
+    avatarURL = config.thumbrooturl+"\/images_bot\/default_avatar.png";
+  }
 
   const embed = new Discord.RichEmbed()
-  .setTitle("Click here to add the kamihime bot to your own server")
-  .setAuthor("Kamihime Bot:")
-  .setThumbnail(thumb)
+  .setTitle("Click here to add the "+botUser.username+" bot to your own server")
+  .setAuthor(botUser.username+" Bot:")
+  .setThumbnail(avatarURL)
   .setColor("#00AE86");
 
-  var description = "Please, ensure you have the 'Manage server' role on your discord server to allow installation.\n";
+  const description = "Please, ensure you have the 'Manage server' role on your discord server to allow installation.\n";
   embed.setDescription(description);
-
-  embed.setURL("https:\/\/discordapp.com/oauth2/authorize?client_id=371779857694326785&scope=bot&permissions=3072");
+  embed.setURL("https:\/\/discordapp.com/oauth2/authorize?client_id="+client.user.id+"&scope=bot&permissions="+permissions);
   message.channel.send({embed});
 
 }

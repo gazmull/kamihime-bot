@@ -6,22 +6,19 @@ const   moment      = require("moment-timezone");
 const   kp          = require("../commands/kp");
 const   logger      = require("../utils/logger").logger;
 
-exports.run = (client, member) => {
+exports.run = async (client, member) => {
   let guild = member.guild;
   logger.info(`New member joined: ${member.user}} `);
 
   const dateUpdated = moment().format("YYYY-MM-DD HH:mm:ss");
 
-  db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [member.user.id],
-    function(err, rows, fields) {
-      if (err) {
-        logger.error(err);
-        return;
-      }
-      if (!rows.length) {
-        kp.createProfile(member.user);
-      }
+  try {
+    const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [member.user.id]);
+    if (!rows.length) {
+      kp.createProfile(member.user);
     }
-  );
+  } catch (err) {
+    logger.error(err);
+  }
 
 }

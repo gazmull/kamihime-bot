@@ -3,8 +3,8 @@ const {
   user,
   password,
   database
-}	            = require("../config.json").mysql;
-const mysql 	= require('mysql2');
+}             = require("../config.json").mysql;
+const mysql 	= require('mysql2/promise');
 
 const pool = mysql.createPool({
   host     : host ? host : null,

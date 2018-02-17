@@ -46,8 +46,8 @@ exports.run = (message, config, khItems, khIdx) => {
     }
   }
 
-  if(! khItems[khIdx].skill_type)
-    embed.addField('This page is incomplete: ','[Help us by contributing to wikia]('+ed_link+')',false);
+  //if(! khItems[khIdx].skill_type)
+  //  embed.addField('This page is incomplete: ','[Help us by contributing to wikia]('+ed_link+')',false);
 
   if (wp_imageurl)
     embed.setImage(wp_imageurl);
@@ -55,5 +55,5 @@ exports.run = (message, config, khItems, khIdx) => {
   if (khItems[khIdx].description)
     embed.setDescription('*'+khItems[khIdx].description+'*')
 
-  message.channel.send({embed});
+  return embed;
 }

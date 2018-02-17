@@ -140,7 +140,7 @@ exports.run = (client, message, args) => {
         embed.addField(name, `in ` + Countdown(date, undefined, Countdown_units).toString());
       }
 
-      message.channel.send({embed});
+      message.channel.send({embed}).then(sentMessage => client.clearDialog(message, sentMessage));
     });
 
   } else if (args.length > 0) {
@@ -193,7 +193,7 @@ exports.run = (client, message, args) => {
       .addField('Example', Moment.utc().format('Y-MM-DDTHH:mm') + ` would create a countdown to now.`)
       .addField('Note', `Date has to be provided in UTC. https://time.is/UTC`);
 
-      message.channel.send({embed});
+      message.channel.send({embed}).then(sentMessage => client.clearDialog(message, sentMessage));
     }
   }
 }
