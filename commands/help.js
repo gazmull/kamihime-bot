@@ -89,16 +89,16 @@ exports.run = (client, message, args) => {
     helpText    += config.prefix+"ku role officer [discordrolename] => all discord members with the role [discordrolename] will be affected to your union as Officers\n";
     helpText    += config.prefix+"ku role member [discordrolename] => all discord members with the role [discordrolename] will be affected to your union as Members\n\n";
 
-    helpText    += "#Command restricted to users having the role offcier/subleader/leader\n\n";
+    helpText    += "#Command restricted to users having the role officer/subleader/leader\n\n";
     helpText    += config.prefix+"ku set name [text] => Update your union name\n";
     helpText    += config.prefix+"ku set nbmembers [number] => Set the real number of players in your Union (useful to count non discord union players)\n";
     helpText    += config.prefix+"ku set desc [text] => Set description text for your union\n";
     helpText    += config.prefix+"ku set bursttime => Set Union BurstTime\n";
-    helpText    += config.prefix+"ku set recruit [on/off] => Activate/Deactivate recruitment\n";
-    helpText    += config.prefix+"ku set recruitdesc [text] => Set Text for your recruitment campaign (the text is displayed only if recruitment is on)\n";
+    helpText    += config.prefix+"ku set recruit [on/off] => Activate/Deactivate recruitment (default off)\n";
+    helpText    += config.prefix+"ku set recruitdesc [text] => Set Text for your recruitment campaign (Displayed only if recruitment is on)\n";
     helpText    += config.prefix+"ku set timezone => Set favorite Timezone for gathering\n";
     helpText    += config.prefix+"ku set discordinvit [link] => link to your discord server\n";
-    helpText    += config.prefix+"ku set private [on/off] => Include/Exclude the union from the public union list & public recruitment (default off)\n\n";
+    helpText    += config.prefix+"ku set private [on/off] => Include/Exclude your server from the public union list (default off)\n\n";
 
     helpText    += "Once roles are configured, the bot will automatically update the union Memberlist regarding discord member status.\n";
     helpText    += "The profile field 'UnionName PlaceHolder [coming soon]' will also be replaced by your Union name and role (subleader/leader)\n\n";

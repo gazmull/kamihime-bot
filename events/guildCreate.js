@@ -5,10 +5,24 @@ const   logger      = require("../utils/logger").logger;
 const   db          = require("../utils/dbconfig").pool;
 const   moment      = require("moment-timezone");
 const   ku          = require("../commands/ku");
+const   kp          = require("../commands/kp");
 
 exports.run = async (client, guild) => {
   logger.info(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
   client.user.setActivity(`${client.guilds.size} servers | ${config.prefix}help`, { type: 'WATCHING' });
+
+  // Add the guild owner to the user database
+
+  try {
+    const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [guild.ownerID]);
+    if (!rows.length) {
+      kp.createProfile(guild.owner.user);
+    }
+  } catch (err) {
+    logger.error(err);
+  }
+
+  // Add the guild to the union database
 
   try {
     const [rows, fields] = await db.execute('SELECT * FROM `unions` WHERE `union_discord_guild_id` = ?', [guild.id]);
@@ -25,6 +39,5 @@ exports.run = async (client, guild) => {
   } catch (err) {
     logger.error(err);
   }
-
 
 }

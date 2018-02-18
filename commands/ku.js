@@ -5,6 +5,7 @@ const   config      = require("../config.json");
 const   db          = require("../utils/dbconfig").pool;
 const   moment      = require("moment-timezone");
 const   momentZones = require('moment-timezone/data/meta/latest.json');
+const   kp          = require("../commands/kp");
 
 const   logger      = require("../utils/logger").logger;
 
@@ -12,7 +13,6 @@ const   logger      = require("../utils/logger").logger;
 exports.createUnion     = (guild) => {
   createNewUnion(guild);
 }
-
 
 exports.run     = async (client, message, args) => {
 
@@ -297,6 +297,19 @@ async function createNewUnion (guild, message = null) {
       try {
         const [results, fields] = await db.execute('INSERT INTO `unions` (`union_discord_guild_id`, `union_discord_guild_name`, `union_discord_owner_id`, `union_name`, `union_created_on`,`union_active`) VALUES(?,?,?,?,?,1) ON DUPLICATE KEY UPDATE `union_discord_guild_id` = ?', [guild.id, guild.name, guild.ownerID, guild.name, dateCreated, guild.id]);
         logger.info("New union created: "+guild.name+" - id: "+guild.id);
+
+        // Add the guild owner to the user database if he was missing
+
+        try {
+          const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [guild.ownerID]);
+          if (!rows.length) {
+            kp.createProfile(guild.owner.user);
+          }
+        } catch (err) {
+          logger.error(err);
+        }
+
+        // Update owner with Leader status
 
         try {
           const [results, fields] = await db.execute('UPDATE `users` SET `user_discord_union_id`=?, `user_nutaku_role`=? WHERE `user_discord_id`=?', [guild.id, 'Leader', guild.ownerID]);
