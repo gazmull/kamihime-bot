@@ -13,10 +13,10 @@ exports.run = (message, config, khItems, khIdx) => {
   const ed_HPMax                    = khItems[khIdx].hp_max;
   const ed_totalPowerMin            = parseInt(ed_attackMin)+parseInt(ed_HPMin);
   const ed_totalPowerMax            = parseInt(ed_attackMax)+parseInt(ed_HPMax);
-  const ed_summonAttack             = ':a: Summon Attack - '+khItems[khIdx].summon_atk;
+  const ed_summonAttack             = ':a: '+khItems[khIdx].summon_atk;
   const ed_summonAttackEffect       = khItems[khIdx].summon_atk_des;
-  const ed_summonAttackCooldown     = khItems[khIdx].summon_cd +' turns';
-  const ed_eidolonsEffect           = ':regional_indicator_e: Eidolon Effect - '+khItems[khIdx].eidolon_effect;
+  const ed_summonAttackCooldown     = ':hourglass: '+khItems[khIdx].summon_cd +' turns';
+  const ed_eidolonsEffect           = ':regional_indicator_e: '+khItems[khIdx].eidolon_effect;
   const ed_eidolonEffectTier0Stars  = '\u2606 \u2606 \u2606 \u2606';
   const ed_eidolonEffectTier0Effect = khItems[khIdx].eidolon_effect_des_0;
   const ed_eidolonEffectTier1Stars  = '\u2605 \u2606 \u2606 \u2606';
@@ -30,21 +30,19 @@ exports.run = (message, config, khItems, khIdx) => {
   let ed_summonEffectDur            = khItems[khIdx].summon_effect_dur;
 
   if (ed_summonEffectDur)
-    ed_summonEffectDur = ' (Duration: '+ed_summonEffectDur+')';
+    ed_summonEffectDur = ' :battery: '+ed_summonEffectDur;
 
   const embed = new discord.RichEmbed()
-  .setTitle(config.eimojis[ed_rarity]+' '+config.eimojis[ed_element])
+  .setTitle(config.eimojis[ed_rarity]+' '+config.eimojis[ed_element]+' (Wiki page)')
   .setAuthor('Eidolon: '+ed_name, '')
   .setColor('#00AE86')
+  .setDescription('*'+khItems[khIdx].description+'*')
   .setThumbnail(ed_thumb)
   .setURL(ed_link)
   .addField('Statistics:', ':crossed_swords: ATK: ' + ed_attackMin + '-' + ed_attackMax + ' :green_heart: HP: ' + ed_HPMin + '-' + ed_HPMax + ' :muscle: PWR: ' + ed_totalPowerMin + '-' + ed_totalPowerMax, false);
 
-  if (khItems[khIdx].description)
-    embed.setDescription('*'+khItems[khIdx].description+'*')
-
   if (ed_summonAttack.length && ed_summonAttackEffect.length)
-    embed.addField(ed_summonAttack + ' (' + ed_summonAttackCooldown + ')', ed_summonAttackEffect+ed_summonEffectDur,false);
+    embed.addField(ed_summonAttack + ed_summonAttackCooldown + ed_summonEffectDur, ed_summonAttackEffect,false);
 
   if (ed_eidolonsEffect.length && khItems[khIdx].link)
     embed.addField(
@@ -56,9 +54,6 @@ exports.run = (message, config, khItems, khIdx) => {
       ed_eidolonEffectTier4Stars+' '+ed_eidolonEffectTier4Effect+'\n',
       false
     );
-
-  //if(!khItems[khIdx].link)
-  //  embed.addField('This page is incomplete: ','[Help us by contributing to wikia]('+ed_link+')',false);
 
   if (khItems[khIdx].obtained)
     embed.addField('Obtained from:',khItems[khIdx].obtained,false);
