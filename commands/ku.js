@@ -22,15 +22,14 @@ exports.run     = async (client, message, args) => {
     unionSetCommand(client, message, args);
     return;
   }
-  if (args[0]=="new") {
-    createNewUnion(message.guild, message);
+  if (args[0]=="register") {
+    unionRegisterCommand(client, message, args);
     return;
   }
   if (args[0]=="role") {
     unionRoleCommand(client, message, args);
     return;
   }
-
 
   // =======================================================================================
   // ============ No special command : fall back to the default search & display Unions
@@ -48,19 +47,35 @@ exports.run     = async (client, message, args) => {
   }
   else {
     userSearch    = args.join(" ");
+
+    // search union related to a username
     if (userSearch.startsWith('<@')) {
-      // search union related to a username
       searchId = userSearch.slice(2, -1);
       if (searchId.charAt(0) === "!") {
         searchId = searchId.substr(1);
       }
     }
-    else {
-      // search union by unionname or unionId
+
+    // search by union id
+    const unionId = parseInt(userSearch);
+    if (unionId) {
+      try {
+        const [urows, ufields] = await db.execute('SELECT * FROM `unions` WHERE `union_id` = ?', [unionId]);
+        if (urows.length) {
+          displayUnion(client, message, urows[0]);
+        }
+        else {
+          message.channel.send("Error no union found for #Id "+unionId);
+        }
+      } catch (err) {
+        logger.error(err);
+        message.channel.send("Error reading union");
+      }
+      return;
     }
   }
 
-  // --- Try to match a user (Own profile only in Direct message, Everything in Text channels using Mention/User ID/Exact Username/Exact User Tag)
+  // --- Try to match a user (Own profile only in Direct message, Other profile in Text channels only)
 
   if (message.channel.type=="dm") {
     // dm channel
@@ -70,11 +85,11 @@ exports.run     = async (client, message, args) => {
 
   user = client.users.get(searchId);
   if (!user) {
-    message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\nHave you tried: Mention/User ID/**Exact** Username or User Tag in your query?");
+    message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\n");
     return;
   }
 
-  // --- Get additionnal user info from database (or store the new profile if not available)
+  // --- Get union based on the user profile
 
   try {
     const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id]);
@@ -82,7 +97,7 @@ exports.run     = async (client, message, args) => {
       try {
         const [urows, ufields] = await db.execute('SELECT * FROM `unions` WHERE `union_discord_guild_id` = ?', [rows[0]['user_discord_union_id']]);
         if (urows.length) {
-          displayUnion(message, urows[0]);
+          displayUnion(client, message, urows[0]);
         }
         else {
           message.channel.send("Error no union found for "+userSearch);
@@ -106,7 +121,7 @@ exports.run     = async (client, message, args) => {
 
 // ==================== Union Set Commands ============
 
-function unionSetCommand(client, message, args) {
+async function unionSetCommand(client, message, args) {
 
   const dateUpdated = moment().format("YYYY-MM-DD HH:mm:ss");
 
@@ -157,11 +172,65 @@ function unionSetCommand(client, message, args) {
 
 }
 
+
+// ==================== Union Register Commands ============
+
+async function unionRegisterCommand(client, message, args) {
+
+  if (message.channel.type=="dm") {
+      return message.channel.send("Sorry, Register commands are related to a Discord server, it's not possible on direct message. You need to be on a text channel to use them.");
+  }
+  if (message.author.id!=361433266869501953) {
+      return message.channel.send("Sorry, for now register commands are restricted to userId 361433266869501953 only.");
+  }
+
+  switch (args[1]) {
+
+    // ------------ Register all server ----------
+
+    case "all":
+    const guildList = await client.guilds.array();
+    try {
+      for (const guild of guildList) {
+        if (await createNewUnion(guild, message)){
+          message.channel.send("New union created: "+guild.name+" - id: "+guild.id);
+        }
+      }
+    } catch (err) {
+      console.log("Could not create union " + guild.name);
+    }
+    return;
+    break;
+
+    // ------------ Default: Register the current Discord server only ----------
+
+    default:
+    if (args[1]) {
+      return message.channel.send("'"+args[1]+"' Unknown register union function. Please use '"+config.prefix+"help ku' for more infos.");
+    }
+    else {
+      if (await createNewUnion(message.guild, message)) {
+        const union = await getUnionById(message.guild.id);
+        if (union) {
+          displayUnion(client, message, union);
+        }
+        else {
+          message.channel.send("Error no union found.");
+        }
+      }
+    }
+    return;
+    break;
+  }
+
+}
+
+
 // ==================== Union Role Commands ============
 
-function unionRoleCommand(client, message, args) {
+async function unionRoleCommand(client, message, args) {
 
-  const dateUpdated = moment().format("YYYY-MM-DD HH:mm:ss");
+  return message.channel.send("Sorry, Role commands are not available yet.(wip)");
 
   if (message.channel.type!="dm") {
       message.channel.send("The response had been sent to you by direct message.");
@@ -210,20 +279,6 @@ function unionRoleCommand(client, message, args) {
 
 }
 
-// ==================== Display a Formatted Union ============
-
- function displayUnion(message, union) {
-
-  if (!union) {
-    message.channel.send("No union found, or no union for this user.");
-    return;
-  }
-
-  message.channel.send("UnionId: "+union['union_discord_guild_id']+"\nUnionName: "+union['union_name']+ "\nUnion OwnerId: "+union['union_discord_owner_id'] );
-
-}
-
-
 // ==================== Create a new Union ============
 
 async function createNewUnion (guild, message = null) {
@@ -234,8 +289,9 @@ async function createNewUnion (guild, message = null) {
     const [rows, fields] = await db.execute('SELECT * FROM `unions` WHERE `union_discord_guild_id` = ?', [guild.id]);
     if (rows.length) {
       if (message) {
-        message.channel.send("Union Already registered");
+        message.channel.send("Union Already registered: "+guild.name);
       }
+      return false;
     }
     else {
       try {
@@ -243,41 +299,69 @@ async function createNewUnion (guild, message = null) {
         logger.info("New union created: "+guild.name+" - id: "+guild.id);
 
         try {
-          const [results, fields] = await db.execute('UPDATE `users` SET `user_discord_union_id`=? WHERE `user_discord_id`=?', [guild.id, guild.ownerID]);
+          const [results, fields] = await db.execute('UPDATE `users` SET `user_discord_union_id`=?, `user_nutaku_role`=? WHERE `user_discord_id`=?', [guild.id, 'Leader', guild.ownerID]);
           logger.info("union owner updated: "+guild.name+" - userId: "+guild.ownerID);
         } catch (err) {
           logger.error(err);
           if (message) {
             message.channel.send("Enable to update OwnerId for this union.");
-            return;
+            return false;
           }
         }
+        return true;
 
-        if (message) {
-          try {
-            const [rows, fields] = await db.execute('SELECT * FROM `unions` WHERE `union_discord_guild_id` = ?', [guild.id]);
-            if (rows.length) {
-              displayUnion(message, rows[0]);
-            }
-            else {
-              message.channel.send("Error no union found.");
-            }
-          } catch (err) {
-            logger.error(err);
-            message.channel.send("Error reading union");
-          }
-        }
       } catch (err) {
         logger.error(err);
         if (message) {
           message.channel.send("Error creating Union");
+          return false;
         }
       }
     }
   } catch (err) {
     logger.error(err);
     message.channel.send("Error reading union");
+    return false;
+  }
+
+}
+
+// ==================== Get Union by Id ============
+
+async function getUnionById (guildId) {
+  try {
+    const [rows, fields] = await db.execute('SELECT * FROM `unions` WHERE `union_discord_guild_id` = ?', [guildId]);
+    if (rows.length) {
+      return rows[0];
+    }
+    else {
+      return null;
+    }
+  } catch (err) {
+    logger.error(err);
+  }
+}
+
+// ==================== Display a Formatted Union ============
+
+ function displayUnion(client, message, union) {
+
+  if (!union) {
+    message.channel.send("No union found, or no union for this user.");
     return;
   }
+
+  let avatarURL = null;
+  if ( avatarURL == null) {
+    avatarURL = config.thumbrooturl+"\/images_bot\/default_avatar.png";
+  }
+
+  const embed = new discord.RichEmbed()
+  embed.setAuthor(union['union_name']+ " (Id #"+union['union_id']+")");
+  embed.setTitle(":crown: "+client.users.get(union['union_discord_owner_id']).tag, "");
+  embed.setColor("#00AE86");
+  embed.setThumbnail(avatarURL);
+  embed.setDescription("```\nUnion description text```");
+  message.channel.send({embed}).then(sentMessage => message.client.clearDialog(message, sentMessage));
 
 }

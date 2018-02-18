@@ -77,16 +77,19 @@ exports.run = (client, message, args) => {
 
     helpText    += config.prefix+"ku => display union information about the current Discord server\n";
     helpText    += config.prefix+"ku [@username] => display union info about a specific user or yourself\n";
-    helpText    += config.prefix+"ku [union name] => display information about a specific union\n";
-    helpText    += config.prefix+"ku list [pageNumber] => display the list of registered unions\n";
-    helpText    += config.prefix+"ku new => (temporary) Register your union on Discord and assign the Discord owner as leader of this union\n\n";
+    helpText    += config.prefix+"ku [unionId] => display union info based on Id\n";
+    helpText    += config.prefix+"ku list [pageNumber] => display the list of registered unions\n\n";
+
+    helpText    += "#Command restricted to Bot owner\n\n";
+    helpText    += config.prefix+"ku register => Register the current Discord server and assign the Discord owner as leader of this union\n";
+    helpText    += config.prefix+"ku register all => Register all Discord servers and assign Discord owners as leader.\n\n";
 
     helpText    += "#Command restricted to Discord server owner\n\n";
     helpText    += config.prefix+"ku role subleader [discordrolename] => all discord members with the role [discordrolename] will be affected to your union as SubLeaders\n";
     helpText    += config.prefix+"ku role officer [discordrolename] => all discord members with the role [discordrolename] will be affected to your union as Officers\n";
     helpText    += config.prefix+"ku role member [discordrolename] => all discord members with the role [discordrolename] will be affected to your union as Members\n\n";
 
-    helpText    += "#Command restricted to users having the role subleader/leader]\n\n";
+    helpText    += "#Command restricted to users having the role offcier/subleader/leader\n\n";
     helpText    += config.prefix+"ku set name [text] => Update your union name\n";
     helpText    += config.prefix+"ku set nbmembers [number] => Set the real number of players in your Union (useful to count non discord union players)\n";
     helpText    += config.prefix+"ku set desc [text] => Set description text for your union\n";
