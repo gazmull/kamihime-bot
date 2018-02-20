@@ -54,7 +54,7 @@ String.prototype.toTitleCase = function () {
 
 exports.run     = (client, message, args) => {
 
-   if(message.guild) {
+  if(message.guild) {
     if( !message.channel.permissionsFor(message.client.user).has('SEND_MESSAGES') ) {
       return;
     }
@@ -116,15 +116,17 @@ exports.run     = (client, message, args) => {
 
   // --- Added condition where character names only has two characters
 
+  const khRequestEscaped = khRequest.replace(/[\(\)]/g, '\\$&');
+
   if (khParameter) {
-    if (!(shortNames.some( el => new RegExp(khRequest, 'i').test(el.name) && khParameter === el.objectType ) ||
+    if (!(shortNames.some( el => new RegExp(khRequestEscaped, 'i').test(el.name) && khParameter === el.objectType ) ||
         shortNames.some( el => el.name === khRequest.toTitleCase() && khParameter === el.objectType )) &&
         khRequest.length < 3)
       return message.channel.send('For the search query to be effective, you must enter at least three characters.');
   }
 
   else if (!khParameter) {
-    if (!(shortNames.some( el => new RegExp(`\${khRequest}`, 'i').test(el.name) ) ||
+    if (!(shortNames.some( el => new RegExp(khRequestEscaped, 'i').test(el.name) ) ||
         shortNames.some( el => el.name === khRequest.toTitleCase() )) &&
         khRequest.length < 3)
       return message.channel.send('For the search query to be effective, you must enter at least three characters.');
@@ -142,7 +144,7 @@ exports.run     = (client, message, args) => {
     return message.channel.send(`Query '${khRequest}'${khParameter ? ` with parameter '${khParameter}'` : ''} is not found.`);
 
   else if (khParameter) {
-    if (!(shortNames.some( el => new RegExp(khRequest, 'i').test(el.name) && khParameter === el.objectType ) ||
+    if (!(shortNames.some( el => new RegExp(khRequestEscaped, 'i').test(el.name) && khParameter === el.objectType ) ||
       shortNames.some( el => el.name === khRequest.toTitleCase() && khParameter === el.objectType )) &&
       parameterResults.length > 1) {
       message.channel.send(
@@ -159,7 +161,7 @@ exports.run     = (client, message, args) => {
   }
 
    else if (!khParameter) {
-    if (!(shortNames.some( el => new RegExp(khRequest, 'i').test(el.name) ) ||
+    if (!(shortNames.some( el => new RegExp(khRequestEscaped, 'i').test(el.name) ) ||
       shortNames.some( el => el.name === khRequest.toTitleCase() )) &&
       parameterResults.length > 1) {
       message.channel.send(
