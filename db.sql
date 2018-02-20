@@ -60,6 +60,5 @@ ALTER TABLE `unions`
 ALTER TABLE `unions`
   ADD UNIQUE(`union_discord_guild_id`);
 
-
 ALTER TABLE `users` ADD `user_discord_union_id` bigint(20) DEFAULT NULL AFTER `user_discriminator`;
 ALTER TABLE `users` ADD `user_nutaku_role` ENUM('None','Member','Officer','Subleader','Leader') NOT NULL DEFAULT 'None' AFTER `user_nutaku_id`;
