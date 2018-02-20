@@ -71,8 +71,8 @@ exports.run = (client, message, args) => {
       helpText += "```*\n";
       break;
 
-    case "ku":
-      /*helpText += "*```md\n";
+    /*case "ku":
+      helpText += "*```md\n";
       helpText += "#Union Display commands:\n\n";
 
       helpText += config.prefix + "ku => display union information about the current Discord server\n";
@@ -91,8 +91,8 @@ exports.run = (client, message, args) => {
       helpText += config.prefix + "ku set timezone => Set favorite Timezone for gathering\n";
       helpText += config.prefix + "ku set discordinvit [link] => link to your discord server\n";
       helpText += config.prefix + "ku set private [on/off] => Include/Exclude your server from the public union list (default off)\n\n";
-      helpText += "```*\n";*/
-      break;
+      helpText += "```*\n";
+      break;*/
 
     case "kudos":
       helpText += "*```md\n";
