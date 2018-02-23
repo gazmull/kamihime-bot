@@ -26,7 +26,7 @@ exports.run = (message, config, khItems, khIdx) => {
   .addField('Statistics:', ':crossed_swords: ATK: ' + kh_attackMin + '-' + kh_attackMax + ' :green_heart: HP: ' + kh_HPMin + '-' + kh_HPMax + ' :muscle: PWR: ' + kh_totalPowerMin + '-' + kh_totalPowerMax, false);
 
   if (khItems[khIdx].favourite_weapon) {
-    embed.addField(':regional_indicator_f: Favourite weapon:',khItems[khIdx].favourite_weapon,false);
+    embed.addField(':regional_indicator_f: Favourite weapon',khItems[khIdx].favourite_weapon,false);
   }
 
   if (khItems[khIdx].burst_name) {
