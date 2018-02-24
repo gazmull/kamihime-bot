@@ -81,15 +81,14 @@ exports.run = (client, message, args) => {
       helpText += config.prefix + "ku list [pageNumber] => display the list of registered unions\n\n";
 
       helpText += "#Command restricted to Discord server owner\n\n";
-      helpText += config.prefix + "ku register => Register the current Discord server and assign the Discord owner as leader of this union\n";
+      helpText += config.prefix + "ku register => Register or update your current Discord server (assign you as union leader and update the member count)\n";
       helpText += config.prefix + "ku set name [text] => Update your union name\n";
-      helpText += config.prefix + "ku set nbmembers [number] => Set the real number of players in your Union (useful to count non discord union players)\n";
       helpText += config.prefix + "ku set desc [text] => Set description text for your union\n";
-      helpText += config.prefix + "ku set bursttime => Set Union BurstTime\n";
-      helpText += config.prefix + "ku set recruit [on/off] => Activate/Deactivate recruitment (default off)\n";
+      helpText += config.prefix + "ku set discordinvit [link] => link to your discord server\n";
+      helpText += config.prefix + "ku set recruitment [on/off] => Activate/Deactivate recruitment (default off)\n";
       helpText += config.prefix + "ku set recruitdesc [text] => Set Text for your recruitment campaign (Displayed only if recruitment is on)\n";
       helpText += config.prefix + "ku set timezone => Set favorite Timezone for gathering\n";
-      helpText += config.prefix + "ku set discordinvit [link] => link to your discord server\n";
+      helpText += config.prefix + "ku set bursttime => Set Union BurstTime\n";
       helpText += config.prefix + "ku set private [on/off] => Include/Exclude your server from the public union list (default off)\n\n";
       helpText += "```*\n";
       break;*/
