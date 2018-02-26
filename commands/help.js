@@ -74,14 +74,16 @@ exports.run = (client, message, args) => {
     /*case "ku":
       helpText += "*```md\n";
       helpText += "#Union Display commands:\n\n";
-
       helpText += config.prefix + "ku => display union information about the current Discord server\n";
       helpText += config.prefix + "ku [@username] => display union info about a specific user or yourself\n";
       helpText += config.prefix + "ku [unionId] => display union info based on Id\n";
       helpText += config.prefix + "ku list [pageNumber] => display the list of registered unions\n\n";
 
       helpText += "#Command restricted to Discord server owner\n\n";
-      helpText += config.prefix + "ku register => Register or update your current Discord server (assign you as union leader and update the member count)\n";
+      helpText += config.prefix + "ku reset => Reset the union leader to the Discord owner.\n";
+      helpText += config.prefix + "ku leader [@username] => Set @username as the union leader (Only useful if your union leader is not the Discord owner)\n\n";
+
+      helpText += "#Command restricted to Discord server owner or union leader\n\n";
       helpText += config.prefix + "ku set name [text] => Update your union name\n";
       helpText += config.prefix + "ku set desc [text] => Set description text for your union\n";
       helpText += config.prefix + "ku set discordinvit [link] => link to your discord server\n";

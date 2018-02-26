@@ -28,8 +28,12 @@ exports.run = async (client, message, args) => {
     unionSetCommand(client, message, args);
     return;
   }
-  if(args[0] == "register") {
-    unionRegisterCommand(client, message, args);
+  if(args[0] == "reset") {
+    unionResetCommand(client, message, args);
+    return;
+  }
+  if(args[0] == "leader") {
+    unionLeaderCommand(client, message, args);
     return;
   }
   if(args[0] == "list") {
@@ -49,11 +53,11 @@ exports.run = async (client, message, args) => {
 
   if(args.length == 0) {
     // no query: get user union
-    if(message.channel.type == "dm") {
+    /*if(message.channel.type == "dm") {
       return message.channel.send("Sorry, wip in dm");
-    }
-    userSearch = message.guild.name;
-    searchId = message.guild.ownerID;
+    }*/
+    userSearch = message.author.name;
+    searchId = message.author.id;
   } else {
     userSearch = args.join(" ");
 
@@ -178,44 +182,94 @@ async function unionSetCommand(client, message, args) {
 }
 
 
-// ==================== Union Register Commands ============
+// ==================== Union Leader Command ============
 
-async function unionRegisterCommand(client, message, args) {
+async function unionLeaderCommand(client, message, args) {
+
+  let searchId = "";
+
+  if(message.channel.type == "dm") {
+    return message.channel.send("Sorry, a user is related to a memberlist, it's not possible on direct message. You need to be on a text channel to get a user.");
+  }
+
+  if(args.length < 2) {
+    return message.channel.send("Please provide username");
+  }
+
+  if(message.guild.ownerID != message.author.id) {
+    return message.channel.send("Sorry, Leader command for this server is only available to the Discord server owner.");
+  }
+
+  userSearch = args.join(" ");
+  userSearch = userSearch.slice(args[0].length + 1);
+  if(userSearch.startsWith('<@')) {
+    searchId = userSearch.slice(2, -1);
+    if(searchId.charAt(0) === "!") {
+      searchId = searchId.substr(1);
+    }
+  }
+
+  if(!searchId) {
+    return message.channel.send("Sorry, no profile found for '" + userSearch + "' on this Discord server.\n");
+  }
+
+  user = client.users.get(searchId);
+  if(!user) {
+    return message.channel.send("Sorry, no profile found for '" + userSearch + "' on this Discord server.\n");
+  }
+
+  try {
+    const [results, fields] = await db.execute('UPDATE `unions` SET `union_discord_owner_id`=? WHERE `union_discord_guild_id`=?', [user.id, message.guild.id]);
+    logger.info("Union owner updated for " + message.guild.name + " - userId: " + user.id);
+    message.channel.send("Union owner updated for " + message.guild.name + " - new leader: " + user.username + "#" + user.discriminator);
+  } catch(err) {
+    logger.error(err);
+    message.channel.send("Enable to update OwnerId for this union.");
+  }
+
+}
+
+// ==================== Union Reset Commands ============
+
+async function unionResetCommand(client, message, args) {
 
   switch(args[1]) {
 
-    // ------------ Register all server ----------
+    // ------------ Reset all servers ----------
 
     case "all":
       if(message.author.id != 361433266869501953) {
-        return message.channel.send("Sorry, for now the 'register all' command is restricted to userId 361433266869501953 only.");
+        return message.channel.send("Sorry, the 'reset all' command is restricted.");
       }
       const guildList = await client.guilds.array();
       try {
         for(const guild of guildList) {
-          if(await createNewUnion(guild, message)) {
-            //message.channel.send("New union created or updated: " + guild.name + " - id: " + guild.id);
-          }
+          await createNewUnion(guild, message);
         }
       } catch(err) {
         console.log("Could not create union " + guild.name);
       }
+      message.channel.send(guildList.length + " servers updated.");
       return;
       break;
 
-      // ------------ Default: Register the current Discord server only ----------
+      // ------------ Default: Reset the current Discord server only ----------
 
     default:
       if(message.channel.type == "dm") {
-        return message.channel.send("Sorry, Register commands are related to a Discord server, it's not possible on direct message. You need to be on a text channel to use them.");
+        return message.channel.send("Sorry, Reset command is related to a Discord server, it's not possible on direct message. You need to be on a text channel to use them.");
       }
+
+      if(message.guild.ownerID != message.author.id) {
+        return message.channel.send("Sorry, Reset command for this server is only available to the Discord server owner.");
+      }
+
       if(args[1]) {
-        return message.channel.send("'" + args[1] + "' Unknown register union function. Please use '" + config.prefix + "help ku' for more infos.");
+        return message.channel.send("'" + args[1] + "' Unknown reset union function. Please use '" + config.prefix + "help ku' for more infos.");
       } else {
         if(await createNewUnion(message.guild, message)) {
           const union = await getUnionById(message.guild.id);
           if(union) {
-            //message.channel.send("New union created or updated: " + guild.name + " - id: " + guild.id);
             displayUnion(client, message, union);
           } else {
             message.channel.send("Error no union found.");
@@ -266,7 +320,7 @@ async function unionListCommand(client, message, args) {
         } else {
           output += "❌ ";
         }
-        output += "[Id #" + rows[i]['union_id'] + "](" + rows[i]['union_name'] + ") - [" + rows[i]['union_discord_nb_member'] + " members](Leader: " + rows[i]['user_username'] + "#" + rows[i]['user_discriminator'] + ")\n";
+        output += "[Id #" + rows[i]['union_id'] + "](" + rows[i]['union_name'] + ") - [" + rows[i]['union_discord_nb_member'] + " Discord users](Leader: " + rows[i]['user_username'] + "#" + rows[i]['user_discriminator'] + ")\n";
       }
       if(output) {
         output = "```Markdown\n" + output + "```";
@@ -296,8 +350,7 @@ async function createNewUnion(guild, message = null) {
 
   try {
     const [rows, fields] = await db.execute('SELECT * FROM `unions` WHERE `union_discord_guild_id` = ?', [guild.id]);
-    if(!rows.length)
-    {
+    if(!rows.length) {
       try {
         const [results, fields] = await db.execute('INSERT INTO `unions` (`union_discord_guild_id`, `union_discord_guild_name`, `union_discord_owner_id`, `union_name`, `union_created_on`,`union_active`) VALUES(?,?,?,?,?,1) ON DUPLICATE KEY UPDATE `union_discord_guild_id` = ?', [guild.id, guild.name, guild.ownerID, guild.name, dateCreated, guild.id]);
         if(message) {
@@ -318,7 +371,6 @@ async function createNewUnion(guild, message = null) {
     return false;
   }
 
-
   // Add the guild owner to the user database if he was missing
 
   try {
@@ -331,13 +383,13 @@ async function createNewUnion(guild, message = null) {
     return false;
   }
 
-  // Update owner with Leader status
+  // Update Leader status for the user
 
   try {
     const [results, fields] = await db.execute('UPDATE `users` SET `user_discord_union_id`=?, `user_nutaku_role`=? WHERE `user_discord_id`=?', [guild.id, 'Leader', guild.ownerID]);
-    logger.info("Union owner updated: " + guild.name + " - userId: " + guild.ownerID);
+    logger.info("Union owner updated for " + guild.name + " - userId: " + guild.ownerID);
     if(message) {
-      message.channel.send("Union owner updated: " + guild.name + " - user: " + guild.owner.user.username+"#"+guild.owner.user.discriminator);
+      message.channel.send("Union owner updated for " + guild.name + " - user: " + guild.owner.user.username + "#" + guild.owner.user.discriminator);
     }
   } catch(err) {
     logger.error(err);
@@ -347,10 +399,10 @@ async function createNewUnion(guild, message = null) {
     }
   }
 
-  // Update memberCount for this union
+  // Update memberCount & reset owner to default (discord owner) for the union
 
   try {
-    const [results, fields] = await db.execute('UPDATE `unions` SET `union_discord_nb_member`=? WHERE `union_discord_guild_id`=?', [guild.memberCount,guild.id]);
+    const [results, fields] = await db.execute('UPDATE `unions` SET `union_discord_owner_id`=?, `union_discord_nb_member`=? WHERE `union_discord_guild_id`=?', [guild.ownerID, guild.memberCount, guild.id]);
     if(message) {
       message.channel.send("Union member count updated: " + guild.name + " - memberCount: " + guild.memberCount);
     }

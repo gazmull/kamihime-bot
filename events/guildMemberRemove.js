@@ -1,4 +1,4 @@
-// This event triggers when a member joins a guild.
+// This event triggers when a member leave a guild.
 
 const config = require("../config.json");
 const db = require("../utils/dbconfig").pool;
@@ -8,17 +8,7 @@ const logger = require("../utils/logger").logger;
 
 exports.run = async (client, member) => {
   let guild = member.guild;
-  logger.info('A new member joined the guild ' + guild.name + ': username: ' + member.user.username + ' userId: ' + member.user.id);
-
-  // Create the user profile is not already done before
-  try {
-    const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [member.user.id]);
-    if(!rows.length) {
-      kp.createProfile(member.user);
-    }
-  } catch(err) {
-    logger.error(err);
-  }
+  logger.info('A member left the guild ' + guild.name + ': username: ' + member.user.username + ' userId: ' + member.user.id)
 
   // update guild memberCount
   try {
