@@ -1,28 +1,55 @@
-// Provide a link for bot easy install on other Discord server
-// Permissions: 3072 (Read messages / Send messages) see: https://discordapi.com/permissions.html
+const Command = require('../struct/Command');
 
-const Discord     = require("discord.js");
-const config      = require("../config.json");
-const permissions = 3072;
+class InviteBotCommand extends Command {
+  constructor(client) {
+    super(client, {
+      name: 'invitebot',
+      description: {
+        content: [
+          'Provides a link to install this bot to your Discord server.',
+          'Please ensure that you have the \'Manage Server\' permission in your Discord server to allow installation.'
+        ]
+      },
+      permissions: ['SEND_MESSAGES', 'EMBED_LINKS']
+    });
 
-exports.run = (client, message, args) => {
-
-  const botUser = client.user;
-
-  let avatarURL = botUser.avatarURL;
-  if ( avatarURL == null) {
-    avatarURL = config.thumbrooturl+"\/images_bot\/default_avatar.png";
+    this.bitfield = 3072;
   }
 
-  const embed = new Discord.RichEmbed()
-  .setTitle("Click here to add the "+botUser.username+" bot to your own server")
-  .setAuthor(botUser.username+" Bot:")
-  .setThumbnail(avatarURL)
-  .setColor("#00AE86");
+  run(message) {
+    const {
+      client: {
+        user: {
+          displayAvatarURL,
+          username,
+          id
+        }
+      },
+      util,
+      bitfield
+    } = this;
 
-  const description = "Please, ensure you have the 'Manage server' role on your discord server to allow installation.\n";
-  embed.setDescription(description);
-  embed.setURL("https:\/\/discordapp.com/oauth2/authorize?client_id="+client.user.id+"&scope=bot&permissions="+permissions);
-  message.channel.send({embed});
+    const embed = util.embed()
+      .setColor(0x00AE86)
+      .setAuthor(`${username} Bot`)
+      .setThumbnail(displayAvatarURL)
+      .setURL(
+        [
+          `https://discord.gg/oauth2/authorize?client_id=${id}`,
+          'scope=bot',
+          `permissions=${bitfield}`
+        ].join('&')
+      )
+      .setTitle('Click here to add this bot to your own server')
+      .setDescription(
+        [
+          'Please ensure that you have the \'Manage Server\' permission',
+          'in your Discord server to allow installation.'
+        ].join(' ')
+      );
 
+    return message.channel.send(embed);
+  }
 }
+
+module.exports = InviteBotCommand;

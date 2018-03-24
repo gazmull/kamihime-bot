@@ -1,37 +1,55 @@
-// Return the n latest updates for Kamihimes Eidolons Weapons & Souls
+const Command = require('../struct/Command');
 
-const   config  = require("../config.json");
-const   khinfos = require("../utils/khinfos");
-
-let     nbResultToDisplay = 15;
-const   dataArray = khinfos.getKHInfos();
-const   khArray   = khinfos.getKamihimeInfos();
-const   edArray   = khinfos.getEidolonInfos();
-const   slArray   = khinfos.getSoulInfos();
-const   wpArray   = khinfos.getWeaponInfos();
-const   acArray   = khinfos.getAccessoryInfos();
-
-exports.run     = (client, message, args) => {
-
-  let khrequest = args.join(" ");
-
-  if (khrequest && (parseInt(khrequest)>0)) {
-    nbResultToDisplay = parseInt(khrequest);
-    if (nbResultToDisplay>15) nbResultToDisplay=15;
+class LatestCommand extends Command {
+  constructor(client) {
+    super(client, {
+      name: 'latest',
+      description: {
+        content: [
+          'Displays up to 15 (default) latest updates in the bot\'s database downloaded from Kamihime Project Wikia (Nutaku).',
+          'This also displays the total number of objects registered in the bot\'s database.'
+        ],
+        usage: '[optional # of objects to list]',
+        examples: ['13', '5']
+      },
+      permissions: ['SEND_MESSAGES']
+    });
   }
 
-  let latestResponse = "```Markdown\n";
-  for (let i=0; i<nbResultToDisplay; i++) {
-      let link = config.wikidomain+dataArray[i]['link'];
-      latestResponse += dataArray[i]['timestamp']+" ["+dataArray[i]['name']+"]("+dataArray[i]['objectType']+")\n";
+  run(message, [count = 15]) {
+    const {
+      client: {
+        khDB: {
+          all,
+          kamihime,
+          eidolon,
+          soul,
+          weapon,
+          accessory
+        }
+      }
+    } = this;
+    const objects = [];
+
+    for (let i = 0; i < count; ++i) {
+      const current = all()[i];
+
+      objects.push(`${current.timestamp} [${current.name}](${current.objectType})`);
+    }
+
+    return message.channel.send([
+      '```Markdown\n',
+      objects.join('\n'),
+      '```',
+      '```Markdown\n',
+      `Totals: [Kamihime](${kamihime().length}) `,
+      `[Eidolon](${eidolon().length}) `,
+      `[Soul](${soul().length}) `,
+      `[Weapon](${weapon().length}) `,
+      `[Accessory](${accessory().length})`,
+      '```'
+    ].join(''));
   }
-  latestResponse +="```";
-
-  let stats = "```Markdown\n";
-  stats +="Totals: [Kamihime]("+khArray.length+")"+" [Eidolon]("+edArray.length+")"+" [Soul]("+slArray.length+")"+" [Weapon]("+wpArray.length+")"+" [Accessory]("+acArray.length+")\n";
-  stats +="```";
-
-  const response = latestResponse.concat(stats)
-  message.channel.send(response).then(sentMessage => client.clearDialog(message, sentMessage));
-
 }
+
+module.exports = LatestCommand;

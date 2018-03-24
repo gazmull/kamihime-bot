@@ -1,81 +1,66 @@
-// Search & Display user profile, or Update your own Profile
+const Command = require('../struct/Command');
+const insults = require('../datas/insults.json');
 
-const   discord     = require("discord.js");
-const   config      = require("../config.json");
-const   insults     = require('../datas/insults.json');
-const   persist     = require("../utils/persist").persist;
-const   logger      = require("../utils/logger").logger;
-
-exports.run     = (client, message, args) => {
-
-
-  if(!config.kbaka_authorized_users.includes(message.author.id))
-    return message.reply("Sorry, you don't have permissions to use this!");
-
-  if (args.length==0){
-    message.channel.send("Please provide a username using the @username argument.");
-    return;
-  }
-  else {
-    userSearch    = args.join(" ");
-    searchId = userSearch.slice(2, -1);
-    if( searchId.charAt(0) === "!") {
-      searchId = searchId.substr(1);
-    }
+class BakaCommand extends Command {
+  constructor(client) {
+    super(client, {
+      name: 'kbaka',
+      description: {
+        content: 'Adds/Removes a user from baka list— a list of users that Alyssa should try to insult desperately.',
+        usage: '[mention username]',
+        examples: ['@User#0001']
+      },
+      permissions: ['SEND_MESSAGES', 'EMBED_LINKS'],
+      authorizedUsers: client.config.kbaka_authorized_users
+    });
   }
 
-  // --- Try to match a user
+  async run(message) {
+    if (message.channel.type !== 'text')
+      return message.reply('this command is not available in DMs. You need to be on a text channel (in a server)');
 
-  if (message.channel.type=="dm") {
-    // dm channel
-    message.channel.send("Sorry, kbaka is not possible on direct message. You need to be on a text channel to do that.");
-    return;
-  }
+    const mentions = message.mentions;
 
-  user = client.users.get(searchId);
-  if (!user) {
-    message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\nDon't forget to add @ before the username.");
-    return;
-  }
+    if (!mentions.users.size)
+      return message.reply('please provide a username using via mention.');
 
-  /*if (message.author.id == user.id) {
-    message.channel.send("Sending kbaka to yourself is not allowed...");
-    return;
-  }*/
+    const user = mentions.users.first();
 
-  const userId = user.id;
+    const { client: { persist } } = this;
 
-  persist.get('bakas').then((bakas) => {
+    const bakas = await persist.get('bakas');
+    const index = bakas.indexOf(user.id);
+    let sentMessage;
 
-    var userIndex = bakas.indexOf(user.id);
-    if(userIndex > -1 ) {
-      bakas.splice(userIndex, 1);
-      message.channel.send ("Removing "+user.username+" from the baka list.");
-    }
-    else {
+    if (index < 0) {
+      bakas.splice(index, 1);
+      sentMessage = await message.reply(`removing ${user.tag} from the baka list...`);
+    } else {
       bakas.push(user.id);
-      message.channel.send ("Adding "+user.username+" to the baka list.");
+      sentMessage = await message.reply(`adding ${user.tag} into the baka list...`);
     }
-    persist.set('bakas', bakas);
 
-  });
+    await persist.set('bakas', bakas);
 
+    return sentMessage.edit(`${message.author}, successfully updated the baka list.`);
+  }
+
+  insult(message) {
+    const {
+      util,
+      util: { config: { thumbrooturl: thumbRootURI } }
+    } = this;
+    const alyssaIMG = `${thumbRootURI}/images_bot/AlyssaPortrait.jpg`;
+    const embed = util.embed()
+      .setAuthor('Alyssa')
+      .setThumbnail(alyssaIMG)
+      .setColor(0x00AE86);
+    const array = insults.insult;
+    const insult = array[Math.floor(Math.random() * array.length)];
+
+    embed.setDescription(insult);
+    message.channel.send(embed);
+  }
 }
 
-// ------------------------------------------------------------
-
-exports.insult     = (client, message ) => {
-
-  const thumb = config.thumbrooturl+"\/images_bot\/AlyssaPortrait.jpg";
-
-  const embed = new discord.RichEmbed()
-  .setAuthor("Alyssa:")
-  .setThumbnail(thumb)
-  .setColor("#00AE86");
-
-  const insult = insults.insult[Math.floor(Math.random()*insults.insult.length)];
-
-  embed.setDescription(insult);
-  message.channel.send({embed});
-
-}
+module.exports = BakaCommand;

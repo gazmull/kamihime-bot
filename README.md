@@ -1,5 +1,7 @@
 # kamihime-bot
 
+> This is a work in progress branch.
+
 A simple Kamihime Discord bot.
 
 * Displays datasheet infos from Kamihime, eidolons, souls, weapons and accessories.

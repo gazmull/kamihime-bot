@@ -1,119 +1,76 @@
-// Search & Display user profile, or Update your own Profile
+const Command = require('../struct/Command');
+const moment = require('moment-timezone');
 
-const   discord     = require("discord.js");
-const   config      = require("../config.json");
-const   db          = require("../utils/dbconfig").pool;
-const   moment      = require("moment-timezone");
-const   logger      = require("../utils/logger").logger;
-
-exports.run     = async (client, message, args) => {
-
-  let userSearch    = null;
-  let searchId      = null;
-  let user          = null;
-
-  // --- Format the user search request
-
-  if (args.length==0){
-    message.channel.send("Please provide a username using the @username argument.");
-    return;
-  }
-  else {
-    userSearch    = args.join(" ");
-    searchId = userSearch.slice(2, -1);
-    if( searchId.charAt(0) === "!") {
-      searchId = searchId.substr(1);
-    }
+class KudosCommand extends Command {
+  constructor(client) {
+    super(client, {
+      name: 'kudos',
+      description: {
+        content: [
+          'Sends one kudos to a user. (Text Channels only)',
+          'Only one kudos points can be sent every 24 hours.'
+        ],
+        usage: '[mention username]',
+        examples: ['@User#0001']
+      },
+      permissions: ['SEND_MESSAGES']
+    });
   }
 
-  // --- Try to match a user
-
-  if (message.channel.type=="dm") {
-    // dm channel
-    message.channel.send("Sorry, sending kudos is not possible on direct message. You need to be on a text channel to do that.");
-    return;
+  get now() {
+    return moment().format('YYYY-MM-DD HH:mm:ss');
   }
 
-  user = client.users.get(searchId);
-  if (!user) {
-    message.channel.send("Sorry, no profile found for '"+userSearch+"' on this Discord server.\nDon't forget to add @ before the username.");
-    return;
-  }
+  async run(message) {
+    if (message.channel.type !== 'text')
+      return message.reply('this command is not available in DMs. You need to be on a text channel (in a server)');
 
-  if (message.author.id == user.id) {
-    message.channel.send("Sending kudos to yourself is not allowed...");
-    return;
-  }
+    const mentions = message.mentions;
 
+    if (!mentions.users.size)
+      return message.reply('please provide a username using via mention.');
 
-  // --- Get user info from database
+    const user = mentions.users.first();
+    const author = message.author;
 
-  const dateNow = moment().format("YYYY-MM-DD HH:mm:ss");
+    if (author.id === user.id)
+      return message.reply('sending kudos to yourself is not allowed.');
 
-  try {
-    const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [message.author.id]);
-    if (rows.length) {
-
-      // Check last kudos data from the sender (24 hours limit)
-      if(rows[0]['user_last_given_rep']) {
-        const lastKudosDate = moment(rows[0]['user_last_given_rep']);
-        const deltaDate = moment.duration(moment().diff(lastKudosDate));
-        const minutesDelta = deltaDate.asMinutes();
-        if (minutesDelta<(24*60)) {
-          message.channel.send("Sending kudos is allowed once every day. You already sent one on "+moment(rows[0]['user_last_given_rep']).format("YYYY-MM-DD HH:mm:ss"));
-          return;
-        }
-      }
-    }
-    else {
-      message.channel.send("Error reading your profile");
-      return;
-    }
-
-    // Load the targetted user
+    const { client: { db } } = this;
 
     try {
-      const [rows, fields] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id]);
+      // -- Check for recently given kudos points by author
+      const [aRows] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [author.id]);
 
-      if (rows.length) {
+      if (!aRows.length)
+        return message.reply('I cannot read your profile.');
 
-        // Add one kudos to the targetted user
-        let kudos = rows[0]['user_rep_point'];
-        kudos++;
+      const lastGiven = moment(aRows[0].user_last_given_rep);
+      const dateDelta = moment.duration(moment().diff(lastGiven));
+      const minutesDelta = dateDelta.asMinutes();
 
-        try {
-          const [rows, fields] = await db.execute('UPDATE `users` SET `user_rep_point`=? WHERE `user_discord_id`=?', [kudos, user.id]);
+      if (minutesDelta < (24 * 60))
+        return message.reply([
+          'Sending kudos point is allowed once a day.',
+          `You already have sent one on ${lastGiven.format('YYYY-MM-DD HH:mm:ss')}`
+        ].join('\n'));
 
-          // Update Last kudos date for the sender
-          try {
-            const [results, fields] = await db.execute('UPDATE `users` SET `user_last_given_rep`=? WHERE `user_discord_id`=?', [dateNow, message.author.id]);
-            message.channel.send("One kudos sent to "+userSearch)
-          } catch (err) {
-            logger.error(err);
-            message.channel.send("Error updating kudos");
-            return;
-          }
-        } catch (err) {
-          logger.error(err);
-          message.channel.send("Error updating user kudos");
-          return;
-        }
-        return;
-      }
-      else {
-        message.channel.send("Sorry, no profile found for '"+userSearch+"' on our database.");
-      }
+      // -- Load user profile, then give kudos points to user
+      const [uRows] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [user.id]);
 
+      if (!uRows.length)
+        return message.reply(`there is no profile found for ${user.tag} in our database.`);
+
+      const kudos = uRows[0].user_rep_point + 1;
+
+      await db.execute('UPDATE `users` SET `user_rep_point` = ? WHERE `user_discord_id` = ?;', [kudos, user.id]);
+      await db.execute('UPDATE `users` SET `user_last_given_rep` = ? WHERE `user_discord_id` = ?', [this.now, author.id]);
+
+      return message.reply(`one kudos point sent to ${user}!`);
     } catch (err) {
-      logger.error(err);
-      message.channel.send("Error reading user profile");
-      return;
+      this.handleError(err);
     }
-
-  } catch (err) {
-    logger.error(err);
-    message.channel.send("Error reading your profile");
-    return;
   }
-
 }
+
+module.exports = KudosCommand;

@@ -51,16 +51,16 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
+# Yarn Integrity
 .yarn-integrity
 
-# dotenv environment variables file
+# ENV Variables
 .env
 
-# npm package-lock
+# NPM package-lock
 package-lock.json
 
-# kamihime bot specific
+# Kamihime Bot Specific
 
 /config.json
 /datas/storage
@@ -69,3 +69,6 @@ package-lock.json
 /datas/weapons.json
 /datas/kamihime.json
 /datas/accessories.json
+
+# Strip Offs [Kamihime Bot - Overhaul]
+wip

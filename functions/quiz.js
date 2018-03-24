@@ -1,67 +1,67 @@
+const { RichEmbed } = require('discord.js');
+let goodResponse = null;
 
-const Discord = require("discord.js");
-const config  = require("../config.json");
-const khinfos = require("../utils/khinfos.js");
+function initQuestion(client) {
+  const {
+    config: {
+      thumbrooturl: thumbRootURI,
+      quiz: {
+        channel_id: channelID,
+        thumbrootencryptedurl: thumbRootEncryptedURI
+      }
+    },
+    logger,
+    khDB
+  } = client;
+  const channel = client.channels.get(channelID);
 
-global.khquiz_goodResponse;
+  if (!channel) logger.error('Cannot find Quiz Channel ID...');
 
-// -----------
+  const khArray = khDB.all();
+  const itemsTotal = khArray.length;
+  const randomise = () => Math.floor(Math.random() * itemsTotal);
+  const responses = [];
+  const itemID = randomise();
+  const item = khArray[itemID];
+  goodResponse = Math.floor(Math.random() * 4);
+  let itemThumb = `${thumbRootURI}${item.portraiturl || item.thumbnailurl}`;
+  const encryptedURI = khDB.encrypt(item.portraiturl);
 
-exports.read_answer = (client, message) => {
+  if (encryptedURI)
+    itemThumb = `${thumbRootEncryptedURI}/${encryptedURI}`;
 
- let response = parseInt(message) || 0;
+  for (let i = 0; i < 4; ++i)
+    responses.push(randomise());
 
- if ((response<1) || (response>4)) {
-   return;
- }
- response--;
+  responses[goodResponse] = itemID;
 
- if( response == khquiz_goodResponse ) {
-   message.channel.send("correct answer.");
- }
- else {
-   message.channel.send("Sorry, the answer is wrong.");
- }
+  const embed = new RichEmbed()
+    .setTitle('Who is this character?')
+    .setAuthor(`Kamihime Quiz: ${item.name}`)
+    .setThumbnail(itemThumb)
+    .setColor(0x00AE86);
 
-  exports.init_question(client);
-}
+  const description = [];
 
-// -----------
+  for (let i = 0; i < 4; ++i)
+    description.push(`${i + 1} - ${khArray[responses[i]].name}`);
 
-exports.init_question = (client) => {
-  var channel         = client.channels.get(config.quiz.channel_id);
-
-  const khArray       = khinfos.getKHInfos();
-  const nbTotalItem   = khArray.length;
-  const responses     = [];
-
-  const itemId          = Math.floor(Math.random()*nbTotalItem);
-  const itemName        = khArray[itemId].name;
-  khquiz_goodResponse   = Math.floor(Math.random()*4);
-
-
-  let itemThumb         = config.thumbrooturl+khArray[itemId].portraiturl;
-  const encryptedUrl    = khinfos.encrypt(khArray[itemId].portraiturl);
-  if (encryptedUrl){
-    itemThumb           = config.quiz.thumbrootencryptedurl+"/"+encryptedUrl;
-  }
-
-  for (var i=0;i<4;i++)  {
-    responses[i] = Math.floor(Math.random()*nbTotalItem);
-  }
-  responses[khquiz_goodResponse] = itemId;
-
-  const embed = new Discord.RichEmbed()
-  .setTitle("Who is this character?")
-  .setAuthor("Kamihime Quiz: "+itemName)
-  .setThumbnail(itemThumb)
-  .setColor("#00AE86");
-  var description = "1 - "+khArray[responses[0]].name+"\n";
-  description += "2 - "+khArray[responses[1]].name+"\n";
-  description += "3 - "+khArray[responses[2]].name+"\n";
-  description += "4 - "+khArray[responses[3]].name+"\n";
   embed.setDescription(description);
 
-  channel.send({embed});
-
+  return channel.send(embed);
 }
+
+function readAnswer(client, message) {
+  const response = (parseInt(message) - 1) || 0;
+
+  if (response < 1 || response > 4) return;
+
+  if (response === goodResponse)
+    return message.channel.send('Correct answer!');
+
+  message.channel.send('Sorry, the answer is wrong!');
+
+  return initQuestion(client);
+}
+
+module.exports = { initQuestion, readAnswer };
