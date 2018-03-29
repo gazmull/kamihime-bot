@@ -223,18 +223,18 @@ class UserProfileCommand extends Command {
           waifu = results[0];
 
           if (waifu.objectType === 'Weapon')
-            return message.author.send(`Sorry, but your query matches \`${waifu}\`, but it's a weapon...`);
+            return message.author.send(`Sorry, but your query matches \`${waifu.name}\`, but it's a weapon...`);
 
           const waifuLink = util.config.wikidomain + waifu.link;
 
           await db.execute(
             'UPDATE `users` SET `user_waifu`=?, `user_waifu_link`=?, `user_updated_on`=? WHERE `user_discord_id`=?', [
-              waifu,
+              waifu.name,
               waifuLink,
               dateUpdated,
               message.author.id
             ]);
-          message.author.send(`Favorite character set to \`${waifu}\`.`);
+          message.author.send(`Favorite character set to \`${waifu.name}\`.`);
         }
       }
     } else
@@ -276,6 +276,8 @@ class UserProfileCommand extends Command {
       return message.reply('I cannot retrieve the profile.');
     }
 
+    const cleanWaifuLink = res.user_waifu_link.replace(/(\(|\))/g, '\\$&');
+
     const nickname = user.nickname ? `${user.nickname} / ` : '';
     const name = `${nickname}${user.username}`;
     const createdDate = moment(res.user_created_on).format('MMMM DD YYYY');
@@ -286,7 +288,7 @@ class UserProfileCommand extends Command {
     const nutakuID = res.user_nutaku_id || 'Not provided';
     const reputationText = res.user_rep_point ? `${res.user_rep_point} kudos received` : 'No kudos yet';
     const userLang = res.user_lang || 'English';
-    const waifu = res.user_waifu_link ? `[${res.user_waifu.replace(/(\(|\()/g, '\\$1')}](${res.user_waifu_link})` : 'None';
+    const waifu = res.user_waifu_link ? `[${res.user_waifu}](${cleanWaifuLink})` : 'None';
     const avatarURL = user.displayAvatarURL;
     const presence = user.presence.status === 'offline'
       ? res.user_last_online
