@@ -24,8 +24,6 @@ class Event {
 
   handleError(err) {
     this.logger('error', err);
-
-    throw err;
   }
 
   logger(type, message) {

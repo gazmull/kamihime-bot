@@ -11,7 +11,7 @@ class ReadyEvent extends Event {
     const { client, client: { config, config: { prefix } } } = this;
 
     this.logger('info', `Bot has started with ${client.users.size} users in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-    await client.user.setActivity(`say ${prefix}help | ${client.guilds.size} servers`, { type: 'WATCHING' });
+    await client.user.setActivity(`you say ${prefix}help | ${client.guilds.size} servers`, { type: 'WATCHING' });
 
     if (config.hasOwnProperty('quiz')) {
       quiz.initQuestion(client);

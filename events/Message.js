@@ -54,8 +54,7 @@ class MessageEvent extends Event {
 
     const authorized = command.authorizedUsers;
 
-    if (authorized.length && !authorized.includes(author.id))
-      return message.reply('you don\'t have a permission to use this command.');
+    if (authorized.length && !authorized.includes(author.id)) return;
 
     try {
       if (command.awaitingPrompt) {
@@ -85,6 +84,8 @@ class MessageEvent extends Event {
           ? discord_code
           : 'No invite code was in the configuration'}\``
       ].join(''));
+
+      throw (err);
     }
   }
 }

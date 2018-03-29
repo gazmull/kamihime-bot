@@ -38,10 +38,10 @@ class LatestCommand extends Command {
     }
 
     return message.channel.send([
-      '```Markdown\n',
+      '```md\n',
       objects.join('\n'),
       '```',
-      '```Markdown\n',
+      '```md\n',
       `Totals: [Kamihime](${kamihime().length}) `,
       `[Eidolon](${eidolon().length}) `,
       `[Soul](${soul().length}) `,

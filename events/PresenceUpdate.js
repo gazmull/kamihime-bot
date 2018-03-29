@@ -18,7 +18,7 @@ class PresenceUpdateEvent extends Event {
         if (rows.length) {
           const dateUpdated = moment().format('YYYY-MM-DD HH:mm:ss');
           await db.execute('UPDATE `users` SET `user_last_online` = ? WHERE `user_discord_id` = ?', [dateUpdated, newMember.id]);
-        } else commands.get('kp').createProfile(newMember.user);
+        } else commands.get('kp').create(newMember.user);
       } catch (err) {
         this.handleError(err);
       }

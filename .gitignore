@@ -57,8 +57,9 @@ typings/
 # ENV Variables
 .env
 
-# NPM package-lock
+# package-locks
 package-lock.json
+yarn.lock
 
 # Kamihime Bot Specific
 

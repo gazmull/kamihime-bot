@@ -30,7 +30,7 @@ class Helper {
 
         loaded++;
       } catch (err) {
-        this.logger('error', err);
+        this.handleError(err);
       }
 
     this.logger('info', `${loaded} helpers have been loaded. (Expected: ${files.length})`);

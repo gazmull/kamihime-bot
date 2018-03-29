@@ -10,7 +10,7 @@ class GuildDeleteEvent extends Event {
     const { client, client: { db }, prefix } = this;
 
     try {
-      await client.user.setActivity(`say ${prefix}help | ${client.guilds.size} servers`, { type: 'WATCHING' });
+      await client.user.setActivity(`you say ${prefix}help | ${client.guilds.size} servers`, { type: 'WATCHING' });
       await db.execute('UPDATE `unions` SET `union_active` = 0 WHERE `union_discord_guild_id` = ?', [id]);
 
       this.logger('info', `Guild Update: I left ${name} (${id})`);

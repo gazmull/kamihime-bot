@@ -15,9 +15,9 @@ class GuildMemberAddEvent extends Event {
       const [rows] = await db.execute('SELECT * FROM `users` WHERE `user_discord_id` = ?', [member.user.id]);
 
       if (!rows.length)
-        commands.get('kp').createProfile(member.user);
+        commands.get('kp').create(member.user);
 
-      await db.execute('UPDATE `unions` SET `union_discord_nb_member` = ? WHERE `union_discord_guild__id` = ?', [guild.memberCount, guild.id]);
+      await db.execute('UPDATE `unions` SET `union_discord_nb_member` = ? WHERE `union_discord_guild_id` = ?', [guild.memberCount, guild.id]);
       this.logger('info', `Guild Update: ${guild.name} - memberCount: ${guild.memberCount}`);
     } catch (err) {
       this.handleError(err);

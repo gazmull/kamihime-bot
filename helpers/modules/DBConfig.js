@@ -8,19 +8,19 @@ class DBConfigHelper extends Helper {
       client: {
         config: {
           mysql: {
-            host,
-            user,
-            password,
-            database
+            host = null,
+            user = null,
+            password = null,
+            database = null
           }
         }
       }
     } = this;
     const pool = mysql.createPool({
-      host: host || null,
-      user: user || null,
-      password: password || null,
-      database: database || null,
+      host,
+      user,
+      password,
+      database,
       supportBigNumbers: true,
       bigNumberStrings: true
     });

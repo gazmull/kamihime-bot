@@ -1,4 +1,4 @@
-const { RichEmbed } = require('discord.js');
+const { Collection, RichEmbed } = require('discord.js');
 
 class Command {
 
@@ -59,10 +59,18 @@ class Command {
 
     this.util = {
       config: client.config,
+      collection: this.collection,
       embed: this.embed
     };
 
     this.prefix = this.util.config.prefix;
+  }
+
+  /**
+   * @returns {Collection}
+   */
+  collection() {
+    return new Collection();
   }
 
   /**
@@ -74,8 +82,6 @@ class Command {
 
   handleError(err) {
     this.logger('error', err);
-
-    throw err;
   }
 
   logger(type, message) {
