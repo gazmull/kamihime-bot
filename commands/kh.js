@@ -41,29 +41,9 @@ class KHCommand extends Command {
     return { extract: el => el.name };
   }
 
-  get objectTypes() {
-    return {
-      shortHands: [
-        'K', // Kamihime
-        'E', // Eidolon
-        'S', // Soul
-        'W', // Weapon
-        'A' // Accessory
-      ],
-      longHands: [
-        'Kamihime',
-        'Eidolon',
-        'Soul',
-        'Weapon',
-        'Accessory'
-      ]
-    };
-  }
-
   async run(message, args) {
     const {
       fuzzyOptions,
-      objectTypes,
       triggerDialog,
       failReply,
       toTitleCase,
@@ -77,35 +57,34 @@ class KHCommand extends Command {
     if (!name)
       return failReply(message);
 
-    const parameterRegExp = /(^| )-{1,2}\w+/g;
+    const parameterRegExp = /(?:^| )-{1,2}([\w]+)/g;
     const potentialParameter = parameterRegExp.test(name);
 
     if (potentialParameter) {
-      const match = name.exec(parameterRegExp);
-      const parameterIndex = args.indexOf(match[0].charAt(0) === ' ' ? match[0].slice(1) : match[0]);
+      let toTruncate = -1;
 
-      name = parameterIndex === 0 ? args.slice(1).join(' ') : args.slice(0, parameterIndex).join(' ');
-      parameter = parameterIndex + 1 === args.length
-        ? toTitleCase(args.slice(1).toString().replace(/-/g, ''))
-        : toTitleCase(args.slice(0, 1).toString().replace(/-/g, ''));
+      for (const arg of args)
+        if (parameterRegExp.test(arg))
+          toTruncate = args.indexOf(arg);
+
+      parameter = toTruncate === args.length - 1 ? args.pop() : args.shift();
+      parameter = toTitleCase(parameter.replace(parameterRegExp, '$1'));
+      name = args.join(' ');
     }
 
-    parameter = parameter === 'K'
+    parameter = parameter === 'K' || parameter === 'Kamihime'
       ? 'Kamihime'
-      : parameter === 'E'
+      : parameter === 'E' || parameter === 'Eidolon'
         ? 'Eidolon'
-        : parameter === 'S'
+        : parameter === 'S' || parameter === 'Soul'
           ? 'Soul'
-          : parameter === 'W'
+          : parameter === 'W' || parameter === 'Weapon'
             ? 'Weapon'
-            : parameter === 'A'
+            : parameter === 'A' || parameter === 'Accessory'
               ? 'Accessory'
               : null;
 
-    const invalidParameter = parameter &&
-      !(objectTypes.shortHands.some(el => parameter === el) || objectTypes.longHands.some(el => parameter === el));
-
-    if (invalidParameter)
+    if (potentialParameter && !parameter)
       return message.reply(`invalid parameter. See \`${prefix}help kh\` for examples.`);
 
     const cleanName = name.replace(/[()]/g, '\\$&');
