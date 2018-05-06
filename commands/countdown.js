@@ -7,6 +7,7 @@ class CountdownCommand extends Command {
 
     super(client, {
       name: 'countdown',
+      aliases: ['cd'],
       description: {
         content: [
           'Displays countdowns related to Kamihime Project in-game events.',
@@ -31,9 +32,9 @@ class CountdownCommand extends Command {
 
     this.preset = [
       { class: 'DLY', name: 'Daily Reset', time: '00:00', day: '*' },
-      { class: 'ENH', name: 'Weapon/Eidolon Enhancement Quest1', time: '12:00', day: '*' },
-      { class: 'ENH', name: 'Weapon/Eidolon Enhancement Quest2', time: '19:00', day: '*' },
-      { class: 'ENH', name: 'Weapon/Eidolon Enhancement Quest3', time: '22:00', day: '*' },
+      { class: 'ENH', name: 'Weapon/Eidolon Enhancement Quest 1', time: '12:00', day: '*' },
+      { class: 'ENH', name: 'Weapon/Eidolon Enhancement Quest 2', time: '19:00', day: '*' },
+      { class: 'ENH', name: 'Weapon/Eidolon Enhancement Quest 3', time: '22:00', day: '*' },
       { class: 'GEM', name: 'Monday Gem Quest 1', time: '12:00', day: 'Monday' },
       { class: 'GEM', name: 'Monday Gem Quest 2', time: '19:00', day: 'Monday' },
       { class: 'GEM', name: 'Tuesday Gem Quest 1', time: '12:30', day: 'Tuesday' },

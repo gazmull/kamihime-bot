@@ -9,6 +9,7 @@ class UnionProfileCommand extends Command {
 
     super(client, {
       name: 'ku',
+      aliases: ['union'],
       description: {
         content: [
           'Displays a union info from the bot\'s database.\n',

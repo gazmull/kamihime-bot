@@ -5,6 +5,7 @@ class BakaCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'kbaka',
+      aliases: ['baka'],
       description: {
         content: 'Adds/Removes a user from baka list— a list of users that Alyssa should try to insult desperately.',
         usage: '[mention username]',

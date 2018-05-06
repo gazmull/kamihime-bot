@@ -43,12 +43,14 @@ class MessageEvent extends Event {
 
     const content = message.content;
     const author = message.author;
+    const clientRegex = new RegExp(`^<@!?${client.user.id}>`);
+    const mentioned = clientRegex.test(content);
 
-    if (!content.startsWith(prefix)) return;
+    if (!(content.startsWith(prefix) || mentioned)) return;
 
-    const args = content.slice(prefix.length).trim().split(/ +/g);
+    const args = mentioned ? content.split(/ +/g).slice(1) : content.slice(prefix.length).trim().split(/ +/g);
     let command = args.shift().toLowerCase();
-    command = client.commands.get(command);
+    command = client.commands.get(command) || client.commands.filter(c => c.aliases && c.aliases.includes(command)).first();
 
     if (!command) return;
 

@@ -9,6 +9,7 @@ class UserProfileCommand extends Command {
 
     super(client, {
       name: 'kp',
+      aliases: ['profile'],
       description: {
         content: [
           'Displays a profile registered in the bot\'s database.\n',

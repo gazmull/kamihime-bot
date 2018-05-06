@@ -4,6 +4,7 @@ class HelpCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'help',
+      aliases: ['commands', 'halp'],
       description: {
         content: 'Displays commands available.',
         examples: ['kh', 'kp'],
@@ -18,14 +19,17 @@ class HelpCommand extends Command {
 
     args = args.join(' ');
     const { client, prefix } = this;
-    const command = client.commands.get(args);
+    const command = client.commands.get(args) || client.commands.filter(c => c.aliases && c.aliases.includes(args)).first();
 
     if (!command) return this.defaultHelp(message);
 
-    const { name, description: { content, usage, examples }, permissions } = command;
+    const { name, aliases, description: { content, usage, examples }, permissions } = command;
 
     return message.channel.send([
       `**Command: ${name.toUpperCase()}**\n\`\`\`css\n${Array.isArray(content) ? content.join('\n') : content}\`\`\``,
+      aliases
+        ? `\`\`\`css\n#Aliases\n${aliases.join(', ')}\`\`\``
+        : '',
       examples.length && usage
         ? `\`\`\`css\n#Usage\n${prefix}${name} ${usage}\n\n#Examples\n${
           examples.map(e => `${prefix}${name} ${e}`).join('\n')}\`\`\``

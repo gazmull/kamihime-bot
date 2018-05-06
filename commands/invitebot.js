@@ -4,6 +4,7 @@ class InviteBotCommand extends Command {
   constructor(client) {
     super(client, {
       name: 'invitebot',
+      aliases: ['invite'],
       description: {
         content: [
           'Provides a link to install this bot to your Discord server.',

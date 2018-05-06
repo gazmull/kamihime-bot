@@ -14,6 +14,7 @@ class Command {
    * Options for Command.
    * @typedef {Object} CommandOptions
    * @property {string} name Name of the command.
+   * @property {Array} aliases Aliases of the command.
    * @property {DescriptionOptions} [description={}] Description of the command.
    * @property {Array} [permissions=[]] Permissions for the client to execute this command.
    * @property {Array} [authorizedUsers=[]] Authorized users to execute this command.
@@ -36,6 +37,11 @@ class Command {
      * @type {string}
      */
     this.name = options.name || null;
+
+    /**
+     * @type {Array.<string>}
+     */
+    this.aliases = options.aliases;
 
     /**
      * @type {DescriptionOptions}
