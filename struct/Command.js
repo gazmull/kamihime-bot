@@ -41,7 +41,7 @@ class Command {
     /**
      * @type {Array.<string>}
      */
-    this.aliases = options.aliases;
+    this.aliases = options.aliases || [];
 
     /**
      * @type {DescriptionOptions}

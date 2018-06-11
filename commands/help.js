@@ -27,7 +27,7 @@ class HelpCommand extends Command {
 
     return message.channel.send([
       `**Command: ${name.toUpperCase()}**\n\`\`\`css\n${Array.isArray(content) ? content.join('\n') : content}\`\`\``,
-      aliases
+      aliases.length
         ? `\`\`\`css\n#Aliases\n${aliases.join(', ')}\`\`\``
         : '',
       examples.length && usage
