@@ -4,7 +4,7 @@ const { RichEmbed } = require('discord.js');
 class WeaponInfo extends KHInfo {
   get releaseHime() {
     return this.res.releases
-      ? `[${this.res.releases}](${this.config.wikidomain}/w/${encodeURI(this.res.releases)})`
+      ? `[${this.res.releases}](${`${this.config.wikidomain}/w/${encodeURI(this.res.releases)}`.replace(/(\(|\))/g, '\\$&')})`
       : null;
   }
 
