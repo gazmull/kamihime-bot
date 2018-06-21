@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { Collection } = require('discord.js');
+const { Collection, RichEmbed } = require('discord.js');
 
 class Helper {
   constructor(client) {
@@ -7,7 +7,8 @@ class Helper {
 
     this.util = {
       config: client.config,
-      collection: this.collection
+      collection: this.collection,
+      embed: this.embed
     };
   }
 
@@ -16,6 +17,13 @@ class Helper {
    */
   collection() {
     return new Collection();
+  }
+
+  /**
+   * @returns {RichEmbed}
+   */
+  embed() {
+    return new RichEmbed();
   }
 
   async init() {

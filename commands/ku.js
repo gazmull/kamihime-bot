@@ -94,8 +94,8 @@ class UnionProfileCommand extends Command {
     }
   }
 
-  set(message, details) {
-    const { prefix } = this;
+  async set(message, details) {
+    const { prefix, client: { db } } = this;
 
     if (message.channel.type !== 'dm') {
       message.reply('The response had been sent to you by direct message.');
@@ -119,11 +119,14 @@ class UnionProfileCommand extends Command {
       name: null,
       nbmembers: null,
       desc: null,
+      twitter: `I cannot find a channel from your input. Please use \`${prefix}help ku\` for more info.`,
       default: `Unknown set profile command. Please use \`${prefix}help ku\` for more info.`
     };
 
-    if (parameter && !details)
+    if (parameter && !details.length)
       return message.author.send(presetMessages[parameter].join('\n'));
+
+    details = details.join(' ');
 
     switch (parameter) {
       default:
@@ -133,6 +136,20 @@ class UnionProfileCommand extends Command {
       case 'nbmembers':
       case 'desc':
         return null;
+
+      case 'twitter': {
+        const channel = /(?:<#)?(\d{17,20})>?/.exec(details); // needs improvement
+        const resolvedChannel = channel
+          ? this.client.channels.get(channel[1])
+          : message.guild.channels.find('name', details);
+
+        if (!resolvedChannel) return message.author.send(presetMessages.twitter);
+
+        await db.execute('UPDATE `unions` SET `union_discord_twitter_channel_id` = ? WHERE `union_discord_guild_id` = ?', [channel[1], message.guild.id]);
+        this.logger('info', `Union ${message.guild.name}'s twitter channel has been updated to ${resolvedChannel.name} (${channel[1]})`);
+
+        return message.reply(`Twitter updates channel has been set to ${resolvedChannel}.`);
+      }
     }
   }
 
