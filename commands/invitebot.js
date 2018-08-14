@@ -3,7 +3,7 @@
 
 const Discord     = require("discord.js");
 const config      = require("../config.json");
-const permissions = 3072;
+const permissions = 289856;
 
 exports.run = (client, message, args) => {
 
